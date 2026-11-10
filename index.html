@@ -3,6 +3,7 @@
 <head>
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1716'/%3E%3Cpath d='M58 32 H44 C42 32 41.5 28.5 40 28.5 C38.5 28.5 38 32 36 32 H33 L31.5 34 L29 20 L26.5 42 L25 32 H21 C19 32 18.5 27.5 16.5 27.5 C14.5 27.5 14 32 12 32 H6' fill='none' stroke='%23FB7185' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>نبض بازار · پژوهش زنده بازار غذا و نوشیدنی</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2479,13 +2480,422 @@ body.in-panel .ab-foot{display:none}
 .ab-rep span{display:block;font-size:14px;line-height:1.8;color:#A7BDB6;margin-top:2px}
 .ab-rb{margin-top:10px}
 .ab-rb .btn{text-decoration:none}
+/* ===== v75: "others" and "me", the same mark ===== */
+.ld h1 .hl{position:relative;display:inline-block;padding:0 .16em;margin:0 .02em;border-radius:.2em;color:inherit;background:linear-gradient(#BEF264,#BEF264) no-repeat 100% 50%/0% 100%;animation:hlIn .75s cubic-bezier(.2,.8,.2,1) forwards}
+.ld h1 .h1w{animation-delay:.45s}
+.ld h1 .h2w{animation-delay:1.25s}
+@keyframes hlIn{60%{color:inherit}to{background-size:100% 100%;color:#10292B;box-shadow:0 0 28px rgba(190,242,100,.35)}}
+@media (prefers-reduced-motion:reduce){.ld h1 .hl{animation:none;background-size:100% 100%;color:#10292B}}
+/* ===== v76: title, subtitle and text on one scale ===== */
+#fIntro .ld-lead{margin-top:14px;max-width:none}
+#fIntro .ld-lead b{font-size:clamp(17px,1.42vw,19.5px);font-weight:700;line-height:1.75;color:#F4FAF7;text-wrap:pretty}
+#fIntro .ld-lead span{margin-top:8px;font-size:clamp(14.5px,1.15vw,16px);font-weight:500;line-height:1.9;color:#B9CEC8;text-wrap:pretty}
+/* ===== v77: the game invitation as its own banner ===== */
+.ld-game.gb{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;max-width:600px;margin-top:20px;padding:18px 22px 18px 18px;border-radius:24px;overflow:hidden;
+  background:radial-gradient(120% 140% at 0% 100%,rgba(190,242,100,.22),rgba(190,242,100,0) 55%),linear-gradient(135deg,#123532,#0C2423 70%);border:1.5px solid rgba(190,242,100,.55);box-shadow:0 18px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06)}
+.ld-game.gb::after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 12px)}
+.ld-game.gb > div{flex:none}
+.gb-tx{position:relative;z-index:1;min-width:0}
+.ld-game.gb .gb-kick{display:inline-flex;align-items:center;gap:7px;margin:0;padding:3px 11px;border-radius:999px;background:rgba(190,242,100,.14);border:1px solid rgba(190,242,100,.4);font-size:12.5px;font-weight:800;color:#BEF264;line-height:1.6}
+.gb-kick i{width:7px;height:7px;border-radius:50%;background:#BEF264;box-shadow:0 0 0 0 rgba(190,242,100,.6);animation:gbDot 1.8s ease-out infinite}
+@keyframes gbDot{70%{box-shadow:0 0 0 7px rgba(190,242,100,0)}100%{box-shadow:0 0 0 0 rgba(190,242,100,0)}}
+.ld-game.gb .gb-t{display:block;margin-top:9px;font-size:clamp(20px,1.8vw,25px);font-weight:900;line-height:1.4;color:#F4FAF7}
+.ld-game.gb .gb-s{display:block;margin-top:4px;font-size:14px;font-weight:500;line-height:1.8;color:#B9CEC8;text-wrap:pretty}
+.ld-game.gb #fStart.gb-go{display:inline-flex;align-items:center;gap:14px;margin-top:14px;padding:13px 30px;border:0;border-radius:999px;background:#BEF264;color:#10292B;font:inherit;font-size:18.5px;font-weight:900;cursor:pointer;
+  box-shadow:0 10px 30px rgba(190,242,100,.35);animation:goGlow 2.4s ease-in-out infinite;transition:transform .2s}
+.gb-go i{font-style:normal;transition:transform .2s}
+.gb-go:hover{transform:translateY(-2px)}.gb-go:hover i{transform:translateX(-4px)}
+.gb-go:focus-visible{outline:3px solid #F4FAF7;outline-offset:3px}
+.gb-cards{position:relative;z-index:1;width:178px;height:124px;flex:none}
+.gbc{position:absolute;top:14px;left:56px;width:66px;height:92px;border-radius:13px;display:grid;place-items:center;font-style:normal;
+  background:linear-gradient(160deg,#1B4541,#0E2B29);border:1.5px solid rgba(190,242,100,.7);box-shadow:0 12px 24px rgba(0,0,0,.45);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.gbc::before{content:'';position:absolute;inset:5px;border-radius:9px;border:1px dashed rgba(190,242,100,.3)}
+.gbc .gbc-ic{position:absolute;top:8px;right:8px;display:grid;color:#BEF264}
+.gbc .gbc-ic .ic svg{width:16px;height:16px}
+.gbc u{text-decoration:none;font-size:34px;font-weight:900;color:#BEF264;line-height:1;margin-top:-4px}
+.gbc em{position:absolute;bottom:7px;left:0;right:0;text-align:center;font-style:normal;font-size:10.5px;font-weight:800;color:#D6E4E1}
+.gbc.c1{transform:translateX(52px) rotate(10deg);animation:gbF1 3.6s ease-in-out infinite}
+.gbc.c2{transform:translateY(-8px);z-index:2;animation:gbF2 3.6s ease-in-out -1.2s infinite}
+.gbc.c3{transform:translateX(-52px) rotate(-10deg);animation:gbF3 3.6s ease-in-out -2.4s infinite}
+@keyframes gbF1{50%{transform:translateX(52px) translateY(-5px) rotate(11deg)}}
+@keyframes gbF2{50%{transform:translateY(-14px)}}
+@keyframes gbF3{50%{transform:translateX(-52px) translateY(-5px) rotate(-11deg)}}
+.ld-game.gb:hover .gbc.c1{animation:none;transform:translateX(60px) translateY(-4px) rotate(14deg)}
+.ld-game.gb:hover .gbc.c2{animation:none;transform:translateY(-16px)}
+.ld-game.gb:hover .gbc.c3{animation:none;transform:translateX(-60px) translateY(-4px) rotate(-14deg)}
+@media (max-height:800px){.ld-game.gb{margin-top:14px;padding:14px 18px 14px 14px}.ld-game.gb .gb-t{margin-top:7px}.ld-game.gb #fStart.gb-go{margin-top:11px;padding:11px 26px;font-size:17.5px}}
+@media (max-width:620px){.ld-game.gb{grid-template-columns:1fr}.gb-cards{display:none}}
+@media (prefers-reduced-motion:reduce){.gbc,.gb-kick i,.ld-game.gb #fStart.gb-go{animation:none !important}}
+/* v77b: cards spread so every label reads */
+.gb-cards{width:222px;height:124px}
+.gbc{left:78px;width:68px}
+.gbc em{font-size:10px}
+.gbc.c1{transform:translateX(70px) rotate(8deg)}
+.gbc.c3{transform:translateX(-70px) rotate(-8deg)}
+@keyframes gbF1{50%{transform:translateX(70px) translateY(-5px) rotate(9deg)}}
+@keyframes gbF3{50%{transform:translateX(-70px) translateY(-5px) rotate(-9deg)}}
+.ld-game.gb:hover .gbc.c1{transform:translateX(76px) translateY(-4px) rotate(11deg)}
+.ld-game.gb:hover .gbc.c3{transform:translateX(-76px) translateY(-4px) rotate(-11deg)}
+.ld-game.gb .gb-t{text-wrap:balance}
+/* v78: the definition links to the project document */
+.ld-about{display:inline;padding:0;margin-inline-start:4px;border:0;background:none;font:inherit;font-weight:800;color:#BEF264;cursor:pointer;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+.ld-about:hover{color:#F4FAF7}
+/* v79: two parts only - the hook line, then the question and the button */
+.ld-game.gb .gb-t{margin-top:12px;font-size:clamp(23px,2.05vw,29px);line-height:1.35}
+.ld-game.gb .gb-t em{font-style:normal;color:#BEF264}
+.ld-game.gb #fStart.gb-go{margin-top:16px}
+/* ===== v80: the spring report's "but" in the middle, questions about the others around it ===== */
+.ld-art .th.t2.pair{top:13%;left:10%;max-width:80%;animation-delay:.5s,1.2s}
+.ld-art .th.t2.pair span.pp{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:0;background:none;box-shadow:none;border-radius:0;text-align:start}
+.th.pair i{position:relative;display:block;font-style:normal;font-size:clamp(16px,1.35vw,19px);font-weight:900;line-height:1.5;padding:8px 18px;border-radius:12px;white-space:nowrap;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.th.pair i small{position:absolute;bottom:calc(100% - 6px);right:6px;font-size:clamp(20px,1.9vw,27px);font-weight:900;letter-spacing:.02em;line-height:1;color:rgba(214,228,225,.32);font-family:Arial Narrow,Arial,sans-serif;pointer-events:none}
+.th.pair .pg{background:#4ADE80;color:#0B2A17;align-self:flex-end;margin-inline-end:12%}
+.th.pair .po{background:#F2885C;color:#2A1208;margin-inline-start:4%;opacity:0;animation:poIn .6s cubic-bezier(.2,.8,.2,1) 1.25s forwards}
+.th.pair .po small{bottom:auto;top:calc(100% - 4px)}
+@keyframes poIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.ld-art .th.t1{animation-delay:1.9s,2.6s}
+.ld-art .th.t3{top:38%;animation-delay:2.4s,3.1s}
+.ld-art .th.t4{top:44%;animation-delay:2.9s,3.6s}
+@media (prefers-reduced-motion:reduce){.th.pair .po{animation:none;opacity:1}}
+/* v80b: the pair sits in the middle, larger */
+.ld-art .th.t2.pair{left:14%;right:14%;max-width:none;top:14%}
+.ld-art .th.t2.pair span.pp{align-items:stretch;gap:20px}
+.th.pair i{font-size:clamp(18px,1.6vw,22px);padding:9px 20px;text-align:center}
+.th.pair .pg{align-self:flex-start;margin-inline-end:0;margin-inline-start:0}
+.th.pair .po{align-self:flex-end;margin-inline-start:0}
+.th.pair i small{font-size:clamp(22px,2.1vw,30px)}
+.ld-art .th.t3{left:-5%;max-width:46%}
+/* v80c: these bubbles only bob; another thFloat later in the file pulled them sideways */
+@keyframes thBob{0%,100%{translate:0}50%{translate:0 -6px}}
+.ld-art .th{animation-name:thIn,thBob}
+.ld-art .th.t1{right:-2%}.ld-art .th.t4{right:-3%}
+/* ===== v81: one language - one main thought, three questions about the others ===== */
+.ld-art .th.t2.main{top:15%;left:12%;right:12%;max-width:none;animation-delay:.5s,1.2s}
+.ld-art .th.t2.main span{background:#BEF264;color:#0F2A12;font-size:clamp(16px,1.4vw,19px);font-weight:900;text-align:center;padding:12px 20px;border-radius:24px}
+.ld-art .th.t1,.ld-art .th.t3,.ld-art .th.t4{max-width:46%}
+.ld-art .th.t1 span,.ld-art .th.t3 span,.ld-art .th.t4 span{background:rgba(244,250,247,.95);color:#13221F;font-size:14.5px;font-weight:800;padding:9px 15px;white-space:nowrap}
+.ld-art .th.t1{top:4%;right:-2%;animation-delay:1.6s,2.3s}
+.ld-art .th.t3{top:33%;left:-4%;animation-delay:2.1s,2.8s}
+.ld-art .th.t4{top:40%;right:-3%;animation-delay:2.6s,3.3s}
+@media (max-height:720px){.ld-art .th.t1 span,.ld-art .th.t3 span,.ld-art .th.t4 span{font-size:13px}}
+/* v81b: every thought on one line */
+.ld-art .th.t2.main{left:4%;right:4%;display:flex;justify-content:center}
+.ld-art .th.t2.main span{white-space:nowrap;font-size:clamp(15.5px,1.3vw,18px)}
+.ld-art .th.t1,.ld-art .th.t3,.ld-art .th.t4{max-width:none}
+.ld-art .th.t3{left:-3%}
+/* ===== Market Pulse logo system =====
+   .nbl            wordmark + pulse, tagline underneath (size with --nb)
+   .nbl--center    centred lockup
+   .nbl--light     for light backgrounds
+   the pulse: a monitor sweep (2.4s), a double beat on the R peak, a slow breath (4.8s) */
+.nbl{--nb:20px;--nb-ink:#F4FAF7;--nb-sub:#B9CEC8;--nb-pulse:#FB7185;--nb-glow:rgba(251,113,133,.7);display:inline-grid;grid-template-columns:auto auto;align-items:center;column-gap:.5em;row-gap:.12em;direction:rtl;font-size:var(--nb);line-height:1.25;color:var(--nb-ink);text-align:start;vertical-align:middle}
+.nbl--center{justify-content:center;justify-items:center;text-align:center}
+.nbl--light{--nb-ink:#13221F;--nb-sub:#52605C;--nb-pulse:#E11D48;--nb-glow:rgba(225,29,72,.4)}
+.nbl > b{display:block;font-size:1em;font-weight:900;letter-spacing:.02em;white-space:nowrap;color:var(--nb-ink);margin:0}
+.nbl > small{grid-column:1/-1;display:block;font-size:.6em;font-weight:500;letter-spacing:0;white-space:nowrap;color:var(--nb-sub);margin:0}
+.nbl--center > small{justify-self:center}
+.nbl .nbp{display:block;width:3.3em;height:.75em;overflow:visible;animation:nbBreath 4.8s ease-in-out infinite}
+.nbl .nbp path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.nbl .nbp .base{stroke:var(--nb-pulse);stroke-opacity:.3;stroke-width:1.6}
+.nbl .nbp .trace{stroke:var(--nb-pulse);stroke-width:2.3;stroke-dasharray:22 100;stroke-dashoffset:122;animation:nbSweep 2.4s linear infinite}
+.nbl .nbp .beat{fill:#FFE4E8;transform-box:fill-box;transform-origin:center;opacity:0;animation:nbLub 2.4s ease-out infinite}
+@keyframes nbSweep{to{stroke-dashoffset:0}}
+@keyframes nbLub{0%,40%{opacity:0;transform:scale(.4)}45%{opacity:1;transform:scale(1.7)}51%{opacity:.55;transform:scale(.9)}57%{opacity:1;transform:scale(1.35)}74%,100%{opacity:0;transform:scale(.5)}}
+@keyframes nbBreath{0%,100%{filter:drop-shadow(0 0 1.5px var(--nb-glow))}50%{filter:drop-shadow(0 0 6px var(--nb-glow))}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp,.nbl .nbp .trace,.nbl .nbp .beat{animation:none}.nbl .nbp .trace{stroke-dasharray:none;stroke-dashoffset:0}.nbl .nbp .beat{opacity:1}}
+/* logo v2: the pulse carries the same weight as the wordmark at every size */
+.nbl .nbp{width:3em;height:1.05em}
+.nbl .nbp .base{stroke-opacity:.5;stroke-width:calc(var(--nb) * .085)}
+.nbl .nbp .trace{stroke-width:calc(var(--nb) * .12);stroke-dasharray:26 100}
+.nbl .nbp .beat{r:3.6px}
+/* ===== logo v3: Fibonacci proportions, the line breathes on its peak =====
+   wordmark 1em · tagline 0.618em · gap 0.382em · row gap 0.236em · pulse 2.618em x 1em (89 x 34)
+   one beat = 2.1s: a 34-long trail and a 13-long head run the line; when the head crosses the
+   peak (about 18% of the beat) the whole line inhales, then exhales. */
+.nbl{column-gap:.382em;row-gap:.236em}
+.nbl > small{font-size:.618em}
+.nbl .nbp{width:2.618em;height:1em;transform-origin:62% 62%;animation:nbInhale 2.1s cubic-bezier(.4,0,.2,1) infinite}
+.nbl .nbp .base{stroke:var(--nb-pulse);stroke-opacity:.42;stroke-width:calc(var(--nb) * .09);animation:nbBase 2.1s cubic-bezier(.4,0,.2,1) infinite}
+.nbl .nbp .tail{fill:none;stroke:var(--nb-pulse);stroke-opacity:.55;stroke-width:calc(var(--nb) * .11);stroke-dasharray:34 87;stroke-dashoffset:121;animation:nbRun 2.1s linear infinite}
+.nbl .nbp .trace{stroke:#FFD5DC;stroke-width:calc(var(--nb) * .13);stroke-dasharray:13 108;stroke-dashoffset:100;animation:nbHead 2.1s linear infinite}
+.nbl .nbp .beat{display:none}
+@keyframes nbRun{from{stroke-dashoffset:121}to{stroke-dashoffset:0}}
+@keyframes nbHead{from{stroke-dashoffset:100}to{stroke-dashoffset:-21}}
+@keyframes nbInhale{0%,8%{transform:scale(1);filter:drop-shadow(0 0 1px var(--nb-glow))}18%{transform:scale(1.09);filter:drop-shadow(0 0 7px var(--nb-glow)) drop-shadow(0 0 2px var(--nb-glow))}47%,100%{transform:scale(1);filter:drop-shadow(0 0 1px var(--nb-glow))}}
+@keyframes nbBase{0%,8%{stroke-opacity:.42}18%{stroke-opacity:.95}47%,100%{stroke-opacity:.42}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp,.nbl .nbp .base,.nbl .nbp .tail,.nbl .nbp .trace{animation:none}.nbl .nbp .tail,.nbl .nbp .trace{display:none}.nbl .nbp .base{stroke-opacity:1}}
+/* ===== golden grid in the illustrations =====
+   intro art: the main thought sits on the 23.6% line, the two side questions on the 38.2% line,
+   the top question on 9% (0.382 x 0.236); the game cards are 55 x 89 and fan out by 34px */
+.ld-art .th.t1{top:9%}
+.ld-art .th.t2.main{top:23.6%;transform-origin:center}
+.ld-art .th.t2.main{translate:0 -50%}
+.ld-art .th.t3{top:38.2%}
+.ld-art .th.t4{top:38.2%}
+.gbc{width:55px;height:89px;left:84px;top:17px;border-radius:8px}
+.gbc::before{border-radius:5px}
+.gbc u{font-size:34px}
+.gbc .gbc-ic{top:5px;right:5px}
+.gbc.c1{transform:translateX(55px) rotate(8deg)}
+.gbc.c3{transform:translateX(-55px) rotate(-8deg)}
+@keyframes gbF1{50%{transform:translateX(55px) translateY(-5px) rotate(9deg)}}
+@keyframes gbF3{50%{transform:translateX(-55px) translateY(-5px) rotate(-9deg)}}
+.ld-game.gb:hover .gbc.c1{transform:translateX(63px) translateY(-3px) rotate(13deg)}
+.ld-game.gb:hover .gbc.c3{transform:translateX(-63px) translateY(-3px) rotate(-13deg)}
+.gb-cards{width:222px;height:123px}
+/* logo v3b: inhale exactly when the head crosses the R peak (measured at 25% of the beat) */
+@keyframes nbInhale{0%,13%{transform:scale(1);filter:drop-shadow(0 0 1px var(--nb-glow))}25%{transform:scale(1.09);filter:drop-shadow(0 0 7px var(--nb-glow)) drop-shadow(0 0 2px var(--nb-glow))}55%,100%{transform:scale(1);filter:drop-shadow(0 0 1px var(--nb-glow))}}
+@keyframes nbBase{0%,13%{stroke-opacity:.42}25%{stroke-opacity:.95}55%,100%{stroke-opacity:.42}}
+/* golden grid b: centre each thought on its line (thBob owns `translate`, so centre with margins) */
+.ld-art .th.t2.main{translate:none;margin-top:-28px}
+.ld-art .th.t1,.ld-art .th.t3,.ld-art .th.t4{margin-top:-22px}
+/* ===== logo v4: heart monitor =====
+   static: one even line on the wordmark's centre line, so the lockup always reads balanced.
+   motion (1.3s, about 46 beats a minute): the line is drawn from the right; when the pen reaches the
+   peak it beats twice (lub-dub) as a short glow, then the line fades and is drawn again.
+   nothing moves or scales, so the lockup never shifts. */
+.nbl{column-gap:.382em;row-gap:.236em;align-items:center}
+.nbl > small{font-size:.618em}
+.nbl .nbp{width:2.618em;height:1em;align-self:center;overflow:visible;animation:none;transform:none;filter:none}
+.nbl .nbp path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-width:calc(var(--nb) * .1)}
+.nbl .nbp .base{stroke:var(--nb-pulse);stroke-opacity:.32;animation:none}
+.nbl .nbp .draw{stroke:var(--nb-pulse);stroke-dasharray:100 100;stroke-dashoffset:100;animation:nbDraw 1.3s linear infinite,nbBeat 1.3s linear infinite}
+.nbl .nbp .tail,.nbl .nbp .trace,.nbl .nbp .beat{display:none}
+@keyframes nbDraw{0%{stroke-dashoffset:100;opacity:1}55%{stroke-dashoffset:0;opacity:1}62%{stroke-dashoffset:0;opacity:1}88%,100%{stroke-dashoffset:0;opacity:0}}
+@keyframes nbBeat{0%,24%{filter:none}27%{filter:drop-shadow(0 0 calc(var(--nb) * .3) var(--nb-glow))}30%{filter:drop-shadow(0 0 calc(var(--nb) * .08) var(--nb-glow))}33%{filter:drop-shadow(0 0 calc(var(--nb) * .22) var(--nb-glow))}42%,100%{filter:drop-shadow(0 0 calc(var(--nb) * .06) var(--nb-glow))}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp .draw{animation:none;stroke-dashoffset:0}.nbl .nbp .base{stroke-opacity:0}}
+/* ===== logo v5: lub-dub =====
+   one calm line; the first beat (lub, on the golden point 55/89) lands hard, the second (dub, on 34/89)
+   follows softer 0.23s later, then the heart rests. 1.3s a beat. Nothing moves or resizes. */
+.nbl .nbp path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke:var(--nb-pulse);stroke-width:calc(var(--nb) * .1)}
+.nbl .nbp .base{stroke-opacity:.55;animation:none}
+.nbl .nbp .draw{display:none}
+.nbl .nbp .lub,.nbl .nbp .dub{stroke-opacity:.9}
+.nbl .nbp .lub{animation:nbLub 1.3s cubic-bezier(.2,.7,.3,1) infinite}
+.nbl .nbp .dub{animation:nbDub 1.3s cubic-bezier(.2,.7,.3,1) infinite}
+@keyframes nbLub{
+  0%{stroke:#FFE1E6;stroke-opacity:1;stroke-width:calc(var(--nb) * .16);filter:drop-shadow(0 0 calc(var(--nb) * .32) var(--nb-glow))}
+  16%{stroke:var(--nb-pulse);stroke-opacity:.9;stroke-width:calc(var(--nb) * .1);filter:drop-shadow(0 0 calc(var(--nb) * .06) var(--nb-glow))}
+  100%{stroke:var(--nb-pulse);stroke-opacity:.9;stroke-width:calc(var(--nb) * .1);filter:drop-shadow(0 0 0 transparent)}}
+@keyframes nbDub{
+  0%,15%{stroke:var(--nb-pulse);stroke-opacity:.9;stroke-width:calc(var(--nb) * .1);filter:drop-shadow(0 0 0 transparent)}
+  18%{stroke:#FFC9D2;stroke-opacity:1;stroke-width:calc(var(--nb) * .14);filter:drop-shadow(0 0 calc(var(--nb) * .2) var(--nb-glow))}
+  32%,100%{stroke:var(--nb-pulse);stroke-opacity:.9;stroke-width:calc(var(--nb) * .1);filter:drop-shadow(0 0 0 transparent)}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp .lub,.nbl .nbp .dub{animation:none}}
+/* ===== logo v6: the wave comes, the heart beats, the wave goes =====
+   2.6s a cycle. 0-42%: a soft light walks in from the right, slow then gathering.
+   42-62%: it reaches the spike; the spike jumps from its baseline twice (lub-dub) and glows.
+   62-80%: the light walks out to the left and fades. 80-100%: rest.
+   the spike scales only from its own baseline, so the line never tilts or shifts. */
+.nbl .nbp path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke:var(--nb-pulse);stroke-width:calc(var(--nb) * .1);filter:none}
+.nbl .nbp .base{stroke-opacity:.5;animation:none}
+.nbl .nbp .lub,.nbl .nbp .dub,.nbl .nbp .draw,.nbl .nbp .tail,.nbl .nbp .trace,.nbl .nbp .beat{display:none}
+.nbl .nbp .wave{stroke:#FFD7DE;stroke-width:calc(var(--nb) * .13);stroke-dasharray:22 400;stroke-dashoffset:22;opacity:0;
+  filter:drop-shadow(0 0 calc(var(--nb) * .18) var(--nb-glow));animation:nbWave 2.6s infinite}
+.nbl .nbp .qrs{stroke-opacity:.85;transform-box:view-box;transform-origin:34px 17px;animation:nbJump 2.6s infinite}
+@keyframes nbWave{
+  0%{stroke-dashoffset:22;opacity:0;animation-timing-function:cubic-bezier(.45,0,.6,1)}
+  6%{opacity:1}
+  42%{stroke-dashoffset:-44;opacity:1;animation-timing-function:linear}
+  60%{stroke-dashoffset:-50;opacity:.35;animation-timing-function:cubic-bezier(.3,0,.5,1)}
+  64%{opacity:1}
+  80%{stroke-dashoffset:-100;opacity:0}
+  100%{stroke-dashoffset:-100;opacity:0}}
+@keyframes nbJump{
+  0%,40%{transform:scaleY(1);stroke:var(--nb-pulse);stroke-opacity:.85;filter:none}
+  45%{transform:scaleY(1.32);stroke:#FFE1E6;stroke-opacity:1;filter:drop-shadow(0 0 calc(var(--nb) * .28) var(--nb-glow))}
+  50%{transform:scaleY(.82);stroke:var(--nb-pulse)}
+  55%{transform:scaleY(1.14);stroke:#FFD0D8;filter:drop-shadow(0 0 calc(var(--nb) * .16) var(--nb-glow))}
+  62%,100%{transform:scaleY(1);stroke:var(--nb-pulse);stroke-opacity:.85;filter:none}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp .wave,.nbl .nbp .qrs{animation:none}.nbl .nbp .wave{display:none}}
+/* logo v6b: wave timed on the measured spike entry (62.1% of the line length) */
+@keyframes nbWave{
+  0%{stroke-dashoffset:22;opacity:0;animation-timing-function:cubic-bezier(.45,0,.55,1)}
+  6%{opacity:1}
+  42%{stroke-dashoffset:-40;opacity:1;animation-timing-function:ease-out}
+  50%{stroke-dashoffset:-41;opacity:.15}
+  58%{stroke-dashoffset:-60;opacity:0}
+  62%{stroke-dashoffset:-62;opacity:1;animation-timing-function:cubic-bezier(.3,0,.6,1)}
+  82%{stroke-dashoffset:-100;opacity:0}
+  100%{stroke-dashoffset:-100;opacity:0}}
+/* ===== v87: the guess - a compact card, the chart in the middle, answers as a staircase ===== */
+#fQ .qpanel{text-align:center}
+#fQ .qpanel .q-kick,#fQ .qpanel .q-h2{text-align:center;margin-inline:auto}
+#fQ .qgrid.qstack{display:block}
+.gcard.g3{display:block;max-width:470px;margin:14px auto 0;padding:18px 22px 20px;text-align:center}
+.g3-k{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#A7BDB6}
+.g3-k b{padding:1px 11px;border-radius:999px;background:#BEF264;color:#0F2A12;font-weight:900}
+.g3-q{display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0 0;font-size:clamp(21px,1.9vw,26px);font-weight:900;line-height:1.35;color:#F4FAF7}
+.g3-q em{font-style:normal;color:#BEF264}
+.g3-q .qi{flex:0 0 40px;height:40px;border-radius:12px}
+.g3-q .qi .ic svg{width:22px;height:22px}
+.g3-sub{margin:4px 0 0;font-size:13px;color:#A7BDB6}
+.g3-viz{display:flex;justify-content:center;gap:34px;align-items:flex-end;margin-top:16px}
+.g3-viz .g2-col{width:96px}
+.g3-viz .g2-track{height:170px}
+.g3-viz .g2-bar{border-radius:12px 12px 0 0}
+.g3-viz .g2-bar.old b{position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);font-size:13px;font-weight:800;color:#A7BDB6;white-space:nowrap}
+.g3-viz .g2-bar.now b{font-size:17px}
+.g3-viz .g2-col small{font-size:12.5px}
+.g3-st{display:flex !important;align-items:flex-end;justify-content:center;gap:8px;margin-top:18px;grid-template-columns:none}
+.g3-st .gopt{flex:0 0 74px;min-height:0 !important;padding:0 0 8px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:0;border-radius:12px 12px 8px 8px;transition:transform .2s,background .2s,border-color .2s}
+.g3-st .gopt:hover{transform:translateY(-3px)}
+.g3-st .gopt b{font-size:15px;line-height:1.3;direction:ltr;unicode-bidi:isolate}
+.g3-st .gopt small{font-size:11px;line-height:1.3}
+#fQ .q-go2{justify-content:center;gap:16px;max-width:470px;margin:14px auto 0}
+#fQ #qDone{display:none}
+#fQ #gNext:disabled,#fQ #fReveal:disabled{opacity:.4}
+@media (max-height:800px){.g3-viz .g2-track{height:140px}.g3-viz{margin-top:12px}.g3-st{margin-top:14px}.gcard.g3{padding:14px 20px 16px}.g3-q{margin-top:7px}}
+.g3-st .gopt b{direction:rtl}
+/* v87b: room above the chart for the value label at "2x" */
+.g3-viz{margin-top:34px !important}
+/* ===== v88: market page - space, one type scale, centred CTA, trust beside the claim =====
+   type scale (major third, x1.25): 12 · 14 · 17.5 · 22 · 27 · 34
+   spacing (8px grid): header -> cards 24 · cards -> tally 16 · tally -> takeaway 16 · takeaway -> CTA 24 */
+#fReal .gstage{font-size:12px;margin:0}
+#fReal .gstage b{font-size:12px}
+#fReal .q-kick{font-size:34px;line-height:1.3;margin:8px 0 0}
+#fReal .r-src{display:flex;align-items:center;gap:8px;margin:6px 0 0;font-size:14px;color:#A7BDB6}
+#fReal .r-src i{flex:none;width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:youP 2s ease-in-out infinite}
+#fReal .r-src b{font-size:14px;font-weight:900;color:#F4FAF7;letter-spacing:.2px}
+#fReal .rstack{margin-top:24px !important;gap:12px}
+#fReal .fc{padding:12px 12px 12px}
+#fReal .fc-h b{font-size:17.5px}
+#fReal .fc-plot{height:96px !important;margin-top:8px}
+#fReal .fc-bar em{font-size:17.5px}
+#fReal .fc-l small{font-size:12px}
+#fReal .fc-f{min-height:0 !important;margin-top:8px}
+#fReal .fc-res{padding:10px 8px !important}
+#fReal .fc-res .w{font-size:12px;padding:2px 12px}
+#fReal .fc-res b{font-size:27px !important;margin-top:4px;line-height:1.2}
+#fReal .fc-res i{font-size:12px;font-style:normal}
+#fReal .rsum{margin-top:16px;min-height:0;font-size:14px;justify-content:center}
+#fReal .rsum b{font-size:14px}
+#fReal .rsum .far{font-size:14px}
+#fReal .r-go{display:flex;flex-direction:column;align-items:center;margin-top:16px !important;gap:0}
+#fReal .r-why{width:100%;padding:14px 20px;text-align:start}
+#fReal .r-why strong{font-size:22px !important;line-height:1.35}
+#fReal .r-why > b{font-size:14px !important;margin-top:4px;line-height:1.7}
+#fReal #fYes{margin-top:24px;align-self:center;font-size:17.5px;padding:12px 32px}
+@media (max-height:800px){#fReal .q-kick{font-size:30px}#fReal .rstack{margin-top:20px !important}#fReal .fc-plot{height:84px !important}#fReal .fc-res b{font-size:22px !important}#fReal .rsum{margin-top:12px}#fReal .r-go{margin-top:12px !important}#fReal #fYes{margin-top:20px}}
+/* v88b: room above each card's bars for the top value label */
+#fReal .fc-plot{margin-top:30px !important}
+@media (max-height:800px){#fReal .fc-plot{margin-top:28px !important}#fReal .rstack{margin-top:18px !important}}
+/* ===== v89: the gate to round 2 ===== */
+#fReal .r-go{margin-top:20px !important}
+.r-next{position:relative;width:100%;padding:18px 24px 22px;border-radius:22px;text-align:center;overflow:hidden;
+  background:radial-gradient(90% 120% at 50% 0%,rgba(190,242,100,.16),rgba(190,242,100,0) 60%),linear-gradient(180deg,#123532,#0C2423);
+  border:1.5px solid rgba(190,242,100,.55);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.rn-track{display:flex;align-items:center;justify-content:center;gap:14px}
+.rn-st{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 16px;border-radius:14px;min-width:190px}
+.rn-st small{font-size:12px;font-weight:800;color:#A7BDB6}
+.rn-st.done{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12)}
+.rn-st.next{border:1.5px dashed rgba(190,242,100,.7);background:rgba(190,242,100,.06);animation:rnNext 2.4s ease-in-out infinite}
+.rn-st.next small{color:#BEF264}
+@keyframes rnNext{50%{box-shadow:0 0 0 5px rgba(190,242,100,.1)}}
+#fReal .rn-st .rsum{margin:0 !important;min-height:0;gap:8px;font-size:14px;justify-content:center}
+#fReal .rn-st .rsum .far{display:none}
+#fReal .rn-st .rsum b{font-size:14px}
+.rn-q{display:inline-flex;align-items:center;gap:5px}
+.rn-q i{width:14px;height:14px;border-radius:50%;border:1.5px dashed #BEF264}
+.rn-q b{margin-inline-start:4px;font-size:14px;font-weight:900;color:#F4FAF7}
+.rn-arrow{position:relative;width:46px;height:2px;background:repeating-linear-gradient(270deg,#BEF264 0 6px,transparent 6px 11px);animation:perF 1.1s linear infinite}
+.rn-arrow i{position:absolute;left:-2px;top:-5px;border:6px solid transparent;border-right-color:#BEF264;border-left:0}
+.rn-h{display:block;margin-top:14px;font-size:27px;font-weight:900;line-height:1.35;color:#F4FAF7}
+.rn-s{margin:4px 0 0;font-size:17.5px;font-weight:700;color:#D6E4E1}
+.rn-s em{font-style:normal;color:#BEF264;font-weight:900}
+#fReal .r-next #fYes{margin-top:16px}
+@media (max-height:800px){.r-next{padding:14px 22px 18px}.rn-h{margin-top:10px;font-size:24px}.rn-s{font-size:16px}#fReal .r-next #fYes{margin-top:12px}#fReal .r-go{margin-top:16px !important}}
+@media (prefers-reduced-motion:reduce){.rn-st.next,.rn-arrow{animation:none}}
+/* ===== v90: round-1 scoreboard - a token per card, green close, red far ===== */
+.rn-st.done{padding:8px 14px 10px;min-width:0}
+#fReal .rn-st .rsum{display:flex;align-items:center;gap:14px}
+.sct{display:inline-flex;gap:6px}
+.sc-t{display:flex;flex-direction:column;align-items:center;gap:2px;width:58px;padding:6px 0 5px;border-radius:12px;font-style:normal}
+.sc-t .ic-w{display:grid;place-items:center;width:28px;height:28px;border-radius:50%}
+.sc-t .ic svg{width:16px;height:16px}
+.sc-t em{font-style:normal;font-size:11px;font-weight:800;line-height:1.2;white-space:nowrap}
+.sc-t.ok{background:rgba(74,222,128,.14);border:1px solid rgba(74,222,128,.5)}
+.sc-t.ok .ic-w{background:#4ADE80;color:#0B2A17}
+.sc-t.ok em{color:#86EFAC}
+.sc-t.no{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.55)}
+.sc-t.no .ic-w{background:#EF4444;color:#fff}
+.sc-t.no em{color:#FCA5A5}
+.sc-n{display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.sc-n small{font-size:12px;font-weight:700;color:#A7BDB6}
+.sc-n b{font-size:22px !important;font-weight:900;color:#F4FAF7;white-space:nowrap}
+#fReal .rsum.go .sc-t{animation:scIn .45s cubic-bezier(.2,.9,.25,1.3) both}
+#fReal .rsum.go .sc-t:nth-child(2){animation-delay:.12s}
+#fReal .rsum.go .sc-t:nth-child(3){animation-delay:.24s}
+@keyframes scIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.rn-st.next{align-self:stretch;justify-content:center}
+.rn-q i{width:28px;height:28px}
+.rn-q b{font-size:22px}
+@media (prefers-reduced-motion:reduce){#fReal .rsum.go .sc-t{animation:none}}
+/* v90b: win back ~40px on short screens so nothing rides up under the top bar */
+@media (max-height:800px){
+  #fReal .fc-plot{height:70px !important;margin-top:26px !important}
+  #fReal .fc{padding:10px 10px}
+  #fReal .fc-f{margin-top:6px}
+  #fReal .fc-res{padding:7px 8px !important}
+  #fReal .rstack{margin-top:16px !important}
+  #fReal .r-go{margin-top:14px !important}
+  .r-next{padding:10px 20px 14px}
+  .rn-st.done{padding:6px 12px 7px}
+  .sc-t{padding:4px 0 3px;width:54px}
+  .sc-t .ic-w{width:24px;height:24px}
+  .rn-q i{width:24px;height:24px}
+  .rn-h{margin-top:8px;font-size:22px}
+  .rn-s{font-size:15px;margin-top:2px}
+  #fReal .r-next #fYes{margin-top:10px;padding:10px 30px}
+}
+/* ===== v91: the about document, one piece - the story plus the product document ===== */
+.ab-toc{position:sticky;top:0;z-index:3;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 calc(50% - 50vw);padding:10px 16px;background:rgba(10,23,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.ab-toc a{padding:4px 12px;border-radius:999px;font-size:13px;font-weight:700;color:#D6E4E1;text-decoration:none;border:1px solid rgba(255,255,255,.12)}
+.ab-toc a:hover{color:#10292B;background:#BEF264;border-color:#BEF264}
+.about section{scroll-margin-top:60px}
+.about h2{display:flex;align-items:center;gap:10px;font-size:22px !important;color:#F4FAF7 !important;margin-bottom:14px !important}
+.about h2 i{font-style:normal;font-size:14px;font-weight:900;color:#10292B;background:#BEF264;border-radius:8px;padding:1px 8px}
+.about h3{margin:22px 0 10px;font-size:17.5px;font-weight:900;color:#BEF264}
+.ab-quote{margin:14px 0 !important;padding:12px 18px;border-inline-start:4px solid #BEF264;background:rgba(190,242,100,.06);font-size:18.5px !important;font-weight:800;color:#F4FAF7 !important}
+.ab-note{font-size:15px !important;line-height:1.9 !important;color:#B9CEC8 !important}
+.ab-note b{color:#F4FAF7}
+.ab-g4{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ab-g4 div{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.ab-g4 b{display:block;font-size:16px;font-weight:900;color:#F4FAF7}
+.ab-g4 span{display:block;margin-top:2px;font-size:14px;line-height:1.8;color:#B9CEC8}
+.ab-defs{list-style:none;margin:0;padding:0;display:grid;gap:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.ab-defs li{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:10px 16px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ab-defs li:last-child{border-bottom:0}
+.ab-defs b{font-weight:900;color:#BEF264}.ab-defs span{color:#D6E4E1}
+.ab-dims{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.ab-dims div{text-align:center;padding:14px 8px;border-radius:14px;background:rgba(190,242,100,.08);border:1px solid rgba(190,242,100,.3)}
+.ab-dims b{display:block;font-size:30px;font-weight:900;color:#BEF264;line-height:1.2}
+.ab-dims span{font-size:13.5px;color:#D6E4E1}
+.ab-chips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ab-chips li{padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-size:13.5px;color:#B9CEC8}
+.ab-chips b{display:block;font-size:15px;font-weight:900;color:#F4FAF7}
+.ab-steps{list-style:none;margin:16px 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;counter-reset:abs}
+.ab-steps li{position:relative;padding:16px 14px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);counter-increment:abs}
+.ab-steps li::before{content:counter(abs,persian);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#BEF264;color:#10292B;font-weight:900;font-size:14px;margin-bottom:8px}
+.ab-steps b{display:block;font-size:15.5px;font-weight:900;color:#F4FAF7}
+.ab-steps span{display:block;margin-top:4px;font-size:14px;line-height:1.8;color:#B9CEC8}
+.ab-together .ab-stats{margin-top:18px}
+.ab-faq{display:grid;gap:8px}
+.ab-faq details{border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:0 16px}
+.ab-faq summary{cursor:pointer;list-style:none;padding:13px 0;font-size:16px;font-weight:800;color:#F4FAF7;display:flex;justify-content:space-between;gap:12px}
+.ab-faq summary::-webkit-details-marker{display:none}
+.ab-faq summary::after{content:'+';color:#BEF264;font-weight:900}
+.ab-faq details[open] summary::after{content:'−'}
+.ab-faq details p{margin:0 0 14px !important;font-size:15px !important;line-height:1.9 !important;color:#D6E4E1 !important}
+@media (max-width:700px){.ab-g4,.ab-chips,.ab-steps{grid-template-columns:1fr}.ab-dims{grid-template-columns:1fr 1fr}.ab-defs li{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body class="hookpage">
 
 <header class="topbar">
   <div class="wrap">
-    <div class="nb-lock top"><div class="t"><b>نبض بازار</b><small>پژوهش زنده بازار غذا و نوشیدنی</small></div><svg class="nb-pulse" viewBox="0 0 132 30" aria-hidden="true"><path class="base" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><path class="trace" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><circle class="beat" cx="58" cy="15" r="2.6"/></svg></div>
+    <div class="nbl" style="--nb:18px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
     <div class="spacer"></div>
   </div>
 </header>
@@ -2508,8 +2918,7 @@ body.in-panel .ab-foot{display:none}
         </div>
         <div class="kv2-fade" aria-hidden="true"></div>
         <header class="kv2-head">
-          <div class="kv2-logo"><b>نبض بازار</b><svg class="nb-pulse" viewBox="0 0 132 30" aria-hidden="true"><path class="base" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><path class="trace" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><circle class="beat" cx="58" cy="15" r="2.6"/></svg></div>
-          <small>پژوهش زنده بازار غذا و نوشیدنی</small>
+          <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
           <h1>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h1>
         </header>
         <div class="kv2-act">
@@ -2527,23 +2936,26 @@ body.in-panel .ab-foot{display:none}
         <div class="st-bg" aria-hidden="true"></div>
         <div class="ld-copy">
           <button class="backl" data-prev>→ قبلی</button>
-          <div class="ld-logo"><b>نبض بازار</b><svg class="nb-pulse" viewBox="0 0 132 30" aria-hidden="true"><path class="base" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><path class="trace" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><circle class="beat" cx="58" cy="15" r="2.6"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
-          <h1>وضع بازار چطور است؟<br><em>و من کجای این بازارم؟</em></h1>
-          <p class="ld-lead"><b>در بازاری که ثبات ندارد، دانستن عملکرد خودتان به‌تنهایی کافی نیست.</b><span>نبض بازار نشان می‌دهد فروش، سفارش، قیمت منو و سبد خرید در صنف و شهر شما چه تغییری کرده و مجموعه شما کجای این بازار ایستاده است.</span></p>
-          <div class="ld-game">
-            <div class="lg-top"><div class="lg-tx"><b>بیایید با یک بازی ساده شروع کنیم</b><span>لطفاً اول بگویید مجموعه شما نسبت به پارسال چه تغییری کرده است.</span></div>
-              <div class="lg-toks" aria-hidden="true"><i class="ldt"><span data-ic="users"></span><u>؟</u></i><i class="ldt"><span data-ic="tag"></span><u>؟</u></i><i class="ldt"><span data-ic="cash"></span><u>؟</u></i></div></div>
-            <div class="lg-go"><button class="btn primary big" id="fStart">حدس بزنم <i>←</i></button><small>سه سؤال ساده: مشتری، قیمت منو، دخل صندوق</small></div>
+          <div class="nbl" style="--nb:20px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+          <h1>وضع <span class="hl h1w">بقیه</span> بازار چطور است؟<br><em>و <span class="hl h2w">من</span> کجای این بازارم؟</em></h1>
+          <p class="ld-lead"><b>در بازاری که ثبات ندارد، دانستن عملکرد خودتان به‌تنهایی کافی نیست.</b><span>نبض بازار پژوهشی زنده از فاکتورهای ناشناس مجموعه‌هاست. فروش، سفارش، قیمت منو و سبد خرید صنف و شهرتان را کنار عددهای خودتان می‌بینید. <button type="button" class="ld-about" id="ldAbout">درباره نبض بازار ←</button></span></p>
+          <div class="ld-game gb">
+            <div class="gb-tx">
+              <span class="gb-kick"><i></i>یک بازی کوتاه · یک دقیقه · ۳ حدس</span>
+              <b class="gb-t">فکر می‌کنید به بازار <em>نزدیکید</em> یا <em>دور</em>؟</b>
+              <button class="gb-go" id="fStart">بازی را شروع کنم <i>←</i></button>
+            </div>
+            <div class="gb-cards" aria-hidden="true"><i class="gbc c1"><span class="gbc-ic" data-ic="users"></span><u>؟</u><em>مشتری</em></i><i class="gbc c2"><span class="gbc-ic" data-ic="tag"></span><u>؟</u><em>قیمت منو</em></i><i class="gbc c3"><span class="gbc-ic" data-ic="cash"></span><u>؟</u><em>دخل صندوق</em></i></div>
           </div>
           <button class="ld-direct" type="button" id="fDirect">آشنا هستم؛ مستقیم درخواست اتصال می‌دهم ←</button>
           <button class="ld-film" type="button"><span>▶</span> فیلم کوتاه معرفی · ۶۰ ثانیه</button>
         </div>
         <figure class="ld-art" aria-label="سرآشپزی که به خیابان کافه رستوران‌ها نگاه می‌کند و در فکر است">
           <div class="ld-img" aria-hidden="true"></div>
-          <div class="th t1"><span>فروش بالا رفته، سود چی؟</span></div>
-          <div class="th t2"><span>حس می‌کنم مشتری‌ام کمتر شده؛ برای بازار هم کم شده؟</span></div>
-          <div class="th t3"><span>من نسبت به بازار جلوترم یا عقب‌تر؟</span></div>
-          <div class="th t4"><span>قیمت من بیشتر بالا رفته یا بازار؟</span></div>
+          <div class="th t1"><span>مشتری بقیه هم کمتر شده؟</span></div>
+          <div class="th t2 main"><span>صندوقم پر است، اما مشتری‌ام کمتر شده.</span></div>
+          <div class="th t3"><span>قیمت منوی بقیه هم این‌قدر بالا رفته؟</span></div>
+          <div class="th t4"><span>دخل بقیه هم مثل من است؟</span></div>
           <i class="bub b1" aria-hidden="true"></i><i class="bub b2" aria-hidden="true"></i><i class="bub b3" aria-hidden="true"></i>
         </figure>
       </section>
@@ -2579,11 +2991,11 @@ body.in-panel .ab-foot{display:none}
         <div class="qpanel rpanel">
           <p class="gstage"><b>بازی حدس · مرحله ۱ از ۲</b> کل ایران</p>
           <p class="q-kick">حدس شما، در مقایسه با بازار کل ایران</p>
+          <p class="r-src"><i></i>بر پایه <b class="num" id="trustR">۱۷۸٬۷۹۴٬۷۲۹</b> فاکتور واقعی و ناشناس · مهر امسال نسبت به مهر پارسال</p>
           <h1 class="q-h2" id="fRealH">—</h1>
           <p class="q-sub2 r-sub">مهر امسال نسبت به مهر پارسال، در همه کافه رستوران‌های کشور.</p>
           <div class="rstack" id="rgrid"></div>
-                    <div class="rsum" id="rSum"></div>
-          <div class="r-go" id="fBridge"><div class="r-why"><strong id="rWhyT">&nbsp;</strong><b>اما بازار شما کل ایران نیست. با شهر و صنف خودتان چطور؟ نزدیک‌تر می‌شوید یا دورتر؟</b></div><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button><span class="r-trust"><i></i><span>شاخص اعتماد</span><b class="num" id="trustR">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور بررسی‌شده</span></span></div>
+                    <div class="r-go" id="fBridge"><div class="r-next"><div class="rn-track"><div class="rn-st done"><small>مرحله ۱ · کل ایران</small><div class="rsum" id="rSum"></div></div><span class="rn-arrow" aria-hidden="true"><i></i></span><div class="rn-st next"><small>مرحله ۲ · شهر و صنف شما</small><span class="rn-q" aria-label="هنوز بازی نشده"><i></i><i></i><i></i><b>؟ از ۳</b></span></div></div><strong class="rn-h">اما بازار شما کل ایران نیست.</strong><p class="rn-s">با شهر و صنف خودتان، <em>نزدیک‌تر</em> می‌شوید یا <em>دورتر</em>؟</p><span id="rWhyT" hidden></span><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button></div></div>
           <div class="final" id="fEndNo" hidden></div>
         </div>
       </section>
@@ -2850,27 +3262,94 @@ body.in-panel .ab-foot{display:none}
   <button type="button" class="ab-x" id="abX" aria-label="بستن">✕</button>
   <article class="ab-doc">
     <header class="ab-hero"><div class="ab-veil"></div><div class="ab-ht">
-      <p class="ab-brand">نبض بازار</p><p class="ab-sub">پژوهش زنده بازار غذا و نوشیدنی</p>
+      <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
       <h1>کاسبی بقیه چطور است؟</h1></div></header>
-    <section><h2>چرا این کار را کردیم</h2>
+    <nav class="ab-toc" aria-label="فصل‌های این سند"><a href="#ab1">چرا</a><a href="#ab2">چیست</a><a href="#ab3">بازار شما</a><a href="#ab4">چطور کار می‌کند</a><a href="#ab5">کار جمعی</a><a href="#ab6">اعتماد</a><a href="#ab7">پرسش‌ها</a></nav>
+
+    <section id="ab1"><h2><i>۰۱</i>چرا این کار را کردیم</h2>
       <p class="ab-lead">سال‌هاست این سؤال را از ما می‌پرسید.</p>
       <p>سؤال ساده‌ای نیست؛ پشت آن نگرانی واقعی کسانی است که هر روز صبح کرکره را بالا می‌دهند. فروش بالا رفته، اما چیزی سر جایش نیست. مشتری کمتر شده، و کسی نمی‌داند دلیلش کار خودش است یا حال بازار.</p>
       <p>در اقتصادی چنین پرنوسان، هیچ مجموعه‌ای به‌تنهایی نمی‌تواند بفهمد فشار از کجا می‌آید. و تا امروز، هیچ سازوکار جمعی هم برای جواب دادن به این سؤال وجود نداشت.</p></section>
-    <section><h2>چه ساختیم</h2>
-      <p>پژوهشی زنده روی بازار غذا و نوشیدنی: تصویری از بازار که از فاکتورهای واقعی و ناشناس ساخته می‌شود، بی‌آنکه هیچ مجموعه‌ای از کار مجموعه دیگر خبردار شود.</p>
+
+    <section id="ab2"><h2><i>۰۲</i>نبض بازار چیست</h2>
+      <p>نبض بازار پژوهشی زنده روی بازار غذا و نوشیدنی است. عملکرد مجموعه شما را، بر پایه فاکتورهای واقعی صندوق، کنار میانگین مجموعه‌های متصل بازار می‌گذارد و به عددهایتان زمینه می‌دهد: اگر فروش رشد یا افت کرده، معلوم می‌شود این تغییر نسبت به بازار چه معنایی دارد.</p>
+      <p class="ab-quote">در بازار بی‌ثبات، عددهای خودتان به‌تنهایی کافی نیستند؛ باید بدانید بازار در همان زمان چه مسیری رفته است.</p>
+      <h3>چهار پرسشی که جواب می‌دهد</h3>
+      <div class="ab-g4">
+        <div><b>افت واقعی</b><span>افت شما اختصاصی است، یا کل بازار افت کرده؟</span></div>
+        <div><b>رشد واقعی</b><span>رشد شما از بازار جلوتر بوده، یا فقط هم‌پای تورم؟</span></div>
+        <div><b>قیمت‌گذاری</b><span>رشد قیمت منوی شما، کنار بازار همان صنف و استان.</span></div>
+        <div><b>ارزش هر سفارش</b><span>مشتریان شما در هر سفارش بیشتر از بازار خرج می‌کنند یا کمتر؟</span></div>
+      </div>
+      <h3>چهار شاخص، با یک تعریف برای شما و بازار</h3>
+      <ul class="ab-defs">
+        <li><b>فروش</b><span>تغییر مبلغ کل فروش در بازه انتخابی</span></li>
+        <li><b>تعداد سفارش</b><span>تغییر تعداد فاکتورهای ثبت‌شده</span></li>
+        <li><b>قیمت منو</b><span>تغییر میانگین قیمت آیتم‌های فروخته‌شده منو</span></li>
+        <li><b>سبد خرید</b><span>تغییر میانگین ارزش هر سفارش</span></li>
+      </ul>
+      <p class="ab-note">همه شاخص‌ها درصد تغییرند. «اختلاف» فاصله رشد شما با رشد بازار است، به واحد درصد؛ اختلاف کمتر از یک واحد یعنی «هم‌تراز».</p></section>
+
+    <section id="ab3"><h2><i>۰۳</i>بازار شما، دقیق‌تر از همیشه</h2>
+      <p>هر ویترین این خیابان یک بازار است. نبض بازار، بازار را در چهار بُعد تفکیک می‌کند تا شما با همان بازاری سنجیده شوید که واقعاً در آن رقابت می‌کنید.</p>
+      <div class="ab-dims">
+        <div><b>۱۹</b><span>استان</span></div><div><b>۸</b><span>نوع کسب‌وکار</span></div><div><b>۴</b><span>شیفت</span></div><div><b>۵</b><span>نوع سفارش</span></div>
+      </div>
+      <h3>با کدام بازار مقایسه شوم؟</h3>
+      <ul class="ab-chips">
+        <li><b>هم‌نوع من</b>هم‌صنف‌های شما در کل کشور</li>
+        <li><b>هم‌نوع در استان من</b>نزدیک‌ترین بازار به شما</li>
+        <li><b>استان من</b>همه مجموعه‌های متصل استان</li>
+        <li><b>کل بازار</b>میانگین همه مجموعه‌های متصل ایران</li>
+        <li><b>بازار دلخواه</b>مثل «کافه رستوران · ظهر»</li>
+        <li><b>دو بازار کنار هم</b>مثل کافه‌های تهران و اصفهان</li>
+      </ul></section>
+
+    <section id="ab4"><h2><i>۰۴</i>از فاکتور تا تصویر بازار</h2>
+      <p>نبض بازار عدد خام هیچ مجموعه‌ای را نشان نمی‌دهد. فقط درصد تغییر روی صفحه می‌آید؛ همان چیزی که رفتار بازار را دقیق نشان می‌دهد.</p>
+      <ol class="ab-steps">
+        <li><b>فاکتورها، بی‌نام و نشان</b><span>از هر فاکتور فقط مبلغ، تعداد، اقلام و زمان؛ بدون نام و نشانی مشتری یا مجموعه.</span></li>
+        <li><b>هر ماه، قالب خودش</b><span>فاکتورهای هر ماه کنار هم جمع می‌شوند و دو ماه با هم سنجیده می‌شوند.</span></li>
+        <li><b>فقط درصد تغییر</b><span>برای بازار انتخابی و، کنارش، برای مجموعه خود شما.</span></li>
+      </ol>
+      <p class="ab-note"><b>حداقل استاندارد آماری:</b> هر بازار فقط وقتی نمایش داده می‌شود که نمونه‌اش به این حد رسیده باشد. اگر نرسیده باشد، با گروه بزرگ‌تر کنارش یکی می‌شود تا عدد همیشه میانگین بازار باشد، نه چند مجموعه: هم‌نوع در استان ← استان ← هم‌نوع کشور ← کل بازار.</p></section>
+
+    <section id="ab5" class="ab-together"><h2><i>۰۵</i>یک کار جمعی، به نفع همه</h2>
+      <p>هر مجموعه، یک دست است. دست‌ها که کنار هم می‌آیند، تصویری از بازار ساخته می‌شود که هیچ‌کس به‌تنهایی نمی‌دید؛ و همه از آن سهم می‌برند. هر مجموعه‌ای که می‌پیوندد، این تصویر را برای همه روشن‌تر می‌کند.</p>
+      <p class="ab-big">کنار هم، بازار را روشن‌تر می‌بینیم.</p>
       <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور بررسی‌شده</span></div><div><b>۱۰۰ هزار</b><span>کسب‌وکار؛ ظرفیتی که زیرساخت برای آن ساخته شده</span></div></div>
+      
       <div class="ab-rep"><i class="ab-cov" style="background-image:url(assets/story/drawer.webp)"></i><div><small>نخستین روایت ما</small><b>گزارش فصلی صنعت غذا و نوشیدنی · بهار ۱۴۰۵</b><span>صندوق پر از پول، اما مشتری کمتر؛ روایتی از فروش، سفارش و واقعیت بازار، با تحلیل استان‌ها.</span>
         <div class="ab-rb"><a class="btn primary" href="spring-1405.html">گزارش بهار را ببینید ←</a></div></div></div></section>
-    <section class="ab-together"><h2>یک کار جمعی، به نفع همه</h2>
-      <p>هر مجموعه‌ای که می‌پیوندد، تصویر بازار را برای همه روشن‌تر می‌کند. هیچ‌کس عدد دیگری را نمی‌بیند؛ اما همه تصویر بازار را می‌بینند.</p>
-      <p class="ab-big">کنار هم، بازار را روشن‌تر می‌بینیم.</p></section>
-    <section><h2>تعهد ما به شما</h2>
+
+    <section id="ab6"><h2><i>۰۶</i>اعتماد و محرمانگی</h2>
+      <p class="ab-quote">هیچ‌کس فروش هیچ‌کس را نمی‌بیند؛ اما همه تصویر بازار را می‌بینند.</p>
       <ul class="ab-list">
-        <li><b>ناشناس می‌ماند.</b> نام و تلفن هیچ‌کس جابه‌جا نمی‌شود و عدد هیچ مجموعه‌ای جدا نمایش داده نمی‌شود.</li>
+        <li><b>تجمیع‌شده.</b> فاکتورها فقط با هم و در سطح بازار سنجیده می‌شوند.</li>
+        <li><b>ناشناس.</b> هیچ فاکتوری با نام یا نشانی مشتری و مجموعه وارد محاسبه نمی‌شود.</li>
+        <li><b>فقط میانگین.</b> آنچه دیده می‌شود میانگین بازار است؛ نه عدد رقیب، نه عدد شما برای دیگران.</li>
         <li><b>فروخته نمی‌شود.</b> داده خام شما به هیچ‌کس فروخته یا داده نمی‌شود.</li>
-        <li><b>به اختیار شماست.</b> هر وقت بخواهید، با یک دکمه قطع می‌شود.</li>
+        <li><b>به اختیار شماست.</b> هر وقت بخواهید، با یک دکمه قطع می‌شود. داخل مجموعه هم هر همکار فقط شعبه‌هایی را می‌بیند که مدیر برایش تعیین کرده است.</li>
         <li><b>شفاف می‌گوییم.</b> در مراحل اولیه قصد درآمدزایی از این پلتفرم نداریم. بعدتر، برای توسعه زیرساخت و تحلیل‌های عمیق‌تر، اشتراک خواهیم داشت و از قبل اعلام می‌کنیم.</li>
-      </ul></section>
+      </ul>
+      <h3>چرا این تصویر قابل اتکاست</h3>
+      <div class="ab-g4">
+        <div><b>داده واقعی صندوق</b><span>فاکتورهای ثبت‌شده، نه نظرسنجی یا تخمین.</span></div>
+        <div><b>فراتر از فروش آنلاین</b><span>سالن، بسته‌بندی، دلیوری، اسنپ و سایت اختصاصی.</span></div>
+        <div><b>به‌روزرسانی روزانه</b><span>با داده‌های فروش تا پایان شب قبل.</span></div>
+        <div><b>شاخص اطمینان</b><span>کنار هر مقایسه، کیفیت نمونه همان بازار و روزهای ثبت‌شده هر ماه.</span></div>
+      </div></section>
+
+    <section id="ab7"><h2><i>۰۷</i>پرسش‌های پرتکرار</h2>
+      <div class="ab-faq">
+        <details><summary>آیا اطلاعات رقبا را می‌بینم؟</summary><p>خیر. نبض بازار برای فهم جایگاه شما نسبت به میانگین بازار است، نه دیدن اطلاعات رقبا. هیچ‌کس هم عدد شما را نمی‌بیند.</p></details>
+        <details><summary>داده‌ها از کجا می‌آیند؟</summary><p>از فاکتورهای واقعی فروش که از صندوق فروشگاهی به سرویس باشگاه مشتریان یا نظرسنجی اسمارت‌ایکس می‌رسد.</p></details>
+        <details><summary>بازار مرجع من چطور تعیین می‌شود؟</summary><p>یکی از بازارهای آماده را انتخاب می‌کنید، یا استان، نوع کسب‌وکار، شیفت و نوع سفارش را خودتان کنار هم می‌گذارید.</p></details>
+        <details><summary>جایگاه من چطور نمایش داده می‌شود؟</summary><p>به‌صورت بازه رتبه در بازار انتخابی شما. برای بازاری که هنوز به حداقل استاندارد آماری نرسیده، رتبه نمایش داده نمی‌شود تا عدد همیشه قابل اتکا باشد.</p></details>
+        <details><summary>ماه جاری چطور حساب می‌شود؟</summary><p>به انتخاب شما: یا فقط داده ثبت‌شده تا امروز، یا برآورد تا پایان ماه. تعداد روزهای ثبت‌شده همیشه کنارش آمده است.</p></details>
+        <details><summary>اختلاف منفی با بازار را چطور بخوانم؟</summary><p>به‌عنوان یک نشانه برای مقایسه، نه یک نمره. اختلاف نشان می‌دهد کدام شاخص، در کدام شیفت یا نوع سفارش، بیشترین فرصت رشد را دارد.</p></details>
+      </div></section>
+
     <footer class="ab-end">
       <p>این پروژه برای نخستین بار در کشور و با سرمایه‌گذاری مستقیم سپیدز و اسمارت‌ایکس انجام شده است.</p>
       <p class="ab-thanks">پاسخی است به ۲۵ سال همراهی شما، و به صنعتی که به این شرکت‌ها جان داد.</p>
@@ -3048,8 +3527,7 @@ body.in-panel .ab-foot{display:none}
       <div class="fm-pour" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="fm-cap" id="fmCap"></div>
       <div class="fm-end" id="fmEnd">
-        <div class="kv2-logo"><b>نبض بازار</b><svg class="nb-pulse" viewBox="0 0 132 30" aria-hidden="true"><path class="base" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><path class="trace" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/><circle class="beat" cx="58" cy="15" r="2.6"/></svg></div>
-        <small>پژوهش زنده بازار غذا و نوشیدنی</small>
+        <div class="nbl nbl--center" style="--nb:3cqw" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
         <h3>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h3>
         <button class="btn primary big" id="fmGo">حدس می‌زنم ←</button>
       </div>
@@ -3484,12 +3962,14 @@ function fInit(){
     bar.classList.toggle('set', set); bar.style.height = (set ? hOf(v) : H0)+'%';
     lab.innerHTML = set ? glb(GOPTS.find(x=>x[0]===v)[3]) : '؟'; };
   const draw = ()=>{ const q = FQ[G.i], Q = GQ[q.k];
-    $('#qgrid').innerHTML = `<div class="gcard g2"><div class="g2-main">
-        <div class="g2-q"><span class="qi">${ic(q.i)}</span><h2><em>${Q.word}</em><span>چقدر تغییر کرد؟</span></h2></div><p class="g2-sub">${Q.sub}</p>
-        <div class="g2-per"><span>مهر پارسال</span><i aria-hidden="true"></i><span class="on">مهر امسال</span></div></div>
-      <div class="g2-viz" aria-hidden="true"><div class="g2-col"><div class="g2-track"><span class="g2-bar old" style="height:${H0}%"></span></div><small>مهر پارسال</small></div>
+    const STEP = v => Math.round(hOf(v)*.95);
+    $('#qgrid').innerHTML = `<div class="gcard g3">
+      <div class="g3-k"><b>${fa(G.i+1)} از ${fa(FQ.length)}</b><span>${GQ[q.k].tok} · مهر پارسال ← مهر امسال</span></div>
+      <h2 class="g3-q"><span class="qi">${ic(q.i)}</span><span><em>${Q.word}</em> چقدر تغییر کرد؟</span></h2>
+      <p class="g3-sub">${Q.sub}</p>
+      <div class="g3-viz" aria-hidden="true"><div class="g2-col"><div class="g2-track"><span class="g2-bar old" style="height:${H0}%"></span></div><small>مهر پارسال</small></div>
         <div class="g2-col"><div class="g2-track"><span class="g2-bar now" id="gNow"><b id="gNowL">؟</b></span></div><small>مهر امسال</small></div></div>
-      <div class="gopts g2-o">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" aria-label="${h} ${t}"><b>${glb(t)}</b><small>${h}</small></button>`).join('')}</div></div>`;
+      <div class="gopts g3-st" role="group" aria-label="جواب شما">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" style="height:${STEP(v)}px" aria-label="${h} ${t}"><b>${glb(t)}</b>${h==='حدود'||h==='یا بیشتر'?`<small>${h}</small>`:''}</button>`).join('')}</div></div>`;
     $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v; $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q); toks(); nav(); }));
     paintBar(q); toks(); nav(); };
   const go = i => { const t = performance.now(); if (t-G.lock<320) return; G.lock = t; G.i = Math.max(0, Math.min(FQ.length-1, i)); draw(); };
@@ -3558,6 +4038,9 @@ function playCards(sel, m, mName, cb){
 const gapOf = m => FQ.reduce((a,q)=>a+Math.abs(state.g[q.k]-m[q.k]),0);
 const DIR = {near:'نزدیک‌تر شدید', far:'دورتر شدید', same:'به همان اندازه نزدیک'};
 const dirOf = (n1,g1,n2,g2) => n2>n1 ? 'near' : n2<n1 ? 'far' : Math.abs(g2-g1)<=3 ? 'same' : g2<g1 ? 'near' : 'far';
+const scoreHTML = (m, near) => `<span class="sct">${FQ.map(q=>{ const c = closeOf(Math.round(state.g[q.k]-m[q.k]))[0], ok = c==='a'||c==='b';
+    return `<span class="sc-t ${ok?'ok':'no'}" title="${FL[q.k]}: ${ok?'نزدیک':'دور'}"><span class="ic-w">${ic(q.i)}</span><em>${FL[q.k]}</em></span>`; }).join('')}</span>
+  <span class="sc-n"><small>امتیاز شما</small><b>${fa(near)} از ${fa(FQ.length)}</b></span>`;
 const sumHTML = (near, total, hideFar) => `<span class="sn">${Array.from({length:total},(_,i)=>`<i class="${i<near?'on':''}"></i>`).join('')}</span><b>${fa(near)} از ${fa(total)} حدس نزدیک</b>${hideFar ? '' : `<span class="far">${fa(total-near)} حدس دور</span>`}`;
 function fReal(){
   const m = YTD['کل کشور'].all;
@@ -3578,7 +4061,7 @@ function fReal(){
       <text x="60" y="78" text-anchor="middle" font-size="9.5" font-weight="900" fill="currentColor" stroke="none">عدد واقعی؟</text>
       <path d="M10 66 L110 54" stroke-width="0"/></g></svg>`;
   const ME_T = {up:'بیشتر از بازار',flat:'حدود بازار',down:'کمتر از بازار'};
-  $('#rSum').innerHTML = ''; playCards('#rgrid', m, 'کل ایران', {row:gradeRow, all:(still,near)=>{ state.r1 = near; state.r1Gap = gapOf(m); $('#rWhyT').textContent = near===FQ.length ? `هر ${fa(near)} حدس شما به کل ایران نزدیک بود.` : near ? `${fa(near)} حدس از ${fa(FQ.length)} حدس شما به کل ایران نزدیک بود.` : 'این بار حدس‌ها از کل ایران فاصله داشت.'; $('#rSum').innerHTML = sumHTML(near, FQ.length); $('#rSum').classList.add('go'); $('#fBridge').classList.add('go'); setTimeout(()=>{ $('#rStamp').classList.add('go'); setTimeout(()=>$('#rNote').classList.add('thump'), 330); }, 750); }});
+  $('#rSum').innerHTML = ''; playCards('#rgrid', m, 'کل ایران', {row:gradeRow, all:(still,near)=>{ state.r1 = near; state.r1Gap = gapOf(m); $('#rWhyT').textContent = near===FQ.length ? `هر ${fa(near)} حدس شما به کل ایران نزدیک بود.` : near ? `${fa(near)} حدس از ${fa(FQ.length)} حدس شما به کل ایران نزدیک بود.` : 'این بار حدس‌ها از کل ایران فاصله داشت.'; $('#rSum').innerHTML = scoreHTML(m, near); $('#rSum').classList.add('go'); $('#fBridge').classList.add('go'); setTimeout(()=>{ $('#rStamp').classList.add('go'); setTimeout(()=>$('#rNote').classList.add('thump'), 330); }, 750); }});
   $('#fEndNo').hidden = true;
 }
 function finalBox(el){
@@ -4091,7 +4574,8 @@ $('#fYes').addEventListener('click',()=>fShow('fPick'));
 $('#fNo') && $('#fNo').addEventListener('click',()=>{ state.viaNo = true; state.fcat = state.fcat || 'فست فود'; state.scope='کل کشور'; state.prov='تهران'; state.cat=state.fcat; renderGroup(); const e=$('#fEndNo'); e.hidden=false; finalBox(e); e.scrollIntoView({behavior:'smooth',block:'center'}); });
 (function(){ const ov = $('#about'), link = $('#abLink'), close = ()=>{ ov.hidden = true; document.body.style.overflow = ''; link.focus(); };
   link.addEventListener('click',()=>{ ov.hidden = false; ov.scrollTop = 0; document.body.style.overflow = 'hidden'; $('#abN').textContent = fa(window.__tn||178794729); $('#abX').focus(); });
-  $('#abX').addEventListener('click',close); document.addEventListener('keydown',e=>{ if (e.key==='Escape' && !ov.hidden) close(); }); })();
+  $('#abX').addEventListener('click',close); document.querySelectorAll('.ab-toc a').forEach(l=>l.addEventListener('click',e=>{ e.preventDefault(); const t = document.querySelector(l.getAttribute('href')); if (t) t.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'}); })); document.addEventListener('keydown',e=>{ if (e.key==='Escape' && !ov.hidden) close(); }); })();
+$('#ldAbout').addEventListener('click',()=>$('#abLink').click());
 $('#fDirect').addEventListener('click',()=>{ state.direct = true; fShow('stage2'); });
 $('#fShowMine').addEventListener('click',()=>{ state.viaNo = false; fShow('fMine'); });
 $$('[data-prev]').forEach(b=>b.addEventListener('click',()=>fShow(prevOf(state.cur))));
