@@ -2466,6 +2466,19 @@ body.in-panel .ab-link{display:none}
 .dm-prem h3{margin:2px 0 4px}
 .dm-prem p{font-size:14px;line-height:1.8;color:#3F3F46;margin:0}
 .dm-prem .btn{flex:0 0 auto;white-space:nowrap}
+/* ===== v74: link to the spring report landing ===== */
+.ab-foot{position:fixed;left:4vw;bottom:10px;z-index:25;display:flex;align-items:center;gap:10px;font-size:12.5px}
+.ab-foot .ab-link{position:static}
+.ab-rl{color:#BEF264;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.ab-rl::before{content:'·';color:#9FB5AE;margin-inline-end:10px;text-decoration:none;display:inline-block}
+body.in-panel .ab-foot{display:none}
+.ab-rep{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-top:16px;padding:14px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.ab-cov{display:block;aspect-ratio:650/900;border-radius:10px;background:center/cover no-repeat;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.ab-rep small{display:block;font-size:12.5px;font-weight:800;color:#BEF264}
+.ab-rep b{display:block;font-size:17px;font-weight:900;color:#F4FAF7;margin-top:2px}
+.ab-rep span{display:block;font-size:14px;line-height:1.8;color:#A7BDB6;margin-top:2px}
+.ab-rb{margin-top:10px}
+.ab-rb .btn{text-decoration:none}
 </style>
 </head>
 <body class="hookpage">
@@ -2832,7 +2845,7 @@ body.in-panel .ab-link{display:none}
 </main>
 
 <!-- ================= AGREEMENT MODAL ================= -->
-<button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button>
+<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a></div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-label="درباره نبض بازار" hidden>
   <button type="button" class="ab-x" id="abX" aria-label="بستن">✕</button>
   <article class="ab-doc">
@@ -2845,7 +2858,9 @@ body.in-panel .ab-link{display:none}
       <p>در اقتصادی چنین پرنوسان، هیچ مجموعه‌ای به‌تنهایی نمی‌تواند بفهمد فشار از کجا می‌آید. و تا امروز، هیچ سازوکار جمعی هم برای جواب دادن به این سؤال وجود نداشت.</p></section>
     <section><h2>چه ساختیم</h2>
       <p>پژوهشی زنده روی بازار غذا و نوشیدنی: تصویری از بازار که از فاکتورهای واقعی و ناشناس ساخته می‌شود، بی‌آنکه هیچ مجموعه‌ای از کار مجموعه دیگر خبردار شود.</p>
-      <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور بررسی‌شده</span></div><div><b>۱۰۰ هزار</b><span>کسب‌وکار؛ ظرفیتی که زیرساخت برای آن ساخته شده</span></div></div></section>
+      <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور بررسی‌شده</span></div><div><b>۱۰۰ هزار</b><span>کسب‌وکار؛ ظرفیتی که زیرساخت برای آن ساخته شده</span></div></div>
+      <div class="ab-rep"><i class="ab-cov" style="background-image:url(assets/story/drawer.webp)"></i><div><small>نخستین روایت ما</small><b>گزارش فصلی صنعت غذا و نوشیدنی · بهار ۱۴۰۵</b><span>صندوق پر از پول، اما مشتری کمتر؛ روایتی از فروش، سفارش و واقعیت بازار، با تحلیل استان‌ها.</span>
+        <div class="ab-rb"><a class="btn primary" href="spring-1405.html">گزارش بهار را ببینید ←</a></div></div></div></section>
     <section class="ab-together"><h2>یک کار جمعی، به نفع همه</h2>
       <p>هر مجموعه‌ای که می‌پیوندد، تصویر بازار را برای همه روشن‌تر می‌کند. هیچ‌کس عدد دیگری را نمی‌بیند؛ اما همه تصویر بازار را می‌بینند.</p>
       <p class="ab-big">کنار هم، بازار را روشن‌تر می‌بینیم.</p></section>

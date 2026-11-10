@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گزارش بهار ۱۴۰۵ · نبض بازار</title>
+<style>
+
+@font-face{font-family:IranYekanX;font-weight:400;src:url(fonts/IRANYekanXFaNum-Regular.ttf) format("truetype");font-display:swap}
+@font-face{font-family:IranYekanX;font-weight:500;src:url(fonts/IRANYekanXFaNum-Medium.ttf) format("truetype");font-display:swap}
+@font-face{font-family:IranYekanX;font-weight:600;src:url(fonts/IRANYekanXFaNum-DemiBold.ttf) format("truetype");font-display:swap}
+@font-face{font-family:IranYekanX;font-weight:700 900;src:url(fonts/IRANYekanXFaNum-Bold.ttf) format("truetype");font-display:swap}
+:root{--bg:#0A1716;--card:rgba(12,32,34,.78);--line:rgba(255,255,255,.1);--ink:#F4FAF7;--ink2:#D6E4E1;--mut:#A7BDB6;--lime:#BEF264;--amber:#FBBF24;--orange:#FB923C;--teal:#4FD1C5;--gray:#C9D2CF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:IranYekanX,Tahoma,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.top{position:sticky;top:0;z-index:20;background:rgba(10,23,22,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;height:58px}
+.brand b{font-weight:900;font-size:17px}.brand small{margin-inline-start:10px;color:var(--mut);font-size:13px}
+.top nav{display:flex;gap:18px;margin-inline-start:auto;font-size:13.5px}
+.top nav a{text-decoration:none;color:var(--ink2)}.top nav a:hover{color:var(--lime)}
+.back{font-size:13.5px;font-weight:800;color:var(--lime);text-decoration:none;white-space:nowrap}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.kick{display:inline-block;padding:3px 13px;border-radius:999px;background:rgba(190,242,100,.13);border:1px solid rgba(190,242,100,.4);color:var(--lime);font-size:13.5px;font-weight:900}
+h1{font-size:clamp(36px,4.4vw,60px);line-height:1.25;font-weight:900;margin:16px 0 0}
+h1 em,h2 em{font-style:normal;color:var(--lime)}
+h2{font-size:clamp(26px,2.7vw,38px);line-height:1.35;font-weight:900;margin:10px 0 0}
+.lead{font-size:clamp(16px,1.35vw,19px);color:var(--ink2);margin:16px 0 0;max-width:640px}
+.lead b{color:var(--ink)}
+.sub{font-size:13.5px;color:var(--mut);margin:6px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;border:0;font:inherit;font-weight:900;font-size:15.5px;cursor:pointer;text-decoration:none}
+.btn.pri{background:var(--lime);color:#10292B;box-shadow:0 8px 30px rgba(190,242,100,.25)}
+.btn.out{background:transparent;color:var(--ink);border:1.5px solid rgba(255,255,255,.3)}
+.btns{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:26px}
+.art{border-radius:26px;background:center/cover no-repeat;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:56px 0 64px}
+.hero .art{aspect-ratio:650/900;max-height:620px;justify-self:center;width:100%}
+.hero-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:var(--mut)}
+.hero-meta b{display:block;font-size:22px;color:var(--ink);font-weight:900}
+/* glance */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.g{padding:18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.g h3{margin:0;font-size:15.5px;font-weight:900}
+.g small{display:block;font-size:12px;color:var(--mut);margin-top:1px}
+.g dl{margin:14px 0 0;display:grid;gap:8px}
+.g dl div{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.g dt{font-size:12.5px;color:var(--mut)}
+.g dd{margin:0;font-size:24px;font-weight:900;direction:ltr}
+.up{color:var(--lime)}.dn{color:var(--orange)}
+.say{margin-top:26px;padding:16px 20px;border-radius:16px;background:linear-gradient(135deg,rgba(251,146,60,.14),rgba(12,32,34,.6) 70%);border:1px solid rgba(251,146,60,.35);font-size:17px;font-weight:700}
+.say b{color:#FDBA74}
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.f{padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.f .n{font-size:44px;font-weight:900;color:var(--lime);line-height:1}
+.f h3{margin:8px 0 4px;font-size:21px;font-weight:900}
+.f p{margin:0;color:var(--ink2);font-size:15px}
+.chart{margin-top:22px;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.chart h3{margin:0;font-size:17px;font-weight:900}
+.lg{display:flex;gap:18px;font-size:13px;color:var(--ink2);margin-top:6px}
+.lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-inline-end:6px;vertical-align:-1px}
+.bars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;height:220px;margin-top:18px;align-items:end;border-bottom:1px solid rgba(255,255,255,.25);padding:0 10px}
+.mo{display:flex;align-items:flex-end;justify-content:center;gap:8px;height:100%;position:relative}
+.bar{width:44px;border-radius:6px 6px 0 0;position:relative}
+.bar em{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font-style:normal;font-size:13.5px;font-weight:900;color:var(--ink);direction:ltr}
+.bar:hover{filter:brightness(1.15)}
+.mol{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:8px 10px 0;text-align:center;font-size:13px;color:var(--mut)}
+.note{margin:12px 0 0;font-size:13.5px;color:var(--ink2)}
+/* behaviour */
+.beh{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.bc{border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:grid;grid-template-columns:.8fr 1fr}
+.bc .art{border-radius:0;box-shadow:none;min-height:330px}
+.bc .tx{padding:22px}
+.bc h3{margin:0;font-size:20px;line-height:1.5;font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{padding:6px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.chip b{font-size:16px;margin-inline-start:6px;direction:ltr;display:inline-block}
+/* loyalty */
+.loy{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.loy .art{aspect-ratio:650/900;max-height:600px;width:100%}
+.stats{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.st{padding:16px 20px;border-radius:16px;background:rgba(190,242,100,.1);border:1px solid rgba(190,242,100,.35)}
+.st b{display:block;font-size:34px;font-weight:900;color:var(--lime);direction:ltr;text-align:right;line-height:1.2}
+.st span{font-size:13px;color:var(--ink2)}
+.pill{margin-top:22px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.05);border-inline-start:4px solid var(--lime);font-size:17px;font-weight:800}
+.tip{margin-top:16px;font-size:14px;color:var(--ink2)}
+.tip b{color:var(--lime)}
+/* provinces */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tab{padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink2);font:inherit;font-size:14px;font-weight:800;cursor:pointer}
+.tab.on{background:var(--lime);border-color:var(--lime);color:#10292B}
+.pv{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;margin-top:18px;align-items:start}
+.mapbox{position:relative;padding:16px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapbox path{stroke:#0A1716;stroke-width:1.6;cursor:pointer;transition:fill .4s,opacity .2s}
+.mapbox path:hover,.mapbox path:focus{opacity:.8;outline:none}
+.mapbox path.sel{stroke:#fff;stroke-width:3.5}
+.mapbox path.nd{fill:url(#hatch);cursor:default}
+.scale{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+.scale .rmp{width:150px;height:9px;border-radius:5px}
+.scale i{display:inline-block;width:14px;height:9px;border-radius:3px;vertical-align:-1px;margin-inline-end:4px}
+.side{display:grid;gap:14px}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lst{padding:14px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.lst h4{margin:0 0 8px;font-size:13.5px;font-weight:900;color:var(--ink2)}
+.lst button{display:flex;justify-content:space-between;width:100%;padding:5px 9px;margin-top:4px;border-radius:9px;border:0;background:rgba(255,255,255,.05);color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer}
+.lst button:hover,.lst button.sel{background:rgba(190,242,100,.16)}
+.lst button b{direction:ltr;font-weight:900}
+.card{padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(190,242,100,.1),rgba(12,32,34,.8) 70%);border:1px solid rgba(190,242,100,.3);min-height:220px}
+.card label{font-size:12.5px;color:var(--mut)}
+.card select{display:block;width:100%;margin-top:4px;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:#0E2223;color:var(--ink);font:inherit;font-size:15px}
+.card h3{margin:14px 0 6px;font-size:22px;font-weight:900}
+.rows{display:grid;gap:6px}
+.rw{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line)}
+.rw:last-child{border-bottom:0}
+.rw span{color:var(--ink2)}
+.rw b{font-size:17px;direction:ltr}
+.rw small{display:block;font-size:11.5px;color:var(--mut)}
+.rw .mid{font-size:13px;color:var(--mut);font-weight:600}
+.pnote{margin:10px 0 0;font-size:14px;color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.tw{padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.tw h3{margin:0;font-size:20px;font-weight:900}
+.tw .rows{margin-top:10px}
+.tw p{margin:10px 0 0;font-size:14.5px;color:var(--ink2)}
+.mx{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.mx div{padding:18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.mx h4{margin:0;font-size:16px;font-weight:900;color:var(--lime)}
+.mx p{margin:8px 0 0;font-size:14px;color:var(--ink2);line-height:1.85}
+/* months */
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.m{padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.m small{font-size:12.5px;color:var(--mut)}
+.m h3{margin:4px 0 8px;font-size:18px;font-weight:900;color:var(--lime)}
+.m p{margin:0;font-size:14.5px;color:var(--ink2)}
+.days{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.d{padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.18)}
+.d h4{margin:0;font-size:15px;font-weight:900}
+.d p{margin:6px 0 0;font-size:14px;color:var(--ink2)}
+.d b{color:var(--lime)}
+/* other report */
+.other{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:26px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.other h3{margin:4px 0 0;font-size:22px;font-weight:900}
+.other .chips{margin-top:12px}
+/* end */
+.end{text-align:center;padding:80px 0}
+.end h2{font-size:clamp(28px,3vw,42px)}
+.end .btns{justify-content:center}
+footer{padding:28px 0 40px;font-size:12.5px;color:var(--mut)}
+footer p{margin:4px 0}
+@media (max-width:980px){.hero,.loy,.pv{grid-template-columns:1fr}.hero .art,.loy .art{max-height:420px;aspect-ratio:auto;height:420px}.glance{grid-template-columns:1fr 1fr}.beh,.why,.two,.days{grid-template-columns:1fr}.months,.mx{grid-template-columns:1fr}.top nav{display:none}}
+@media (max-width:620px){.brand small{display:none}.wrap{padding:0 16px}.glance,.lists{grid-template-columns:1fr}.bc{grid-template-columns:1fr}.bc .art{min-height:240px}.other{grid-template-columns:1fr}section{padding:52px 0}.bar{width:30px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mapbox path{transition:none}}
+
+/* ===== v2: plainer reading, full matrices ===== */
+.tl{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px;max-width:660px}
+.tl div{padding:12px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.tl b{display:block;font-size:12px;color:var(--lime);font-weight:900}
+.tl span{display:block;font-size:14.5px;font-weight:800;line-height:1.6;margin-top:2px}
+.mean{margin-top:18px;padding:14px 18px;border-radius:14px;background:rgba(190,242,100,.07);border-inline-start:4px solid var(--lime);font-size:16px;color:var(--ink)}
+.mean b{color:var(--lime);font-weight:900;margin-inline-end:6px}
+.gl-def{font-size:12px;color:var(--mut)}
+.ctabs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ctab{padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink2);font:inherit;font-size:13.5px;font-weight:800;cursor:pointer}
+.ctab.on{background:rgba(190,242,100,.16);border-color:var(--lime);color:var(--lime)}
+.you{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;padding:12px 16px;border-radius:16px;background:var(--card);border:1px solid rgba(190,242,100,.3)}
+.you label{font-size:14px;font-weight:900}
+.you select{padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:#0E2223;color:var(--ink);font:inherit;font-size:15px;min-width:190px}
+.you small{font-size:12.5px;color:var(--mut)}
+.mxw{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:16px;align-items:start}
+.mxbox{position:relative;padding:14px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.mxbox svg{display:block;width:100%;height:auto;direction:ltr}
+.mxbox .ax{font-size:13px;fill:#9FB5AE;font-family:IranYekanX,Tahoma,sans-serif}
+.mxbox .axt{font-size:14px;fill:#D6E4E1;font-weight:700;font-family:IranYekanX,Tahoma,sans-serif}
+.mxbox .ql{font-size:14px;font-weight:900;font-family:IranYekanX,Tahoma,sans-serif}
+.mxbox .lb{font-size:13px;fill:#F4FAF7;font-weight:700;font-family:IranYekanX,Tahoma,sans-serif;paint-order:stroke;stroke:#0E2223;stroke-width:4px;pointer-events:none}
+.mxbox circle.b{cursor:pointer;transition:opacity .25s,stroke-width .2s}
+.mxbox circle.b:hover,.mxbox circle.b:focus{stroke-width:4;outline:none}
+.mxbox circle.b.sel{stroke:#fff;stroke-width:4}
+.mxbox.dim circle.b:not(.sel){opacity:.45}
+.mtip{position:absolute;z-index:3;pointer-events:none;padding:8px 12px;border-radius:12px;background:#08201F;border:1px solid rgba(190,242,100,.45);font-size:13px;line-height:1.7;white-space:nowrap;transform:translate(-50%,calc(-100% - 12px))}
+.mtip b{display:block;font-size:14.5px}
+.mside{display:grid;gap:12px}
+.mcard{padding:16px 18px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.mcard h4{margin:0;font-size:13px;font-weight:900;color:var(--mut)}
+.mcard p{margin:6px 0 0;font-size:14.5px;color:var(--ink2);line-height:1.9}
+.mcard.yours{border-color:rgba(190,242,100,.4);background:linear-gradient(135deg,rgba(190,242,100,.1),rgba(12,32,34,.8) 70%)}
+.mcard.yours p{color:var(--ink);font-weight:700}
+.qtag{display:inline-block;padding:1px 10px;border-radius:999px;font-size:13px;font-weight:900;color:#10292B}
+.approx{margin:10px 0 0;font-size:12px;color:var(--mut)}
+@media (max-width:980px){.mxw{grid-template-columns:1fr}.tl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand"><b>نبض بازار</b><small>گزارش‌های فصلی صنعت غذا و نوشیدنی</small></div>
+  <nav><a href="#glance">در یک نگاه</a><a href="#why">چرا</a><a href="#loyalty">وفاداری</a><a href="#provinces">استان‌ها</a><a href="#matrix">ماتریس‌ها</a><a href="#months">ماه‌به‌ماه</a></nav>
+  <a class="back" href="index.html">مجموعه من در بازار ←</a>
+</div></header>
+
+<main>
+<div class="wrap">
+
+<section class="hero" aria-labelledby="h-hero">
+  <div>
+    <span class="kick">گزارش فصلی نبض بازار · بهار ۱۴۰۵</span>
+    <h1 id="h-hero">صندوق پر از پول،<br><em>اما مشتری کمتر.</em></h1>
+    <p class="lead">بهار ۱۴۰۵ بازار کافه و رستوران‌ها، در مقایسه با بهار و زمستان ۱۴۰۴؛ ساخته‌شده از داده‌های واقعی و ناشناس.</p>
+    <div class="tl" aria-label="خلاصه گزارش">
+      <div><b>۱ · پول</b><span>فروش ۵۱٪ بالا رفت، اما ارزش واقعی‌اش ۱۸٪ کمتر شد.</span></div>
+      <div><b>۲ · مشتری</b><span>کمتر آمد، و هر بار گران‌تر پرداخت.</span></div>
+      <div><b>۳ · راه</b><span>وفاداری هنوز کار می‌کند.</span></div>
+    </div>
+    <div class="btns"><a class="btn pri" href="#glance">روایت را ببینید ↓</a><a class="btn out" href="https://smartx.ir/nabze-bazar/reports/spring-1405/" target="_blank" rel="noopener">گزارش کامل در smartx.ir ↗</a></div>
+  </div>
+  <div class="art" role="img" aria-label="صندوقی پر از پول کنار صفحه نمایش فروش" style="background-image:url(assets/story/drawer.webp)"></div>
+</section>
+
+<section id="glance" aria-labelledby="h-glance">
+  <span class="kick">بهار در یک نگاه</span>
+  <h2 id="h-glance">قوی‌تر از زمستان، <em>کوچک‌تر از بهار پارسال.</em></h2>
+  <p class="sub">هر عدد: بهار ۱۴۰۵ در مقایسه با دو فصل مبنا</p>
+  <div class="glance">
+    <div class="g"><h3>تعداد سفارش</h3><small>چند بار مشتری آمد</small><dl><div><dt>نسبت به زمستان ۱۴۰۴</dt><dd class="up">+۱۰٪</dd></div><div><dt>نسبت به بهار ۱۴۰۴</dt><dd class="dn">−۱۸٪</dd></div></dl></div>
+    <div class="g"><h3>مبلغ هر سفارش</h3><small>هر سفارش چقدر گران‌تر شد</small><dl><div><dt>نسبت به زمستان ۱۴۰۴</dt><dd class="up">+۲۳٪</dd></div><div><dt>نسبت به بهار ۱۴۰۴</dt><dd class="up">+۸۳٪</dd></div></dl></div>
+    <div class="g"><h3>فروش کل</h3><small>پولی که وارد صندوق شد</small><dl><div><dt>نسبت به زمستان ۱۴۰۴</dt><dd class="up">+۳۵٪</dd></div><div><dt>نسبت به بهار ۱۴۰۴</dt><dd class="up">+۵۱٪</dd></div></dl></div>
+    <div class="g"><h3>درآمد واقعی</h3><small>همان فروش، اگر اثر گرانی را کنار بگذاریم</small><dl><div><dt>نسبت به زمستان ۱۴۰۴</dt><dd class="up">+۱۱٪</dd></div><div><dt>نسبت به بهار ۱۴۰۴</dt><dd class="dn">−۱۸٪</dd></div></dl></div>
+  </div>
+  <p class="mean"><b>یعنی:</b>مشتری کمتر آمد ولی هر بار بیشتر پرداخت. پول بیشتری وارد صندوق شد، اما با همین پول، کمتر از پارسال می‌شود خرید.</p>
+</section>
+
+<section id="why" aria-labelledby="h-why">
+  <span class="kick">یک سؤال مهم</span>
+  <h2 id="h-why">چرا با وجود افزایش فروش ریالی، <em>درآمد واقعی کاهش یافته است؟</em></h2>
+  <p class="lead">پشت این اتفاق دو عامل اصلی است.</p>
+  <div class="why">
+    <div class="f"><span class="n">۰۱</span><h3>تورم</h3><p>ارزش واقعی پول داخل صندوق را کم می‌کند. چالشی سراسری و خارج از کنترل مستقیم مجموعه‌هاست؛ اما اثرش باید در محاسبات و تصمیم‌های مالی دیده شود.</p></div>
+    <div class="f"><span class="n">۰۲</span><h3>رفتار مشتری</h3><p>کمتر شدن مراجعه و تغییر سفارش‌ها را توضیح می‌دهد. قدرت خرید مشتری دست مجموعه نیست؛ اما بر تجربه، ارتباط و احتمال بازگشت او می‌شود اثر گذاشت.</p></div>
+  </div>
+  <div class="chart" role="figure" aria-labelledby="h-inf">
+    <h3 id="h-inf">اول، تورم</h3>
+    <div class="ctabs" role="tablist" aria-label="مقایسه تورم">
+      <button class="ctab on" role="tab" aria-selected="true" data-c="s">تورم کل و فروش</button>
+      <button class="ctab" role="tab" aria-selected="false" data-c="m">تورم خوراکی و قیمت منو</button>
+    </div>
+    <div class="lg" id="infLg"></div>
+    <div class="bars" id="infBars"></div>
+    <div class="mol"><span>فروردین</span><span>اردیبهشت</span><span>خرداد</span></div>
+    <p class="mean" id="infMean"></p>
+    <p class="note">مبنا: هر ماه در مقایسه با ماه مشابه سال قبل · منابع: مرکز آمار ایران، داده‌های اسمارت‌ایکس</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-beh">
+  <span class="kick">دوم، رفتار مشتری</span>
+  <h2 id="h-beh">اما همه ماجرا <em>تورم نیست.</em></h2>
+  <div class="beh">
+    <div class="bc"><div class="art" role="img" aria-label="سه نفر پشت به ما، کنار پیشخوانی که یک صندلی‌اش خالی مانده" style="background-image:url(assets/story/absence.webp)"></div>
+      <div class="tx"><small class="sub">تعداد سفارش‌ها</small><h3>از هر ۴ مشتری که پارسال در فروردین می‌آمدند، ۱ نفر دیگر نمی‌آید.</h3>
+        <div class="chips"><span class="chip">فروردین<b class="dn">−۲۸٪</b></span><span class="chip">اردیبهشت<b class="dn">−۱۹٪</b></span><span class="chip">خرداد<b class="dn">−۱۰٪</b></span></div>
+        <p class="note">فاصله ماه‌به‌ماه کمتر شد؛ خرداد نزدیک‌ترین ماه به پارسال بود.</p></div></div>
+    <div class="bc"><div class="art" role="img" aria-label="ترازویی زیر نور چراغ؛ یک برگر در یک کفه و دسته‌ای پول در کفه دیگر" style="background-image:url(assets/story/scales.webp)"></div>
+      <div class="tx"><small class="sub">میانگین مبلغ سفارش</small><h3>مشتری برای یک سفارش ساده، حالا هزینه یک وعده لوکس پارسال را می‌پردازد.</h3>
+        <div class="chips"><span class="chip">فروردین<b class="up">+۷۷٪</b></span><span class="chip">اردیبهشت<b class="up">+۸۸٪</b></span><span class="chip">خرداد<b class="up">+۹۶٪</b></span></div>
+        <p class="note">رشد فروش بیشتر از گران‌تر شدن هر سفارش آمد، نه از مشتری بیشتر.</p></div></div>
+  </div>
+  <p class="mean"><b>یعنی:</b>همین دو اتفاق با هم، فروش را بالا برد و صندوق را سبک‌تر کرد. تورم دست ما نیست؛ اما اینکه مشتری برگردد، تا حد زیادی هست.</p>
+</section>
+
+<section id="loyalty" aria-labelledby="h-loy">
+  <div class="loy">
+    <div class="art" role="img" aria-label="سرآشپز با مشتری‌اش دست می‌دهد" style="background-image:url(assets/story/loyal.webp)"></div>
+    <div>
+      <span class="kick">در میان همه فشارها</span>
+      <h2 id="h-loy">وفاداری <em>هنوز کار می‌کند.</em></h2>
+      <p class="lead">وقتی امتحان کردن یک جای تازه پرریسک می‌شود، مشتری به جایی برمی‌گردد که می‌شناسد و به آن <b>اعتماد</b> دارد.</p>
+      <div class="stats"><div class="st"><b>+۶۰٪</b><span>استفاده از باشگاه مشتریان، نسبت به بهار ۱۴۰۴</span></div><div class="st"><b>+۱۴۶٪</b><span>نسبت به زمستان ۱۴۰۴</span></div></div>
+      <p class="pill">بازگشت مشتری همان بخشی است که هنوز دست شماست.</p>
+      <p class="tip">از ۸ هزار کمپین باشگاه مشتریان در این فصل، <b>چهارشنبه‌ها</b> بیشترین مشارکت را داشتند؛ بهترین روز برای کمپین وفاداری.</p>
+      <div class="btns"><a class="btn pri" href="https://smartx.ir/services/club/" target="_blank" rel="noopener">باشگاه مشتریان اسمارت‌ایکس ←</a><a class="btn out" href="tel:90001123">مشاوره رایگان · ۹۰۰۰۱۱۲۳</a></div>
+      <p class="sub">مبنا: فعالیت کمپین‌های باشگاه مشتریان اسمارت‌ایکس در بهار ۱۴۰۵</p>
+    </div>
+  </div>
+</section>
+
+<section id="provinces" aria-labelledby="h-pv">
+  <span class="kick">هر گوشه از ایران، یک داستان</span>
+  <h2 id="h-pv">یک فصل سخت، <em>سراسر ایران را آزمود.</em></h2>
+  <p class="lead">از شمال تا جنوب و از شرق تا غرب، هر استان به شکلی متفاوت زیر فشار بود.</p>
+  <div class="you"><label for="pvSel">استان شما</label><select id="pvSel"></select><small>نقشه، کارت استان و هر سه ماتریس پایین، روی همین استان می‌ایستند.</small></div>
+  <div class="tabs" role="tablist" aria-label="شاخص نقشه">
+    <button class="tab on" role="tab" aria-selected="true" data-k="o">تعداد سفارش</button>
+    <button class="tab" role="tab" aria-selected="false" data-k="r">درآمد واقعی</button>
+    <button class="tab" role="tab" aria-selected="false" data-k="f">تورم خوراکی</button>
+  </div>
+  <div class="pv">
+    <div class="mapbox">
+      <svg id="map" role="group" aria-label="نقشه استان‌های ایران"></svg>
+      <div class="scale"><span id="scLo">کمترین افت</span><span class="rmp" id="ramp"></span><span id="scHi">بیشترین افت</span><span><i style="background:#5E7470"></i>در میانه</span><span><i style="background:repeating-linear-gradient(45deg,#2B3D3C 0 3px,#1A2928 3px 6px)"></i>بدون داده</span></div>
+    </div>
+    <div class="side">
+      <div class="card" aria-live="polite"><div id="pvOut"></div></div>
+      <div class="lists" id="lists"></div>
+    </div>
+  </div>
+  <div class="two">
+    <div class="tw"><span class="kick">گیلان</span><h3>کمترین افت در میان همه استان‌ها</h3>
+      <div class="rows"><div class="rw"><span>تعداد سفارش</span><b class="dn">−۷٫۵٪</b></div><div class="rw"><span>تورم خوراکی و آشامیدنی<small>دومین تورم پایین در میان استان‌ها</small></span><b>۱۱۴٪</b></div><div class="rw"><span>درآمد واقعی</span><b class="dn">−۷٪</b></div></div>
+      <p>حتی بهترین استان هم بدون فشار نبود.</p></div>
+    <div class="tw"><span class="kick">هرمزگان</span><h3>بیشترین افت در میان همه استان‌ها</h3>
+      <div class="rows"><div class="rw"><span>تعداد سفارش</span><b class="dn">−۳۸٪</b></div><div class="rw"><span>تورم خوراکی و آشامیدنی<small>دومین تورم بالا در میان استان‌ها</small></span><b>۱۳۶٫۸٪</b></div><div class="rw"><span>درآمد واقعی</span><b class="dn">−۳۷٪</b></div></div>
+      <p>چند فشار هم‌زمان، سخت‌ترین تجربه بهار را ساخت.</p></div>
+  </div>
+</section>
+
+<section id="matrix" aria-labelledby="h-mx">
+  <span class="kick">تحلیل‌های جغرافیایی</span>
+  <h2 id="h-mx">سه نگاه به <em>۱۸ استان</em></h2>
+  <p class="lead">هر دایره یک استان است و اندازه‌اش حجم فروش آن استان در بهار ۱۴۰۵. روی هر دایره بروید تا عددهایش را ببینید؛ با کلیک، آن استان انتخاب می‌شود.</p>
+  <div class="tabs" role="tablist" aria-label="ماتریس">
+    <button class="tab mt on" role="tab" aria-selected="true" data-m="res">ماتریس تاب‌آوری</button>
+    <button class="tab mt" role="tab" aria-selected="false" data-m="pri">ماتریس قیمت‌گذاری</button>
+    <button class="tab mt" role="tab" aria-selected="false" data-m="mix">ماتریس ترکیب رشد</button>
+  </div>
+  <div class="mxw">
+    <div class="mxbox" id="mxBox"><svg id="mx" role="img" aria-labelledby="mxQ"></svg><div class="mtip" id="mTip" hidden></div></div>
+    <div class="mside">
+      <div class="mcard"><h4>سؤال این ماتریس</h4><p id="mxQ"></p></div>
+      <div class="mcard"><h4>چطور بخوانیم</h4><p id="mxRead"></p></div>
+      <div class="mcard"><h4>آنچه دیدیم</h4><p id="mxSaw"></p></div>
+      <div class="mcard yours" aria-live="polite"><h4>استان شما</h4><p id="mxYou"></p></div>
+    </div>
+  </div>
+  <p class="approx">جای دایره‌ها از روی نمودارهای منتشرشده گزارش خوانده شده و عددهای روی هر دایره تقریبی‌اند. عدد دقیق هر استان در گزارش کامل است.</p>
+</section>
+
+<section id="months" aria-labelledby="h-mo">
+  <span class="kick">ماه‌به‌ماه</span>
+  <h2 id="h-mo">سه ماه، <em>سه حال متفاوت.</em></h2>
+  <p class="sub">هر ماه در مقایسه با ماه قبل</p>
+  <div class="months">
+    <div class="m"><small>فروردین ۱۴۰۵</small><h3>این جهش، رونق نیست</h3><p>تقریباً همه شاخص‌ها جهش کردند؛ اما این بازگشت از کفِ بسیار غیرعادی اسفند بود. حتی سفر و بیرون غذا خوردنِ نوروزی هم نیمه‌جان ماند.</p></div>
+    <div class="m"><small>اردیبهشت ۱۴۰۵</small><h3>بازگشت، اما با احتیاط</h3><p>مشتری برمی‌گشت، ولی محتاط‌تر می‌خرید؛ تنها ماه فصل که تعداد اقلام هر سفارش کم شد. پرتورم‌ترین ماه فصل هم بود.</p></div>
+    <div class="m"><small>خرداد ۱۴۰۵</small><h3>حجم ایستاد، قیمت ادامه داد</h3><p>رشد فروش تقریباً کامل از بزرگ‌تر شدن مبلغ هر سفارش آمد، نه از مشتری بیشتر.</p></div>
+  </div>
+  <div class="days">
+    <div class="d"><h4>روزهای سفارش</h4><p>پنجشنبه و جمعه پرسفارش‌ترین روزها بودند و شنبه کم‌سفارش‌ترین. پرسفارش‌ترین روز فصل <b>۳۱ اردیبهشت</b> بود و کم‌سفارش‌ترین، <b>سیزده‌به‌در</b>؛ مردم بیرون از شهر بودند، نه در رستوران.</p></div>
+    <div class="d"><h4>روزهای کمپین</h4><p>برخلاف سفارش که جمعه‌ها اوج می‌گیرد، مشتریان جمعه‌ها کمتر درگیر تخفیف و امتیاز می‌شوند. <b>چهارشنبه</b>، روز بیشترین مشارکت در باشگاه مشتریان است.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-oth">
+  <div class="other">
+    <div><span class="kick">گزارش قبلی</span><h3 id="h-oth">سال ۱۴۰۴: بیشتر فروختند، اما ضعیف‌تر شدند</h3>
+      <p class="note">برآیند روند سال ۱۴۰۴ در مقایسه با ۱۴۰۳. رشد فروش بیش از آن‌که از تقاضای بیشتر آمده باشد، از افزایش قیمت‌ها شکل گرفت و بازار از تورم عقب ماند. همراه با گفت‌وگوی تحلیلی در برنامه اقتصادی اکوهشت.</p>
+      <div class="chips"><span class="chip">تعداد سفارش · حدود<b class="dn">−۴۵٪</b></span><span class="chip">فروش کل · حدود<b class="up">+۱۴٪</b></span><span class="chip">مبلغ هر سفارش · حدود<b class="up">+۵۵٪</b></span></div></div>
+    <a class="btn out" href="https://smartx.ir/annual-report-1404/" target="_blank" rel="noopener">گزارش سال ۱۴۰۴ ↗</a>
+  </div>
+</section>
+
+<section class="end" aria-labelledby="h-end">
+  <h2 id="h-end">این داستان کل بازار بود.<br><em>داستان مجموعه شما چیست؟</em></h2>
+  <p class="lead" style="margin-inline:auto">نبض بازار نشان می‌دهد مجموعه شما در همین تصویر کجا ایستاده است.</p>
+  <div class="btns"><a class="btn pri" href="index.html#intro">جایگاه مجموعه خودم را ببینم ←</a><a class="btn out" href="https://smartx.ir/nabze-bazar/reports/spring-1405/" target="_blank" rel="noopener">دانلود گزارش کامل ↗</a></div>
+</section>
+
+</div>
+</main>
+<footer><div class="wrap">
+  <p>این گزارش بخشی از پروژه بزرگ نبض بازار است؛ پژوهش زنده بازار غذا و نوشیدنی، به کوشش اسمارت‌ایکس.</p>
+  <p>منابع: داده‌های اسمارت‌ایکس، مرکز آمار ایران · مبنای مقایسه در شاخص‌های ماهانه: هر ماه با ماه مشابه سال قبل · تحلیل استانی بر پایه ۱۸ استان دارای داده.</p>
+  <p>نقشه: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© مشارکت‌کنندگان OpenStreetMap</a> · geoBoundaries</p>
+</div></footer>
+
+<script>
+const IR_MAP = {"vb":"0 0 1000 904","p":{"مازندران":"M509 184L501 184L499 183L496 184L489 184L488 184L488 183L487 182L487 182L486 181L486 181L495 182L495 180L495 181L491 180L496 179L501 180L517 177L516 176L478 180L458 186L436 191L414 197L404 197L395 195L391 194L383 190L371 189L361 186L345 177L343 174L340 173L336 179L334 178L332 180L332 187L328 193L334 196L340 200L344 202L352 207L354 211L353 214L371 222L375 221L377 223L384 223L400 232L407 241L413 245L417 247L424 247L428 244L432 242L435 238L442 236L449 237L461 242L464 242L466 241L466 239L468 238L476 237L476 234L484 229L500 226L506 221L510 219L514 214L510 210L512 207L513 205L517 205L523 202L523 200L523 197L522 194L515 191L510 191L509 184Z","خراسان شمالی":"M740 130L735 129L734 124L732 122L730 123L730 122L729 122L729 122L725 121L718 117L715 118L713 116L711 116L709 114L704 114L702 113L698 114L690 110L691 104L687 99L685 93L682 92L680 93L676 97L673 97L672 98L671 96L664 95L659 92L654 93L652 95L648 93L643 93L637 98L638 102L637 105L635 104L636 108L636 115L635 118L631 118L626 132L623 136L623 139L620 144L621 148L615 150L615 158L618 158L621 156L623 161L620 164L622 165L621 170L619 171L619 177L621 181L632 177L634 181L639 186L639 190L643 190L646 191L648 191L654 185L657 183L673 179L697 185L702 187L706 191L711 193L720 196L725 197L728 195L729 193L728 188L729 185L729 183L729 179L731 179L733 177L737 176L739 173L739 171L737 170L736 168L732 166L736 160L739 161L740 159L744 158L745 156L740 149L742 146L743 135L740 130Z","کرمان":"M800 569L786 551L780 545L779 539L764 530L756 523L750 515L736 504L721 496L700 489L677 484L672 482L667 481L660 481L651 483L650 496L648 496L633 505L628 506L626 503L622 504L621 511L618 513L617 516L607 523L599 524L594 528L579 534L565 538L553 535L544 539L545 565L541 571L534 577L545 589L544 608L546 624L559 626L567 638L577 647L582 657L583 660L581 678L586 678L591 681L595 681L611 673L623 670L622 701L623 706L625 709L633 714L643 716L654 715L659 707L671 709L672 711L672 725L680 729L683 730L693 730L694 735L696 737L692 739L688 743L684 749L684 751L685 750L687 748L690 750L688 756L689 758L689 765L693 769L700 774L703 779L711 785L713 788L723 790L734 799L746 802L755 810L759 814L767 817L771 815L776 816L776 814L777 813L775 810L776 806L775 805L775 800L771 798L768 796L768 791L771 785L768 779L767 770L770 750L770 730L772 726L772 722L773 720L777 717L782 717L783 716L784 708L782 705L782 701L779 698L787 694L803 695L805 692L804 685L805 681L804 674L801 665L802 662L805 657L801 647L800 639L798 609L799 601L798 585L800 569Z","ایلام":"M179 359L176 358L174 359L170 358L174 364L172 366L170 366L169 368L161 367L159 365L159 366L156 365L154 367L152 371L150 369L149 371L147 372L141 369L140 371L134 366L120 357L117 355L116 358L110 356L105 353L103 356L101 357L98 357L95 356L94 358L94 360L100 364L98 365L95 365L94 368L90 373L86 374L90 377L89 380L92 378L97 377L97 379L100 382L95 386L99 387L102 385L102 387L103 387L104 391L106 393L106 395L109 399L112 400L111 404L113 404L108 409L105 409L104 411L110 412L109 415L107 415L107 418L110 419L116 418L125 421L134 428L139 430L148 439L163 450L167 450L168 448L173 449L177 454L178 455L176 456L178 459L181 459L180 461L183 464L183 466L181 468L181 469L183 471L186 471L188 473L187 474L188 475L197 470L205 462L204 460L204 458L207 456L206 446L205 445L203 446L203 445L202 445L203 444L201 444L200 443L202 442L201 441L205 440L203 439L204 438L203 436L201 434L202 431L206 430L205 426L202 423L200 422L199 420L198 421L196 418L184 414L182 411L182 412L181 410L179 410L178 408L176 407L174 404L173 404L172 404L172 403L169 402L168 402L167 401L166 401L165 400L164 399L164 398L163 398L162 396L159 396L159 395L154 393L155 391L147 385L145 382L147 381L146 379L148 379L151 378L153 381L156 381L155 378L157 376L157 373L158 374L162 373L163 372L166 372L167 371L170 372L175 371L177 367L180 366L180 361L179 359Z","لرستان":"M204 438L210 436L210 435L209 434L210 434L209 433L209 430L208 429L212 425L212 423L213 422L215 423L220 417L226 419L232 419L234 418L238 418L242 421L243 423L245 421L245 419L249 420L250 422L252 424L258 422L258 423L260 422L264 425L266 424L269 426L271 425L274 426L276 426L280 430L284 433L287 433L288 430L292 430L295 428L296 425L293 423L291 418L294 418L291 416L292 414L295 411L301 414L302 412L305 413L305 411L303 408L304 408L303 405L303 403L306 402L306 401L309 398L310 394L306 393L299 389L297 384L294 382L291 381L290 378L289 377L288 375L290 374L289 371L285 374L280 374L280 371L279 370L276 371L277 374L276 376L273 377L272 379L269 379L268 374L265 372L261 372L261 374L260 373L258 374L258 369L256 368L257 366L256 365L258 363L257 362L258 361L256 361L256 358L258 356L260 357L261 354L258 354L255 355L253 353L252 355L250 355L249 353L245 351L243 348L242 350L240 350L238 349L236 351L235 351L234 349L233 349L233 352L231 355L224 355L221 354L221 352L218 352L215 350L208 342L202 340L200 341L198 338L197 335L190 332L189 334L190 338L183 344L179 344L179 348L176 349L176 350L180 357L179 359L180 361L180 366L177 367L177 369L176 370L175 371L170 372L167 371L166 372L163 372L162 373L158 374L157 373L157 376L155 378L156 381L153 381L151 378L146 379L147 381L146 381L146 382L147 385L154 390L155 391L154 393L159 395L159 396L162 396L163 398L164 398L164 399L165 400L166 401L167 401L168 402L169 402L172 403L172 404L173 404L174 404L176 407L178 408L179 410L181 410L182 412L182 411L184 414L190 416L193 417L202 423L205 426L206 429L205 431L202 431L201 434L204 438Z","مرکزی":"M307 393L307 391L309 391L308 388L308 386L319 384L321 380L323 381L327 379L333 378L338 378L346 372L355 373L361 369L364 366L363 364L364 359L362 356L364 353L356 345L355 343L351 342L350 341L347 342L343 339L342 340L340 342L336 344L332 343L331 338L326 330L327 328L324 328L317 326L317 324L314 319L315 317L316 309L318 305L322 305L327 308L330 309L332 309L333 304L335 302L346 302L345 297L343 294L343 293L355 281L359 267L355 264L349 264L342 260L331 259L328 259L319 262L309 263L305 262L303 260L298 262L293 261L292 262L293 264L293 266L290 266L286 269L280 268L278 270L278 271L276 276L277 278L277 279L279 280L282 283L279 291L273 289L271 291L272 293L277 293L279 294L278 299L273 299L268 303L266 302L265 306L263 309L264 317L263 319L262 319L261 316L257 318L260 324L258 327L258 328L258 329L255 331L258 332L258 336L264 340L264 343L262 345L265 348L266 348L260 357L258 356L255 358L255 361L258 361L257 362L258 363L256 365L257 366L256 368L258 369L258 374L260 373L261 374L261 372L265 372L268 374L269 379L272 379L273 377L276 376L277 374L276 371L279 370L280 371L280 374L285 374L289 371L290 374L288 376L290 378L291 381L294 382L297 384L299 390L307 393Z","چهارمحال و بختیاری":"M284 433L283 435L288 441L305 459L306 467L309 471L322 482L324 486L324 487L332 500L333 502L331 503L330 503L328 505L329 506L324 510L328 513L332 514L335 512L337 512L339 514L342 513L347 516L350 520L354 522L355 520L357 521L359 523L359 526L363 528L365 528L369 530L370 529L370 527L373 526L378 527L378 521L376 517L377 515L376 512L374 511L376 508L377 499L380 496L376 490L382 487L383 478L382 476L381 475L381 472L379 469L373 467L368 460L360 454L359 451L361 446L361 444L357 441L357 437L354 435L343 434L341 436L339 436L338 437L338 436L338 436L338 434L337 434L333 437L336 439L335 442L326 445L322 443L320 440L317 437L312 439L308 439L299 431L297 431L295 428L292 430L288 430L287 433L284 433Z","کرمانشاه":"M179 359L180 357L176 351L176 349L179 348L179 344L183 344L190 338L189 334L190 332L192 332L197 335L198 338L200 339L203 334L205 333L205 331L208 331L210 329L211 326L210 320L208 317L207 319L206 319L203 317L199 316L198 315L199 311L195 303L201 301L202 298L197 297L195 295L195 293L192 290L183 289L178 291L172 290L172 293L170 293L171 298L168 298L166 297L165 298L163 295L162 296L163 300L160 300L158 300L158 303L160 306L159 307L157 306L157 307L158 309L154 309L148 308L143 310L140 307L140 304L135 302L131 299L128 292L125 290L120 283L110 276L108 279L111 280L112 281L110 284L110 286L112 287L108 289L106 289L106 290L105 291L103 289L102 290L98 288L98 291L96 292L97 296L95 298L95 300L91 299L91 303L89 304L88 303L86 305L86 308L84 311L87 313L86 314L88 316L89 322L86 321L81 321L78 318L77 321L77 323L77 326L74 326L73 327L76 334L76 334L78 334L80 337L80 340L79 343L80 346L75 351L74 355L71 357L73 359L77 359L81 367L83 369L83 372L86 374L90 373L94 368L95 365L98 365L100 364L94 360L94 358L95 356L98 357L101 357L103 356L105 353L110 356L116 358L117 355L120 357L134 366L140 371L141 369L147 372L149 371L150 369L152 371L154 367L156 365L159 366L159 365L161 367L169 368L170 366L172 366L174 364L170 358L174 359L176 358L179 359Z","همدان":"M261 354L266 348L265 348L262 345L264 343L264 340L258 336L258 332L255 331L258 329L258 328L258 327L260 324L257 318L261 316L262 319L263 319L264 317L263 309L265 306L266 302L268 303L273 299L278 299L279 294L277 293L272 293L271 291L273 289L276 289L276 290L279 292L280 288L282 283L279 280L277 279L277 278L276 276L278 271L278 270L280 268L266 263L264 262L264 259L251 251L246 249L244 249L243 251L245 252L246 257L245 259L242 260L240 257L233 258L231 257L231 254L229 253L226 254L224 253L221 252L219 249L217 252L212 252L208 254L204 258L200 258L199 259L203 270L207 271L210 277L211 280L212 280L213 281L215 284L213 286L216 288L215 294L213 296L209 296L208 295L206 296L203 296L202 297L201 301L195 303L199 311L198 315L199 316L203 317L206 319L207 319L208 317L211 323L210 325L211 326L210 329L208 331L205 331L205 333L203 334L200 339L200 341L202 340L208 342L215 350L218 352L221 352L221 354L225 355L231 355L233 352L233 349L234 349L235 351L236 351L238 349L240 350L242 350L243 348L245 351L249 353L250 355L252 355L253 353L255 355L258 354L261 354Z","قزوین":"M328 193L325 193L322 191L320 191L312 195L306 195L306 197L304 197L298 198L289 195L283 195L282 195L272 182L267 186L266 185L263 185L261 188L261 191L258 192L256 199L261 202L263 206L267 206L272 208L275 208L277 212L279 212L278 216L280 220L278 229L273 234L268 233L265 237L261 237L261 239L260 240L254 237L252 233L246 239L243 247L244 249L246 249L251 251L260 256L264 259L264 262L266 263L284 269L287 269L290 266L293 266L293 264L292 262L293 261L298 262L303 260L305 262L309 263L319 262L321 260L318 256L322 254L322 244L325 243L329 239L331 232L338 231L339 227L344 225L332 217L331 213L332 212L335 211L343 212L353 214L354 211L353 208L350 205L344 201L340 200L334 196L328 193Z","گیلان":"M340 173L334 169L325 162L320 148L307 144L305 142L303 143L304 143L301 144L281 141L282 142L281 141L270 137L262 132L257 126L256 122L256 120L254 115L253 101L251 89L251 82L247 82L244 84L240 85L237 83L236 81L235 87L239 92L240 92L241 96L240 98L241 100L238 103L238 109L235 115L236 122L239 123L239 127L237 128L237 131L241 134L243 142L252 152L252 157L254 162L260 168L266 176L269 177L270 180L273 183L275 187L282 195L283 195L289 195L298 198L304 197L306 197L306 195L312 195L320 191L328 193L332 187L332 180L334 178L336 179L340 173Z","زنجان":"M244 249L243 247L246 239L252 233L254 237L260 240L261 239L261 237L265 237L268 233L273 234L276 232L279 228L279 224L280 220L278 216L279 212L277 212L275 208L272 208L267 206L263 206L261 202L256 198L263 185L266 185L267 186L272 182L269 180L269 177L266 176L260 168L254 162L253 160L251 162L248 161L247 162L244 159L240 163L236 165L234 163L232 162L230 158L228 158L227 157L228 156L226 155L213 157L211 161L208 162L206 164L204 161L201 160L198 160L195 162L194 166L188 165L185 169L181 167L179 171L169 177L163 184L165 187L169 190L171 195L173 205L175 207L178 206L181 206L188 209L194 209L197 211L203 213L203 215L203 219L205 224L203 229L201 232L205 234L198 236L198 237L201 239L206 236L208 244L214 245L216 249L218 249L221 252L226 254L229 253L231 254L231 257L233 258L240 257L242 260L245 259L246 257L245 252L244 251L244 249Z","سمنان":"M466 241L467 243L472 243L473 244L472 245L466 250L464 252L459 254L454 260L449 260L446 263L442 268L435 271L433 273L426 267L415 263L412 259L411 258L409 260L408 268L410 272L406 276L410 284L415 288L415 291L413 299L411 302L407 316L405 320L404 324L412 328L420 330L433 329L442 330L452 335L458 340L616 340L629 317L644 294L648 291L656 290L664 282L672 280L675 274L671 266L672 264L674 261L673 257L670 255L667 251L657 241L657 235L658 227L662 218L658 213L656 208L660 207L662 204L665 200L665 197L664 196L660 194L659 189L656 189L651 191L646 191L643 190L639 190L639 186L634 181L632 177L621 181L619 177L619 171L621 170L622 165L620 164L623 161L621 156L618 158L615 158L615 150L610 151L606 154L605 159L600 165L597 175L594 177L589 182L569 185L561 194L557 195L553 193L550 194L546 199L543 201L536 200L524 202L517 205L513 205L510 210L514 214L510 219L506 221L500 226L484 229L476 234L476 237L468 238L466 239L466 241Z","اصفهان":"M295 428L297 431L299 431L308 439L312 439L317 437L320 440L322 443L326 445L335 442L336 439L333 437L337 434L338 434L338 436L338 436L338 437L339 436L341 436L343 434L350 435L353 434L355 435L357 437L357 441L361 444L361 446L359 451L360 454L368 460L373 467L379 469L381 472L381 475L382 476L383 478L382 487L376 489L376 490L380 496L377 499L376 508L374 511L377 514L377 516L376 517L378 521L378 532L379 536L381 540L387 547L399 557L402 558L404 555L405 552L404 546L408 540L408 538L411 528L410 514L415 503L420 499L423 498L426 499L433 506L442 508L452 509L465 509L475 504L475 502L467 494L465 487L467 479L468 458L467 453L465 446L474 440L489 435L503 436L508 436L513 429L525 425L528 423L531 419L532 415L534 413L544 411L548 411L555 413L557 409L563 406L568 409L580 397L588 394L594 384L593 340L458 340L452 335L442 330L433 329L420 330L414 329L403 324L378 328L370 328L362 332L361 333L362 338L361 341L356 346L364 353L362 355L364 361L363 364L364 366L362 368L355 373L346 372L340 376L339 378L333 378L327 379L323 381L321 380L319 384L308 386L308 388L309 391L307 391L307 393L310 394L309 398L306 401L306 402L303 403L303 405L304 408L303 408L305 410L305 412L302 412L301 414L295 411L292 414L291 416L294 418L290 418L293 423L296 425L295 428Z","کهگیلویه و بویراحمد":"M324 510L322 512L322 514L325 517L322 521L321 521L321 522L317 524L314 524L307 526L309 532L306 535L308 539L303 542L305 544L306 543L307 544L307 547L311 547L313 550L320 544L322 550L321 552L322 554L327 557L330 556L331 557L331 560L337 564L338 566L335 568L329 569L333 574L336 577L336 591L339 593L337 596L337 600L337 603L339 606L345 601L349 601L353 603L357 597L358 592L361 590L364 590L364 589L367 589L368 588L370 588L371 586L375 584L373 580L376 578L368 566L368 564L370 561L372 561L379 566L380 572L385 572L391 575L393 574L399 578L401 577L404 573L404 569L407 564L404 560L387 547L381 540L378 533L378 527L373 526L370 527L370 529L369 530L365 528L363 528L359 526L359 523L357 521L355 520L354 522L350 520L347 516L342 513L339 514L337 512L335 512L334 513L329 514L324 510Z","کردستان":"M202 298L202 297L203 296L206 296L208 295L209 296L213 296L215 294L216 288L213 286L215 284L213 281L212 280L211 280L210 277L207 271L203 270L199 259L200 258L204 258L208 254L212 252L217 252L219 249L216 249L214 245L208 244L206 236L201 239L198 237L198 236L205 234L201 232L203 229L205 223L203 219L203 215L203 213L200 212L197 211L194 209L188 209L181 206L178 206L175 207L173 205L173 208L174 212L172 215L169 217L162 217L158 217L155 213L150 212L148 209L146 207L144 207L143 206L141 207L140 207L137 208L126 207L124 209L119 209L116 208L112 204L108 204L102 206L100 208L101 215L99 218L93 219L87 218L85 219L85 222L83 224L85 226L79 228L79 233L81 234L87 240L90 245L92 243L93 244L95 244L97 242L100 243L100 242L103 242L106 241L109 242L109 243L111 245L111 244L113 245L117 242L120 243L119 247L118 247L116 249L114 250L112 249L111 251L104 250L102 255L103 255L104 258L101 258L103 262L102 262L101 263L105 270L109 273L110 276L120 283L125 290L128 292L131 299L135 302L140 304L140 306L142 310L148 308L154 309L158 309L157 307L157 306L159 307L160 306L158 303L158 300L160 300L163 300L162 296L163 295L165 298L166 297L168 298L171 298L170 293L172 293L172 290L174 290L178 291L183 289L192 290L195 293L195 295L197 297L202 298Z","آذربایجان غربی":"M163 184L161 181L159 181L155 184L154 187L151 186L147 184L149 177L145 175L145 172L147 171L143 168L139 166L135 168L126 170L126 168L128 167L128 165L125 165L123 167L117 173L115 173L112 174L111 173L111 171L105 165L102 162L98 160L94 161L89 160L91 157L87 155L78 141L61 98L58 93L56 93L54 89L61 83L64 82L68 80L65 77L62 69L64 64L64 57L67 55L70 50L74 48L73 47L74 45L71 44L71 42L69 40L68 38L66 38L67 37L67 36L63 37L60 34L58 35L58 31L56 30L57 30L55 28L54 28L55 26L51 23L48 22L48 21L49 20L47 20L47 18L48 18L47 18L48 18L45 16L46 13L44 12L45 11L44 12L44 10L43 11L41 10L40 8L35 4L32 3L30 0L23 6L24 9L23 11L20 14L21 17L20 19L21 21L20 23L18 23L14 25L10 22L5 24L5 23L2 23L0 25L2 28L3 30L4 31L3 32L4 33L3 35L7 37L9 40L10 42L8 43L9 47L7 48L8 50L8 51L9 51L8 52L10 53L9 55L11 56L11 57L14 58L15 60L13 61L13 64L12 65L13 68L12 70L15 71L14 77L15 79L14 82L15 84L14 85L15 87L17 86L18 87L22 86L22 87L25 88L24 91L19 94L20 96L19 100L17 101L17 102L17 103L15 103L14 107L11 112L11 113L10 116L12 118L15 117L18 118L19 119L19 120L20 122L22 121L21 124L27 123L31 126L31 127L28 131L30 134L28 143L31 144L32 147L36 148L36 150L40 152L41 154L38 157L39 162L37 164L39 165L39 166L40 168L43 168L45 170L44 174L46 176L45 179L43 180L43 181L42 182L42 183L43 185L47 184L49 186L51 186L53 189L54 194L52 195L52 198L50 199L51 200L53 201L54 206L58 207L58 207L62 206L64 208L65 212L64 214L66 215L64 217L66 218L67 219L67 221L67 224L70 227L68 232L69 234L70 233L70 234L71 234L73 232L79 233L79 228L85 226L83 224L85 222L85 219L86 218L93 219L100 217L101 215L100 208L102 206L108 204L112 204L116 208L119 209L124 209L126 207L137 208L140 207L141 207L143 206L144 207L146 207L148 209L150 212L155 213L158 217L170 217L174 212L173 208L173 205L171 195L169 190L165 187L163 184Z","فارس":"M546 624L541 623L535 625L529 626L522 614L521 610L522 605L513 597L509 589L513 580L511 574L513 567L510 562L503 559L489 556L484 550L466 540L463 539L460 532L456 528L457 526L462 524L463 521L463 517L461 515L457 512L454 509L442 508L433 506L426 499L423 498L420 499L415 503L410 514L411 528L408 538L408 540L404 546L405 552L404 555L402 558L407 564L404 569L405 572L404 574L399 578L393 574L391 575L384 572L382 572L380 571L379 566L372 561L370 561L368 564L368 566L372 573L376 577L373 580L375 584L371 586L370 588L368 588L367 589L364 589L364 590L361 590L359 591L357 594L356 599L353 603L349 601L345 601L341 603L340 604L343 605L346 609L344 609L343 612L346 614L353 615L361 614L370 618L375 619L377 621L375 625L378 632L380 634L383 633L387 634L391 638L396 648L403 656L403 658L402 660L406 664L411 673L416 697L419 708L419 711L422 716L427 721L432 723L433 724L439 737L441 744L444 750L452 754L458 761L460 764L467 768L471 768L483 773L486 778L490 779L493 775L497 779L505 782L513 778L518 771L517 768L516 768L515 766L515 763L525 759L535 757L549 756L575 759L583 754L585 750L591 746L594 740L598 736L594 728L588 724L589 698L590 693L592 691L586 683L581 679L581 672L583 663L582 657L577 647L567 638L560 627L556 625L548 625L546 624Z","بوشهر":"M336 591L331 590L320 583L318 588L315 592L317 597L317 600L318 600L317 600L316 605L318 606L319 606L320 608L320 607L320 608L322 608L320 608L321 610L322 609L322 611L323 610L322 611L326 617L328 619L328 617L328 620L333 624L336 629L340 633L340 631L341 632L340 633L341 634L343 636L344 645L345 643L347 643L345 644L345 645L344 647L345 647L344 647L343 650L344 649L343 649L342 652L343 655L344 654L344 654L345 654L343 655L345 656L345 654L352 654L356 657L357 663L355 662L354 664L355 664L355 665L354 664L355 666L352 663L351 667L355 673L361 674L362 674L361 673L362 674L362 676L364 679L365 678L364 679L366 691L365 692L370 702L376 709L375 716L376 718L376 717L376 718L376 719L378 719L381 724L382 728L383 729L384 727L384 727L386 729L387 729L387 731L389 731L391 732L392 733L391 734L395 733L397 735L400 734L400 733L400 734L401 734L402 734L402 733L402 734L404 733L409 734L411 733L415 734L423 742L431 744L431 745L435 745L439 748L444 756L446 757L448 758L447 757L448 757L447 761L448 759L448 761L444 761L443 761L449 767L451 768L456 765L457 767L459 767L462 765L452 754L444 750L441 744L439 737L433 724L432 723L427 721L421 715L419 711L419 708L416 697L411 673L406 664L402 660L403 658L403 656L396 648L391 638L387 634L383 633L380 634L378 632L375 625L377 621L375 619L370 618L361 614L351 615L346 614L343 612L344 609L346 609L342 605L340 604L339 606L337 603L337 596L339 593L336 591Z","اردبیل":"M236 81L232 78L232 76L230 75L229 72L222 72L221 70L219 69L218 65L216 63L211 62L211 61L207 58L206 54L209 53L210 51L220 50L223 47L222 41L218 40L217 38L213 36L212 32L217 28L219 28L225 25L223 22L207 5L205 4L201 7L199 7L196 8L193 11L188 12L183 16L173 20L173 22L177 27L176 28L180 30L179 31L181 34L180 38L181 39L180 40L181 43L180 46L181 47L180 48L183 49L181 51L182 51L180 53L185 59L178 61L176 64L176 66L181 68L183 70L183 72L180 74L178 80L172 88L169 89L169 91L174 95L178 94L179 98L185 96L191 96L195 94L198 100L198 109L201 110L202 113L200 116L200 118L204 117L206 116L209 119L211 118L213 121L213 125L209 126L207 130L207 133L210 135L208 138L209 139L214 142L213 145L223 155L223 156L227 156L227 157L230 158L232 162L234 163L236 165L240 163L244 159L247 162L248 161L251 162L253 160L252 157L252 152L243 142L241 134L238 132L236 128L239 127L239 123L236 122L235 115L238 109L238 103L241 100L240 98L241 96L240 92L239 92L235 87L236 81Z","گلستان":"M523 202L536 200L543 201L546 199L550 194L553 193L557 195L561 194L569 185L589 182L594 177L597 175L600 165L605 159L606 154L610 151L621 148L620 144L623 139L623 136L626 132L631 118L635 118L636 115L635 104L631 105L629 104L618 105L607 102L591 104L588 107L580 111L579 113L577 112L575 113L570 117L569 119L565 122L563 124L561 124L559 126L557 132L559 134L558 139L551 144L547 143L537 149L531 149L529 151L515 150L516 156L516 158L519 169L518 172L516 172L518 173L519 174L518 182L519 184L520 188L517 192L522 195L523 202Z","خراسان رضوی":"M648 191L659 189L660 194L664 196L665 197L665 200L662 204L660 207L656 208L658 213L662 218L658 227L657 235L657 241L667 251L670 256L674 259L674 261L672 264L671 267L675 274L672 281L669 280L664 282L656 290L653 290L645 292L635 306L632 312L633 312L644 313L655 309L658 307L661 304L664 299L663 298L663 297L666 295L672 294L680 289L688 288L699 289L701 290L702 294L709 299L713 305L708 308L701 318L705 323L708 329L711 332L712 334L713 335L719 335L726 340L727 341L733 340L737 335L740 336L743 337L744 341L746 343L748 347L757 354L760 349L764 350L768 348L774 349L778 348L784 348L789 346L793 349L803 349L807 354L827 355L832 360L835 364L837 363L845 356L855 355L854 351L855 346L858 342L862 338L862 337L875 336L871 333L869 326L866 323L871 322L874 320L875 317L878 317L879 316L879 311L882 307L883 303L883 301L882 300L883 299L882 299L885 294L884 292L885 291L885 290L886 290L885 289L887 289L886 288L886 287L886 285L884 284L885 281L884 280L884 278L885 276L887 277L888 276L889 274L888 272L889 271L889 269L891 268L891 267L894 260L893 256L890 252L892 250L893 244L892 239L891 239L890 236L885 235L888 233L888 230L891 225L890 224L891 224L890 220L887 213L887 212L886 208L888 207L888 204L887 201L889 200L889 198L887 193L862 194L845 194L841 186L833 176L832 173L830 170L826 168L822 168L815 163L814 164L811 162L809 162L809 164L804 163L804 160L800 158L801 157L801 156L798 152L796 151L795 146L797 144L795 143L796 141L794 138L787 139L779 132L772 130L769 130L766 128L765 130L762 130L761 131L752 128L748 132L744 132L742 130L740 130L743 135L742 146L740 149L745 156L744 158L740 159L739 161L736 160L732 166L736 168L737 170L739 171L739 173L737 176L733 177L731 179L729 179L729 183L729 185L728 188L729 193L728 195L725 197L720 196L711 193L706 191L702 187L697 185L673 179L657 183L654 185L648 191Z","خراسان جنوبی":"M800 569L816 560L824 555L825 547L826 544L836 544L839 542L840 540L843 538L840 532L846 527L849 525L862 522L866 519L872 512L869 496L870 479L870 476L873 466L870 448L864 435L860 415L858 409L860 403L872 391L871 387L873 386L875 386L876 385L874 383L864 383L857 380L856 377L856 372L857 367L855 355L845 356L837 363L835 364L832 360L827 355L807 354L803 349L793 349L789 346L784 348L778 348L774 349L768 348L764 350L760 349L757 354L748 347L746 343L744 341L743 337L741 336L737 335L733 340L726 341L719 335L714 335L712 334L711 332L708 329L705 323L701 318L708 308L713 305L709 299L702 294L701 290L699 289L688 288L680 289L672 294L666 295L663 297L663 298L664 299L661 304L658 307L655 309L643 313L632 312L620 332L616 340L598 340L593 340L594 384L588 394L595 401L603 417L604 421L610 430L614 432L619 433L632 442L639 453L648 464L654 473L651 478L651 483L660 481L669 481L677 484L700 489L721 496L728 499L736 504L744 510L764 530L779 539L780 545L786 551L800 569Z","سیستان و بلوچستان":"M767 817L770 821L769 825L773 826L774 829L775 833L777 836L777 839L780 845L780 847L776 848L775 850L779 853L780 856L787 863L786 866L788 869L786 874L787 879L789 877L787 879L791 880L789 880L789 881L796 880L793 878L795 879L794 874L795 878L796 879L801 879L804 883L806 884L818 883L819 884L819 885L821 887L822 887L822 886L823 885L825 884L822 886L831 885L833 885L833 887L838 888L838 885L842 884L843 885L843 886L844 888L849 889L849 890L852 890L851 888L848 887L848 885L850 882L851 881L850 883L852 881L855 881L857 882L859 884L858 887L860 890L859 890L859 890L859 891L866 891L888 898L889 900L901 904L901 903L904 902L905 897L905 898L908 897L909 894L906 893L907 893L907 890L908 890L907 892L908 892L908 894L909 893L909 892L909 893L909 896L909 895L910 896L909 897L911 897L913 888L914 868L917 862L920 864L921 863L923 862L922 859L923 858L922 856L923 854L925 854L924 852L922 852L922 849L923 845L922 845L923 844L922 843L925 831L926 830L929 831L931 829L933 826L935 827L936 829L940 830L942 830L943 827L943 826L944 827L945 826L944 825L946 823L944 822L944 819L946 820L947 818L947 815L950 813L953 814L954 812L962 811L965 809L967 810L969 809L969 808L970 807L972 807L974 807L982 807L985 808L988 807L993 807L993 799L994 799L992 798L992 795L995 794L996 780L999 777L1000 778L997 772L994 771L993 769L989 771L985 771L979 773L976 771L973 772L971 770L973 769L974 767L972 764L975 757L974 738L970 722L972 707L962 708L957 704L956 701L951 697L933 692L926 689L913 674L907 662L904 661L906 659L905 659L904 657L904 655L901 654L900 652L901 650L897 645L898 643L898 639L895 638L888 630L873 610L921 550L920 544L922 541L922 539L923 537L921 529L919 527L919 521L916 516L872 510L871 514L866 519L861 522L847 526L842 530L840 533L843 538L840 540L839 542L836 544L826 544L825 547L824 554L821 557L800 569L798 585L799 601L798 609L800 639L801 647L805 657L802 662L801 665L804 674L805 681L804 685L805 692L803 695L787 694L779 698L782 701L782 705L784 708L783 716L782 717L776 717L772 722L772 725L770 730L770 750L767 770L768 779L771 785L768 791L768 796L771 798L775 800L775 805L776 806L775 810L777 813L776 814L776 816L771 815L767 817Z","قم":"M356 346L361 341L362 338L362 332L368 329L378 328L404 324L405 320L408 312L411 302L399 294L392 293L391 291L386 287L370 283L366 283L362 285L357 285L353 283L343 293L343 294L345 297L346 302L335 302L333 304L332 309L330 309L327 308L322 305L317 305L316 309L315 317L314 319L317 324L317 326L324 328L327 328L326 330L328 334L331 338L331 342L333 343L336 344L340 342L342 340L343 339L347 342L350 341L351 342L355 343L356 346Z","البرز":"M353 214L343 212L334 211L331 212L330 214L332 217L344 225L339 227L338 231L331 233L329 239L325 243L322 244L322 254L318 255L318 257L321 260L328 259L330 255L345 253L348 251L355 250L357 251L357 250L359 250L361 251L361 249L362 248L365 250L367 249L366 248L366 247L367 248L366 244L374 236L382 239L382 234L385 229L385 224L377 223L375 221L371 222L353 214Z","آذربایجان شرقی":"M223 156L223 155L213 145L214 142L209 139L209 135L207 133L209 126L213 125L213 121L211 118L209 119L206 116L204 117L200 118L200 116L202 113L201 110L198 109L198 100L195 94L191 96L185 96L179 98L178 94L174 95L169 91L169 89L172 88L178 80L180 74L183 72L183 70L181 68L176 66L176 64L178 61L185 59L180 53L182 51L181 51L183 49L180 48L181 47L180 46L181 43L180 40L181 39L181 34L179 31L180 30L176 29L177 27L173 23L173 22L171 23L170 25L159 31L157 33L157 36L155 38L152 39L150 38L145 40L145 41L142 44L141 46L138 47L135 52L130 56L129 55L125 54L124 55L120 53L117 54L111 58L109 57L105 55L103 56L99 54L97 56L94 54L92 54L92 53L88 52L86 51L82 52L80 49L78 50L74 48L70 50L67 55L64 57L64 64L62 69L65 77L68 80L64 82L61 83L54 89L56 93L58 93L61 98L78 141L87 155L91 157L89 160L94 161L101 161L111 171L111 173L112 174L115 173L117 173L123 167L125 165L128 165L128 167L126 168L126 170L135 168L139 166L143 168L147 171L145 172L145 175L149 177L147 184L151 186L154 187L155 184L159 181L161 181L163 184L164 183L167 179L179 171L181 167L185 169L188 165L194 166L194 163L199 160L204 161L206 164L208 162L211 161L213 157L223 156Z","یزد":"M651 483L651 478L654 473L648 464L639 453L633 443L619 433L611 430L604 421L603 417L595 401L588 394L585 395L581 396L578 398L568 409L563 406L557 409L555 413L545 411L534 413L532 415L531 419L528 423L525 425L513 429L508 436L503 436L489 435L474 440L465 446L467 453L468 458L467 479L465 487L467 494L472 498L475 503L472 506L465 509L454 509L457 512L462 516L464 520L462 525L458 526L456 528L460 532L463 539L466 540L484 550L488 556L503 559L510 562L513 567L511 574L513 580L509 589L513 597L522 605L521 610L522 614L529 626L535 625L541 623L546 624L544 608L545 589L534 577L541 571L545 565L544 539L553 535L565 538L579 534L594 528L599 524L607 523L617 516L618 513L621 511L622 504L626 503L628 506L633 505L648 496L650 496L651 483Z","هرمزگان":"M581 678L581 679L586 683L592 690L589 698L588 724L594 728L598 736L598 737L593 741L591 746L585 750L582 755L575 759L549 756L535 757L522 760L515 764L515 766L516 768L517 768L518 771L513 778L506 782L497 779L493 775L490 779L486 778L483 773L471 768L467 768L462 765L459 767L455 765L451 768L454 770L456 773L463 777L484 785L484 786L488 786L490 788L490 795L496 799L501 801L502 804L504 802L508 803L513 802L517 800L521 802L526 803L530 802L532 802L531 802L533 802L533 803L537 809L539 811L543 810L545 810L549 816L554 815L558 816L559 815L560 815L567 809L568 808L568 807L568 808L569 807L569 808L571 807L573 804L579 802L581 798L585 798L588 800L593 800L596 798L595 797L596 796L596 798L597 796L598 796L596 795L597 795L598 794L596 794L598 794L597 793L599 793L599 791L598 792L597 792L598 791L597 792L598 790L598 791L599 791L600 789L598 790L599 789L603 787L601 786L608 786L607 783L608 782L607 783L609 786L611 786L610 785L611 786L614 786L619 783L618 783L618 782L619 782L619 783L621 780L624 780L623 780L623 779L624 780L627 776L631 777L631 776L631 776L631 777L634 775L638 774L643 776L650 776L649 775L650 776L651 775L650 776L652 776L652 774L652 776L653 775L653 775L652 777L653 777L654 774L653 776L654 777L654 777L655 777L656 775L655 777L657 777L657 775L657 777L659 778L659 780L660 778L662 778L662 775L661 781L663 780L662 779L663 780L663 779L663 778L663 779L665 778L663 779L664 780L662 780L661 781L663 783L665 781L663 783L665 784L663 783L664 784L667 782L664 784L665 785L668 782L665 785L666 786L667 785L667 786L669 786L670 784L669 785L670 785L669 786L670 787L668 787L669 789L667 787L669 790L671 790L669 790L668 789L668 790L670 791L672 791L672 792L669 791L673 796L676 810L676 814L675 819L675 820L677 819L675 820L675 825L677 824L675 825L676 828L676 825L676 826L677 825L676 826L677 827L678 826L677 828L678 833L681 833L683 837L681 841L681 845L685 848L686 850L687 855L688 855L687 859L689 860L687 859L694 861L695 861L695 861L697 861L698 862L702 862L706 864L708 862L710 862L713 865L713 867L714 867L714 866L713 867L712 865L711 869L720 865L724 869L725 868L724 869L725 869L724 868L725 871L725 870L726 871L727 870L726 872L729 873L731 874L730 873L731 874L732 873L731 874L734 873L733 873L734 872L734 873L735 872L735 873L736 874L739 872L738 872L739 872L739 873L742 872L741 870L742 872L744 871L743 870L745 871L743 872L748 871L748 872L753 872L752 871L753 872L759 873L766 873L765 873L766 874L767 874L767 875L771 877L777 883L781 883L788 881L787 880L786 881L782 882L782 882L783 881L782 881L783 880L783 878L783 878L783 878L783 880L785 878L785 877L787 876L788 869L786 866L787 863L780 856L779 853L775 850L776 848L780 847L780 845L777 839L777 836L775 833L774 829L773 826L769 825L770 821L767 817L757 812L746 802L734 799L723 790L713 789L711 785L703 779L700 774L692 769L688 763L689 758L688 756L690 750L687 748L685 750L684 751L683 750L689 742L696 736L694 735L693 730L682 730L672 725L671 709L659 707L654 715L643 716L633 714L625 709L623 706L622 701L623 670L611 673L595 681L591 681L586 678L581 678ZM628 785L619 788L614 791L612 791L609 788L607 788L606 790L609 794L610 794L609 794L610 795L611 798L607 800L603 799L598 802L598 803L586 806L582 806L581 807L582 809L582 813L584 814L586 812L587 812L592 810L594 810L597 808L600 807L604 805L608 805L612 802L614 802L616 804L617 804L626 797L629 791L635 789L634 787L631 786L628 785Z","خوزستان":"M188 475L190 477L191 477L190 478L192 482L196 485L196 488L198 489L199 491L189 515L189 540L207 540L207 572L213 574L215 576L216 581L220 580L227 588L227 590L225 593L228 596L229 601L232 603L237 605L241 608L240 606L242 606L242 601L238 596L235 594L236 589L234 588L231 590L230 589L231 590L234 588L236 588L236 591L235 592L236 594L241 598L242 600L243 600L244 595L241 589L240 589L239 587L236 586L239 587L237 585L240 588L243 589L244 591L246 591L246 592L247 593L246 592L247 593L246 593L247 593L246 593L247 593L245 591L245 592L248 595L251 597L251 599L252 600L254 599L254 595L253 593L253 592L250 592L248 590L250 592L253 592L253 594L255 593L255 589L252 584L248 580L246 582L244 583L242 581L241 579L242 581L244 582L246 582L248 580L251 581L251 579L253 576L258 576L260 575L259 573L255 572L255 571L255 572L258 572L258 570L257 570L258 570L258 572L259 573L260 571L259 572L261 572L261 570L260 570L260 569L261 573L259 573L261 575L263 574L263 572L264 570L263 569L265 571L265 573L266 570L266 573L268 569L269 571L268 572L268 572L267 572L270 572L269 573L270 574L270 573L271 574L271 572L271 574L272 572L272 573L274 572L272 573L273 574L272 573L270 575L271 576L267 576L270 577L271 577L270 577L267 576L269 579L270 579L270 579L270 579L269 579L269 580L271 582L271 582L269 579L268 580L270 582L269 581L270 583L271 583L269 588L270 590L269 591L269 591L270 593L281 592L282 594L283 592L284 593L284 597L286 601L306 588L311 588L314 589L315 592L318 588L320 583L331 590L336 591L336 577L333 574L329 569L335 568L338 566L337 564L331 560L331 557L330 556L327 557L322 554L321 552L322 550L320 544L313 550L311 547L307 547L307 544L306 543L305 544L303 542L308 539L306 535L309 532L307 526L314 524L317 524L321 522L321 521L322 521L325 517L322 514L322 512L329 506L328 505L330 503L331 503L333 502L329 495L324 487L324 486L322 482L315 477L306 467L305 459L288 441L283 435L284 433L284 433L280 430L276 426L274 426L271 425L269 426L266 424L264 425L260 422L258 423L258 422L252 424L250 422L249 420L245 419L245 421L243 423L242 421L238 418L234 418L232 419L226 419L220 417L215 423L213 422L212 423L212 425L208 429L209 430L209 433L210 434L209 434L210 435L210 436L204 438L203 439L205 440L201 441L202 442L200 443L201 444L203 444L202 445L203 445L203 446L205 445L206 446L207 456L204 458L204 460L205 462L196 471L188 475Z","تهران":"M385 224L385 229L382 234L382 239L374 236L366 244L367 248L366 247L366 248L367 249L365 250L362 248L361 249L361 251L359 249L357 250L357 251L355 250L348 251L345 253L330 255L327 258L342 260L349 264L355 264L359 266L359 267L359 269L355 280L353 283L357 285L362 285L366 283L369 283L386 287L391 291L392 293L399 294L411 302L413 299L415 291L415 288L410 284L406 277L409 272L410 272L408 268L409 259L411 258L412 258L415 263L426 267L433 273L435 271L442 268L446 263L449 260L454 260L459 254L464 252L466 250L473 245L472 243L467 243L466 241L464 242L461 243L449 237L442 236L435 238L432 242L428 244L425 246L417 247L407 241L400 232L385 224Z"},"c":{"مازندران":[433,209],"خراسان شمالی":[679,146],"کرمان":[687,624],"ایلام":[151,409],"لرستان":[228,388],"مرکزی":[307,325],"چهارمحال و بختیاری":[343,475],"کرمانشاه":[138,329],"همدان":[237,301],"قزوین":[297,227],"گیلان":[283,155],"زنجان":[225,202],"سمنان":[551,268],"اصفهان":[439,409],"کهگیلویه و بویراحمد":[353,554],"کردستان":[153,252],"آذربایجان غربی":[68,131],"فارس":[478,652],"بوشهر":[381,673],"اردبیل":[210,82],"گلستان":[574,151],"خراسان رضوی":[778,252],"خراسان جنوبی":[741,422],"سیستان و بلوچستان":[865,729],"قم":[362,312],"البرز":[351,235],"آذربایجان شرقی":[136,109],"یزد":[548,490],"هرمزگان":[646,784],"خوزستان":[259,511],"تهران":[399,260]}};
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const fa = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]).replace('.', '٫');
+const sg = (v,k) => k==='f' ? fa(v)+'٪' : (v<0 ? '−'+fa(Math.abs(v)) : '+'+fa(v))+'٪';
+const sgn = v => (v<0 ? '−'+fa(Math.abs(Math.round(v))) : '+'+fa(Math.round(v)))+'٪';
+
+/* ---- inflation bars ---- */
+const INF = {
+  s:{a:['تغییر فروش کل','#BEF264','#A6D84E'], b:['تورم کل','#4ADE80','#34C46C'], d:[[26,74],[53,84],[76,89]], mean:'<b>یعنی:</b>فروش فروردین ۲۶٪ رشد کرد، اما تورم ۷۴٪ بود. در هر سه ماه، پول بیشتری آمد ولی ارزشش از تورم عقب ماند.'},
+  m:{a:['تغییر مبلغ منو','#C9D2CF','#B4BFBB'], b:['تورم خوراکی و آشامیدنی','#4FD1C5','#3DB9AE'], d:[[77,115],[88,130],[96,134]], mean:'<b>یعنی:</b>مواد اولیه از منو گران‌تر شد. فاصله این دو ستون همان فشاری است که روی حاشیه سود مجموعه‌ها ماند.'}
+};
+function infDraw(c){ const I = INF[c], max = 150, bar = (v,col,m,lab) => `<span class="bar" style="height:${v/max*100}%;background:repeating-linear-gradient(135deg,${col[1]} 0 6px,${col[2]} 6px 10px)" title="${m} · ${col[0]} ${fa(v)}٪"><em>${fa(v)}٪</em></span>`, M = ['فروردین','اردیبهشت','خرداد'];
+  $('#infLg').innerHTML = `<span><i style="background:${I.b[1]}"></i>${I.b[0]}</span><span><i style="background:${I.a[1]}"></i>${I.a[0]}</span>`;
+  $('#infBars').innerHTML = I.d.map(([a,b],i)=>`<div class="mo">${bar(a,I.a,M[i])}${bar(b,I.b,M[i])}</div>`).join('');
+  $('#infMean').innerHTML = I.mean;
+  $$('.ctab').forEach(t=>{ t.classList.toggle('on', t.dataset.c===c); t.setAttribute('aria-selected', t.dataset.c===c); }); }
+$$('.ctab').forEach(t=>t.addEventListener('click',()=>infDraw(t.dataset.c)));
+
+/* ---- provinces: only what the published report states ---- */
+const L = {
+  o:{name:'تعداد سفارش', lo:'۵ استان با کمترین افت', hi:'۵ استان با بیشترین افت', good:[['گیلان',-7.5],['قزوین',-10],['کرمان',-12],['مازندران',-14],['تهران',-16]], bad:[['هرمزگان',-38],['آذربایجان غربی',-32],['همدان',-31],['اصفهان',-26],['یزد',-24]]},
+  r:{name:'درآمد واقعی', lo:'۵ استان با کمترین افت', hi:'۵ استان با بیشترین افت', good:[['گیلان',-7],['قزوین',-9],['مازندران',-10],['کرمان',-12],['خراسان رضوی',-13]], bad:[['هرمزگان',-37],['مرکزی',-29],['اصفهان',-27],['آذربایجان غربی',-26],['فارس',-24]]},
+  f:{name:'تورم خوراکی و آشامیدنی', lo:'۵ استان با کمترین تورم', hi:'۵ استان با بیشترین تورم', good:[['قم',113],['گیلان',114],['اصفهان',122],['خوزستان',123],['مازندران',123]], bad:[['آذربایجان غربی',142],['هرمزگان',137],['خراسان رضوی',135],['یزد',132],['آذربایجان شرقی',130]]}
+};
+const HAVE = ['آذربایجان غربی','هرمزگان','همدان','خراسان رضوی','یزد','البرز','آذربایجان شرقی','مرکزی','گلستان','کرمان','قزوین','تهران','فارس','مازندران','خوزستان','اصفهان','قم','گیلان'];
+const NOTE = {
+  'تهران':'با وجود بزرگ‌ترین بازار، هم افت سفارشش کمتر از میانه بود و هم فشار تورمی‌اش؛ در گروه «مقاوم و کم‌فشار».',
+  'قزوین':'تنها استانی که قیمت منویش را بیشتر از تورم محلی خودش بالا برد.',
+  'همدان':'همراه با فارس، بیشترین فشار بر حاشیه سود: قیمت منو نزدیک ۶۰ تا ۶۵ واحد درصد کمتر از تورم محلی رشد کرد.',
+  'فارس':'همراه با همدان، بیشترین فشار بر حاشیه سود: قیمت منو نزدیک ۶۰ تا ۶۵ واحد درصد کمتر از تورم محلی رشد کرد.',
+  'گیلان':'کمترین افت سفارش و درآمد واقعی در میان همه استان‌ها؛ اما حتی بهترین استان هم بدون فشار نبود.',
+  'هرمزگان':'چند فشار هم‌زمان، سخت‌ترین تجربه بهار را ساخت.'
+};
+const RAMP = ['#E6F5C3','#C8E67F','#9CC63E','#6E9A22','#46641A'];
+const val = (k,pv) => { const e = [...L[k].good, ...L[k].bad].find(x=>x[0]===pv); return e ? e[1] : null; };
+const rankOf = (k,pv) => L[k].good.some(x=>x[0]===pv) ? 'good' : L[k].bad.some(x=>x[0]===pv) ? 'bad' : null;
+let K = 'o', SEL = 'تهران', MX = 'res';
+function colorOf(k,pv){
+  if (!HAVE.includes(pv)) return null;
+  const v = val(k,pv); if (v==null) return '#5E7470';
+  const all = [...L[k].good, ...L[k].bad].map(x=>Math.abs(x[1])), lo = Math.min(...all), hi = Math.max(...all);
+  return RAMP[Math.min(4, Math.floor((Math.abs(v)-lo)/(hi-lo||1)*5))]; }
+function drawMap(){
+  const svg = $('#map'); svg.setAttribute('viewBox', IR_MAP.vb);
+  svg.innerHTML = '<defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#1A2928"/><rect width="3" height="8" fill="#2B3D3C"/></pattern></defs>' +
+    Object.entries(IR_MAP.p).map(([n,d])=>`<path d="${d}" data-pv="${n}" ${HAVE.includes(n)?`tabindex="0" role="button" aria-label="${n}"`:'class="nd" aria-hidden="true"'}><title>${n}${HAVE.includes(n)?'':' · بدون داده'}</title></path>`).join('');
+  $$('#map path[data-pv]:not(.nd)').forEach(p=>{ const go = ()=>pick(p.dataset.pv);
+    p.addEventListener('click', go); p.addEventListener('keydown', e=>{ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } }); }); }
+function paint(){
+  $$('#map path[data-pv]').forEach(p=>{ const c = colorOf(K, p.dataset.pv); if (c) p.style.fill = c; p.classList.toggle('sel', p.dataset.pv===SEL); });
+  $('#ramp').style.background = `linear-gradient(to left, ${RAMP.join(',')})`;
+  $('#scLo').textContent = K==='f' ? 'کمترین تورم' : 'کمترین افت';
+  $('#scHi').textContent = K==='f' ? 'بیشترین تورم' : 'بیشترین افت';
+  const li = arr => arr.map(([n,v])=>`<button type="button" data-pv="${n}" class="${n===SEL?'sel':''}"><span>${n}</span><b>${sg(v,K)}</b></button>`).join('');
+  $('#lists').innerHTML = `<div class="lst"><h4>${L[K].lo}</h4>${li(L[K].good)}</div><div class="lst"><h4>${L[K].hi}</h4>${li(L[K].bad)}</div>`;
+  $$('#lists button').forEach(b=>b.addEventListener('click',()=>pick(b.dataset.pv))); }
+function card(){
+  const row = k => { const v = val(k,SEL), r = rankOf(k,SEL);
+    const tag = r==='good' ? 'در میان '+L[k].lo : r==='bad' ? 'در میان '+L[k].hi : '';
+    return `<div class="rw"><span>${L[k].name}${tag?`<small>${tag}</small>`:''}</span>${v==null ? '<span class="mid">در میانه استان‌ها</span>' : `<b class="${k==='f'?'':'dn'}">${sg(v,k)}</b>`}</div>`; };
+  $('#pvOut').innerHTML = `<h3>${SEL}</h3><div class="rows">${row('o')}${row('r')}${row('f')}</div>${NOTE[SEL]?`<p class="pnote">${NOTE[SEL]}</p>`:''}`; }
+
+/* ---- the three matrices; positions read from the published charts (approximate) ---- */
+/* o: order change vs spring 1404, f: food inflation, m: menu price change, a: average invoice change, s: sales volume (relative) */
+const PD = {
+ 'آذربایجان غربی':{o:-32.3,f:142.2,m:131.5,a:156,s:15}, 'هرمزگان':{o:-37.7,f:137,m:76.6,a:77.8,s:19}, 'خراسان رضوی':{o:-18.7,f:134.9,m:98.9,a:115.5,s:16},
+ 'یزد':{o:-23.6,f:131.5,m:79.1,a:82,s:15}, 'البرز':{o:-23.6,f:129.8,m:77.6,a:86.6,s:17}, 'آذربایجان شرقی':{o:-20.3,f:130,m:81,a:84.3,s:18},
+ 'گلستان':{o:-16.3,f:129.8,m:99.6,a:102.1,s:16}, 'همدان':{o:-31.3,f:128.3,m:62.7,a:85.4,s:12}, 'مرکزی':{o:-21.8,f:128.4,m:93,a:76.4,s:10},
+ 'کرمان':{o:-11.9,f:127.8,m:76.2,a:77.3,s:16}, 'قزوین':{o:-10,f:126.7,m:134.7,a:140.3,s:15}, 'فارس':{o:-19.3,f:124.7,m:63.7,a:61.8,s:17},
+ 'تهران':{o:-15.5,f:123.9,m:79.8,a:79.2,s:47}, 'مازندران':{o:-13.1,f:123.1,m:106,a:119.2,s:18}, 'اصفهان':{o:-26.8,f:122,m:77.9,a:76.4,s:17},
+ 'خوزستان':{o:-20.2,f:122.4,m:74.1,a:70.4,s:16}, 'قم':{o:-17.7,f:112.6,m:79.1,a:75.7,s:15}, 'گیلان':{o:-7.2,f:114.5,m:103.1,a:104.4,s:16}
+};
+const Q = {lime:'#BEF264', green:'#4ADE80', amber:'#FBBF24', orange:'#FB923C'};
+const MXD = {
+ res:{x:'o', y:'f', xr:[-40,-5], yr:[106,151], xs:5, ys:5, mx:-19.9, my:128.1, xt:'تغییر سفارش نسبت به بهار ۱۴۰۴ · راست‌تر یعنی افت کمتر', yt:'تورم خوراکی · بالاتر یعنی فشار بیشتر',
+   q:{tl:['شکننده و پرفشار',Q.orange], tr:['مقاوم اما پرفشار',Q.amber], bl:['شکننده، اما کم‌فشار',Q.amber], br:['مقاوم و کم‌فشار',Q.green]},
+   ask:'کدام استان با وجود فشار تورم، سفارش‌هایش را بهتر نگه داشت؟',
+   read:'هرچه دایره راست‌تر، آن استان سفارش کمتری از دست داده. هرچه بالاتر، تورم خوراکی‌اش بیشتر بوده. خط‌چین‌ها میانه استان‌ها هستند و صفحه را چهار گروه می‌کنند.',
+   saw:'از ۱۸ استان، ۷ استان «شکننده و پرفشار» و ۷ استان «مقاوم و کم‌فشار» بودند؛ یعنی بیشتر استان‌ها در دو سر طیف‌اند، نه وسط. جایی که تورم بالاتر بود، افت سفارش هم معمولاً عمیق‌تر بود. تهران با بزرگ‌ترین بازار، «مقاوم و کم‌فشار» ماند.',
+   lab:['تهران','هرمزگان','گیلان','آذربایجان غربی']},
+ pri:{x:'f', y:'m', xr:[60,148], yr:[48,148], xs:20, ys:20, diag:true, xt:'تورم خوراکی همان استان', yt:'رشد قیمت منو در همان استان',
+   q:{tl:['پیشی گرفته از تورم',Q.green], br:['عقب مانده از تورم',Q.orange]},
+   ask:'مجموعه‌های هر استان، چقدر از گرانی را به منو منتقل کردند؟',
+   read:'خط مورب یعنی قیمت منو درست هم‌پای تورم همان استان بالا رفته. بالای خط: منو از تورم جلو زده. پایین خط: مجموعه‌ها بخشی از گرانی را از حاشیه سود خودشان پرداخته‌اند؛ هرچه پایین‌تر، فشار بیشتر.',
+   saw:'از ۱۸ استان، فقط قزوین بالای خط است. در همدان و فارس، قیمت منو نزدیک ۶۰ تا ۶۵ واحد درصد کمتر از تورم محلی رشد کرد؛ یعنی مجموعه‌های این دو استان بیشترین فشار حاشیه سود را در کشور تحمل کردند.',
+   lab:['قزوین','همدان','فارس','تهران']},
+ mix:{x:'o', y:'a', xr:[-40,-5], yr:[52,172], xs:5, ys:20, mx:-19.6, my:83.2, xt:'تغییر سفارش نسبت به بهار ۱۴۰۴ · راست‌تر یعنی افت کمتر', yt:'رشد میانگین فاکتور · بالاتر یعنی گران‌تر',
+   q:{tl:['رشد صرفاً قیمتی',Q.amber], tr:['رشد متوازن',Q.green], bl:['رکود دوطرفه',Q.orange], br:['رشد حجمی، قیمت محتاط',Q.amber]},
+   ask:'رشد فروش هر استان از کجا آمد: از مشتری بیشتر، یا فقط از قیمت؟',
+   read:'هرچه دایره راست‌تر، سفارش کمتری از دست رفته. هرچه بالاتر، میانگین هر فاکتور بیشتر رشد کرده. بالا و چپ یعنی رشد تقریباً فقط از قیمت آمده؛ پایین و راست یعنی رشد بیشتر مدیون آمدن مشتری بوده.',
+   saw:'۴ استان در ربع «رشد صرفاً قیمتی»اند: فاکتورشان بیشتر از میانه گران شد و حجم سفارششان بیشتر از میانه افت کرد. ۵ استان «رشد متوازن» داشتند: قیمت بالا رفت و تقاضا کمتر از بقیه افت کرد؛ ترکیبی سالم‌تر از بقیه کشور.',
+   lab:['آذربایجان غربی','قزوین','تهران','فارس']}
+};
+const VB = {w:760,h:560,l:64,r:20,t:20,b:64};
+const _cx = document.createElement('canvas').getContext('2d');
+const tw = s => { _cx.font = '900 14px IranYekanX, Tahoma, sans-serif'; return _cx.measureText(s).width; };
+function quadOf(D, p){ if (D.diag) return p[D.y] > p[D.x] ? 'tl' : 'br';
+  return (p[D.y] >= D.my ? 't' : 'b') + (p[D.x] >= D.mx ? 'r' : 'l'); }
+function mxDraw(){
+  const D = MXD[MX], W = VB.w-VB.l-VB.r, H = VB.h-VB.t-VB.b;
+  const X = v => VB.l + (v-D.xr[0])/(D.xr[1]-D.xr[0])*W, Y = v => VB.t + (D.yr[1]-v)/(D.yr[1]-D.yr[0])*H;
+  let g = `<rect x="${VB.l}" y="${VB.t}" width="${W}" height="${H}" rx="14" fill="#0E2223"/>`;
+  for (let v = Math.ceil(D.xr[0]/D.xs)*D.xs; v <= D.xr[1]; v += D.xs) g += `<line x1="${X(v)}" x2="${X(v)}" y1="${VB.t}" y2="${VB.t+H}" stroke="rgba(255,255,255,.07)"/><text class="ax" x="${X(v)}" y="${VB.t+H+20}" text-anchor="middle">${sgnx(v,D)}</text>`;
+  for (let v = Math.ceil(D.yr[0]/D.ys)*D.ys; v <= D.yr[1]; v += D.ys) g += `<line y1="${Y(v)}" y2="${Y(v)}" x1="${VB.l}" x2="${VB.l+W}" stroke="rgba(255,255,255,.07)"/><text class="ax" x="${VB.l-8}" y="${Y(v)+4}" text-anchor="end">${fa(v)}٪</text>`;
+  if (D.diag){ const a = Math.max(D.xr[0],D.yr[0]), b = Math.min(D.xr[1],D.yr[1]);
+    g += `<path d="M${X(a)} ${Y(a)} L${X(b)} ${Y(b)} L${X(b)} ${Y(D.yr[1])} L${X(D.xr[0])} ${Y(D.yr[1])} L${X(D.xr[0])} ${Y(a)} Z" fill="rgba(74,222,128,.05)"/><line x1="${X(a)}" y1="${Y(a)}" x2="${X(b)}" y2="${Y(b)}" stroke="#FB923C" stroke-dasharray="5 6" stroke-width="1.6"/><text class="ax" x="${X(b)-6}" y="${Y(b)+18}" text-anchor="end">قیمت منو = تورم</text>`; }
+  else g += `<line x1="${X(D.mx)}" x2="${X(D.mx)}" y1="${VB.t}" y2="${VB.t+H}" stroke="rgba(255,255,255,.35)" stroke-dasharray="4 5"/><line y1="${Y(D.my)}" y2="${Y(D.my)}" x1="${VB.l}" x2="${VB.l+W}" stroke="rgba(251,146,60,.6)" stroke-dasharray="4 5"/>`;
+  const corner = {tl:[VB.l+12,VB.t+14,'start'], tr:[VB.l+W-12,VB.t+14,'end'], bl:[VB.l+12,VB.t+H-30,'start'], br:[VB.l+W-12,VB.t+H-30,'end']};
+  Object.entries(D.q).forEach(([k,[t,c]])=>{ const [x,y,an] = corner[k], w = tw(t)+26, x0 = an==='start' ? x : x-w;
+    g += `<rect x="${x0}" y="${y}" width="${w}" height="26" rx="13" fill="${c}"/><text class="ql" x="${x0+w/2}" y="${y+18}" text-anchor="middle" fill="#10292B">${t}</text>`; });
+  g += `<text class="axt" x="${VB.l+W/2}" y="${VB.h-12}" text-anchor="middle">${D.xt}</text><text class="axt" transform="translate(16 ${VB.t+H/2}) rotate(-90)" text-anchor="middle">${D.yt}</text>`;
+  const pts = Object.entries(PD).sort((a,b)=>b[1].s-a[1].s);
+  g += pts.map(([n,p])=>{ const q = quadOf(D,p), c = D.q[q] ? D.q[q][1] : Q.lime;
+    return `<circle class="b ${n===SEL?'sel':''}" data-pv="${n}" cx="${X(p[D.x])}" cy="${Y(p[D.y])}" r="${Math.max(9,p.s*.95)}" fill="${c}" fill-opacity=".22" stroke="${c}" stroke-width="2" tabindex="0" role="button" aria-label="${n}"/>`; }).join('');
+  g += pts.filter(([n])=>D.lab.includes(n) || n===SEL).map(([n,p])=>`<text class="lb" x="${X(p[D.x])}" y="${Y(p[D.y]) - Math.max(9,p.s*.95) - 6}" text-anchor="middle">${n}</text>`).join('');
+  const svg = $('#mx'); svg.setAttribute('viewBox', `0 0 ${VB.w} ${VB.h}`); svg.innerHTML = g;
+  $('#mxBox').classList.add('dim');
+  $('#mxQ').textContent = D.ask; $('#mxRead').textContent = D.read; $('#mxSaw').textContent = D.saw;
+  mxYou();
+  const tip = $('#mTip'), box = $('#mxBox');
+  $$('#mx circle.b').forEach(c=>{
+    const show = ()=>{ const n = c.dataset.pv, p = PD[n], r = c.getBoundingClientRect(), b = box.getBoundingClientRect(), q = quadOf(D,p);
+      tip.innerHTML = `<b>${n}</b>${tipLines(D,p)}${D.q[q]?`<br>${D.q[q][0]}`:''}`; tip.hidden = false;
+      tip.style.left = (r.left + r.width/2 - b.left)+'px'; tip.style.top = (r.top - b.top)+'px'; };
+    c.addEventListener('mouseenter', show); c.addEventListener('focus', show);
+    c.addEventListener('mouseleave', ()=>tip.hidden = true); c.addEventListener('blur', ()=>tip.hidden = true);
+    c.addEventListener('click', ()=>pick(c.dataset.pv)); c.addEventListener('keydown', e=>{ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(c.dataset.pv); } }); });
+  $$('.mt').forEach(t=>{ t.classList.toggle('on', t.dataset.m===MX); t.setAttribute('aria-selected', t.dataset.m===MX); });
+}
+function sgnx(v,D){ return D.x==='o' ? (v<0?'−':'')+fa(Math.abs(v))+'٪' : fa(v)+'٪'; }
+const NM = {o:'تغییر سفارش', f:'تورم خوراکی', m:'رشد قیمت منو', a:'رشد میانگین فاکتور'};
+const show = (k,v) => k==='o' ? sgn(v) : 'حدود '+fa(Math.round(v))+'٪';
+function tipLines(D,p){ return [D.x,D.y].map(k=>`${NM[k]}: ${k==='o'?'حدود '+sgn(p[k]):show(k,p[k])}`).join('<br>'); }
+function mxYou(){
+  const D = MXD[MX], p = PD[SEL];
+  if (!p){ $('#mxYou').textContent = `${SEL} در این تحلیل داده ندارد. تحلیل‌های جغرافیایی بر پایه ۱۸ استان است.`; return; }
+  const q = quadOf(D,p), t = D.q[q];
+  let s = `${SEL} ${t ? `در گروه <span class="qtag" style="background:${t[1]}">${t[0]}</span> است.` : 'در این ماتریس است.'}`;
+  if (MX==='pri'){ const gap = Math.round(p.f - p.m); s += gap>0 ? ` قیمت منو حدود ${fa(gap)} واحد درصد کمتر از تورم محلی رشد کرد.` : ` قیمت منو حدود ${fa(-gap)} واحد درصد بیشتر از تورم محلی رشد کرد.`; }
+  $('#mxYou').innerHTML = s; }
+$$('.mt').forEach(t=>t.addEventListener('click',()=>{ MX = t.dataset.m; $('#mTip').hidden = true; mxDraw(); }));
+
+/* ---- one province, everywhere ---- */
+function pick(pv){ SEL = pv; $('#pvSel').value = pv; paint(); card(); mxDraw(); }
+$('#pvSel').innerHTML = HAVE.slice().sort((a,b)=>a.localeCompare(b,'fa')).map(n=>`<option>${n}</option>`).join('');
+$('#pvSel').addEventListener('change', e=>pick(e.target.value));
+$$('.tab[data-k]').forEach(t=>t.addEventListener('click',()=>{ K = t.dataset.k; $$('.tab[data-k]').forEach(x=>{ x.classList.toggle('on', x===t); x.setAttribute('aria-selected', x===t); }); paint(); }));
+drawMap(); infDraw('s'); pick(SEL); document.fonts && document.fonts.ready.then(()=>mxDraw());
+</script>
+</body>
+</html>
