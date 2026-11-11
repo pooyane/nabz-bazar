@@ -1349,7 +1349,7 @@ body.in-panel{background:#E4E4E4}
 .ins-more{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
 .ins-more div{border:1px dashed #D4D4D8;border-radius:20px;padding:14px;font-size:14px;color:#52525B;position:relative}
 .ins-more div b{display:block;color:#18181B;font-size:14.5px}
-.ins-more div:after{content:"";position:absolute;top:12px;left:14px;width:13px;height:13px;background:currentColor;opacity:.55;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9.5' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9.5' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat}
+.ins-more div:after{content:"";position:absolute;top:12px;left:14px;width:13px;height:13px;background:currentColor;opacity:.55;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9.5' rx='2'/%3E%3Cpath d='M8 36 H22 L24 31 L28 49 L32 15 L39 45 L43 36 H56' fill='none' stroke='%23FF3A29' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='9.5' rx='2'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat}
 .ins-cta{display:flex;align-items:center;gap:16px;justify-content:space-between;margin-top:16px;background:#18181B;color:#fff;border-radius:20px;padding:16px 20px}
 .ins-cta p{font-size:15px}
 .ins-cta .btn.lime{background:#BEF264;color:#134E4A}
@@ -2889,13 +2889,23 @@ body.in-panel .ab-foot{display:none}
 .ab-faq details[open] summary::after{content:'−'}
 .ab-faq details p{margin:0 0 14px !important;font-size:15px !important;line-height:1.9 !important;color:#D6E4E1 !important}
 @media (max-width:700px){.ab-g4,.ab-chips,.ab-steps{grid-template-columns:1fr}.ab-dims{grid-template-columns:1fr 1fr}.ab-defs li{grid-template-columns:1fr;gap:2px}}
+/* ===== logo v7: the supplied mark ===== */
+.nbl .nbp7{width:1.95em;height:1.15em;overflow:visible;animation:none;filter:none;transform:none}
+.nbl .nbp7 path{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-width:calc(var(--nb) * .12);filter:none}
+.nbl .nbp7 .lg-base{stroke:#981200;stroke-opacity:1;animation:none}
+.nbl .nbp7 .lg-run{stroke:#FF3A29;stroke-dasharray:7 300;stroke-dashoffset:7;animation:lgRun 2.2s infinite}
+.nbl .nbp7 .lg-ring{fill:none;stroke:#FF3A29;stroke-width:1.2px;vector-effect:non-scaling-stroke;opacity:0;transform-box:fill-box;transform-origin:center;animation:lgRing 2.2s ease-out infinite}
+.nbl .nbp7 .r2{animation-delay:.24s}.nbl .nbp7 .r3{animation-delay:.48s}
+@keyframes lgRun{0%{stroke-dashoffset:7;animation-timing-function:cubic-bezier(.55,0,.35,1)}76%{stroke-dashoffset:-93;animation-timing-function:linear}100%{stroke-dashoffset:-100}}
+@keyframes lgRing{0%,38%{opacity:0;transform:scale(1)}42%{opacity:.4}80%,100%{opacity:0;transform:scale(9)}}
+@media (prefers-reduced-motion:reduce){.nbl .nbp7 .lg-run,.nbl .nbp7 .lg-ring{animation:none;display:none}}
 </style>
 </head>
 <body class="hookpage">
 
 <header class="topbar">
   <div class="wrap">
-    <div class="nbl" style="--nb:18px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+    <div class="nbl" style="--nb:18px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp nbp7" viewBox="156 214 288 170" aria-hidden="true" focusable="false"><circle class="lg-ring r1" cx="300" cy="300" r="12"/><circle class="lg-ring r2" cx="300" cy="300" r="12"/><circle class="lg-ring r3" cx="300" cy="300" r="12"/><path class="lg-base" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434"/><path class="lg-run" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434" pathLength="100"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
     <div class="spacer"></div>
   </div>
 </header>
@@ -2918,7 +2928,7 @@ body.in-panel .ab-foot{display:none}
         </div>
         <div class="kv2-fade" aria-hidden="true"></div>
         <header class="kv2-head">
-          <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+          <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp nbp7" viewBox="156 214 288 170" aria-hidden="true" focusable="false"><circle class="lg-ring r1" cx="300" cy="300" r="12"/><circle class="lg-ring r2" cx="300" cy="300" r="12"/><circle class="lg-ring r3" cx="300" cy="300" r="12"/><path class="lg-base" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434"/><path class="lg-run" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434" pathLength="100"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
           <h1>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h1>
         </header>
         <div class="kv2-act">
@@ -2936,7 +2946,7 @@ body.in-panel .ab-foot{display:none}
         <div class="st-bg" aria-hidden="true"></div>
         <div class="ld-copy">
           <button class="backl" data-prev>→ قبلی</button>
-          <div class="nbl" style="--nb:20px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+          <div class="nbl" style="--nb:20px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp nbp7" viewBox="156 214 288 170" aria-hidden="true" focusable="false"><circle class="lg-ring r1" cx="300" cy="300" r="12"/><circle class="lg-ring r2" cx="300" cy="300" r="12"/><circle class="lg-ring r3" cx="300" cy="300" r="12"/><path class="lg-base" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434"/><path class="lg-run" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434" pathLength="100"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
           <h1>وضع <span class="hl h1w">بقیه</span> بازار چطور است؟<br><em>و <span class="hl h2w">من</span> کجای این بازارم؟</em></h1>
           <p class="ld-lead"><b>در بازاری که ثبات ندارد، دانستن عملکرد خودتان به‌تنهایی کافی نیست.</b><span>نبض بازار پژوهشی زنده از فاکتورهای ناشناس مجموعه‌هاست. فروش، سفارش، قیمت منو و سبد خرید صنف و شهرتان را کنار عددهای خودتان می‌بینید. <button type="button" class="ld-about" id="ldAbout">درباره نبض بازار ←</button></span></p>
           <div class="ld-game gb">
@@ -3262,7 +3272,7 @@ body.in-panel .ab-foot{display:none}
   <button type="button" class="ab-x" id="abX" aria-label="بستن">✕</button>
   <article class="ab-doc">
     <header class="ab-hero"><div class="ab-veil"></div><div class="ab-ht">
-      <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+      <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp nbp7" viewBox="156 214 288 170" aria-hidden="true" focusable="false"><circle class="lg-ring r1" cx="300" cy="300" r="12"/><circle class="lg-ring r2" cx="300" cy="300" r="12"/><circle class="lg-ring r3" cx="300" cy="300" r="12"/><path class="lg-base" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434"/><path class="lg-run" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434" pathLength="100"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
       <h1>کاسبی بقیه چطور است؟</h1></div></header>
     <nav class="ab-toc" aria-label="فصل‌های این سند"><a href="#ab1">چرا</a><a href="#ab2">چیست</a><a href="#ab3">بازار شما</a><a href="#ab4">چطور کار می‌کند</a><a href="#ab5">کار جمعی</a><a href="#ab6">اعتماد</a><a href="#ab7">پرسش‌ها</a></nav>
 
@@ -3527,7 +3537,7 @@ body.in-panel .ab-foot{display:none}
       <div class="fm-pour" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="fm-cap" id="fmCap"></div>
       <div class="fm-end" id="fmEnd">
-        <div class="nbl nbl--center" style="--nb:3cqw" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp" viewBox="0 0 89 34" aria-hidden="true" focusable="false"><path class="base" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0"/><path class="wave" d="M89 17 H62 C59 17 57.5 12 55 12 C52.5 12 51 17 48 17 H40 M27.5 17 H21 C18 17 16.5 11 13 11 C9.5 11 8 17 5 17 H0" pathLength="100"/><path class="qrs" d="M40 17 L37.5 20 L34 3 L30 29 L27.5 17"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+        <div class="nbl nbl--center" style="--nb:3cqw" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><svg class="nbp nbp7" viewBox="156 214 288 170" aria-hidden="true" focusable="false"><circle class="lg-ring r1" cx="300" cy="300" r="12"/><circle class="lg-ring r2" cx="300" cy="300" r="12"/><circle class="lg-ring r3" cx="300" cy="300" r="12"/><path class="lg-base" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434"/><path class="lg-run" d="M165 311 H232 L242 287 L261 372 L300 226 L334 352 L354 311 H434" pathLength="100"/></svg><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
         <h3>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h3>
         <button class="btn primary big" id="fmGo">حدس می‌زنم ←</button>
       </div>
