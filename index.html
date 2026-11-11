@@ -3168,6 +3168,108 @@ body.in-panel .ab-foot{display:none}
 @media (max-height:800px) and (min-width:1001px){.cy{gap:10px}.cy-h{font-size:27px}.cy-lead{font-size:14px;margin-top:2px}.cy-c p{font-size:13.5px}.cy-ft{padding:9px 18px}}
 /* v102c */
 #fArea{padding:0 !important;gap:0}
+/* v103: the analysis is the next step after round 2 */
+.cy-cta .tf-demo{white-space:nowrap}
+@media (max-width:620px){#fMine .mend-b .tf-demo{white-space:normal}}
+/* ===== v104: end-of-game card, rebuilt ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#fMine #mEnd.g2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px;align-items:center;text-align:start;padding:16px 20px !important}
+.g2-score{display:grid;gap:10px;justify-items:start;min-width:0}
+.g2-t{display:grid;gap:6px;width:100%}
+.g2-r{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}
+.g2-x{display:grid;grid-template-columns:repeat(3,54px) 62px;gap:6px;align-items:center;justify-items:center}
+.g2-l{font-size:13.5px;font-weight:800;color:#D6E4E1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-h{display:flex;flex-direction:column;align-items:center;gap:1px;color:#A7BDB6}
+.g2-h .ic svg{width:15px;height:15px}
+.g2-h em{font-style:normal;font-size:12px;font-weight:800;white-space:nowrap}
+.g2-c{display:grid;place-items:center;width:100%;height:32px;border-radius:10px;font-weight:900;font-size:14px}
+.g2-c svg{width:17px;height:17px}
+.g2-c.ok{background:rgba(74,222,128,.16);border:1px solid rgba(74,222,128,.55);color:#86EFAC}
+.g2-c.no{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.55);color:#FCA5A5}
+.g2-c.wait{background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.25);color:#8FA9A2}
+.g2-n{font-size:17px;font-weight:900;color:#F4FAF7;white-space:nowrap}
+.g2-n.wait{color:#8FA9A2}
+#mSum.go .g2-c{animation:scIn .45s cubic-bezier(.2,.9,.25,1.3) both}
+#mSum.go .g2-c:nth-child(2){animation-delay:.12s}#mSum.go .g2-c:nth-child(3){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){#mSum.go .g2-c{animation:none}}
+#fMine #mEnd.g2 .rdir{margin:0 !important;font-size:13.5px !important;padding:3px 14px !important}
+.g2-act{display:grid;gap:4px;min-width:0;padding-inline-start:22px;border-inline-start:1px solid rgba(190,242,100,.22)}
+#fMine #mEnd.g2 .rn-h{margin:0 !important;font-size:22px !important;line-height:1.4;color:#F4FAF7}
+#fMine #mEnd.g2 .rn-s{margin:0 !important;font-size:15.5px !important;font-weight:600;color:#D6E4E1}
+#fMine #mEnd.g2 .mend-b{display:grid !important;gap:8px !important;margin-top:10px !important;justify-items:stretch}
+#fMine #mEnd.g2 .mend-b .btn.big{width:100%;font-size:16.5px !important;padding:11px 16px !important;white-space:nowrap}
+.g2-area{width:100%;padding:8px 16px;border-radius:14px;background:transparent;border:1.5px solid rgba(190,242,100,.55);color:#F4FAF7;font-family:inherit;font-size:15px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;transition:border-color .2s,background .2s}
+.g2-area[hidden]{display:none}
+.g2-area:hover{border-color:#BEF264;background:rgba(190,242,100,.08)}
+.g2-area small{font-size:12px;font-weight:700;color:#A7BDB6;white-space:nowrap}
+#fMine #mEnd.g2 .tf-demo{justify-self:center;font-size:13px}
+@media (max-width:1000px){
+  #fMine #mEnd.g2{grid-template-columns:1fr;gap:16px;padding:14px !important}
+  .g2-act{padding-inline-start:0;border-inline-start:0;padding-top:14px;border-top:1px solid rgba(190,242,100,.22);text-align:center}
+  .g2-score{justify-items:center}
+  .g2-x{grid-template-columns:repeat(3,46px) 56px;gap:5px}
+  .g2-l{font-size:12.5px}
+  .g2-area{flex-direction:column;gap:0}
+}
+/* province page: matrix / table */
+.cy-fig{grid-template-rows:auto minmax(0,1fr) auto}
+.cy-tg{display:flex;gap:6px;justify-content:center}
+.cy-tg button{font-family:inherit;font-size:13px;font-weight:800;color:#C4D8D0;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:3px 16px;cursor:pointer}
+.cy-tg button.on{background:#BEF264;border-color:#BEF264;color:#10292B}
+.cy-tb{align-self:center;min-height:0;overflow:auto;padding:0 6px}
+.cy-tb[hidden]{display:none}
+.cy-tb table{width:100%;border-collapse:collapse;font-size:15px}
+.cy-tb th,.cy-tb td{padding:12px 10px;text-align:start;border-bottom:1px solid rgba(255,255,255,.1)}
+.cy-tb thead th{font-size:12.5px;font-weight:800;color:#A7BDB6}
+.cy-tb thead th:nth-child(2){color:#BEF264}
+.cy-tb tbody th{font-weight:800;color:#F4FAF7}
+.cy-tb td{color:#D6E4E1;font-variant-numeric:tabular-nums}
+.cy-tb td:nth-child(2){font-weight:900;color:#F4FAF7}
+.cy-tb td b{font-size:17px;color:#F4FAF7}
+.cy-tb td small{display:block;font-size:12px;color:#8FA9A2}
+.cy-tb p{margin:10px 0 0;font-size:12px;color:#8FA9A2}
+@media (max-width:620px){.cy-tb table{font-size:13.5px}.cy-tb th,.cy-tb td{padding:9px 6px}}
+/* v104b */
+#fMine #mEnd.g2{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.g2-x{grid-template-columns:repeat(3,50px) 56px}
+.g2-h em{font-size:11.5px}
+.g2-l{display:grid;line-height:1.35}
+.g2-l small{font-size:11px;font-weight:800;color:#8FA9A2}
+.g2-l b{font-size:13.5px;font-weight:800;color:#F4FAF7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g2-c{height:34px}
+#fMine #mEnd.g2 .mend-b .btn.big{font-size:16px !important;padding:11px 10px !important}
+.g2-area{justify-content:center;font-size:14px;padding:9px 10px;white-space:normal;line-height:1.5}
+@media (max-width:1000px){#fMine #mEnd.g2{grid-template-columns:1fr}.g2-x{grid-template-columns:repeat(3,46px) 54px}.g2-l{text-align:start}}
+/* v105: round-1 end card uses the same two-row score table */
+#fReal .r-next.g2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:center;text-align:start;padding:16px 20px !important;box-sizing:border-box}
+#fReal .r-next.g2 .rn-h{margin:0 !important;font-size:22px !important;line-height:1.4;color:#F4FAF7}
+#fReal .r-next.g2 .rn-s{margin:0 !important;font-size:15.5px !important;font-weight:600;color:#D6E4E1}
+#fReal .r-next.g2 .mend-b{display:grid !important;margin-top:10px !important}
+#fReal .r-next.g2 #fYes{margin:0 !important;width:100%;font-size:16px !important;padding:11px 10px !important;white-space:nowrap}
+#rSum.go .g2-c{animation:scIn .45s cubic-bezier(.2,.9,.25,1.3) both}
+#rSum.go .g2-c:nth-child(2){animation-delay:.12s}#rSum.go .g2-c:nth-child(3){animation-delay:.24s}
+.g2-next .g2-c.wait{border-color:rgba(190,242,100,.6);color:#BEF264;background:rgba(190,242,100,.06);animation:rnNext 2.4s ease-in-out infinite}
+.g2-next .g2-n.wait,.g2-next .g2-l b{color:#BEF264}
+@media (prefers-reduced-motion:reduce){#rSum.go .g2-c,.g2-next .g2-c.wait{animation:none}}
+@media (max-width:1000px){#fReal .r-next.g2{grid-template-columns:1fr;gap:16px;padding:14px !important}}
+/* v105b: column heads never touch */
+.g2-x{grid-template-columns:repeat(3,58px) 56px}
+@media (max-width:1000px){.g2-x{grid-template-columns:repeat(3,54px) 52px;gap:4px}.g2-h em{font-size:10.5px}}
+/* v106: the guess report on the picture repeated the three cards - removed on both result pages */
+#fReal .gnote.rnote,#fMine .gnote.rnote{display:none !important}
+/* v107: result cards - one clear hero number, quieter supporting text (both result pages) */
+#fReal .fc-h b,#fMine .fc-h b{font-size:16px !important;font-weight:800}
+#fReal .fc-bar em,#fMine .fc-bar em{font-size:15px !important;font-weight:800}
+#fReal .fc-l small,#fMine .fc-l small{font-size:12.5px !important;font-weight:700}
+#fReal .fc-res .w,#fMine .fc-res .w{font-size:12.5px !important;font-weight:800}
+#fReal .fc-res b,#fMine .fc-res b{font-size:28px !important;line-height:1.2}
+#fReal .fc-res i,#fMine .fc-res i,#fReal .fc-res span,#fMine .fc-res span{font-size:12.5px !important;font-weight:700}
+@media (max-height:800px){#fReal .fc-res b,#fMine .fc-res b{font-size:26px !important}}
+@media (max-width:620px){#fReal .fc-res b,#fMine .fc-res b{font-size:28px !important}}
+/* v107b */
+@media (max-height:800px) and (min-width:1001px){#fMine .fc-res{padding:4px 8px !important}#fMine .fc-f{margin-top:4px}}
+/* v108: top bar - the live pill repeated the line under the title on the result pages */
+#fReal .sc-top .live,#fMine .sc-top .live{display:none}
 </style>
 </head>
 <body class="hookpage">
@@ -3274,7 +3376,13 @@ body.in-panel .ab-foot{display:none}
           <h1 class="q-h2" id="fRealH">—</h1>
           <p class="q-sub2 r-sub">مهر امسال نسبت به مهر پارسال، در همه کافه رستوران‌های کشور.</p>
           <div class="rstack" id="rgrid"></div>
-                    <div class="r-go" id="fBridge"><div class="r-next"><div class="rn-track"><div class="rn-st done"><small>مرحله ۱ · کل ایران</small><div class="rsum" id="rSum"></div></div><span class="rn-arrow" aria-hidden="true"><i></i></span><div class="rn-st next"><small>مرحله ۲ · شهر و صنف شما</small><span class="rn-q" aria-label="هنوز بازی نشده"><i></i><i></i><i></i><b>؟ از ۳</b></span></div></div><strong class="rn-h">اما بازار شما کل ایران نیست.</strong><p class="rn-s">با شهر و صنف خودتان، <em>نزدیک‌تر</em> می‌شوید یا <em>دورتر</em>؟</p><span id="rWhyT" hidden></span><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button></div></div>
+                    <div class="r-go" id="fBridge"><div class="r-next g2" id="rEnd">
+                      <div class="g2-score"><div class="g2-t" role="table" aria-label="کارنامه دو مرحله">
+                        <div class="g2-r g2-hd" role="row"><span></span><span class="g2-x" id="rGH"></span></div>
+                        <div class="g2-r" role="row"><span class="g2-l"><small>مرحله ۱</small><b>کل ایران</b></span><span class="g2-x" id="rSum"></span></div>
+                        <div class="g2-r g2-next" role="row"><span class="g2-l"><small>مرحله ۲</small><b>شهر و صنف شما</b></span><span class="g2-x" id="rNextRow" aria-label="هنوز بازی نشده"></span></div>
+                      </div></div>
+                      <div class="g2-act"><strong class="rn-h">اما بازار شما کل ایران نیست.</strong><p class="rn-s">با شهر و صنف خودتان، <em>نزدیک‌تر</em> می‌شوید یا <em>دورتر</em>؟</p><span id="rWhyT" hidden></span><div class="mend-b"><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button></div></div></div></div>
           <div class="final" id="fEndNo" hidden></div>
         </div>
       </section>
@@ -3334,15 +3442,22 @@ body.in-panel .ab-foot{display:none}
             <div class="mc-plot" id="mPlot"></div>
             <div class="mc-tip" id="mTip" hidden></div>
           </figure>
-          <div class="mend r-next" id="mEnd">
-            <div class="rn-track">
-              <div class="rn-st done"><small>مرحله ۱ · کل ایران</small><div class="rsum go" id="mR1"></div></div>
-              <span class="rn-mid"><span class="rdir" id="mDir" hidden></span><span class="rn-arrow" aria-hidden="true"><i></i></span></span>
-              <div class="rn-st done"><small id="mR2L">مرحله ۲ · صنف شما</small><div class="rsum" id="mSum"></div></div>
+          <div class="mend r-next g2" id="mEnd">
+            <div class="g2-score">
+              <div class="g2-t" role="table" aria-label="کارنامه دو مرحله">
+                <div class="g2-r g2-hd" role="row"><span></span><span class="g2-x" id="mGH"></span></div>
+                <div class="g2-r" role="row"><span class="g2-l"><small>مرحله ۱</small><b>کل ایران</b></span><span class="g2-x" id="mR1"></span></div>
+                <div class="g2-r" role="row"><span class="g2-l"><small>مرحله ۲</small><b id="mR2L">صنف شما</b></span><span class="g2-x" id="mSum"></span></div>
+              </div>
+              <span class="rdir" id="mDir" hidden></span>
             </div>
-            <strong class="rn-h">این‌ها هنوز حدس است.</strong>
-            <p class="rn-s">عدد <em>واقعی</em> مجموعه شما چقدر است؟</p>
-            <div class="mend-b"><button class="btn primary big" id="mUnlock">بله، درخواست اتصال می‌دهم ←</button><button type="button" class="tf-demo" id="mDemo">بعد از اتصال چه می‌بینم؟</button></div>
+            <div class="g2-act">
+              <strong class="rn-h">این‌ها هنوز حدس است.</strong>
+              <p class="rn-s">عدد <em>واقعی</em> مجموعه شما چقدر است؟</p>
+              <div class="mend-b"><button class="btn primary big" id="mUnlock">درخواست اتصال می‌دهم ←</button>
+                <button type="button" class="btn g2-area" id="mAreaBtn" hidden></button>
+                <button type="button" class="tf-demo" id="mDemo">بعد از اتصال چه می‌بینم؟</button></div>
+            </div>
             <span id="mInvW" hidden></span><span id="mInvH" hidden></span></div>
           <table class="cmp" id="fCmp" hidden></table><p class="hk-note" id="hkNote" hidden></p>
         </div>
@@ -3355,20 +3470,22 @@ body.in-panel .ab-foot{display:none}
         <div class="sc-top"><button class="backl" data-prev>→ قبلی</button><span class="live"><i></i> گزارش بهار ۱۴۰۵ · بهار امسال نسبت به بهار پارسال</span></div>
         <div class="cy">
           <header class="cy-hd">
-            <p class="gstage"><b>تحلیل استان</b> از گزارش بهار ۱۴۰۵</p>
+            <p class="gstage"><b>تحلیل تخصصی استان</b> از گزارش بهار ۱۴۰۵</p>
             <h1 class="cy-h" id="cyH">—</h1>
             <p class="cy-lead">سه نگاه به بازار استان شما. هر دایره یک استان است و دایره روشن، استان شما.</p>
           </header>
           <div class="cy-body">
             <div class="cy-cards" id="cyCards" role="tablist" aria-label="سه نگاه به استان"></div>
             <figure class="cy-fig">
+              <div class="cy-tg" role="tablist" aria-label="نمایش"><button type="button" class="on" data-v="mx" role="tab">ماتریس</button><button type="button" data-v="tb" role="tab">جدول عددها</button></div>
               <svg id="cyMx" role="img" aria-labelledby="cyCap"></svg>
+              <div class="cy-tb" id="cyTb" hidden></div>
               <figcaption id="cyCap"></figcaption>
             </figure>
           </div>
           <footer class="cy-ft">
             <p class="cy-sum"><b>این تصویر کل استان است، نه مجموعه شما.</b> جای مجموعه شما در این تصویر، با فاکتورهای خودتان معلوم می‌شود.</p>
-            <div class="cy-cta"><button class="btn primary big" id="cyGo">درخواست اتصال می‌دهم ←</button><a class="cy-rep" id="cyRep" target="_blank" rel="noopener">گزارش کامل بهار ↗</a></div>
+            <div class="cy-cta"><button class="btn primary big" id="cyGo">درخواست اتصال می‌دهم ←</button><button type="button" class="tf-demo" id="cyDemo">بعد از اتصال چه می‌بینم؟</button><a class="cy-rep" id="cyRep" target="_blank" rel="noopener">گزارش کامل بهار ↗</a></div>
           </footer>
         </div>
       </section>
@@ -4413,6 +4530,9 @@ const dirOf = (n1,g1,n2,g2) => n2>n1 ? 'near' : n2<n1 ? 'far' : Math.abs(g2-g1)<
 const scoreHTML = (m, near) => `<span class="sct">${FQ.map(q=>{ const c = closeOf(Math.round(state.g[q.k]-m[q.k]))[0], ok = c==='a'||c==='b';
     return `<span class="sc-t ${ok?'ok':'no'}" title="${FL[q.k]}: ${ok?'نزدیک':'دور'}"><span class="ic-w">${ic(q.i)}</span><em>${FL[q.k]}</em></span>`; }).join('')}</span>
   <span class="sc-n"><small>امتیاز شما</small><b>${fa(near)} از ${fa(FQ.length)}</b></span>`;
+const G2I = {ok:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', no:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>'};
+const rowHTML = (m, near) => FQ.map(q=>{ const c = closeOf(Math.round(state.g[q.k]-m[q.k]))[0], ok = c==='a'||c==='b';
+    return `<span class="g2-c ${ok?'ok':'no'}" role="cell" title="${FL[q.k]}: ${ok?'نزدیک':'دور'}">${G2I[ok?'ok':'no']}<i class="sr">${ok?'نزدیک':'دور'}</i></span>`; }).join('') + `<b class="g2-n" role="cell">${fa(near)} از ${fa(FQ.length)}</b>`;
 const sumHTML = (near, total, hideFar) => `<span class="sn">${Array.from({length:total},(_,i)=>`<i class="${i<near?'on':''}"></i>`).join('')}</span><b>${fa(near)} از ${fa(total)} حدس نزدیک</b>${hideFar ? '' : `<span class="far">${fa(total-near)} حدس دور</span>`}`;
 function fReal(){
   const m = YTD['کل کشور'].all;
@@ -4433,7 +4553,10 @@ function fReal(){
       <text x="60" y="78" text-anchor="middle" font-size="9.5" font-weight="900" fill="currentColor" stroke="none">عدد واقعی؟</text>
       <path d="M10 66 L110 54" stroke-width="0"/></g></svg>`;
   const ME_T = {up:'بیشتر از بازار',flat:'حدود بازار',down:'کمتر از بازار'};
-  $('#rSum').innerHTML = ''; playCards('#rgrid', m, 'کل ایران', {row:gradeRow, all:(still,near)=>{ state.r1 = near; state.r1Gap = gapOf(m); $('#rWhyT').textContent = near===FQ.length ? `هر ${fa(near)} حدس شما به کل ایران نزدیک بود.` : near ? `${fa(near)} حدس از ${fa(FQ.length)} حدس شما به کل ایران نزدیک بود.` : 'این بار حدس‌ها از کل ایران فاصله داشت.'; $('#rSum').innerHTML = scoreHTML(m, near); $('#rSum').classList.add('go'); $('#fBridge').classList.add('go'); setTimeout(()=>{ $('#rStamp').classList.add('go'); setTimeout(()=>$('#rNote').classList.add('thump'), 330); }, 750); }});
+  { const wait = FQ.map(()=>'<span class="g2-c wait">؟</span>').join('') + '<b class="g2-n wait">؟ از ۳</b>';
+    $('#rGH').innerHTML = FQ.map(q=>`<span class="g2-h">${ic(q.i)}<em>${FL[q.k]}</em></span>`).join('') + '<span class="g2-h"><em>امتیاز</em></span>';
+    $('#rSum').classList.remove('go'); $('#rSum').innerHTML = wait; $('#rNextRow').innerHTML = wait; }
+  playCards('#rgrid', m, 'کل ایران', {row:gradeRow, all:(still,near)=>{ state.r1 = near; state.r1Gap = gapOf(m); $('#rWhyT').textContent = near===FQ.length ? `هر ${fa(near)} حدس شما به کل ایران نزدیک بود.` : near ? `${fa(near)} حدس از ${fa(FQ.length)} حدس شما به کل ایران نزدیک بود.` : 'این بار حدس‌ها از کل ایران فاصله داشت.'; $('#rSum').innerHTML = rowHTML(m, near); $('#rSum').classList.add('go'); $('#fBridge').classList.add('go'); setTimeout(()=>{ $('#rStamp').classList.add('go'); setTimeout(()=>$('#rNote').classList.add('thump'), 330); }, 750); }});
   $('#fEndNo').hidden = true;
 }
 function finalBox(el){
@@ -4607,7 +4730,7 @@ const SPRING = {
 const SQ = {tl:['شکننده و پرفشار','#FB923C'], tr:['مقاوم اما پرفشار','#FBBF24'], bl:['شکننده، اما کم‌فشار','#FBBF24'], br:['مقاوم و کم‌فشار','#4ADE80']};
 function springCard(pv){
   const el = $('#mSpr'), el2 = $('#mArea'), d = SPRING[pv];
-  if (!d || !AR_PD[pv]){ el.hidden = el2.hidden = true; return; }
+  el.hidden = el2.hidden = true; return;
   const [o,f,q,oe,fe] = d, [t,c] = SQ[q];
   el.innerHTML = `<small>تحلیل استان شما · گزارش بهار ۱۴۰۵</small><b>${pv} <em style="background:${c}">${t}</em></b>
     <span>سفارش ${oe?'':'حدود '}<bdi>${o<0?'−':'+'}${fa(Math.abs(o)).replace('.','٫')}٪</bdi> · تورم خوراکی ${fe?'':'حدود '}<bdi>${fa(f)}٪</bdi></span><u>تحلیل ${pv} را ببینم ←</u>`;
@@ -4691,7 +4814,15 @@ function fArea(){
   $('#cyCards').innerHTML = Object.entries(AR_M).map(([m,D],i)=>{ const [t,c] = D.q[arQ(D,p)];
     return `<button type="button" class="cy-c" role="tab" data-m="${m}"><small>${fa(i+1)} · ${D.k}</small><b>${D.ask}</b><span class="cy-tag" style="background:${c}">${t}</span><p>${arSay(m,p)}</p><i>${AR_NM[D.x]} ${arN(D.x,p[D.x])} · ${AR_NM[D.y]} ${arN(D.y,p[D.y])}</i></button>`; }).join('');
   $$('#cyCards .cy-c').forEach(b=>b.addEventListener('click',()=>{ fArea.m = b.dataset.m; arDraw(fArea.m); }));
-  $('#cyGo').onclick = ()=>{ state.direct = false; state.viaArea = true; fShow('stage2'); };
+  $('#cyGo').onclick = ()=>{ state.direct = false; state.viaArea = true; fShow('stage2'); }; $('#cyDemo').onclick = dmOpen;
+  const all = Object.values(AR_PD), med = k => { const v = all.map(x=>x[k]).sort((a,b)=>a-b); return (v[8]+v[9])/2; };
+  const RK = {o:['کمترین افت سفارش',-1], f:['کمترین تورم خوراکی',1], m:['بیشترین رشد قیمت منو',-1], a:['بیشترین رشد میانگین فاکتور',-1]};
+  $('#cyTb').innerHTML = `<table><thead><tr><th>شاخص · بهار ۱۴۰۵</th><th>${pv}</th><th>میانه ۱۸ استان</th><th>جایگاه بین ۱۸ استان</th></tr></thead><tbody>${['o','f','m','a'].map(k=>{
+    const rank = all.filter(x=>RK[k][1]*(x[k]-p[k])<0).length+1;
+    return `<tr><th>${{o:'تغییر سفارش',f:'تورم خوراکی',m:'رشد قیمت منو',a:'رشد میانگین فاکتور'}[k]}</th><td>${arN(k,p[k])}</td><td>${arN(k,med(k))}</td><td><b>${fa(rank)}</b> از ۱۸ <small>در ${RK[k][0]}</small></td></tr>`; }).join('')}</tbody></table>
+    <p>عددها نسبت به بهار ۱۴۰۴ است. میانه یعنی عدد وسط ۱۸ استان گزارش.</p>`;
+  const view = v => { $('#cyMx').style.display = v==='mx' ? '' : 'none'; $('#cyTb').hidden = v==='mx'; $$('.cy-tg button').forEach(b=>{ b.classList.toggle('on', b.dataset.v===v); b.setAttribute('aria-selected', b.dataset.v===v); }); };
+  $$('.cy-tg button').forEach(b=>b.onclick = ()=>view(b.dataset.v)); $$('#cyCards .cy-c').forEach(b=>b.addEventListener('click',()=>view('mx'))); view('mx');
   arDraw(fArea.m || 'res');
 }
 function fMine(){
@@ -4707,9 +4838,10 @@ function fMine(){
   const far = FQ.reduce((a,q)=>a+Math.abs(state.g[q.k]-z[q.k]),0)/3;
   $('#fMineK').textContent = `بازار شما: ${want}`;
   $('#mSrc').innerHTML = `<i></i>${fb ? who : want} · فاکتورهای واقعی و ناشناس · مهر امسال نسبت به مهر پارسال`;
-  $('#mR2L').textContent = `مرحله ۲ · ${fb ? who : want}`;
+  $('#mR2L').textContent = fb ? who : want; $('#mR2L').title = fb ? who : want;
   const n1 = FQ.filter(q=>{ const c = closeOf(Math.round(state.g[q.k]-nat.all[q.k]))[0]; return c==='a'||c==='b'; }).length;
-  $('#mR1').innerHTML = scoreHTML(nat.all, n1);
+  $('#mGH').innerHTML = FQ.map(q=>`<span class="g2-h">${ic(q.i)}<em>${FL[q.k]}</em></span>`).join('') + '<span class="g2-h"><em>امتیاز</em></span>';
+  $('#mR1').innerHTML = rowHTML(nat.all, n1);
   springCard(pv);
   $('#fMineH').innerHTML = `حدس شما، این بار کنار <em>${fb ? who : 'بازار خودتان'}</em>.`;
   const al = $('#fMineAlert'); al.hidden = !fb;
@@ -4720,11 +4852,13 @@ function fMine(){
   state.mine = {z, want, city, pv, c, N0};
   drawMineArt(pv, c, want, z, city);
   drawMine(z, N0);
+  const hasArea = !!AR_PD[pv], ab = $('#mAreaBtn');
   $('#mUnlock').onclick = ()=>{ state.direct = false; state.viaArea = false; fShow('stage2'); }; $('#mDemo').onclick = dmOpen;
+  ab.hidden = !hasArea; if (hasArea){ ab.textContent = `تحلیل تخصصی بازار ${pv} ←`; ab.title = 'سه ماتریس گزارش بهار ۱۴۰۵ برای استان شما'; ab.onclick = ()=>fShow('fArea'); }
   $('#mEnd').classList.remove('go');
-  $('#mSum').innerHTML = ''; playCards('#mGrid', z, 'صنف شما', {row:i=>{ const li = $$('#mNoteL li')[i]; if (li) li.classList.add('gr'); }, all:(still,near)=>{ const r1 = state.r1!=null ? state.r1 : n1, g1 = state.r1Gap!=null ? state.r1Gap : gapOf(nat.all);
+  $('#mSum').classList.remove('go'); $('#mSum').innerHTML = FQ.map(()=>'<span class="g2-c wait">؟</span>').join('') + '<b class="g2-n wait">؟ از ۳</b>'; playCards('#mGrid', z, 'صنف شما', {row:i=>{ const li = $$('#mNoteL li')[i]; if (li) li.classList.add('gr'); }, all:(still,near)=>{ const r1 = state.r1!=null ? state.r1 : n1, g1 = state.r1Gap!=null ? state.r1Gap : gapOf(nat.all);
     const dir = z!==nat.all ? dirOf(r1, g1, near, gapOf(z)) : '';
-    $('#mSum').innerHTML = scoreHTML(z, near); $('#mSum').classList.add('go');
+    $('#mSum').innerHTML = rowHTML(z, near); $('#mSum').classList.add('go');
     const d = $('#mDir'); d.hidden = !dir; if (dir){ d.className = `rdir d-${dir.replace('G','')}`; d.textContent = DIR[dir]; }
     setTimeout(()=>{ $('#mEnd').classList.add('go'); }, still?0:700); }});
 }
