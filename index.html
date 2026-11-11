@@ -3094,6 +3094,16 @@ body.in-panel .ab-foot{display:none}
 .ts-doc2-h span{font-size:22px;font-weight:900;color:#F4FAF7}
 .ts-doc2-h a{font-size:14px;font-weight:800;color:#BEF264;text-underline-offset:4px}
 #tsDoc{display:block;width:100%;height:1600px;border:0;border-radius:18px;background:#EEF2F1}
+/* v100: a lighter trust page - only the engine, the product document as a card */
+.ts-viz[hidden]{display:none !important}
+.ts-doccard{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:36px 0 0;padding:18px 20px;border-radius:18px;background:rgba(12,32,34,.8);border:1px solid rgba(190,242,100,.25);color:#F4FAF7;text-decoration:none;transition:border-color .2s,transform .2s}
+.ts-doccard:hover{border-color:#BEF264;transform:translateY(-2px)}
+.ts-doccard span{display:grid;gap:2px}
+.ts-doccard small{font-size:12.5px;font-weight:800;color:#A7BDB6}
+.ts-doccard b{font-size:19px;font-weight:900}
+.ts-doccard i{font-style:normal;font-size:14px;color:#D6E4E1}
+.ts-doccard u{flex:none;font-size:15px;font-weight:800;color:#BEF264;text-underline-offset:4px;white-space:nowrap}
+@media (max-width:620px){.ts-doccard{flex-direction:column;align-items:flex-start;gap:10px}}
 </style>
 </head>
 <body class="hookpage">
@@ -3498,7 +3508,7 @@ body.in-panel .ab-foot{display:none}
     <section class="ts-sec">
       <h2>چرا هر فاکتور، <em>اعتبار</em> را بالا می‌برد</h2>
       <p>ناشناس بودن و دقیق بودن، با هم رشد می‌کنند. هر فاکتور تازه دو کار می‌کند: میانگین را به واقعیت بازار نزدیک‌تر می‌کند، و هر مجموعه را میان جمعیتی بزرگ‌تر پنهان‌تر. پس هرچه شاخص اعتماد بالاتر برود، هم گزارش معتبرتر می‌شود و هم داده هر مجموعه امن‌تر.</p>
-      <div class="ts-viz">
+      <div class="ts-viz" hidden>
         <div class="ts-vh"><span>اعتبار تصویر بازار</span><b id="tsC">—</b></div>
         <canvas id="tsCv" width="720" height="250" aria-label="هرچه مجموعه بیشتری وصل شود، نبض بازار صاف‌تر می‌شود"></canvas>
         <div class="ts-leg"><span><i class="d"></i>هر نقطه: یک مجموعه متصل</span><span><i class="l"></i>نبض بازار، ساخته از فاکتورهای همه</span></div>
@@ -3522,10 +3532,10 @@ body.in-panel .ab-foot{display:none}
       <button type="button" class="btn primary big" id="tsGo">من هم دستم را می‌دهم ←</button>
     </footer>
 
-    <section class="ts-doc2" aria-label="سند محصول نبض بازار">
-      <div class="ts-doc2-h"><span>سند محصول نبض بازار</span><a href="catalog-v2.html" target="_blank" rel="noopener">باز کردن در صفحه جدا ↗</a></div>
-      <iframe id="tsDoc" src="catalog-v2.html" title="سند محصول نبض بازار" loading="lazy"></iframe>
-    </section>
+    <a class="ts-doccard" href="catalog-v2.html" target="_blank" rel="noopener">
+      <span><small>برای کسی که می‌خواهد بیشتر بداند</small><b>سند محصول نبض بازار</b><i>نحوه کار، پوشش، حریم داده و جزئیات داشبورد، در یک سند کامل.</i></span>
+      <u>خواندن سند ↗</u>
+    </a>
   </article>
 </div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-label="درباره نبض بازار" hidden>
