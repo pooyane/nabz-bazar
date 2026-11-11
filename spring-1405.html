@@ -650,7 +650,7 @@ function pick(pv){ SEL = pv; $('#pvSel').value = pv; paint(); card(); mxDraw(); 
 $('#pvSel').innerHTML = HAVE.slice().sort((a,b)=>a.localeCompare(b,'fa')).map(n=>`<option>${n}</option>`).join('');
 $('#pvSel').addEventListener('change', e=>pick(e.target.value));
 $$('.tab[data-k]').forEach(t=>t.addEventListener('click',()=>{ K = t.dataset.k; $$('.tab[data-k]').forEach(x=>{ x.classList.toggle('on', x===t); x.setAttribute('aria-selected', x===t); }); paint(); }));
-drawMap(); infDraw('s'); pick(SEL); document.fonts && document.fonts.ready.then(()=>mxDraw());
+drawMap(); infDraw('s'); { const qp = new URLSearchParams(location.search).get('pv'); if (qp && HAVE.includes(qp)) SEL = qp; } pick(SEL); if (location.hash) { const tg = document.querySelector(location.hash); if (tg) setTimeout(()=>tg.scrollIntoView({block:'start'}), 120); } document.fonts && document.fonts.ready.then(()=>mxDraw());
 </script>
 </body>
 </html>
