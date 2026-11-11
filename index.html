@@ -3013,6 +3013,81 @@ body.in-panel .ab-foot{display:none}
 #fMine .rn-mid .rdir{margin:0 !important;font-size:14px !important;padding:3px 12px !important;white-space:nowrap}
 #fMine .mend-b{flex-direction:row !important;gap:18px !important}
 @media (max-height:800px){#fMine .fc-plot{height:62px !important}#fMine .rn-track{gap:10px}}
+/* ===== v97: mobile ===== */
+@media (max-width:620px){
+  /* 1. footer links: at the end of the page, not floating over buttons */
+  .ab-foot{position:static !important;justify-content:center;flex-wrap:wrap;gap:6px 10px;margin:8px 16px 28px;text-align:center}
+  /* 2. step pills: only the current step; the data pill moves into the page */
+  .sc-top .crumbs span:not(.on){display:none}
+  .sc-top .live{display:none}
+  .sc-top{gap:8px}
+  body.st-on .sc .qpanel{margin-top:64px !important}
+  /* hook: frame the chef between the title and the call to action */
+  #sKV .kv2 .kv2-stage.kv,.kv2 .kv2-stage{width:calc(86svh * 1332 / 718) !important;max-width:none !important;top:auto !important;bottom:15svh !important;left:50% !important;transform:translateX(-48.2%) !important}
+  .kv2-head h1{font-size:28px !important;padding:0 16px}
+  .kv2 .kv2-act{bottom:2.5svh;width:calc(100% - 32px)}
+  .kv2 .kv2-act .cta2{min-width:0;width:100%}
+  /* intro: a picture band on top - the chef, his main thought and one question about the others */
+  .ld{height:auto !important;min-height:100svh;padding:16px 16px 28px !important;gap:18px !important;align-items:start}
+  .ld-art{display:block !important;order:-1;width:100%;height:300px;aspect-ratio:auto;margin:52px 0 0;justify-self:stretch}
+  .ld-img{background-position:46.8% 34% !important;border-radius:22px}
+  .ld-art .th.t3,.ld-art .th.t4,.ld-art .bub{display:none}
+  .ld-art .th.t2.main{top:16% !important;left:3% !important;right:3% !important}
+  .ld-art .th.t2.main span{font-size:14.5px !important;padding:10px 14px !important}
+  .ld-art .th.t1{top:40% !important;right:6% !important;left:auto !important}
+  .ld-art .th.t1 span{font-size:13px !important}
+  .ld-copy .backl{position:absolute;top:16px;right:16px}
+  /* 3. guess: the staircase shares the width */
+  .gcard.g3{padding:14px 12px 16px}
+  .g3-q{font-size:20px}
+  .g3-viz{gap:22px}
+  .g3-viz .g2-col{width:84px}
+  .g3-viz .g2-track{height:130px}
+  .g3-st{gap:5px}
+  .g3-st .gopt{flex:1 1 0 !important;min-width:0;padding:0 0 7px}
+  .g3-st .gopt b{font-size:13px}
+  .g3-st .gopt small{font-size:10px}
+  #fQ .q-go2{flex-direction:column;gap:10px}
+  /* 4. result cards one under another, shorter */
+  #fReal .rstack,#fMine .rstack{grid-template-columns:1fr !important}
+  #fReal .fc-plot,#fMine .fc-plot{height:64px !important;margin-top:26px !important}
+  #fReal .q-kick,#fMine .q-kick{font-size:26px}
+  #fReal .r-src,#fMine .r-src{flex-wrap:wrap;font-size:13px}
+  /* the gate: scoreboards stacked, the arrow points down */
+  .rn-track{flex-direction:column;gap:6px}
+  .rn-st{width:100%;min-width:0;box-sizing:border-box}
+  .rn-arrow{transform:rotate(-90deg);margin:12px 0}
+  #fMine .rn-mid{flex-direction:row;gap:14px}
+  .rn-st .rsum{flex-wrap:wrap;justify-content:center}
+  .rn-h{font-size:22px !important}
+  .rn-s{font-size:15.5px !important}
+  .r-next{padding:14px 14px 18px !important}
+  #fMine .mend-b{flex-direction:column !important;gap:10px !important}
+  #fMine .mend-b .tf-demo{white-space:nowrap}
+  #fReal .r-next #fYes,#fMine .mend-b .btn.big{width:100%;padding:12px 16px !important;font-size:16px !important}
+  /* 5. pick: city then business type, types in two columns */
+  .pkcard.pkmap{display:grid !important;grid-template-columns:1fr !important;gap:16px}
+  #fPick .pkside .cat-row .pkopts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  #fPick .pkside .cat-row .pk{justify-content:center}
+}
+/* v97b: mobile */
+@media (max-width:620px){
+  #kvLabels .lb3:nth-child(1),#kvLabels .lb3:nth-child(4),#kvLabels .lb3:nth-child(5){display:none !important}
+  #kvLabels .lb3:nth-child(2){left:35.2% !important;top:33% !important}
+  #kvLabels .lb3:nth-child(3){left:48.6% !important;top:26% !important}
+  .ld{position:relative}
+  .ld-copy{position:static !important}
+  .ld-copy .backl{top:22px;right:18px;z-index:5}
+}
+/* v97c: mobile */
+@media (max-width:620px){
+  #fPick .q-go2{flex-direction:column;align-items:stretch;gap:10px;text-align:center}
+  #fPick .q-go2 .btn.big{width:100%;white-space:nowrap;font-size:16px !important}
+  .ab-foot .ab-rl::before{content:none !important}
+}
+/* v98: the engine on the trust page */
+.ts-eng{margin:14px 0 18px}
+.ts-eng iframe{display:block;width:100%;height:420px;border:0;border-radius:18px;background:transparent;color-scheme:normal}
 </style>
 </head>
 <body class="hookpage">
@@ -3391,7 +3466,7 @@ body.in-panel .ab-foot{display:none}
 </main>
 
 <!-- ================= AGREEMENT MODAL ================= -->
-<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a></div>
+<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a><a class="ab-rl ab-doc" href="catalog-v2.html" target="_blank" rel="noopener">سند محصول</a></div>
 <div class="tsx" id="trustX" role="dialog" aria-modal="true" aria-label="شاخص اعتماد" hidden>
   <button type="button" class="ab-x ts-x" id="tsX" aria-label="بستن">✕</button>
   <article class="ts-doc">
@@ -3405,6 +3480,7 @@ body.in-panel .ab-foot{display:none}
 
     <section class="ts-sec">
       <h2>از فاکتور تا تصویر بازار</h2>
+      <div class="ts-eng"><iframe id="tsEng" src="engine.html" title="موتور نبض بازار: از فاکتور تا تحلیل" loading="lazy"></iframe></div>
       <ol class="ts-steps">
         <li><b>فاکتور می‌رسد، بی‌نام.</b><span>از هر فاکتور فقط چهار چیز برداشته می‌شود: مبلغ، تعداد، اقلام و زمان. نام مجموعه، نام و تلفن مشتری و هر نشانی دیگر، پیش از هر محاسبه کنار گذاشته می‌شود.</span></li>
         <li><b>کنار هزاران فاکتور دیگر.</b><span>هیچ فاکتوری تنها دیده نمی‌شود. همه فاکتورهای یک بازار در یک روز روی هم جمع می‌شوند و یک «مبنا» می‌سازند؛ تصویری از رفتار کل آن بازار.</span></li>
@@ -4848,6 +4924,10 @@ kv(); fInit(); fRender(BYHASH[location.hash.slice(1)] || 'sKV');
   $('#tsGo').addEventListener('click', ()=>{ close(); state.direct = true; fShow('stage2'); });
   document.addEventListener('keydown', e=>{ if (e.key==='Escape' && !ov.hidden) close(); });
 })();
+</script>
+<script>
+addEventListener('message', e => { const f = document.getElementById('tsEng');
+  if (f && e.source === f.contentWindow && e.data && e.data.engH) f.style.height = Math.ceil(e.data.engH) + 'px'; });
 </script>
 </body>
 </html>
