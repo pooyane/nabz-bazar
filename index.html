@@ -3104,6 +3104,8 @@ body.in-panel .ab-foot{display:none}
 .ts-doccard i{font-style:normal;font-size:14px;color:#D6E4E1}
 .ts-doccard u{flex:none;font-size:15px;font-weight:800;color:#BEF264;text-underline-offset:4px;white-space:nowrap}
 @media (max-width:620px){.ts-doccard{flex-direction:column;align-items:flex-start;gap:10px}}
+/* v101: footer links stay on one line */
+.ab-foot .ab-rl{white-space:nowrap;flex:none}
 </style>
 </head>
 <body class="hookpage">
@@ -3482,7 +3484,7 @@ body.in-panel .ab-foot{display:none}
 </main>
 
 <!-- ================= AGREEMENT MODAL ================= -->
-<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a><a class="ab-rl ab-doc" href="catalog-v2.html" target="_blank" rel="noopener">سند محصول</a></div>
+<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a><a class="ab-rl ab-pdoc" href="catalog-v2.html" target="_blank" rel="noopener">سند محصول</a></div>
 <div class="tsx" id="trustX" role="dialog" aria-modal="true" aria-label="شاخص اعتماد" hidden>
   <button type="button" class="ab-x ts-x" id="tsX" aria-label="بستن">✕</button>
   <article class="ts-doc">
@@ -4316,8 +4318,8 @@ function playCards(sel, m, mName, cb){
     if (++done===FQ.length) cb.all(still, near); };
   cards.forEach((c,i)=>{ if (still) reveal(c,i); else setTimeout(()=>{ if (c.isConnected && !grid.closest('[hidden]')) reveal(c,i); }, 450 + i*380); }); }
 const gapOf = m => FQ.reduce((a,q)=>a+Math.abs(state.g[q.k]-m[q.k]),0);
-const DIR = {near:'نزدیک‌تر شدید', far:'دورتر شدید', same:'به همان اندازه نزدیک'};
-const dirOf = (n1,g1,n2,g2) => n2>n1 ? 'near' : n2<n1 ? 'far' : Math.abs(g2-g1)<=3 ? 'same' : g2<g1 ? 'near' : 'far';
+const DIR = {near:'نزدیک‌تر شدید', far:'دورتر شدید', nearG:'امتیاز همان، فاصله کمتر', farG:'امتیاز همان، فاصله بیشتر', same:'مثل مرحله ۱'};
+const dirOf = (n1,g1,n2,g2) => n2>n1 ? 'near' : n2<n1 ? 'far' : Math.abs(g2-g1)<=3 ? 'same' : g2<g1 ? 'nearG' : 'farG';
 const scoreHTML = (m, near) => `<span class="sct">${FQ.map(q=>{ const c = closeOf(Math.round(state.g[q.k]-m[q.k]))[0], ok = c==='a'||c==='b';
     return `<span class="sc-t ${ok?'ok':'no'}" title="${FL[q.k]}: ${ok?'نزدیک':'دور'}"><span class="ic-w">${ic(q.i)}</span><em>${FL[q.k]}</em></span>`; }).join('')}</span>
   <span class="sc-n"><small>امتیاز شما</small><b>${fa(near)} از ${fa(FQ.length)}</b></span>`;
@@ -4552,7 +4554,7 @@ function fMine(){
   $('#mSum').innerHTML = ''; playCards('#mGrid', z, 'صنف شما', {row:i=>{ const li = $$('#mNoteL li')[i]; if (li) li.classList.add('gr'); }, all:(still,near)=>{ const r1 = state.r1!=null ? state.r1 : n1, g1 = state.r1Gap!=null ? state.r1Gap : gapOf(nat.all);
     const dir = z!==nat.all ? dirOf(r1, g1, near, gapOf(z)) : '';
     $('#mSum').innerHTML = scoreHTML(z, near); $('#mSum').classList.add('go');
-    const d = $('#mDir'); d.hidden = !dir; if (dir){ d.className = `rdir d-${dir}`; d.textContent = DIR[dir]; }
+    const d = $('#mDir'); d.hidden = !dir; if (dir){ d.className = `rdir d-${dir.replace('G','')}`; d.textContent = DIR[dir]; }
     setTimeout(()=>{ $('#mEnd').classList.add('go'); }, still?0:700); }});
 }
 const diffOf = (g, r) => { const d = Math.round(g-r); return Math.abs(d)<=3 ? {c:'eq', t:'هم‌پای بازار', s:'هم‌پا'} : {c:d>0?'hi':'lo', t:`${fa(Math.abs(d))}٪ ${d>0?'بالاتر':'پایین‌تر'} از بازار`, s:`${fa(Math.abs(d))}٪ ${d>0?'بالاتر':'پایین‌تر'}`}; };
