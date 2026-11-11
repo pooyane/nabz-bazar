@@ -3088,6 +3088,12 @@ body.in-panel .ab-foot{display:none}
 /* v98: the engine on the trust page */
 .ts-eng{margin:14px 0 18px}
 .ts-eng iframe{display:block;width:100%;height:420px;border:0;border-radius:18px;background:transparent;color-scheme:normal}
+/* v99: the product document under the trust page */
+.ts-doc2{margin:40px 0 0;padding-top:28px;border-top:1px solid rgba(190,242,100,.25)}
+.ts-doc2-h{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+.ts-doc2-h span{font-size:22px;font-weight:900;color:#F4FAF7}
+.ts-doc2-h a{font-size:14px;font-weight:800;color:#BEF264;text-underline-offset:4px}
+#tsDoc{display:block;width:100%;height:1600px;border:0;border-radius:18px;background:#EEF2F1}
 </style>
 </head>
 <body class="hookpage">
@@ -3515,6 +3521,11 @@ body.in-panel .ab-foot{display:none}
       <p class="ts-big">شما به این تصویر اعتبار می‌دهید؛<br><em>و این تصویر به شما اعتماد پس می‌دهد.</em></p>
       <button type="button" class="btn primary big" id="tsGo">من هم دستم را می‌دهم ←</button>
     </footer>
+
+    <section class="ts-doc2" aria-label="سند محصول نبض بازار">
+      <div class="ts-doc2-h"><span>سند محصول نبض بازار</span><a href="catalog-v2.html" target="_blank" rel="noopener">باز کردن در صفحه جدا ↗</a></div>
+      <iframe id="tsDoc" src="catalog-v2.html" title="سند محصول نبض بازار" loading="lazy"></iframe>
+    </section>
   </article>
 </div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-label="درباره نبض بازار" hidden>
@@ -4927,7 +4938,9 @@ kv(); fInit(); fRender(BYHASH[location.hash.slice(1)] || 'sKV');
 </script>
 <script>
 addEventListener('message', e => { const f = document.getElementById('tsEng');
-  if (f && e.source === f.contentWindow && e.data && e.data.engH) f.style.height = Math.ceil(e.data.engH) + 'px'; });
+  if (f && e.source === f.contentWindow && e.data && e.data.engH) f.style.height = Math.ceil(e.data.engH) + 'px';
+  const d = document.getElementById('tsDoc');
+  if (d && e.source === d.contentWindow && e.data && e.data.docH) d.style.height = Math.ceil(e.data.docH) + 'px'; });
 </script>
 </body>
 </html>
