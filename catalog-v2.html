@@ -1243,9 +1243,26 @@ td.v2{color:var(--accent-ink);font-weight:600}
 
 @media (max-width:720px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3,.hcards{grid-template-columns:1fr}}
 @media (max-width:460px){.grid2,.pills{grid-template-columns:1fr}}
+/* back to the main page - always in reach */
+.doc-back{position:fixed;top:14px;left:14px;z-index:999;display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;
+  background:rgba(10,23,22,.92);border:1.5px solid rgba(182,240,60,.6);color:#B6F03C;font:800 14px/1.2 var(--font,Tahoma),sans-serif;text-decoration:none;
+  box-shadow:0 8px 22px rgba(0,0,0,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .2s,color .2s}
+.doc-back:hover,.doc-back:focus-visible{background:#B6F03C;color:#0A1716;outline:none}
+.doc-back[hidden]{display:none}
+@media (max-width:620px){.doc-back{top:10px;left:10px;padding:8px 13px;font-size:13px}}
 </style>
 </head>
 <body>
+<a class="doc-back" id="docBack" href="index.html" hidden><span aria-hidden="true">→</span> بازگشت به نبض بازار</a>
+<script>
+(()=>{ const b = document.getElementById('docBack'); if (window.parent !== window) return; b.hidden = false;
+  b.addEventListener('click', e=>{
+    let fromSite = false; try { const u = new URL(document.referrer); fromSite = u.origin === location.origin && u.pathname !== location.pathname; } catch(_){}
+    if (history.length > 1 && fromSite){ e.preventDefault(); history.back(); return; }
+    if (history.length <= 1){ e.preventDefault(); window.close(); setTimeout(()=>{ location.href = 'index.html'; }, 200); }
+  });
+})();
+</script>
 
 
 <div class="wrap">
