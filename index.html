@@ -3270,6 +3270,119 @@ body.in-panel .ab-foot{display:none}
 @media (max-height:800px) and (min-width:1001px){#fMine .fc-res{padding:4px 8px !important}#fMine .fc-f{margin-top:4px}}
 /* v108: top bar - the live pill repeated the line under the title on the result pages */
 #fReal .sc-top .live,#fMine .sc-top .live{display:none}
+/* ===== v109: three questions, one click each ===== */
+#fQ .q-one{margin:0 0 12px;font-size:clamp(20px,1.9vw,26px);line-height:1.5;font-weight:900;color:#BEF264}
+#fQ .q-one span{display:block;font-size:15px;font-weight:600;color:#C4D8D0}
+#fQ #qDone,#fQ #gToks{display:none}
+.g3-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px}
+.g3-s{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;padding:7px 10px;border-radius:12px;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.14);color:#A7BDB6;font-family:inherit;cursor:pointer;text-align:start;transition:border-color .2s,background .2s}
+.g3-s i{font-style:normal;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.1);font-size:12.5px;font-weight:900}
+.g3-s span{display:flex;align-items:center;gap:5px;min-width:0}
+.g3-s span .ic svg{width:15px;height:15px}
+.g3-s b{font-size:13.5px;font-weight:800;white-space:nowrap}
+.g3-s em{font-style:normal;font-size:13.5px;font-weight:900;direction:ltr}
+.g3-s.ok{color:#D6E4E1;border-color:rgba(74,222,128,.45)}
+.g3-s.ok i{background:#4ADE80;color:#0B2A17}
+.g3-s.ok em{color:#86EFAC}
+.g3-s.on{color:#F4FAF7;border-color:#BEF264;background:rgba(190,242,100,.1)}
+.g3-s.on i{background:#BEF264;color:#10292B}
+.g3-s:focus-visible{outline:2px solid #BEF264;outline-offset:2px}
+.g3-sub span{color:#8FA9A2}
+#fQ .q-go2{justify-content:center}
+@media (max-width:620px){
+  #fQ .q-one{font-size:19px;margin-bottom:10px}#fQ .q-one span{font-size:13.5px}
+  .g3-steps{gap:5px}.g3-s{grid-template-columns:auto 1fr;padding:6px 7px;gap:5px}.g3-s span .ic{display:none}.g3-s b{font-size:12px}.g3-s em{grid-column:1/-1;justify-self:center;font-size:12.5px}
+}
+/* ===== v110: pick page ===== */
+#fPick .q-h2{font-size:16.5px !important;font-weight:600;color:#C4D8D0}
+#fPick .pkcard.pkmap{grid-template-columns:1fr !important;gap:16px !important;padding:18px 20px}
+#fPick .pkrow .ql{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:900;color:#F4FAF7}
+#fPick .maprow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;align-items:center}
+#fPick .maprow .ql{grid-column:1/-1}
+#fPick .maprow .csearch{min-width:0}
+#fPick .maprow .cs-quick{margin:0;flex-wrap:nowrap;gap:6px}
+#fPick .cs-quick .pk.qk{font-size:13.5px !important;padding:8px 12px !important;white-space:nowrap}
+#fPick .pkside{border-top:1px solid rgba(255,255,255,.1);padding-top:14px}
+#fPick .pkside .cat-row .pkopts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#fPick .pkside .cat-row .pk{display:flex;align-items:center;justify-content:center;gap:7px;min-height:48px;font-size:14.5px !important;padding:8px 8px !important;white-space:nowrap}
+#fPick .q-go2{margin-top:12px;padding:10px 12px 10px 16px;border-radius:16px;background:rgba(10,28,30,.9);border:1.5px solid rgba(255,255,255,.12);justify-content:space-between;align-items:center;transition:border-color .3s}
+#fPick .q-go2:has(#fShowMine:not(:disabled)){border-color:rgba(190,242,100,.55)}
+#fPick #fPickNote{display:grid;line-height:1.5;font-size:14.5px;color:#C4D8D0}
+#fPick #fPickNote small{font-size:12px;font-weight:800;color:#A7BDB6}
+#fPick #fPickNote b{font-size:18px;font-weight:900;color:#BEF264}
+#fPick #fShowMine{font-size:16.5px;padding:11px 26px;white-space:nowrap}
+#fPick #fShowMine:not(:disabled){animation:goGlow 1.8s ease-in-out 2}
+@media (max-width:1000px){
+  #fPick .maprow{grid-template-columns:1fr}
+  #fPick .maprow .cs-quick{flex-wrap:wrap}
+  #fPick .pkside .cat-row .pkopts{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){#fPick .q-go2{padding:12px}#fPick #fPickNote{justify-items:center}}
+/* v111: the note reads as an invitation, in the page's own colours */
+.malert{background:rgba(190,242,100,.06) !important;border-color:rgba(190,242,100,.35) !important}
+.malert .ma-h{color:#BEF264 !important}
+.malert .ma-h b{font-size:15px !important;font-weight:900}
+.malert p{font-size:13px !important;line-height:1.8 !important}
+/* v111b: compact when the note is shown */
+@media (min-width:1001px){
+  #fMine.has-al .malert{margin-top:6px !important;padding:7px 14px !important}
+  #fMine.has-al .malert p{margin-top:1px;line-height:1.7 !important}
+  #fMine.has-al .rstack{margin-top:10px !important}
+  #fMine.has-al .fc-plot{height:46px !important;margin-top:22px !important}
+  #fMine.has-al .fc-l{margin-top:0}
+  #fMine.has-al .mend.r-next{margin-top:10px !important}
+}
+/* v111c */
+@media (min-width:1001px){#fMine.has-al #mSrc{display:none}#fMine.has-al .malert{margin-top:8px !important}}
+/* v111d: note case fits one screen */
+@media (min-width:1001px){
+  #fMine.has-al .mnpanel{top:calc(50% + 4px) !important}
+  #fMine.has-al .malert p{font-size:12.5px !important;line-height:1.65 !important}
+  #fMine.has-al .rstack{margin-top:8px !important}
+  #fMine.has-al .mend.r-next{margin-top:8px !important}
+}
+/* v109b: step = number + name on one line, the answer under it */
+.g3-s{grid-template-columns:auto 1fr;row-gap:1px;padding:6px 10px}
+.g3-s span .ic{display:none}
+.g3-s em{grid-column:1/-1;justify-self:center;font-size:14px}
+/* ===== v112: 18 provinces as tiles, one tile size for cities and business types ===== */
+#fPick .maprow{grid-template-columns:minmax(0,1fr) minmax(0,290px) !important;gap:10px 12px !important}
+#fPick .maprow .ql{grid-column:auto !important}
+#fPick .maprow .cs-quick{grid-column:1/-1}
+#fPick .csearch input{font-size:14px;padding:8px 0}
+#fPick .csearch .cs-sh{order:3;flex:none;width:0;height:30px}
+#fPick .csearch.has-sh .cs-sh{width:34px}
+#fPick .cs-sh .pv-shape{display:block;width:100%;height:100%}
+#fPick .cs-sh path{fill:#BEF264;stroke:#F4FAF7;stroke-width:1.2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 5px rgba(190,242,100,.55))}
+#fPick .cs-sh.land{animation:shLand .5s cubic-bezier(.2,.8,.2,1.5)}
+@keyframes shLand{0%{transform:scale(1.35)}55%{transform:scale(.9)}100%{transform:scale(1)}}
+.pk-fly{position:fixed;z-index:60;pointer-events:none}
+.pk-fly .pv-shape{display:block;width:100%;height:100%}
+.pk-fly path{fill:#BEF264;stroke:#F4FAF7;stroke-width:1.2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 8px rgba(190,242,100,.9))}
+
+/* one tile: mark on top, name under it */
+#fPick .ct-grid{display:grid !important;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px !important;margin:0 !important}
+#fPick .pkside .cat-row .pkopts{grid-template-columns:repeat(8,minmax(0,1fr)) !important;gap:6px !important}
+#fPick .pk.ct,#fPick .pkside .cat-row .pk{display:flex !important;flex-direction:column;align-items:center;justify-content:center;gap:5px !important;
+  height:62px;min-height:0 !important;padding:6px 2px !important;border-radius:12px !important;font-size:12.5px !important;font-weight:800;line-height:1.2;white-space:nowrap}
+#fPick .ct-sh{display:block;width:30px;height:24px;transition:transform .25s}
+#fPick .ct-sh .pv-shape{display:block;width:100%;height:100%}
+#fPick .ct-sh path{fill:rgba(196,216,208,.16);stroke:rgba(196,216,208,.6);stroke-width:1;vector-effect:non-scaling-stroke;transition:fill .2s,stroke .2s}
+#fPick .pk.ct:hover .ct-sh{transform:translateY(-2px)}
+#fPick .pk.ct:hover .ct-sh path{fill:rgba(190,242,100,.3);stroke:#BEF264}
+#fPick .pk.ct.on .ct-sh path{fill:#12302B;stroke:#12302B}
+#fPick .pkside .cat-row .pk .ic svg{width:22px;height:22px}
+#fPick .pkside{padding-top:12px}
+#fPick .pkcard.pkmap{gap:12px !important}
+@media (max-width:620px){
+  #fPick .maprow{grid-template-columns:1fr !important}
+  #fPick .ct-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  #fPick .pkside .cat-row .pkopts{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+  #fPick .pk.ct,#fPick .pkside .cat-row .pk{height:58px;font-size:11.5px !important;padding:5px 1px !important}
+  #fPick .pkcard.pkmap{padding:14px 12px !important}
+}
+/* v112b: tablet - a little more room inside the tiles */
+@media (min-width:621px) and (max-width:1000px){#fPick .pk.ct,#fPick .pkside .cat-row .pk{font-size:11.5px !important}}
 </style>
 </head>
 <body class="hookpage">
@@ -3352,8 +3465,7 @@ body.in-panel .ab-foot{display:none}
         </div>
         <div class="sc-top"><button class="backl" data-prev>→ قبلی</button><div class="crumbs"><span class="on">۱ · سؤال از شما</span><span class="">۲ · بازار ایران</span><span class="">۳ · بازار شما</span><span class="">۴ · اتصال</span></div></div>
         <div class="qpanel">
-          <p class="q-kick">اول از مجموعه خودتان بگویید.</p>
-          <h1 class="q-h2">سه سؤال ساده. بعد جواب شما را کنار عدد واقعی بازار می‌گذاریم.</h1>
+          <h1 class="q-one">سه سؤال کوتاه از مجموعه خودتان. <span>روی جواب بزنید؛ خودش جلو می‌رود.</span></h1>
           <div class="qgrid qstack" id="qgrid"></div>
           <div class="q-go2"><span id="qDone">سؤال ۱ از ۳</span><span class="gq-nav"><button class="btn ghost2" id="gPrev" hidden>→ سؤال قبلی</button><button class="btn primary big" id="gNext" disabled>سؤال بعدی ←</button><button class="btn primary big" id="fReveal" disabled hidden>بازار چطور بوده؟ نشانم بده</button></span></div>
         </div>
@@ -3399,20 +3511,20 @@ body.in-panel .ab-foot{display:none}
         </div>
         <div class="sc-top"><button class="backl" data-prev>→ قبلی</button><div class="crumbs"><span class="ok">۱ · سؤال از شما</span><span class="ok">۲ · بازار ایران</span><span class="on">۳ · بازار شما</span><span class="">۴ · اتصال</span></div></div>
         <div class="qpanel pkpanel">
-          <p class="q-kick">بازار خودتان را مشخص کنید.</p>
-          <h1 class="q-h2">تا حس شما را با همان بازاری مقایسه کنیم که مجموعه‌تان داخل آن است.</h1>
+          <p class="q-kick">بازار شما کجاست؟</p>
+          <h1 class="q-h2">شهر و نوع کسب‌وکارتان را بزنید تا با همان بازار مقایسه شوید.</h1>
           <div class="pkcard pkmap">
-            <div class="pkrow maprow"><label class="ql" for="fCityQ"><i class="stp">۱</i> مجموعه شما در کدام شهر است؟</label>
-              <div class="csearch" id="fCS"><span class="cs-ic" data-ic="pin"></span>
-                <input id="fCityQ" type="text" autocomplete="off" placeholder="نام شهر یا استان… مثلاً شیراز" role="combobox" aria-expanded="false" aria-controls="fCityL" aria-autocomplete="list">
+            <div class="pkrow maprow"><label class="ql" for="fCityQ"><i class="stp">۱</i> شهر</label>
+              <div class="csearch" id="fCS"><span class="cs-ic" data-ic="pin"></span><span class="cs-sh" id="fCSh" aria-hidden="true"></span>
+                <input id="fCityQ" type="text" autocomplete="off" placeholder="جست‌وجوی شهر…" role="combobox" aria-expanded="false" aria-controls="fCityL" aria-autocomplete="list">
                 <ul class="cs-list" id="fCityL" role="listbox" hidden></ul></div>
-              <div class="cs-quick" id="fCityQuick"></div>
+              <div class="cs-quick ct-grid" id="fCityQuick" role="group" aria-label="استان‌ها"></div>
               <div class="pkopts" id="fProvs" hidden></div></div>
             <div class="pkside">
-            <div class="pkrow cat-row" id="fCatRow"><span class="ql"><i class="stp">۲</i> و نوع کسب‌وکارتان؟</span><div class="pkopts" id="fCats"></div></div>
+            <div class="pkrow cat-row" id="fCatRow"><span class="ql"><i class="stp">۲</i> نوع کسب‌وکار</span><div class="pkopts" id="fCats"></div></div>
             </div>
           </div>
-          <div class="q-go2"><span id="fPickNote">اول استان، بعد نوع کسب‌وکار.</span><button class="btn primary big" id="fShowMine" disabled>بازار من را نشانم بده</button></div>
+          <div class="q-go2"><span id="fPickNote">اول استان، بعد نوع کسب‌وکار.</span><button class="btn primary big" id="fShowMine" disabled>بازار من را نشانم بده ←</button></div>
         </div>
       </section>
     </div>
@@ -4444,7 +4556,7 @@ function fInit(){
     $$('#gToks .gtok').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.i))); };
   const nav = ()=>{ const q = FQ[G.i], last = G.i===FQ.length-1, all = FQ.every(x=>state.g[x.k]!=null);
     $('#qDone').textContent = `سؤال ${fa(G.i+1)} از ${fa(FQ.length)}`;
-    $('#gPrev').hidden = G.i===0; $('#gNext').hidden = last; $('#fReveal').hidden = !last;
+    $('#gPrev').hidden = G.i===0; $('#gNext').hidden = true; $('#fReveal').hidden = !last;
     $('#gNext').disabled = state.g[q.k]==null; $('#fReveal').disabled = !all; };
   const H0 = 48, hOf = v => Math.min(100, H0*(1+v/100));
   const paintBar = q => { const v = state.g[q.k], bar = $('#gNow'), lab = $('#gNowL'), set = v!=null;
@@ -4453,22 +4565,31 @@ function fInit(){
   const draw = ()=>{ const q = FQ[G.i], Q = GQ[q.k];
     const STEP = v => Math.round(hOf(v)*.95);
     $('#qgrid').innerHTML = `<div class="gcard g3">
-      <div class="g3-k"><b>${fa(G.i+1)} از ${fa(FQ.length)}</b><span>${GQ[q.k].tok} · مهر پارسال ← مهر امسال</span></div>
+      <div class="g3-steps" role="tablist" aria-label="سه سؤال">${FQ.map((x,i)=>{ const v = state.g[x.k]; return `<button type="button" role="tab" aria-selected="${i===G.i}" class="g3-s ${i===G.i?'on':''} ${v!=null?'ok':''}" data-i="${i}"><i>${fa(i+1)}</i><span>${ic(x.i)}<b>${GQ[x.k].tok}</b></span><em>${v!=null?glb(GOPTS.find(o=>o[0]===v)[3]):'؟'}</em></button>`; }).join('')}</div>
       <h2 class="g3-q"><span class="qi">${ic(q.i)}</span><span><em>${Q.word}</em> چقدر تغییر کرد؟</span></h2>
-      <p class="g3-sub">${Q.sub}</p>
+      <p class="g3-sub">${Q.sub} <span>مهر امسال نسبت به مهر پارسال.</span></p>
       <div class="g3-viz" aria-hidden="true"><div class="g2-col"><div class="g2-track"><span class="g2-bar old" style="height:${H0}%"></span></div><small>مهر پارسال</small></div>
         <div class="g2-col"><div class="g2-track"><span class="g2-bar now" id="gNow"><b id="gNowL">؟</b></span></div><small>مهر امسال</small></div></div>
       <div class="gopts g3-st" role="group" aria-label="جواب شما">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" style="height:${STEP(v)}px" aria-label="${h} ${t}"><b>${glb(t)}</b>${h==='حدود'||h==='یا بیشتر'?`<small>${h}</small>`:''}</button>`).join('')}</div></div>`;
-    $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v; $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q); toks(); nav(); }));
+    $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v; $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q); toks(); nav();
+      const st = $(`#qgrid .g3-s[data-i="${G.i}"]`); if (st){ st.classList.add('ok'); st.querySelector('em').innerHTML = glb(GOPTS.find(o=>o[0]===state.g[q.k])[3]); }
+      clearTimeout(G.t); const at = G.i;
+      if (at < FQ.length-1) G.t = setTimeout(()=>{ if (G.i===at && state.cur==='fQ') go(at+1); }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 700);
+      else if (FQ.every(x=>state.g[x.k]!=null)) $('#fReveal').focus({preventScroll:true}); }));
+    $$('#qgrid .g3-s').forEach(b=>b.addEventListener('click',()=>{ clearTimeout(G.t); go(+b.dataset.i); }));
     paintBar(q); toks(); nav(); };
   const go = i => { const t = performance.now(); if (t-G.lock<320) return; G.lock = t; G.i = Math.max(0, Math.min(FQ.length-1, i)); draw(); };
   $('#gNext').addEventListener('click',()=>{ if (state.g[FQ[G.i].k]!=null) go(G.i+1); });
-  $('#gPrev').addEventListener('click',()=>go(G.i-1));
+  $('#gPrev').addEventListener('click',()=>{ clearTimeout(G.t); go(G.i-1); });
   draw();
   const CATS4 = ['فست فود','رستوران','کافه','کافه رستوران','رستوران فرنگی','آبمیوه بستنی','فود کورت','سایر'], CICO = {'فست فود':'burger','رستوران':'pot','کافه رستوران':'store','کافه':'cup','رستوران فرنگی':'fork','آبمیوه بستنی':'cone','فود کورت':'tray','سایر':'dots'};
+  let PK_PV = null;
   const paint = ()=>{ const c = state.fcat, pv = state.fprov;
     citySearch();
-    $('#fCityQuick').innerHTML = ['تهران','مشهد','اصفهان','شیراز','تبریز','کرج'].map(c=>{ const o = cityIdx().find(x=>x.c===c); return `<button class="pk qk ${state.fcity===c?'on':''}" data-qc="${c}" data-qp="${o.pv}">${c}</button>`; }).join('');
+    const drop = !!pv && pv!==PK_PV; PK_PV = pv || null;
+    $('#fCityQuick').innerHTML = CITY_CHIPS.filter(x=>AR_PD[x[0]]).map(([p0,c0])=>`<button class="pk ct ${pv===p0?'on':''}" data-qc="${c0}" data-qp="${p0}" aria-pressed="${pv===p0}" title="${p0===c0?'استان '+p0:p0+' · '+c0}"><span class="ct-sh">${provShape(p0)}</span><span class="ct-n">${c0}</span></button>`).join('');
+    const csh = $('#fCSh'); csh.innerHTML = pv ? provShape(pv) : ''; $('#fCS').classList.toggle('has-sh', !!pv);
+    if (drop) pkDrop(pv);
     $$('#fCityQuick [data-qc]').forEach(b=>b.addEventListener('click',()=>setCity(b.dataset.qc, b.dataset.qp)));
     const chip = ([pv0,ct])=>`<button class="pk ${pv===pv0?'on':''}" data-fprov="${pv0}">${pv0}${pv0!==ct?`<small>${ct}</small>`:''}</button>`;
     $('#fProvs').innerHTML = CITY_CHIPS.map(chip).join('') + (state.moreProvs ? OTHER_PROVS.map(x=>chip([x,x])).join('') : `<button class="pk more" data-more>سایر استان‌ها</button>`);
@@ -4480,7 +4601,7 @@ function fInit(){
     $('#fShowMine').disabled = !(c && pv);
     const city = pv ? capOf(pv) : '';
     pickArt(pv, c);
-    $('#fPickNote').innerHTML = !pv ? 'اول استان، بعد نوع کسب‌وکار.' : !c ? `استان ${pv}؛ حالا نوع کسب‌وکارتان را بزنید.` : `بازار شما: <b>${CAT_OF[c]} ${city}</b>`;
+    $('#fPickNote').innerHTML = !pv ? 'اول شهر، بعد نوع کسب‌وکار.' : !c ? `<b>${city}</b>؛ حالا نوع کسب‌وکارتان را بزنید.` : `<small>بازار شما</small><b>${CAT_OF[c]} ${city}</b>`;
   };
   window.__pickPaint = paint;
   paint();
@@ -4606,6 +4727,22 @@ function drawMap(){
     el.addEventListener('mouseleave',()=>{ tip.hidden = true; }); el.addEventListener('blur',()=>{ tip.hidden = true; });
     el.addEventListener('click', pick); el.addEventListener('keydown', e=>{ if (e.key==='Enter' || e.key===' '){ e.preventDefault(); pick(); } });
   });
+}
+function pkDrop(pv){
+  const to = $('#fCSh'), from = $(`#fCityQuick .ct.on .ct-sh`) ;
+  to.classList.remove('land'); void to.offsetWidth;
+  if (!from || matchMedia('(prefers-reduced-motion: reduce)').matches){ to.classList.add('land'); return; }
+  const A = from.getBoundingClientRect(), B = to.getBoundingClientRect();
+  if (!A.width || !B.width){ to.classList.add('land'); return; }
+  to.style.opacity = 0;
+  const f = document.createElement('div'); f.className = 'pk-fly'; f.innerHTML = provShape(pv);
+  Object.assign(f.style, {left:A.left+'px', top:A.top+'px', width:A.width+'px', height:A.height+'px'}); document.body.appendChild(f);
+  const dx = B.left-A.left, dy = B.top-A.top, k = B.width/A.width;
+  const an = f.animate([{transform:'translate(0,0) scale(1)'},{transform:`translate(${dx*.5}px,${dy*.5-34}px) scale(${k*1.5})`,offset:.55},{transform:`translate(${dx}px,${dy}px) scale(${k})`}],
+    {duration:620, easing:'cubic-bezier(.45,.05,.25,1)', fill:'forwards'});
+  f.style.transformOrigin = '0 0';
+  const end = ()=>{ if (!f.isConnected) return; f.remove(); to.style.opacity = ''; to.classList.add('land'); };
+  an.onfinish = end; setTimeout(end, 760);
 }
 function provShape(pv){ const d = IR_MAP.p[pv]; if (!d) return '';
   const xs = [], ys = []; d.replace(/(-?\d+) (-?\d+)/g, (_,x,y)=>{ xs.push(+x); ys.push(+y); return ''; });
@@ -4830,7 +4967,7 @@ function fMine(){
   const city = pv==='کل کشور' ? 'ایران' : capOf(pv);
   const want = `${CAT_OF[c]} ${city}`;
   let z = pv==='کل کشور' ? nat[c] : (YTD[pv] && YTD[pv][c]), who = want, fb = '';
-  if (!z && YTD[pv] && YTD[pv].all){ z = YTD[pv].all; who = `همه کافه رستوران‌های ${city}`; fb = who; }
+  if (!z && YTD[pv] && YTD[pv].all){ z = YTD[pv].all; who = `کل کافه رستوران‌های ${city}`; fb = who; }
   if (!z && nat[c]){ z = nat[c]; who = `${CAT_OF[c]} کل کشور`; fb = who; }
   if (!z){ z = nat.all; who = 'کل کافه رستوران‌های کشور'; fb = who; }
   state.cat = c; state.scope = pv; state.prov = YTD[pv] ? pv : 'تهران'; renderGroup();
@@ -4844,9 +4981,9 @@ function fMine(){
   $('#mR1').innerHTML = rowHTML(nat.all, n1);
   springCard(pv);
   $('#fMineH').innerHTML = `حدس شما، این بار کنار <em>${fb ? who : 'بازار خودتان'}</em>.`;
-  const al = $('#fMineAlert'); al.hidden = !fb;
-  if (fb) al.innerHTML = `<div class="ma-h">${ic('clock')}<b>اطلاعات ${want} به‌زودی تکمیل می‌شود</b></div>
-    <p>این بخش در حال شکل‌گرفتن است و وقتی باز می‌شود که فاکتورهایش به حداقل استاندارد آماری برسد. هرچه زودتر وصل شوید، زودتر کامل می‌شود و همان لحظه خبرتان می‌کنیم. فعلاً با <b>${fb}</b> مقایسه می‌شوید.</p>`;
+  const al = $('#fMineAlert'); al.hidden = !fb; $('#fMine').classList.toggle('has-al', !!fb);
+  if (fb) al.innerHTML = `<div class="ma-h">${ic('users')}<b>بازار ${want} را با هم روشن می‌کنیم.</b></div>
+    <p>هر بازار وقتی جداگانه نشان داده می‌شود که فاکتورهای کافی کنار هم باشند. تا آن روز شما را با <b>${fb}</b> می‌سنجیم؛ هر مجموعه‌ای که وصل شود، این روز را نزدیک‌تر می‌کند.</p>`;
   const N0 = nat[c] || nat.all;
   $('#mLgM').textContent = fb ? who : want; $('#mInvW').textContent = fb ? who : want; $('#mInvH').textContent = ' و معلوم می‌شود حس شما درست بود یا نه'; hydrateIcons($('#fMine'));
   state.mine = {z, want, city, pv, c, N0};
@@ -4854,7 +4991,7 @@ function fMine(){
   drawMine(z, N0);
   const hasArea = !!AR_PD[pv], ab = $('#mAreaBtn');
   $('#mUnlock').onclick = ()=>{ state.direct = false; state.viaArea = false; fShow('stage2'); }; $('#mDemo').onclick = dmOpen;
-  ab.hidden = !hasArea; if (hasArea){ ab.textContent = `تحلیل تخصصی بازار ${pv} ←`; ab.title = 'سه ماتریس گزارش بهار ۱۴۰۵ برای استان شما'; ab.onclick = ()=>fShow('fArea'); }
+  ab.hidden = !hasArea; if (hasArea){ ab.textContent = pv.length > 8 ? `تحلیل تخصصی ${pv} ←` : `تحلیل تخصصی بازار ${pv} ←`; ab.title = 'سه ماتریس گزارش بهار ۱۴۰۵ برای استان شما'; ab.onclick = ()=>fShow('fArea'); }
   $('#mEnd').classList.remove('go');
   $('#mSum').classList.remove('go'); $('#mSum').innerHTML = FQ.map(()=>'<span class="g2-c wait">؟</span>').join('') + '<b class="g2-n wait">؟ از ۳</b>'; playCards('#mGrid', z, 'صنف شما', {row:i=>{ const li = $$('#mNoteL li')[i]; if (li) li.classList.add('gr'); }, all:(still,near)=>{ const r1 = state.r1!=null ? state.r1 : n1, g1 = state.r1Gap!=null ? state.r1Gap : gapOf(nat.all);
     const dir = z!==nat.all ? dirOf(r1, g1, near, gapOf(z)) : '';
