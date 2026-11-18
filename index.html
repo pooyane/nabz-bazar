@@ -3,18 +3,17 @@
 <head>
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
+<link rel="preload" as="image" href="assets/kv-bg-s.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/kv-chef-s.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1716'/%3E%3Cpath d='M58 32 H44 C42 32 41.5 28.5 40 28.5 C38.5 28.5 38 32 36 32 H33 L31.5 34 L29 20 L26.5 42 L25 32 H21 C19 32 18.5 27.5 16.5 27.5 C14.5 27.5 14 32 12 32 H6' fill='none' stroke='%23FB7185' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>نبض بازار · پژوهش زنده بازار غذا و نوشیدنی</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
 @font-face{font-family:IranYekanX;font-weight:400;src:url(fonts/IRANYekanXFaNum-Regular.ttf) format("truetype");font-display:swap}
 @font-face{font-family:IranYekanX;font-weight:500;src:url(fonts/IRANYekanXFaNum-Medium.ttf) format("truetype");font-display:swap}
 @font-face{font-family:IranYekanX;font-weight:600;src:url(fonts/IRANYekanXFaNum-DemiBold.ttf) format("truetype");font-display:swap}
 @font-face{font-family:IranYekanX;font-weight:700 900;src:url(fonts/IRANYekanXFaNum-Bold.ttf) format("truetype");font-display:swap}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 :root{
   --bg:#EEF0F4; --card:#FFFFFF; --ink:#1C2030; --muted:#6B7180; --line:#E6E8EE;
@@ -542,8 +541,8 @@ body.kv-on .sc{height:100vh}
 .fm{width:min(1100px,92vw);color:#F4FAF7}
 .fm-stage{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#061110;box-shadow:0 30px 90px rgba(0,0,0,.6);container-type:inline-size}
 .fm-bg{position:absolute;inset:0;background-size:cover;background-position:50% 55%;opacity:0;transition:opacity 1.4s ease, transform 9s ease-out, filter 1.4s ease}
-.fm-bg.a{background-image:url(assets/kv-bg.webp);transform:scale(1.18)}
-.fm-bg.b{background-image:url(assets/hero.webp);transform:scale(1.06)}
+.fm-bg.a{background-image:url(assets/kv-bg-s.webp);transform:scale(1.18)}
+.fm-bg.b{background-image:url(assets/hero-s.webp);transform:scale(1.06)}
 .shot-street .fm-bg.a{opacity:1;transform:scale(1.04)}
 .shot-chef .fm-bg.b{opacity:1;transform:scale(1.18) translateY(-3%)}
 .now-shot-doubt .fm-bg.b{transform:scale(1.32) translate(0,-8%);filter:brightness(.7)}
@@ -637,7 +636,7 @@ body.kv-on .sc{height:100vh}
 .ld-film:hover{color:#E7EFEC}
 /* the framed art: a crop of the original illustration around the chef (no cutout, no halo) */
 .ld-art{margin:0;position:relative;height:min(86vh,720px);aspect-ratio:520/718;justify-self:center;border-radius:28px;overflow:visible}
-.ld-img{position:absolute;inset:0;border-radius:28px;background:url(assets/hero.webp) 46.8% 0/256% auto no-repeat;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);animation:ldIn 1.2s cubic-bezier(.2,.8,.2,1) both}
+.ld-img{position:absolute;inset:0;border-radius:28px;background:url(assets/hero-s.webp) 46.8% 0/256% auto no-repeat;box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);animation:ldIn 1.2s cubic-bezier(.2,.8,.2,1) both}
 @keyframes ldIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
 .th{position:absolute;max-width:62%;opacity:0;animation:thIn .7s cubic-bezier(.2,.8,.2,1) both, thFloat 5.5s ease-in-out infinite}
 .th span{display:block;background:rgba(244,250,247,.95);color:#13221F;font-size:14.5px;font-weight:800;line-height:1.75;border-radius:22px;padding:10px 16px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
@@ -690,7 +689,7 @@ body.kv-on .sc{height:100vh}
 #fIntro{padding:0 !important;min-height:0 !important}
 body.st-on #stage1{margin:0}
 .st{position:relative;width:100vw;margin:0 calc(50% - 50vw);height:calc(100vh - 64px);min-height:520px;overflow:hidden;background:#0A1716;color:#F4FAF7}
-.st-bg{position:absolute;inset:-30px;background:url(assets/kv-bg.webp) center 60%/cover no-repeat;filter:blur(14px) brightness(.38) saturate(1.15);transform:scale(1.05)}
+.st-bg{position:absolute;inset:-30px;background:url(assets/kv-bg-s.webp) center 60%/cover no-repeat;filter:blur(14px) brightness(.38) saturate(1.15);transform:scale(1.05)}
 .st::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(10,23,22,.92) 0%,rgba(10,23,22,.72) 42%,rgba(10,23,22,.15) 75%,rgba(10,23,22,.35) 100%);pointer-events:none}
 .st-chef{position:absolute;left:6vw;bottom:0;height:88%;width:auto;transform:scaleX(-1);filter:drop-shadow(0 0 40px rgba(190,242,100,.12)) brightness(1.05);z-index:1;animation:stChef 1.2s cubic-bezier(.2,.8,.2,1) both}
 @keyframes stChef{from{opacity:0;transform:scaleX(-1) translateY(4%)}to{opacity:1;transform:scaleX(-1)}}
@@ -776,11 +775,11 @@ body.st-on #stage1{margin:0}
 .kv2-stage .ly{position:absolute;inset:0;pointer-events:none;will-change:transform}
 .kv2-stage .ly img{position:absolute;transition:none}
 .kv2-stage .ly-bg{transform:translate(calc(var(--mx) * -.45cqw), calc(var(--my) * -.3cqw)) scale(1.04);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.kv2-stage .ly-bg img{inset:0;width:100%;height:100%;object-fit:cover;animation:kvZoom 2.8s cubic-bezier(.2,.7,.2,1) both, kvDrift 18s ease-in-out 2.8s infinite alternate}
+.kv2-stage .ly-bg img{inset:0;width:100%;height:100%;object-fit:cover;animation:kvZoom 1.6s cubic-bezier(.2,.7,.2,1) both, kvDrift 18s ease-in-out 1.6s infinite alternate}
 @keyframes kvZoom{from{transform:scale(1.1);filter:brightness(.55) saturate(.8)}to{transform:scale(1);filter:none}}
 @keyframes kvDrift{from{transform:scale(1) translateX(0)}to{transform:scale(1.025) translateX(-.6%)}}
 .kv2-stage .ly-chef{transform:translate(calc(var(--mx) * 1.15cqw), calc(var(--my) * .55cqw));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.kv2-stage .ly-chef img{left:39.64%;top:41.23%;width:16.82%;height:auto;inset:auto;transform-origin:50% 100%;animation:kvChefIn 1.6s cubic-bezier(.2,.8,.2,1) .5s both, kvBreath 5.5s ease-in-out 2.1s infinite;filter:drop-shadow(0 0 1.2cqw rgba(0,0,0,.35))}
+.kv2-stage .ly-chef img{left:39.64%;top:41.23%;width:16.82%;height:auto;inset:auto;transform-origin:50% 100%;animation:kvChefIn 1.05s cubic-bezier(.2,.8,.2,1) .15s both, kvBreath 5.5s ease-in-out 1.2s infinite;filter:drop-shadow(0 0 1.2cqw rgba(0,0,0,.35))}
 .kv2-stage .ly-chef img{left:39.64%;top:41.23%}
 @keyframes kvChefIn{from{opacity:0;transform:translateY(3.5%) scale(.985)}to{opacity:1;transform:none}}
 @keyframes kvBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.008) translateY(-.15%)}}
@@ -790,7 +789,7 @@ body.st-on #stage1{margin:0}
 .fx-win i{position:absolute;height:9%;border-radius:40%;background:radial-gradient(ellipse at 50% 60%,rgba(255,196,110,.45),rgba(255,160,60,0) 70%);mix-blend-mode:screen;animation:kvWin 3.6s ease-in-out infinite}
 .fx-win i:nth-child(2){animation-delay:-1.1s}.fx-win i:nth-child(3){animation-delay:-2.3s}.fx-win i:nth-child(4){animation-delay:-.6s}.fx-win i:nth-child(5){animation-delay:-1.8s}
 @keyframes kvWin{0%,100%{opacity:.55}40%{opacity:1}55%{opacity:.7}70%{opacity:.95}}
-.fx-wet{left:0;right:0;bottom:0;height:30%;background:url(assets/kv-bg.webp) center bottom/100% auto no-repeat;-webkit-mask-image:linear-gradient(transparent,#000 35%);mask-image:linear-gradient(transparent,#000 35%);opacity:.42;filter:blur(1.2px) brightness(1.25) saturate(1.2);mix-blend-mode:screen;animation:kvWet 4.2s ease-in-out infinite}
+.fx-wet{left:0;right:0;bottom:0;height:30%;background:url(assets/kv-bg-s.webp) center bottom/100% auto no-repeat;-webkit-mask-image:linear-gradient(transparent,#000 35%);mask-image:linear-gradient(transparent,#000 35%);opacity:.42;filter:blur(1.2px) brightness(1.25) saturate(1.2);mix-blend-mode:screen;animation:kvWet 4.2s ease-in-out infinite}
 @keyframes kvWet{0%,100%{transform:translateX(0) scaleY(1)}50%{transform:translateX(.35%) scaleY(1.015)}}
 .fx-mist{left:-30%;width:90%;height:38%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(190,240,220,.14),rgba(190,240,220,0) 65%);filter:blur(8px);animation:kvMist 26s linear infinite}
 .fx-mist.m1{top:22%}
@@ -990,7 +989,7 @@ body.hookpage.in-panel::before{display:none}
 .three b{color:#BEF264}
 .tagq{margin-top:18px;color:#D9F99D;font-size:15px;font-weight:700;border-inline-start:3px solid #BEF264;padding-inline-start:12px}
 #fStart{margin-top:20px}
-.video{aspect-ratio:16/9;border-radius:22px;background:linear-gradient(rgba(8,22,21,.35),rgba(8,22,21,.65)),url(assets/hero.webp) center 35%/cover;border:1px solid rgba(190,242,100,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#F4FAF7;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.video{aspect-ratio:16/9;border-radius:22px;background:linear-gradient(rgba(8,22,21,.35),rgba(8,22,21,.65)),url(assets/hero-s.webp) center 35%/cover;border:1px solid rgba(190,242,100,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#F4FAF7;box-shadow:0 20px 50px rgba(0,0,0,.35)}
 .video .play{width:68px;height:68px;border-radius:50%;background:#BEF264;color:#134E4A;display:grid;place-items:center;font-size:24px;padding-inline-start:4px;box-shadow:0 0 0 10px rgba(190,242,100,.15)}
 .video small{color:#A7BDB6}
 .q-h{font-size:38px !important;text-align:center;margin-top:18px !important}
@@ -1034,7 +1033,7 @@ body.hookpage.in-panel::before{display:none}
 @media (max-width:900px){.intro,.qgrid,.rgrid{grid-template-columns:1fr}}
 /* ===== v13: the key visual's world across the whole flow ===== */
 body.hookpage{background:#0B1A19;color:#EEF5F2}
-body.hookpage::before{content:"";position:fixed;inset:-40px;background:url(assets/hero.webp) center 30%/cover no-repeat;filter:blur(22px) brightness(.42) saturate(1.15);z-index:-1}
+body.hookpage::before{content:"";position:fixed;inset:-40px;background:url(assets/hero-blur.webp) center 30%/cover no-repeat;filter:blur(22px) brightness(.42) saturate(1.15);z-index:-1}
 body.hookpage .topbar{background:rgba(8,22,21,.6);border-bottom:1px solid rgba(190,242,100,.12);backdrop-filter:blur(10px)}
 body.hookpage .brand{color:#EEF5F2}
 body.hookpage .brand small{color:#9FB5AE}
@@ -2427,7 +2426,7 @@ body.in-panel .ab-link{display:none}
 .about{position:fixed;inset:0;z-index:90;overflow-y:auto;background:#0A1716;color:#E7EFEC;direction:rtl}
 .ab-x{position:fixed;top:16px;left:18px;z-index:2;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(8,22,21,.75);color:#F4FAF7;font-size:16px;cursor:pointer}
 .ab-doc{max-width:760px;margin:0 auto;padding:0 24px 64px}
-.ab-hero{position:relative;height:330px;margin:0 calc(50% - 50vw);background:url(assets/hero.webp) center 42%/cover no-repeat}
+.ab-hero{position:relative;height:330px;margin:0 calc(50% - 50vw);background:url(assets/hero-s.webp) center 42%/cover no-repeat}
 .ab-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,23,22,.35),rgba(10,23,22,.2) 45%,#0A1716)}
 .ab-ht{position:absolute;left:0;right:0;bottom:22px;text-align:center}
 .ab-brand{font-size:20px;font-weight:900;color:#F4FAF7}.ab-sub{font-size:14.5px;color:#D6E4E1;margin-top:2px}
@@ -3383,13 +3382,382 @@ body.in-panel .ab-foot{display:none}
 }
 /* v112b: tablet - a little more room inside the tiles */
 @media (min-width:621px) and (max-width:1000px){#fPick .pk.ct,#fPick .pkside .cat-row .pk{font-size:11.5px !important}}
+/* v114: the trust page's quote stands on its own; footer items look alike */
+.ts-doc > .ts-quote{margin:26px 0 6px}
+.ab-foot button.ab-rl{background:none;border:0;padding:0;font:inherit;cursor:pointer}
+/* ===== v115: trust page as a scrolling story on the map of Iran ===== */
+.tv{max-width:1120px;margin:0 auto;padding:0 24px 72px;color:#E7EFEC}
+.tv-hero{min-height:calc(100vh - 40px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 0}
+.tv-k{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:14px;font-weight:800;color:#A7BDB6}
+.tv-k i,.tv-meter span i{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:youP 2s ease-in-out infinite}
+.tv-hero h1{margin:16px 0 0;max-width:760px;font-size:clamp(30px,4vw,50px);line-height:1.35;font-weight:900;color:#F4FAF7}
+.tv-lead{margin:18px 0 0;max-width:620px;font-size:18px;line-height:2;color:#C4D8D0}
+.tv-down{margin-top:34px;font-size:22px;color:#BEF264;animation:tvDown 1.8s ease-in-out infinite}
+@keyframes tvDown{50%{transform:translateY(8px);opacity:.5}}
+
+.tv-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.tv-stage{position:sticky;top:5vh;height:90vh;display:flex;flex-direction:column;justify-content:center;order:2}
+.tv-map{width:100%;height:auto;max-height:68vh;overflow:visible}
+.tv-map .pv{fill:rgba(190,242,100,.05);stroke:rgba(196,216,208,.22);stroke-width:1;vector-effect:non-scaling-stroke;transition:fill .6s,stroke .6s}
+.tv-map .city{fill:#BEF264;opacity:0;transition:opacity .5s;transition-delay:calc(var(--i) * 45ms)}
+.tv-map .ring{fill:none;stroke:#BEF264;stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:0;transform-box:fill-box;transform-origin:center}
+.tv-stage:not([data-s="0"]) .city{opacity:1}
+.tv-stage:not([data-s="0"]) .ring{animation:tvRing 2.6s ease-out infinite;animation-delay:calc(var(--i) * -.37s)}
+@keyframes tvRing{0%{opacity:.7;transform:scale(.4)}100%{opacity:0;transform:scale(2.6)}}
+.tv-map .tank{opacity:0;transition:opacity .6s}
+.tv-map .tank circle{fill:rgba(10,23,22,.92);stroke:#BEF264;stroke-width:2;vector-effect:non-scaling-stroke}
+.tv-map .tank .core{fill:#BEF264;stroke:none;filter:drop-shadow(0 0 14px rgba(190,242,100,.9))}
+.tv-map .tank .swirl{fill:none;stroke:rgba(190,242,100,.55);stroke-dasharray:6 10;transform-box:fill-box;transform-origin:center;animation:tvSpin 6s linear infinite}
+@keyframes tvSpin{to{transform:rotate(360deg)}}
+.tv-map .tank text{fill:#C4D8D0;font:800 22px IranYekanX,Tahoma,sans-serif;text-anchor:middle}
+.tv-map .tank{opacity:1}
+.tv-stage[data-s="3"] .tank .swirl{animation-duration:1.6s;stroke:#BEF264}
+.tv-map .fly{fill:#FFB766;pointer-events:none}
+.tv-map .fly.mine{fill:#BEF264}
+.tv-map .out{opacity:0;transition:opacity .5s,transform .5s;transform:translateY(16px)}
+.tv-map .out rect{fill:#0E2422;stroke:#BEF264;stroke-width:2;vector-effect:non-scaling-stroke}
+.tv-map .out text{font:800 26px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#C4D8D0}
+.tv-map .out text.v{font-size:40px;font-weight:900;fill:#BEF264}
+.tv-stage[data-s="4"] .out{opacity:1;transform:none}
+.tv-stage[data-s="5"] .pv.on{fill:rgba(190,242,100,.32);stroke:rgba(190,242,100,.8)}
+.tv-stage[data-s="5"] .pv:not(.on){fill:rgba(255,255,255,.02);stroke-dasharray:4 4}
+
+.tv-meter{display:flex;flex-direction:column;align-items:center;margin-top:6px;text-align:center}
+.tv-meter small{font-size:13px;font-weight:800;color:#A7BDB6}
+.tv-meter b{font-size:clamp(34px,4.2vw,52px);font-weight:900;color:#F4FAF7;line-height:1.2;letter-spacing:.5px;font-variant-numeric:tabular-nums}
+.tv-meter span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:#A7BDB6}
+.tv-meter em{font-style:normal;font-weight:900;color:#BEF264}
+
+.tv-steps{order:1;padding:10vh 0 20vh}
+.tv-s{min-height:72vh;display:flex;flex-direction:column;justify-content:center;opacity:.28;transition:opacity .5s}
+.tv-s.on{opacity:1}
+.tv-n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(190,242,100,.12);border:1.5px solid rgba(190,242,100,.55);color:#BEF264;font-weight:900}
+.tv-s h2{margin:14px 0 0;font-size:clamp(24px,2.6vw,32px);line-height:1.45;font-weight:900;color:#F4FAF7}
+.tv-s p{margin:12px 0 0;font-size:17px;line-height:2.05;color:#C4D8D0}
+.tv-s p b{color:#BEF264}
+.tv-lg{list-style:none;margin:14px 0 0;padding:0;display:flex;gap:18px;font-size:13.5px;color:#A7BDB6}
+.tv-lg li{display:flex;align-items:center;gap:7px}
+.tv-lg i{width:14px;height:14px;border-radius:4px;border:1.5px dashed rgba(196,216,208,.5)}
+.tv-lg i.on{background:rgba(190,242,100,.32);border:1.5px solid #BEF264}
+
+.tv-end{display:flex;flex-direction:column;align-items:center;gap:22px;padding:40px 0 0;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+.tv-q{margin:0;font-size:clamp(22px,2.6vw,30px);line-height:1.7;font-weight:900;color:#F4FAF7}
+.tv-q em{font-style:normal;color:#BEF264}
+.tv-about{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(560px,100%);margin-top:18px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:inherit;font:inherit;text-align:right;cursor:pointer;transition:border-color .2s,background .2s}
+.tv-about:hover{border-color:rgba(190,242,100,.6);background:rgba(190,242,100,.06)}
+.tv-about span{display:grid;gap:2px}
+.tv-about small{font-size:12px;color:#A7BDB6}.tv-about b{font-size:17px;font-weight:900;color:#F4FAF7}.tv-about i{font-style:normal;font-size:13px;color:#A7BDB6}
+.tv-about u{text-decoration:none;font-weight:800;color:#BEF264;white-space:nowrap}
+
+@media (max-width:860px){
+  .tv{padding:0 16px 56px}
+  .tv-hero{min-height:calc(88vh)}
+  .tv-lead{font-size:16px}
+  .tv-body{grid-template-columns:1fr;gap:0}
+  .tv-stage{order:0;top:0;height:auto;padding:8px 0 10px;background:#0A1716;z-index:2}
+  .tv-stage::after{content:"";position:absolute;left:0;right:0;top:100%;height:28px;background:linear-gradient(#0A1716,rgba(10,23,22,0));pointer-events:none}
+  .tv-map{max-height:34vh}
+  .tv-meter b{font-size:30px}
+  .tv-steps{padding:4vh 0 10vh}
+  .tv-s{min-height:56vh}
+  .tv-s p{font-size:15.5px}
+}
+@media (prefers-reduced-motion:reduce){.tv-map .ring,.tv-map .tank .swirl,.tv-down{animation:none !important}}
+/* v116: the opening holds the number and its meaning; tighter rhythm */
+.tv-hero{min-height:0 !important;padding:72px 0 40px !important}
+.tv-hero h1{margin:10px 0 0 !important;font-size:clamp(26px,3vw,36px) !important;color:#BEF264 !important}
+.tv-big{display:block;margin-top:4px;font-size:clamp(46px,7vw,84px);font-weight:900;line-height:1.15;color:#F4FAF7;letter-spacing:.5px;font-variant-numeric:tabular-nums}
+.tv-sub{margin:4px 0 0;font-size:15px;color:#A7BDB6}
+.tv-sub em{font-style:normal;font-weight:900;color:#BEF264}
+.tv-lead{margin-top:20px !important;max-width:640px !important}
+.tv-down{display:inline-flex;align-items:center;gap:8px;margin-top:26px !important;padding:10px 20px;border-radius:999px;border:1.5px solid rgba(190,242,100,.5);color:#BEF264;font-weight:800;font-size:15px;text-decoration:none;animation:none !important}
+.tv-down span{display:inline-block;animation:tvDown 1.8s ease-in-out infinite}
+.tv-down:hover{background:rgba(190,242,100,.1)}
+.tv-steps{padding:6vh 0 12vh !important}
+.tv-s{min-height:52vh !important}
+@media (min-width:861px){.tv-stage{top:4vh !important;height:86vh !important}}
+.tv-end{padding-top:32px !important;gap:18px !important}
+@media (max-width:860px){
+  .tv-hero{padding:56px 0 28px !important}
+  .tv-big{font-size:46px}
+  .tv-s{min-height:44vh !important}
+  .tv-steps{padding:2vh 0 8vh !important}
+}
+/* ===== v117: tank story (map -> tank -> engine -> output) ===== */
+.tv-body{grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr) !important;gap:36px !important}
+@media (min-width:861px){.tv-stage{top:2vh !important;height:96vh !important}}
+.tv2{max-height:none !important}
+.tv2 .tv-col{font:900 25px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#7F968F;transition:fill .4s}
+.tv-stage[data-s="1"] .c1,.tv-stage[data-s="2"] .c1,.tv-stage:is([data-s="2"],[data-s="3"]) .c2,.tv-stage:is([data-s="4"],[data-s="5"]) .c3{fill:#BEF264}
+.tv2 .pv{fill:rgba(190,242,100,.05);stroke:rgba(196,216,208,.25);stroke-width:1;vector-effect:non-scaling-stroke;transition:fill .6s,stroke .6s}
+.tv2 .city{fill:#BEF264;opacity:1}
+.tv2 .ring{fill:none;stroke:#BEF264;stroke-width:1.5;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;animation:tvRing 2.6s ease-out infinite;animation-delay:calc(var(--i) * -.37s)}
+.tv2 .tv-pipe{fill:none;stroke:rgba(190,242,100,.18);stroke-width:30;stroke-linecap:round}
+.tv2 .vatg{opacity:1}
+.tv2 .vat{fill:rgba(10,23,22,.95);stroke:rgba(190,242,100,.55);stroke-width:2.5;vector-effect:non-scaling-stroke}
+.tv2 .vat2{fill:none;stroke:rgba(190,242,100,.2);stroke-width:14;transform-box:fill-box;transform-origin:center;animation:tvBreath 3s ease-in-out infinite}
+@keyframes tvBreath{50%{transform:scale(1.05);opacity:.5}}
+.tv2 .orb{transform-box:view-box;transform-origin:690px 400px;animation:tvSpin 9s linear infinite}
+.tv2 .orb.o2{animation-duration:6s;animation-direction:reverse}.tv2 .orb.o3{animation-duration:4s}
+.tv-stage[data-s="3"] .orb{animation-duration:2.2s}.tv-stage[data-s="3"] .orb.o2{animation-duration:1.6s}.tv-stage[data-s="3"] .orb.o3{animation-duration:1.1s}
+.tv2 .core{fill:#BEF264;filter:drop-shadow(0 0 16px rgba(190,242,100,.9))}
+.tv2 .t-a{font:900 26px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#F4FAF7}
+.tv2 .t-b{font:700 21px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#A7BDB6}
+.tv2 .meter text{text-anchor:middle;font-family:IranYekanX,Tahoma,sans-serif}
+.tv2 .m-k{font-size:22px;font-weight:800;fill:#A7BDB6}
+.tv2 .m-n{font-size:58px;font-weight:900;fill:#F4FAF7;transition:fill .4s}
+.tv-stage[data-s="3"] .m-n{fill:#BEF264}
+.tv2 .m-t{font-size:20px;fill:#A7BDB6}.tv2 .m-d{font-weight:900;fill:#BEF264}
+.tv2 .tv-trunk{fill:none;stroke:rgba(190,242,100,.2);stroke-width:4;stroke-dasharray:2 10;stroke-linecap:round}
+.tv2 .pulses{opacity:0;transition:opacity .4s}
+.tv-stage:is([data-s="4"],[data-s="5"],[data-s="6"]) .pulses{opacity:1}
+.tv2 .eng{opacity:.35;transition:opacity .5s}
+.tv-stage:is([data-s="4"],[data-s="5"],[data-s="6"]) .eng{opacity:1}
+.tv2 .e1{fill:rgba(10,23,22,.95);stroke:rgba(190,242,100,.45);stroke-width:2;vector-effect:non-scaling-stroke}
+.tv2 .e2{fill:none;stroke:rgba(190,242,100,.3);stroke-width:2;stroke-dasharray:4 8;transform-box:fill-box;transform-origin:center;animation:tvSpin 8s linear infinite}
+.tv2 .hr{stroke:rgba(196,216,208,.25);stroke-width:5;stroke-linecap:round}
+.tv2 .hr.on{stroke:#BEF264}
+.tv2 .e-m{font:900 30px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#F4FAF7}
+.tv2 .e-s{font:700 19px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#A7BDB6}
+.tv2 .e-c{font:700 19px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#A7BDB6}
+.tv2 .outp text{font-family:IranYekanX,Tahoma,sans-serif;text-anchor:middle}
+.tv2 .o-h{font-size:22px;font-weight:900;fill:#7F968F;transition:fill .4s}
+.tv-stage[data-s="5"] .o-h{fill:#BEF264}
+.tv2 .o-m,.tv2 .o-v{opacity:0;transition:opacity .35s;transition-delay:calc(var(--i) * 110ms)}
+.tv2 .o-m{font-size:21px;font-weight:700;fill:#C4D8D0}
+.tv2 .o-v{font-size:22px;font-weight:900;fill:#BEF264;direction:ltr}.tv2 .o-v.neg{fill:#FB923C}
+.tv-stage:is([data-s="5"],[data-s="6"]) :is(.o-m,.o-v){opacity:1}
+.tv2 .o-f{font-size:15px;fill:#7F968F;opacity:0;transition:opacity .4s}
+.tv-stage:is([data-s="5"],[data-s="6"]) .o-f{opacity:1}
+.tv2 .fly{fill:#FFB766}.tv2 .fly.mine{fill:#BEF264}
+.tv-stage[data-s="6"] .pv.on{fill:rgba(190,242,100,.32);stroke:rgba(190,242,100,.8)}
+.tv-stage[data-s="6"] .pv:not(.on){fill:rgba(255,255,255,.02);stroke-dasharray:4 4}
+.tv-note{margin-top:10px !important;padding:10px 14px;border-radius:12px;background:rgba(190,242,100,.07);border:1px solid rgba(190,242,100,.3);font-size:15.5px !important}
+.tv-steps{padding:0 0 14vh !important}
+.tv-s{min-height:56vh !important}
+.tv-s:first-child{min-height:48vh !important}
+@media (max-width:860px){
+  .tv-body{grid-template-columns:1fr !important}
+  .tv2{display:block;width:100%}
+  .tv-s{min-height:46vh !important}
+}
+@media (prefers-reduced-motion:reduce){.tv2 .orb,.tv2 .vat2,.tv2 .e2,.tv2 .ring{animation:none !important}}
+/* v117b: a larger drawing on desktop; on phones the camera frames each scene */
+.tv{max-width:1320px !important}
+@media (min-width:861px){.tv-body{grid-template-columns:minmax(0,.5fr) minmax(0,1.5fr) !important;gap:28px !important}}
+@media (max-width:860px){.tv2{height:38vh;width:100%}}
+/* ===== v118: the trust journey ===== */
+.tj{max-width:760px;margin:0 auto;padding:0 0 8px;text-align:center}
+.tj-pipe{position:relative;width:14px;height:96px;margin:0 auto;border-radius:7px;background:linear-gradient(rgba(190,242,100,.08),rgba(190,242,100,.22));overflow:visible}
+.tj-pipe i{position:absolute;left:3px;top:0;width:8px;height:8px;border-radius:50%;background:#FFB766;animation:tjDrop 1.5s linear infinite}
+.tj-pipe i:nth-child(2){animation-delay:-.5s;background:#C4D8D0}.tj-pipe i:nth-child(3){animation-delay:-1s;background:#BEF264}
+@keyframes tjDrop{0%{transform:translateY(-4px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(92px);opacity:0}}
+.tj-pipe em{position:absolute;top:50%;right:26px;transform:translateY(-50%);font-style:normal;font-size:13px;font-weight:800;color:#BEF264;white-space:nowrap}
+.tj-st{display:flex;flex-direction:column;align-items:center;padding:22px 0 18px}
+.tj-n{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#BEF264;color:#10292B;font-weight:900}
+.tj-st h2{margin:12px 0 0;font-size:clamp(24px,3vw,32px);line-height:1.45;font-weight:900;color:#F4FAF7}
+.tj-st > p{margin:10px 0 0;max-width:580px;font-size:17px;line-height:2;color:#C4D8D0}
+.tj-st > p b{color:#BEF264}
+.tj-map{display:block;width:min(560px,100%);height:auto;margin-top:18px;overflow:visible}
+.tj-map .pv{fill:rgba(190,242,100,.06);stroke:rgba(196,216,208,.28);stroke-width:1;vector-effect:non-scaling-stroke}
+.tj-map .city{fill:#BEF264}
+.tj-map .ring{fill:none;stroke:#BEF264;stroke-width:1.5;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;animation:tvRing 2.6s ease-out infinite;animation-delay:calc(var(--i) * -.37s)}
+.tj-map .mouth{fill:#BEF264;filter:drop-shadow(0 0 10px rgba(190,242,100,.9))}
+.tj-map .fly{fill:#FFB766}.tj-map .fly.mine{fill:#BEF264}
+.tj-cov .pv{fill:rgba(255,255,255,.02);stroke:rgba(196,216,208,.3);stroke-dasharray:4 4}
+.tj-cov .pv.on{fill:rgba(190,242,100,.3);stroke:rgba(190,242,100,.85);stroke-dasharray:none}
+.tj-tank{width:min(260px,70vw);margin-top:20px}
+.tj-tank svg,.tj-dial svg{display:block;width:100%;height:auto}
+.tj-tank .v1{fill:rgba(10,23,22,.95);stroke:rgba(190,242,100,.6);stroke-width:2.5}
+.tj-tank .v2{fill:none;stroke:rgba(190,242,100,.18);stroke-width:12;transform-box:fill-box;transform-origin:center;animation:tvBreath 3s ease-in-out infinite}
+.tj-tank .ob{transform-origin:150px 150px;animation:tvSpin 8s linear infinite}
+.tj-tank .o2{animation-duration:5s;animation-direction:reverse}.tj-tank .o3{animation-duration:3s}
+.tj-tank .cr{fill:#BEF264;filter:drop-shadow(0 0 14px rgba(190,242,100,.9))}
+.tj-meter{display:flex;flex-direction:column;align-items:center;margin-top:12px}
+.tj-meter small{font-size:13.5px;font-weight:800;color:#A7BDB6}
+.tj-meter b{font-size:clamp(34px,5vw,50px);font-weight:900;line-height:1.2;color:#BEF264;font-variant-numeric:tabular-nums}
+.tj-meter span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:#A7BDB6}
+.tj-meter span i{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:youP 2s ease-in-out infinite}
+.tj-meter em{font-style:normal;font-weight:900;color:#BEF264}
+.tj-keep{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}
+.tj-keep li{display:flex;flex-direction:column;gap:4px;padding:12px 10px;border-radius:14px;background:rgba(190,242,100,.06);border:1px solid rgba(190,242,100,.28)}
+.tj-keep li b{font-size:13px;font-weight:800;color:#A7BDB6}
+.tj-keep li span{font-size:15px;font-weight:800;color:#F4FAF7}
+.tj-keep li.no{background:rgba(255,255,255,.03);border:1px dashed rgba(196,216,208,.35)}
+.tj-keep li.no span{color:#A7BDB6;text-decoration:line-through;text-decoration-color:rgba(251,146,60,.8)}
+.tj-dial{width:min(240px,64vw);margin-top:20px}
+.tj-dial .d1{fill:rgba(10,23,22,.95);stroke:rgba(190,242,100,.45);stroke-width:2}
+.tj-dial .d2{fill:none;stroke:rgba(190,242,100,.3);stroke-width:2;stroke-dasharray:4 8;transform-box:fill-box;transform-origin:center;animation:tvSpin 8s linear infinite}
+.tj-dial .hr{stroke:rgba(196,216,208,.22);stroke-width:6;stroke-linecap:round}
+.tj-dial .hr.on{stroke:#BEF264}
+.tj-dial .dm{font:900 32px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#F4FAF7}
+.tj-dial .ds{font:700 19px IranYekanX,Tahoma,sans-serif;text-anchor:middle;fill:#A7BDB6}
+.tj-clk{margin:10px 0 0;font-size:14px;font-weight:700;color:#A7BDB6}
+.tj-out{width:min(560px,100%);margin:20px 0 0;padding:18px 20px 16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);text-align:right}
+.tj-out figcaption{display:flex;flex-direction:column;gap:2px;margin-bottom:12px}
+.tj-out figcaption b{font-size:15px;font-weight:900;color:#F4FAF7}
+.tj-out figcaption span{font-size:13px;color:#A7BDB6}
+.tj-r{display:grid;grid-template-columns:76px minmax(0,1fr) 64px;align-items:center;gap:10px;padding:5px 0}
+.tj-r .m{font-size:14px;font-weight:700;color:#C4D8D0}
+.tj-r .tr{position:relative;height:12px;border-radius:6px;background:rgba(255,255,255,.05)}
+.tj-r .tr::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;border-left:1px solid rgba(196,216,208,.35)}
+.tj-r .tr i{position:absolute;top:0;bottom:0;border-radius:6px;background:#BEF264;transform-origin:left;animation:tjBar .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 90ms)}
+.tj-r.neg .tr i{background:#FB923C;transform-origin:right}
+.tj-r b{font-size:15px;font-weight:900;color:#BEF264;direction:ltr;text-align:left}
+.tj-r.neg b{color:#FB923C}
+@keyframes tjBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.tj-cov{width:min(480px,100%) !important}
+.tv-end{margin-top:26px !important}
+@media (max-width:620px){
+  .tj-st > p{font-size:15.5px}
+  .tj-keep{grid-template-columns:1fr}
+  .tj-pipe{height:72px}
+  @keyframes tjDrop{0%{transform:translateY(-4px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(68px);opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){.tj-pipe i,.tj-tank .ob,.tj-tank .v2,.tj-dial .d2,.tj-map .ring,.tj-r .tr i{animation:none !important}}
+/* ===== v119: the market sheet and the tip ===== */
+.tj-sheet{width:min(620px,100%);margin:20px 0 0;padding:18px 18px 12px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);text-align:right}
+.tj-sheet figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.tj-sheet figcaption b{font-size:16px;font-weight:900;color:#F4FAF7}
+.tj-flt{display:flex;gap:6px;flex-wrap:wrap}
+.tj-flt i{font-style:normal;padding:4px 10px;border-radius:999px;background:rgba(190,242,100,.08);border:1px solid rgba(190,242,100,.3);font-size:12.5px;font-weight:700;color:#C4D8D0}
+.tj-th,.tj-tr{display:grid;grid-template-columns:1.1fr repeat(4,minmax(0,1fr));align-items:center;gap:6px}
+.tj-th{padding:0 0 8px;border-bottom:1px solid rgba(255,255,255,.1);font-size:12.5px;font-weight:800;color:#A7BDB6}
+.tj-th span:not(:first-child),.tj-tr .v{text-align:center}
+.tj-tr{position:relative;min-height:38px;border-bottom:1px solid rgba(255,255,255,.05)}
+.tj-tr .m{font-size:14px;font-weight:800;color:#7F968F;transition:color .3s}
+.tj-tr .v{font-size:14.5px;font-weight:900;color:#BEF264;direction:ltr;opacity:0;transform:translateY(4px);transition:opacity .35s,transform .35s}
+.tj-tr .v.neg{color:#FB923C}
+.tj-tr .v:nth-of-type(3){transition-delay:.06s}.tj-tr .v:nth-of-type(4){transition-delay:.12s}.tj-tr .v:nth-of-type(5){transition-delay:.18s}
+.tj-tr.done .m{color:#F4FAF7}
+.tj-tr.done .v{opacity:1;transform:none}
+.tj-tr .wait{position:absolute;inset:0 30% 0 0;display:none;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;color:#A7BDB6}
+.tj-tr .wait i{width:80px;height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
+.tj-tr .wait i::after{content:"";position:absolute;inset:0;background:#BEF264;transform-origin:right;animation:tjFill 1.1s linear both}
+@keyframes tjFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.tj-tr.busy .wait{display:flex}
+.tj-tr.busy .m{color:#BEF264}
+.tj-tr.next{border-bottom:0}
+.tj-tr.next .m{color:#5F7570}
+.tj-tr.next .wait.on{display:flex;color:#5F7570;inset:0 30% 0 0}
+.tj-src{margin:10px 0 0;font-size:12px;color:#7F968F}
+.tj-tip{width:min(620px,100%);margin:34px auto 0;padding:20px 22px;border-radius:20px;background:rgba(190,242,100,.05);border:1px solid rgba(190,242,100,.3);text-align:right}
+.tj-tk{display:inline-block;padding:3px 12px;border-radius:999px;background:#BEF264;color:#10292B;font-size:12.5px;font-weight:900}
+.tj-tip h3{margin:10px 0 0;font-size:20px;font-weight:900;color:#F4FAF7}
+.tj-tip > p{margin:8px 0 0;font-size:15.5px;line-height:2;color:#C4D8D0}
+.tj-tip .tj-tp{font-weight:800;color:#BEF264}
+.tj-ex{display:flex;flex-direction:column;gap:10px;margin-top:14px;padding:14px;border-radius:14px;background:rgba(10,23,22,.6);border:1px solid rgba(255,255,255,.08)}
+.tj-ex .pv{display:flex;align-items:baseline;gap:10px;font-size:16px;font-weight:900;color:#F4FAF7}
+.tj-ex .pv small{font-size:12.5px;font-weight:800;color:#BEF264}
+.tj-ex .cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.tj-ex .cats i{display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 4px;border-radius:10px;font-style:normal;font-size:12.5px;font-weight:800;color:#7F968F;border:1px dashed rgba(196,216,208,.3);text-align:center}
+.tj-ex .cats i em{font-style:normal;font-size:11px;font-weight:700}
+.tj-ex .cats i.ok{color:#F4FAF7;background:rgba(190,242,100,.12);border:1px solid rgba(190,242,100,.55)}
+.tj-ex .cats i.ok em{color:#BEF264}
+@media (max-width:620px){
+  .tj-sheet{padding:14px 10px 10px}
+  .tj-th{font-size:11px}
+  .tj-tr .m{font-size:12.5px}.tj-tr .v{font-size:12.5px}
+  .tj-ex .cats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* v120: trust and credibility, side by side */
+.tv-pair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:stretch;gap:12px;width:min(640px,100%);margin-top:22px}
+.tv-pair div{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:16px;background:rgba(190,242,100,.06);border:1px solid rgba(190,242,100,.3);text-align:center}
+.tv-pair b{font-size:20px;font-weight:900;color:#BEF264}
+.tv-pair span{font-size:14.5px;line-height:1.9;color:#C4D8D0}
+.tv-pair i{align-self:center;font-style:normal;font-size:24px;color:#BEF264;animation:tvSwap 2.4s ease-in-out infinite}
+@keyframes tvSwap{50%{transform:scale(1.2);opacity:.6}}
+.tv-pq{margin:16px 0 0;font-size:18px;font-weight:900;color:#F4FAF7}
+@media (max-width:620px){.tv-pair{grid-template-columns:1fr}.tv-pair i{transform:rotate(90deg);animation:none}}
+/* v121: credibility as a heartbeat */
+.tj-cred{width:min(640px,100%);margin:36px auto 0;padding:22px 22px 18px;border-radius:22px;background:rgba(10,23,22,.7);border:1px solid rgba(255,255,255,.12);text-align:center;transition:border-color .5s,box-shadow .5s}
+.tj-cred.ok{border-color:rgba(190,242,100,.6);box-shadow:0 0 0 4px rgba(190,242,100,.08)}
+.tj-ck{display:inline-block;padding:4px 16px;border-radius:999px;background:#BEF264;color:#10292B;font-size:15px;font-weight:900}
+.tj-cred h3{margin:12px 0 0;font-size:clamp(19px,2.4vw,24px);line-height:1.6;font-weight:900;color:#F4FAF7}
+.tj-heart{display:grid;grid-template-columns:46px minmax(0,1fr);gap:14px;align-items:stretch;margin-top:18px}
+.tj-ecg{width:100%;height:auto;display:block}
+.tj-ecg .base{stroke:rgba(196,216,208,.12);stroke-width:1;fill:none}
+.tj-ecg .ln{fill:none;stroke:#FB923C;stroke-width:3;stroke-linejoin:round;stroke-linecap:round;transition:stroke .5s}
+.tj-cred.ok .tj-ecg .ln{stroke:#BEF264;filter:drop-shadow(0 0 6px rgba(190,242,100,.7))}
+.tj-gauge{position:relative;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);overflow:hidden;min-height:140px}
+.tj-gauge i{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(#FFB766,rgba(255,183,102,.5));transition:background .5s}
+.tj-cred.ok .tj-gauge i{background:linear-gradient(#BEF264,rgba(190,242,100,.45))}
+.tj-gauge b{position:absolute;left:0;right:0;bottom:80%;border-top:2px dashed rgba(244,250,247,.75);font-size:10px;font-weight:800;color:#F4FAF7;padding-top:2px;white-space:nowrap}
+.tj-cap{display:flex;flex-direction:column;gap:2px;margin:14px 0 0;min-height:48px}
+.tj-cap b{font-size:16px;font-weight:900;color:#F4FAF7}
+.tj-cap span{font-size:14px;font-weight:700;color:#FB923C;transition:color .4s}
+.tj-cred.ok .tj-cap span{color:#BEF264}
+.tj-cl{margin:12px 0 0;font-size:14.5px;color:#A7BDB6}
+/* v122: mixing tank, captions that follow it, the example label */
+.tj-flow{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;counter-reset:fl}
+.tj-flow li{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1)}
+.tj-flow li:not(:last-child)::after{content:"←";position:absolute;left:-12px;top:50%;transform:translateY(-50%);color:#BEF264;font-weight:900}
+.tj-flow .dots{display:flex;gap:4px;height:12px}
+.tj-flow .dots i{width:10px;height:10px;border-radius:50%}
+.tj-flow .dots.mixd{gap:0}.tj-flow .dots.mixd i{margin-inline:-1px}
+.tj-flow .dots.one i{background:#BEF264}
+.tj-flow b{font-size:14.5px;line-height:1.7;font-weight:900;color:#F4FAF7}
+.tj-flow small{font-size:12.5px;color:#A7BDB6}
+.tj-eg{display:inline-block;align-self:center;margin-bottom:4px;padding:2px 10px;border-radius:999px;border:1px dashed rgba(196,216,208,.5);font-style:normal;font-size:11.5px;font-weight:800;color:#A7BDB6}
+@media (max-width:620px){.tj-flow{grid-template-columns:1fr}.tj-flow li:not(:last-child)::after{content:"↓";left:50%;top:auto;bottom:-15px;transform:translateX(-50%)}}
+/* v123: a working engine */
+.tj-dial .hr{stroke:#BEF264 !important;stroke-opacity:.22}
+.tj-dial .hr.on{stroke-opacity:1}
+.tj-dial .hand{stroke:#BEF264;stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(190,242,100,.9))}
+.tj-dial .arc{fill:none;stroke:#BEF264;stroke-width:4;stroke-linecap:round;opacity:.9}
+.tj-dial .d3{fill:none;stroke:rgba(190,242,100,.5);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:tjEngP 1.6s ease-out infinite}
+@keyframes tjEngP{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.25);opacity:0}}
+.tj-dial .dm{animation:tjEngT 1.6s ease-in-out infinite}
+@keyframes tjEngT{50%{fill:#BEF264}}
+@media (prefers-reduced-motion:reduce){.tj-dial .d3,.tj-dial .dm{animation:none}}
+/* v124: About - the live trust card */
+.ab-live{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;margin-top:16px;padding:18px 20px;border-radius:18px;background:rgba(190,242,100,.06);border:1px solid rgba(190,242,100,.35);color:inherit;font:inherit;text-align:right;cursor:pointer;transition:background .2s}
+.ab-live:hover{background:rgba(190,242,100,.12)}
+.ab-live span{display:grid;gap:2px}
+.ab-live small{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:#A7BDB6}
+.ab-live small i{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:youP 2s ease-in-out infinite}
+.ab-live b{font-size:clamp(26px,4vw,36px);font-weight:900;color:#F4FAF7;font-variant-numeric:tabular-nums}
+.ab-live em{font-style:normal;font-size:13px;color:#A7BDB6}
+.ab-live u{text-decoration:none;font-weight:900;color:#BEF264;white-space:nowrap}
+@media (max-width:620px){.ab-live{flex-direction:column;align-items:flex-start}}
+/* v124b: 19 provinces - 10 + 9 on wide screens, 5 per row on phones */
+#fPick .ct-grid{grid-template-columns:repeat(10,minmax(0,1fr)) !important}
+@media (max-width:620px){#fPick .ct-grid{grid-template-columns:repeat(5,minmax(0,1fr)) !important}}
+.ab-lead em{font-style:normal;color:#BEF264;white-space:nowrap}
+/* v125: the guess options read as choices */
+#fQ .gopts{position:relative;margin-top:40px !important}
+#fQ .gopts::before{content:"حدس خودتان را انتخاب کنید ↓";position:absolute;top:-32px;left:0;right:0;text-align:center;font-size:15px;font-weight:900;color:#BEF264;animation:goptCue 1.6s ease-in-out infinite}
+#fQ .gopts:has(.gopt.on)::before{content:"انتخاب شما ✓";animation:none;color:#A7BDB6}
+@keyframes goptCue{50%{transform:translateY(4px);opacity:.7}}
+#fQ .gopt{cursor:pointer;border:1.5px solid rgba(190,242,100,.5) !important;background:rgba(190,242,100,.07) !important;transition:transform .15s,background .2s,border-color .2s}
+#fQ .gopt:hover{transform:translateY(-3px);background:rgba(190,242,100,.16) !important;border-color:#BEF264 !important}
+#fQ .gopts:not(:has(.gopt.on)) .gopt{animation:goptWave 2.6s ease-in-out infinite}
+#fQ .gopts .gopt:nth-child(2){animation-delay:.15s}#fQ .gopts .gopt:nth-child(3){animation-delay:.3s}#fQ .gopts .gopt:nth-child(4){animation-delay:.45s}#fQ .gopts .gopt:nth-child(5){animation-delay:.6s}
+@keyframes goptWave{0%,60%,100%{box-shadow:0 0 0 0 rgba(190,242,100,0)}30%{box-shadow:0 0 0 4px rgba(190,242,100,.28)}}
+@media (prefers-reduced-motion:reduce){#fQ .gopt,#fQ .gopts::before{animation:none !important}}
+/* v126: one-line footer; the spring report beside the owner's own market */
+.ab-foot .ab-link{text-decoration:underline;text-decoration-color:rgba(190,242,100,.5);text-underline-offset:5px}
+.ab-foot .ab-link:hover{color:#BEF264}
+.m-spr2{display:inline-block;margin-inline-start:14px;text-decoration:none}
+/* v127: the next button shows once answered; a clearer cue; the chosen answer is solid; the footer is centred */
+#fQ #gNext:not([hidden]){display:inline-flex !important}
+#fQ .gopts::before{content:"یکی را انتخاب کنید" !important;top:-36px !important;left:50% !important;right:auto !important;transform:translateX(-50%);display:inline-flex;align-items:center;gap:6px;
+  padding:5px 14px;border-radius:999px;background:rgba(190,242,100,.1);border:1px solid rgba(190,242,100,.45);font-size:13.5px !important;white-space:nowrap;animation:goptCue2 1.8s ease-in-out infinite !important}
+@keyframes goptCue2{0%,100%{box-shadow:0 0 0 0 rgba(190,242,100,.0)}50%{box-shadow:0 0 0 6px rgba(190,242,100,.14)}}
+#fQ .gopts::after{content:"";position:absolute;top:-8px;left:50%;transform:translateX(-50%);border:7px solid transparent;border-top-color:rgba(190,242,100,.6);border-bottom:0}
+#fQ .gopts:has(.gopt.on)::before{content:"انتخاب شما ثبت شد" !important;background:transparent;border-color:transparent;color:#A7BDB6;animation:none !important}
+#fQ .gopts:has(.gopt.on)::after{display:none}
+#fQ .gopt.on{background:#BEF264 !important;border-color:#BEF264 !important;color:#10292B !important;box-shadow:0 8px 22px rgba(190,242,100,.28)}
+#fQ .gopt.on b,#fQ .gopt.on small{color:#10292B !important}
+.ab-foot{justify-content:center !important;text-align:center;left:0 !important;right:0 !important}
+.ab-foot .ab-link{margin:0 auto}
 </style>
 </head>
 <body class="hookpage">
 
 <header class="topbar">
   <div class="wrap">
-    <div class="nbl" style="--nb:18px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+    <div class="nbl" style="--nb:18px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse-still.webp" data-anim="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
     <div class="spacer"></div>
   </div>
 </header>
@@ -3402,17 +3770,17 @@ body.in-panel .ab-foot{display:none}
     <div id="sKV">
       <section class="kv2">
         <div class="kv2-stage kv" id="kv">
-          <div class="ly ly-bg"><img src="assets/kv-bg.webp" alt="خیابانی شبانه از کافه، رستوران، بستنی‌فروشی، آبمیوه‌فروشی و فست‌فود، با سرآشپزی که به آن نگاه می‌کند"></div>
+          <div class="ly ly-bg"><img src="assets/kv-bg-s.webp" alt="خیابانی شبانه از کافه، رستوران، بستنی‌فروشی، آبمیوه‌فروشی و فست‌فود، با سرآشپزی که به آن نگاه می‌کند"></div>
           <div class="fx fx-beam" aria-hidden="true"></div>
           <div class="fx fx-win" aria-hidden="true"><i style="left:7%;top:57%;width:12%"></i><i style="left:21%;top:59%;width:12%"></i><i style="left:55%;top:59%;width:10%"></i><i style="left:67.5%;top:58%;width:9%"></i><i style="left:78.5%;top:57%;width:12%"></i></div>
           <div class="fx fx-wet" aria-hidden="true"></div>
           <div class="fx fx-mist m1" aria-hidden="true"></div><div class="fx fx-mist m2" aria-hidden="true"></div>
-          <div class="ly ly-chef" aria-hidden="true"><img src="assets/kv-chef.webp" alt=""></div>
+          <div class="ly ly-chef" aria-hidden="true"><img src="assets/kv-chef-s.webp" alt=""></div>
           <div id="kvLabels"></div>
         </div>
         <div class="kv2-fade" aria-hidden="true"></div>
         <header class="kv2-head">
-          <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+          <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse-still.webp" data-anim="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
           <h1>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h1>
         </header>
         <div class="kv2-act">
@@ -3430,7 +3798,7 @@ body.in-panel .ab-foot{display:none}
         <div class="st-bg" aria-hidden="true"></div>
         <div class="ld-copy">
           <button class="backl" data-prev>→ قبلی</button>
-          <div class="nbl" style="--nb:20px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+          <div class="nbl" style="--nb:20px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse-still.webp" data-anim="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
           <h1>وضع <span class="hl h1w">بقیه</span> بازار چطور است؟<br><em>و <span class="hl h2w">من</span> کجای این بازارم؟</em></h1>
           <p class="ld-lead"><b>در بازاری که ثبات ندارد، دانستن عملکرد خودتان به‌تنهایی کافی نیست.</b><span>نبض بازار پژوهشی زنده از فاکتورهای ناشناس مجموعه‌هاست. فروش، سفارش، قیمت منو و سبد خرید صنف و شهرتان را کنار عددهای خودتان می‌بینید. <button type="button" class="ld-about" id="ldAbout">درباره نبض بازار ←</button></span></p>
           <div class="ld-game gb">
@@ -3465,7 +3833,7 @@ body.in-panel .ab-foot{display:none}
         </div>
         <div class="sc-top"><button class="backl" data-prev>→ قبلی</button><div class="crumbs"><span class="on">۱ · سؤال از شما</span><span class="">۲ · بازار ایران</span><span class="">۳ · بازار شما</span><span class="">۴ · اتصال</span></div></div>
         <div class="qpanel">
-          <h1 class="q-one">سه سؤال کوتاه از مجموعه خودتان. <span>روی جواب بزنید؛ خودش جلو می‌رود.</span></h1>
+          <h1 class="q-one">سه سؤال کوتاه از مجموعه خودتان.</h1>
           <div class="qgrid qstack" id="qgrid"></div>
           <div class="q-go2"><span id="qDone">سؤال ۱ از ۳</span><span class="gq-nav"><button class="btn ghost2" id="gPrev" hidden>→ سؤال قبلی</button><button class="btn primary big" id="gNext" disabled>سؤال بعدی ←</button><button class="btn primary big" id="fReveal" disabled hidden>بازار چطور بوده؟ نشانم بده</button></span></div>
         </div>
@@ -3568,7 +3936,7 @@ body.in-panel .ab-foot{display:none}
               <p class="rn-s">عدد <em>واقعی</em> مجموعه شما چقدر است؟</p>
               <div class="mend-b"><button class="btn primary big" id="mUnlock">درخواست اتصال می‌دهم ←</button>
                 <button type="button" class="btn g2-area" id="mAreaBtn" hidden></button>
-                <button type="button" class="tf-demo" id="mDemo">بعد از اتصال چه می‌بینم؟</button></div>
+                <button type="button" class="tf-demo" id="mDemo">بعد از اتصال چه می‌بینم؟</button><a class="tf-demo m-spr2" id="mSpr2" href="spring-1405.html" target="_blank" rel="noopener">گزارش بهار ۱۴۰۵ ↗</a></div>
             </div>
             <span id="mInvW" hidden></span><span id="mInvH" hidden></span></div>
           <table class="cmp" id="fCmp" hidden></table><p class="hk-note" id="hkNote" hidden></p>
@@ -3801,78 +4169,128 @@ body.in-panel .ab-foot{display:none}
 </main>
 
 <!-- ================= AGREEMENT MODAL ================= -->
-<div class="ab-foot"><button type="button" class="ab-link" id="abLink">پژوهش زنده بازار غذا و نوشیدنی · <b>درباره نبض بازار</b></button><a class="ab-rl" href="spring-1405.html">گزارش بهار ۱۴۰۵</a><a class="ab-rl ab-pdoc" href="catalog-v2.html" target="_blank" rel="noopener">سند محصول</a></div>
+<div class="ab-foot"><button type="button" class="ab-link" id="abLink" aria-label="درباره نبض بازار">پژوهش زنده بازار غذا و نوشیدنی</button></div>
 <div class="tsx" id="trustX" role="dialog" aria-modal="true" aria-label="شاخص اعتماد" hidden>
   <button type="button" class="ab-x ts-x" id="tsX" aria-label="بستن">✕</button>
-  <article class="ts-doc">
-    <header class="ts-hd">
-      <p class="ts-k"><i></i>شاخص اعتماد</p>
-      <b class="ts-n num" id="tsN">۱۷۸٬۷۹۴٬۷۲۹</b>
-      <p class="ts-u">فاکتور واقعی که همین حالا، کنار هم و بی‌نام، تصویر بازار را می‌سازند.</p>
-      <h1>هر فاکتور، یک دست.</h1>
-      <p class="ts-lead">شاخص اعتماد می‌گوید پشت تصویر بازار، همین حالا چند فاکتور واقعی ایستاده‌اند. هر مجموعه‌ای که وصل می‌شود، فاکتورهایش را به این حلقه اضافه می‌کند و این عدد بالا می‌رود.</p>
+  <article class="tv">
+    <header class="tv-hero">
+      <p class="tv-k"><i></i>زنده · همین حالا</p>
+      <h1>شاخص اعتماد</h1>
+      <b class="tv-big num" id="tvHeroN">۱۷۸٬۷۹۴٬۷۲۹</b>
+      <p class="tv-sub">فاکتور واقعی · امروز <em id="tvHeroT">+۰</em></p>
+      <p class="tv-lead">شاخص اعتماد تعداد فاکتورهای واقعی است که تا این لحظه از مجموعه‌های سراسر کشور در نبض بازار جمع شده‌اند.</p>
+      <div class="tv-pair">
+        <div><b>اعتماد</b><span>هر مجموعه‌ای که وصل می‌شود، با فاکتورهایش به این تصویر اعتماد می‌کند.</span></div>
+        <i aria-hidden="true">⇄</i>
+        <div><b>اعتبار</b><span>هر فاکتوری که اضافه می‌شود، به عددهای بازار اعتبار بیشتری می‌دهد.</span></div>
+      </div>
+      <p class="tv-pq">اعتماد شما، اعتبار بازار را می‌سازد.</p>
+      <a class="tv-down" href="#tvStage" id="tvHow">چگونه ساخته می‌شود؟ <span aria-hidden="true">↓</span></a>
     </header>
 
-    <section class="ts-sec">
-      <h2>از فاکتور تا تصویر بازار</h2>
-      <div class="ts-eng"><iframe id="tsEng" src="engine.html" title="موتور نبض بازار: از فاکتور تا تحلیل" loading="lazy"></iframe></div>
-      <ol class="ts-steps">
-        <li><b>فاکتور می‌رسد، بی‌نام.</b><span>از هر فاکتور فقط چهار چیز برداشته می‌شود: مبلغ، تعداد، اقلام و زمان. نام مجموعه، نام و تلفن مشتری و هر نشانی دیگر، پیش از هر محاسبه کنار گذاشته می‌شود.</span></li>
-        <li><b>کنار هزاران فاکتور دیگر.</b><span>هیچ فاکتوری تنها دیده نمی‌شود. همه فاکتورهای یک بازار در یک روز روی هم جمع می‌شوند و یک «مبنا» می‌سازند؛ تصویری از رفتار کل آن بازار.</span></li>
-        <li><b>امروز در برابر فردا.</b><span>مبنای هر روز با مبنای روز بعد سنجیده می‌شود. آنچه بیرون می‌آید فقط درصد تغییر است، در فروش، سفارش، قیمت منو و سبد خرید؛ یعنی رفتار بازار، نه عدد یک مجموعه.</span></li>
-        <li><b>فقط وقتی کافی باشد.</b><span>هر بازار فقط وقتی نمایش داده می‌شود که فاکتورهایش به حداقل استاندارد آماری برسد، تا هیچ عددی به یک یا چند مجموعه قابل ردیابی نباشد.</span></li>
-      </ol>
-    </section>
+    <div class="tj" id="tvBody">
+      <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i></div>
+      <section class="tj-st" id="tjStart">
+        <span class="tj-n">۱</span>
+        <h2>از سراسر کشور</h2>
+        <p>بیش از <b>۴٬۰۰۰</b> کافه، رستوران و فست‌فود در استان‌های مختلف به نبض بازار وصل‌اند. هر نقطه روی این نقشه، بازاری است که فاکتورهایش را می‌فرستد.</p>
+        <svg class="tj-map" id="tjMap" viewBox="0 0 1000 960" aria-label="نقشه ایران؛ فاکتورها از استان‌ها به پایین نقشه و مخزن تجمیع می‌روند"></svg>
+      </section>
+      <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i><em>هر ساعت</em></div>
+      <section class="tj-st">
+        <span class="tj-n">۲</span>
+        <h2>در مخزن تجمیع، کنار هم قرار می‌گیرند</h2>
+        <p>فاکتورهای فروش همه مجموعه‌ها در مخزن تجمیع کنار هم قرار می‌گیرند. از این لحظه نام هیچ مجموعه‌ای همراه فاکتورها نیست. آنچه می‌ماند، تصویر یک بازار است.</p>
+        <div class="tj-tank">
+          <svg viewBox="0 0 300 300" aria-hidden="true">
+            <circle class="v1" cx="150" cy="150" r="138"/><circle class="v2" cx="150" cy="150" r="138"/>
+            <g id="tjMix"></g>
+            <circle class="cr" cx="150" cy="150" r="17"/>
+          </svg>
+        </div>
+        <div class="tj-meter">
+          <small>شاخص اعتماد</small>
+          <b class="num" id="tsN">۱۷۸٬۷۹۴٬۷۲۹</b>
+          <span><i></i>فاکتور واقعی تا این لحظه · امروز <em id="tvToday">+۰</em></span>
+        </div>
+        <ol class="tj-flow">
+          <li><span class="dots"><i style="background:#FFB766"></i><i style="background:#7DD3FC"></i><i style="background:#F9A8D4"></i></span><b>هر فاکتور با رنگ مجموعه خودش می‌رسد</b><small>مبلغ، اقلام، تعداد و زمان فروش</small></li>
+          <li><span class="dots mixd"><i style="background:#FDE68A"></i><i style="background:#C4D8D0"></i><i style="background:#FFB766"></i></span><b>در مخزن، کنار فاکتورهای دیگر قرار می‌گیرد</b><small>هزاران فاکتور، از صدها مجموعه</small></li>
+          <li><span class="dots one"><i></i><i></i><i></i></span><b>رنگ مجموعه در رنگ بازار حل می‌شود</b><small>فقط استان و نوع کسب‌وکار می‌ماند</small></li>
+        </ol>
+      </section>
+      <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i></div>
+      <section class="tj-st">
+        <span class="tj-n">۳</span>
+        <h2>موتور، هر ساعت بازار را می‌سنجد</h2>
+        <p>موتور نبض بازار فاکتورهای هر بازار را با دوره قبل مقایسه می‌کند. حاصل این مقایسه فقط درصد تغییر است، نه عدد فروش یک مجموعه.</p>
+        <div class="tj-dial">
+          <svg viewBox="0 0 300 300" aria-hidden="true">
+            <defs><linearGradient id="tjWg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BEF264" stop-opacity="0"/><stop offset="1" stop-color="#BEF264" stop-opacity=".35"/></linearGradient></defs>
+            <circle class="d1" cx="150" cy="150" r="138"/>
+            <g id="tjSw"><path class="wedge" d="M150 150 L81 30.5 A138 138 0 0 1 150 12 Z" fill="url(#tjWg)"/><line class="hand" x1="150" y1="150" x2="150" y2="16"/></g>
+            <g id="tjHrs"></g>
+            <circle class="arc" id="tjArc" cx="150" cy="150" r="118" transform="rotate(-90 150 150)"/>
+            <circle class="d2" cx="150" cy="150" r="92"/><circle class="d3" cx="150" cy="150" r="92"/>
+            <text class="dm" x="150" y="146">موتور</text><text class="ds" x="150" y="180" id="tjDs">در حال سنجش</text>
+          </svg>
+          <p class="tj-clk" id="tjClk"></p>
+        </div>
+      </section>
+      <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i></div>
+      <section class="tj-st">
+        <span class="tj-n">۴</span>
+        <h2>برگه بازار، ماه به ماه</h2>
+        <p>حاصل کار موتور، برگه بازار است. هر ماه که تمام می‌شود، یک ردیف تازه به آن اضافه می‌شود و چهار نبض بازار را نسبت به ماه قبل نشان می‌دهد.</p>
+        <figure class="tj-sheet" id="tjSheet">
+          <figcaption>
+            <b>برگه بازار</b>
+            <span class="tj-flt"><i>استان: همه</i><i>نوع: کافه رستوران</i><i>شیفت: ظهر</i></span>
+          </figcaption>
+          <div class="tj-th"><span>ماه</span><span>فروش</span><span>تعداد سفارش</span><span>قیمت منو</span><span>سبد خرید</span></div>
+          <div id="tjSheetRows"></div>
+          <p class="tj-src">عددهای واقعی نبض بازار، ۱۴۰۵؛ هر ماه نسبت به ماه قبل</p>
+        </figure>
+      </section>
+      <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i></div>
+      <section class="tj-cred" aria-label="اعتبار">
+        <span class="tj-ck">اعتبار</span>
+        <h3>نبض، وقتی دقیق می‌زند که داده کافی باشد</h3>
+        <div class="tj-heart">
+          <div class="tj-gauge" aria-hidden="true"><i id="tjFill"></i><b>حد کافی</b></div>
+          <svg class="tj-ecg" viewBox="0 0 600 200" aria-hidden="true"><path class="base" d="M0 100 H600"/><path id="tjEcg" class="ln" d="M0 100 H600"/></svg>
+        </div>
+        <p class="tj-cap" id="tjCap" aria-live="polite"><em class="tj-eg">مثال، برای درک بهتر</em><b id="tjMk">فست‌فودهای فارس</b><span id="tjSt">در حال جمع شدن فاکتورها</span></p>
+        <p class="tj-cl">هرچه فاکتور بیشتری کنار هم باشد، نبض هر بازار زودتر دقیق می‌شود.</p>
+      </section>
+    </div>
 
-    <section class="ts-sec">
-      <h2>چرا هر فاکتور، <em>اعتبار</em> را بالا می‌برد</h2>
-      <p>ناشناس بودن و دقیق بودن، با هم رشد می‌کنند. هر فاکتور تازه دو کار می‌کند: میانگین را به واقعیت بازار نزدیک‌تر می‌کند، و هر مجموعه را میان جمعیتی بزرگ‌تر پنهان‌تر. پس هرچه شاخص اعتماد بالاتر برود، هم گزارش معتبرتر می‌شود و هم داده هر مجموعه امن‌تر.</p>
-      <div class="ts-viz" hidden>
-        <div class="ts-vh"><span>اعتبار تصویر بازار</span><b id="tsC">—</b></div>
-        <canvas id="tsCv" width="720" height="250" aria-label="هرچه مجموعه بیشتری وصل شود، نبض بازار صاف‌تر می‌شود"></canvas>
-        <div class="ts-leg"><span><i class="d"></i>هر نقطه: یک مجموعه متصل</span><span><i class="l"></i>نبض بازار، ساخته از فاکتورهای همه</span></div>
-        <div class="ts-sl"><label for="tsS">اگر این تعداد مجموعه کنار هم باشند</label><input type="range" id="tsS" min="3" max="400" step="1" value="12"><b id="tsSv">۱۲</b></div>
-        <p class="ts-cap">این نمایش، مفهوم را نشان می‌دهد؛ عددهای آن واقعی نیستند.</p>
-      </div>
-      
-      <p class="ts-quote">هیچ‌کس فروش هیچ‌کس را نمی‌بیند؛ اما همه تصویر بازار را می‌بینند.</p>
-    </section>
-
-    <section class="ts-sec">
-      <h2>اعتماد شما، <em>اعتبار گزارش</em></h2>
-      <p>با وصل شدن، شما به این تصویر اعتبار می‌دهید. و هرچه این تصویر معتبرتر شود، بیشتر می‌شود به آن اعتماد کرد.</p>
-      <ol class="ts-loop" aria-label="چرخه اعتماد و اعتبار">
-        <li>مجموعه‌ای اعتماد می‌کند و وصل می‌شود</li><li>فاکتور بیشتری کنار هم</li><li>نبض بازار روشن‌تر</li><li>گزارش معتبرتر</li><li>اعتماد بیشتر</li>
-      </ol>
-    </section>
-
-    <footer class="ts-end">
-      <p class="ts-big">شما به این تصویر اعتبار می‌دهید؛<br><em>و این تصویر به شما اعتماد پس می‌دهد.</em></p>
-      <button type="button" class="btn primary big" id="tsGo">من هم دستم را می‌دهم ←</button>
+    <footer class="tv-end">
+      <p class="tv-q">هیچ‌کس فروش هیچ‌کس را نمی‌بیند؛<br><em>اما همه تصویر بازار را می‌بینند.</em></p>
+      <button type="button" class="btn primary big" id="tsGo">درخواست اتصال می‌دهم ←</button>
+      <button type="button" class="tv-about" id="tvAbout">
+        <span><small>برای آشنایی بیشتر</small><b>درباره نبض بازار</b><i>نبض بازار چیست، از کجا آمده و به چه کار مالک کسب‌وکار می‌آید.</i></span>
+        <u>خواندن ←</u>
+      </button>
     </footer>
-
-    <a class="ts-doccard" href="catalog-v2.html" target="_blank" rel="noopener">
-      <span><small>برای کسی که می‌خواهد بیشتر بداند</small><b>سند محصول نبض بازار</b><i>نحوه کار، پوشش، حریم داده و جزئیات داشبورد، در یک سند کامل.</i></span>
-      <u>خواندن سند ↗</u>
-    </a>
   </article>
 </div>
 <div class="about" id="about" role="dialog" aria-modal="true" aria-label="درباره نبض بازار" hidden>
   <button type="button" class="ab-x" id="abX" aria-label="بستن">✕</button>
   <article class="ab-doc">
     <header class="ab-hero"><div class="ab-veil"></div><div class="ab-ht">
-      <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
-      <h1>کاسبی بقیه چطور است؟</h1></div></header>
-    <nav class="ab-toc" aria-label="فصل‌های این سند"><a href="#ab1">چرا</a><a href="#ab2">چیست</a><a href="#ab3">بازار شما</a><a href="#ab4">چطور کار می‌کند</a><a href="#ab5">کار جمعی</a><a href="#ab6">اعتماد</a><a href="#ab7">پرسش‌ها</a></nav>
+      <div class="nbl nbl--center" style="--nb:24px" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse-still.webp" data-anim="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+      <h1>وضعیت بازار چطور است؟</h1></div></header>
+    <nav class="ab-toc" aria-label="فصل‌های این سند"><a href="#ab1">چرا</a><a href="#ab2">چیست</a><a href="#ab3">بازار شما</a><a href="#ab4">چگونه ساخته می‌شود</a><a href="#ab5">کار جمعی</a><a href="#ab6">اعتماد</a><a href="#ab7">پرسش‌ها</a></nav>
 
     <section id="ab1"><h2><i>۰۱</i>چرا این کار را کردیم</h2>
-      <p class="ab-lead">سال‌هاست این سؤال را از ما می‌پرسید.</p>
+      <p class="ab-lead">سال‌هاست این سؤال را از ما می‌پرسید: <em>«کاسبی بقیه چطور است؟»</em></p>
       <p>سؤال ساده‌ای نیست؛ پشت آن نگرانی واقعی کسانی است که هر روز صبح کرکره را بالا می‌دهند. فروش بالا رفته، اما چیزی سر جایش نیست. مشتری کمتر شده، و کسی نمی‌داند دلیلش کار خودش است یا حال بازار.</p>
-      <p>در اقتصادی چنین پرنوسان، هیچ مجموعه‌ای به‌تنهایی نمی‌تواند بفهمد فشار از کجا می‌آید. و تا امروز، هیچ سازوکار جمعی هم برای جواب دادن به این سؤال وجود نداشت.</p></section>
+      <p>در اقتصادی چنین پرنوسان، هیچ مجموعه‌ای به‌تنهایی نمی‌تواند بفهمد فشار از کجا می‌آید. تا امروز، سازوکاری جمعی هم برای جواب دادن به این سؤال وجود نداشت.</p></section>
 
     <section id="ab2"><h2><i>۰۲</i>نبض بازار چیست</h2>
-      <p>نبض بازار پژوهشی زنده روی بازار غذا و نوشیدنی است. عملکرد مجموعه شما را، بر پایه فاکتورهای واقعی صندوق، کنار میانگین مجموعه‌های متصل بازار می‌گذارد و به عددهایتان زمینه می‌دهد: اگر فروش رشد یا افت کرده، معلوم می‌شود این تغییر نسبت به بازار چه معنایی دارد.</p>
-      <p class="ab-quote">در بازار بی‌ثبات، عددهای خودتان به‌تنهایی کافی نیستند؛ باید بدانید بازار در همان زمان چه مسیری رفته است.</p>
+      <p>نبض بازار پژوهشی زنده روی بازار غذا و نوشیدنی است. عملکرد مجموعه شما را، بر پایه فاکتورهای واقعی فروش، کنار میانگین بازار خودتان می‌گذارد. این‌طور معلوم می‌شود رشد یا افت فروش شما نسبت به بازار چه معنایی دارد.</p>
+      <p class="ab-quote">در بازاری که هر ماه تغییر می‌کند، عددهای خودتان به‌تنهایی کافی نیستند. باید بدانید بازار در همان زمان چه مسیری رفته است.</p>
       <h3>چهار پرسشی که جواب می‌دهد</h3>
       <div class="ab-g4">
         <div><b>افت واقعی</b><span>افت شما اختصاصی است، یا کل بازار افت کرده؟</span></div>
@@ -3904,19 +4322,17 @@ body.in-panel .ab-foot{display:none}
         <li><b>دو بازار کنار هم</b>مثل کافه‌های تهران و اصفهان</li>
       </ul></section>
 
-    <section id="ab4"><h2><i>۰۴</i>از فاکتور تا تصویر بازار</h2>
-      <p>نبض بازار عدد خام هیچ مجموعه‌ای را نشان نمی‌دهد. فقط درصد تغییر روی صفحه می‌آید؛ همان چیزی که رفتار بازار را دقیق نشان می‌دهد.</p>
-      <ol class="ab-steps">
-        <li><b>فاکتورها، بی‌نام و نشان</b><span>از هر فاکتور فقط مبلغ، تعداد، اقلام و زمان؛ بدون نام و نشانی مشتری یا مجموعه.</span></li>
-        <li><b>هر ماه، قالب خودش</b><span>فاکتورهای هر ماه کنار هم جمع می‌شوند و دو ماه با هم سنجیده می‌شوند.</span></li>
-        <li><b>فقط درصد تغییر</b><span>برای بازار انتخابی و، کنارش، برای مجموعه خود شما.</span></li>
-      </ol>
-      <p class="ab-note"><b>حداقل استاندارد آماری:</b> هر بازار فقط وقتی نمایش داده می‌شود که نمونه‌اش به این حد رسیده باشد. اگر نرسیده باشد، با گروه بزرگ‌تر کنارش یکی می‌شود تا عدد همیشه میانگین بازار باشد، نه چند مجموعه: هم‌نوع در استان ← استان ← هم‌نوع کشور ← کل بازار.</p></section>
+    <section id="ab4"><h2><i>۰۴</i>چگونه ساخته می‌شود</h2>
+      <p>پشت هر عدد نبض بازار، فاکتورهای واقعی فروش مجموعه‌های سراسر کشور ایستاده‌اند. هر بازار فقط وقتی نشان داده می‌شود که فاکتورهایش به حد کافی رسیده باشد.</p>
+      <button type="button" class="ab-live" data-trust>
+        <span><small><i></i>شاخص اعتماد · زنده</small><b class="num" id="abLive">۱۷۸٬۷۹۴٬۷۲۹</b><em>فاکتور واقعی تا این لحظه</em></span>
+        <u>ببینید چگونه ساخته می‌شود ←</u>
+      </button></section>
 
     <section id="ab5" class="ab-together"><h2><i>۰۵</i>یک کار جمعی، به نفع همه</h2>
-      <p>هر مجموعه، یک دست است. دست‌ها که کنار هم می‌آیند، تصویری از بازار ساخته می‌شود که هیچ‌کس به‌تنهایی نمی‌دید؛ و همه از آن سهم می‌برند. هر مجموعه‌ای که می‌پیوندد، این تصویر را برای همه روشن‌تر می‌کند.</p>
+      <p>تصویری که هیچ مجموعه‌ای به‌تنهایی نمی‌دید، از کنار هم قرار گرفتن فاکتورهای همه ساخته می‌شود. هر مجموعه‌ای که وصل می‌شود، این تصویر را برای همه دقیق‌تر می‌کند.</p>
       <p class="ab-big">کنار هم، بازار را روشن‌تر می‌بینیم.</p>
-      <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور بررسی‌شده</span><button type="button" class="ts-mini" data-trust>شاخص اعتماد یعنی چه؟</button></div><div><b>۱۰۰ هزار</b><span>کسب‌وکار؛ ظرفیتی که زیرساخت برای آن ساخته شده</span></div></div>
+      <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>شاخص اعتماد، زنده</span><button type="button" class="ts-mini" data-trust>شاخص اعتماد یعنی چه؟</button></div><div><b>۱۰ هزار</b><span>کسب‌وکار؛ ظرفیت اولیه این طرح</span></div></div>
       
       <div class="ab-rep"><i class="ab-cov" style="background-image:url(assets/story/drawer.webp)"></i><div><small>نخستین روایت ما</small><b>گزارش فصلی صنعت غذا و نوشیدنی · بهار ۱۴۰۵</b><span>صندوق پر از پول، اما مشتری کمتر؛ روایتی از فروش، سفارش و واقعیت بازار، با تحلیل استان‌ها.</span>
         <div class="ab-rb"><a class="btn primary" href="spring-1405.html">گزارش بهار را ببینید ←</a></div></div></div></section>
@@ -3925,7 +4341,7 @@ body.in-panel .ab-foot{display:none}
       <p class="ab-quote">هیچ‌کس فروش هیچ‌کس را نمی‌بیند؛ اما همه تصویر بازار را می‌بینند.</p>
       <ul class="ab-list">
         <li><b>تجمیع‌شده.</b> فاکتورها فقط با هم و در سطح بازار سنجیده می‌شوند.</li>
-        <li><b>ناشناس.</b> هیچ فاکتوری با نام یا نشانی مشتری و مجموعه وارد محاسبه نمی‌شود.</li>
+        <li><b>بدون نام مجموعه.</b> در محاسبه، نام هیچ مجموعه‌ای همراه فاکتورها نیست؛ فقط استان و نوع کسب‌وکار.</li>
         <li><b>فقط میانگین.</b> آنچه دیده می‌شود میانگین بازار است؛ نه عدد رقیب، نه عدد شما برای دیگران.</li>
         <li><b>فروخته نمی‌شود.</b> داده خام شما به هیچ‌کس فروخته یا داده نمی‌شود.</li>
         <li><b>به اختیار شماست.</b> هر وقت بخواهید، با یک دکمه قطع می‌شود. داخل مجموعه هم هر همکار فقط شعبه‌هایی را می‌بیند که مدیر برایش تعیین کرده است.</li>
@@ -3935,22 +4351,20 @@ body.in-panel .ab-foot{display:none}
       <div class="ab-g4">
         <div><b>داده واقعی صندوق</b><span>فاکتورهای ثبت‌شده، نه نظرسنجی یا تخمین.</span></div>
         <div><b>فراتر از فروش آنلاین</b><span>سالن، بسته‌بندی، دلیوری، اسنپ و سایت اختصاصی.</span></div>
-        <div><b>به‌روزرسانی روزانه</b><span>با داده‌های فروش تا پایان شب قبل.</span></div>
+        <div><b>به‌روزرسانی هر ساعت</b><span>فاکتورهای تازه هر ساعت به تصویر بازار اضافه می‌شوند.</span></div>
         <div><b>شاخص اطمینان</b><span>کنار هر مقایسه، کیفیت نمونه همان بازار و روزهای ثبت‌شده هر ماه.</span></div>
       </div></section>
 
     <section id="ab7"><h2><i>۰۷</i>پرسش‌های پرتکرار</h2>
       <div class="ab-faq">
         <details><summary>آیا اطلاعات رقبا را می‌بینم؟</summary><p>خیر. نبض بازار برای فهم جایگاه شما نسبت به میانگین بازار است، نه دیدن اطلاعات رقبا. هیچ‌کس هم عدد شما را نمی‌بیند.</p></details>
-        <details><summary>داده‌ها از کجا می‌آیند؟</summary><p>از فاکتورهای واقعی فروش که از صندوق فروشگاهی به سرویس باشگاه مشتریان یا نظرسنجی اسمارت‌ایکس می‌رسد.</p></details>
-        <details><summary>بازار مرجع من چطور تعیین می‌شود؟</summary><p>یکی از بازارهای آماده را انتخاب می‌کنید، یا استان، نوع کسب‌وکار، شیفت و نوع سفارش را خودتان کنار هم می‌گذارید.</p></details>
+        <details><summary>داده‌ها از کجا می‌آیند؟</summary><p>از فاکتورهای واقعی فروش که صندوق مجموعه‌های متصل ثبت می‌کند.</p></details>
         <details><summary>جایگاه من چطور نمایش داده می‌شود؟</summary><p>به‌صورت بازه رتبه در بازار انتخابی شما. برای بازاری که هنوز به حداقل استاندارد آماری نرسیده، رتبه نمایش داده نمی‌شود تا عدد همیشه قابل اتکا باشد.</p></details>
-        <details><summary>ماه جاری چطور حساب می‌شود؟</summary><p>به انتخاب شما: یا فقط داده ثبت‌شده تا امروز، یا برآورد تا پایان ماه. تعداد روزهای ثبت‌شده همیشه کنارش آمده است.</p></details>
         <details><summary>اختلاف منفی با بازار را چطور بخوانم؟</summary><p>به‌عنوان یک نشانه برای مقایسه، نه یک نمره. اختلاف نشان می‌دهد کدام شاخص، در کدام شیفت یا نوع سفارش، بیشترین فرصت رشد را دارد.</p></details>
       </div></section>
 
     <footer class="ab-end">
-      <p>این پروژه برای نخستین بار در کشور و با سرمایه‌گذاری مستقیم سپیدز و اسمارت‌ایکس انجام شده است.</p>
+      <p>این پروژه با سرمایه‌گذاری مستقیم سپیدز و اسمارت‌ایکس انجام شده است.</p>
       <p class="ab-thanks">پاسخی است به ۲۵ سال همراهی شما، و به صنعتی که به این شرکت‌ها جان داد.</p>
       <p class="ab-sign">سپیدز · اسمارت‌ایکس</p>
       <p class="ab-credit">نقشه: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© مشارکت‌کنندگان OpenStreetMap</a> · geoBoundaries</p></footer>
@@ -4126,7 +4540,7 @@ body.in-panel .ab-foot{display:none}
       <div class="fm-pour" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="fm-cap" id="fmCap"></div>
       <div class="fm-end" id="fmEnd">
-        <div class="nbl nbl--center" style="--nb:3cqw" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
+        <div class="nbl nbl--center" style="--nb:3cqw" role="img" aria-label="نبض بازار · پژوهش زنده بازار غذا و نوشیدنی"><b>نبض بازار</b><img class="nbp nbp-img" src="assets/logo-pulse-still.webp" data-anim="assets/logo-pulse.webp" width="156" height="156" alt="" aria-hidden="true" decoding="async"><small>پژوهش زنده بازار غذا و نوشیدنی</small></div>
         <h3>ببینید کجای <em>بازار</em> ایستاده‌اید؟</h3>
         <button class="btn primary big" id="fmGo">حدس می‌زنم ←</button>
       </div>
@@ -4439,7 +4853,7 @@ function g3(){
 /* ===== v21: the artwork's labels, boxed, floating over each shop (x,y = top-left in the 1332×678 image; stem = % of image height down to the shop) ===== */
 function trustTick(){
   if (trustTick._t) return; let n = 178794729;
-  trustTick._t = setInterval(()=>{ n += Math.floor(Math.random()*6)+1; window.__tn = n; ['#trustN','#trustR','#tPoolN','#dmPoolN','#tsN'].forEach(id=>{ const el=$(id); if(el && !el.closest('[hidden]')) el.textContent = fa(n); }); }, 1100);
+  trustTick._t = 1; window.__tn = n;   /* a fixed, dated count (24 Aban 1405) until it is wired to the live figure */
 }
 function kv(){ trustTick();
   const all = YTD['کل کشور'].all.s;
@@ -4460,7 +4874,7 @@ function kv(){ trustTick();
         <div class="tip">فروش ${o.pl} از فروردین <b>${pct(v)}</b><br>میانگین کل بازار <b>${pct(all)}</b></div>
       </div></div>`;
   }).join('');
-  $$('#kv .lb3').forEach((e,i)=>setTimeout(()=>e.classList.add('in'), 250+i*200));
+  $$('#kv .lb3').forEach((e,i)=>setTimeout(()=>e.classList.add('in'), 200+i*120));
   const kvEl = $('#kv');
   if (!kv._p){ kv._p = true;
     kvEl.addEventListener('pointermove', e=>{ const r = kvEl.getBoundingClientRect();
@@ -4514,7 +4928,8 @@ const FQ = [
   {k:'s', i:'cash',  r:[-40,130]},
 ];
 const GOPTS = [[-15,'کمتر','از پارسال','کمتر'],[0,'همان','تقریباً','همان'],[20,'+۲۰٪','حدود','+۲۰٪'],[50,'+۵۰٪','حدود','+۵۰٪'],[100,'۲ برابر','یا بیشتر','۲ برابر']];
-const glb = t => t[0]==='+' ? `<bdi dir="ltr">${t}</bdi>` : t;
+const glb = t => t && t[0]==='+' ? `<bdi dir="ltr">${t}</bdi>` : (t || '؟');
+const t3 = v => { const o = GOPTS.find(o=>o[0]===v); return o ? o[3] : '؟'; };
 const GSAY = {'-15':'کمتر از مهر پارسال بوده.', '0':'تقریباً مثل مهر پارسال بوده.', '20':'حدود ۲۰٪ بیشتر از مهر پارسال بوده.', '50':'حدود ۵۰٪ بیشتر از مهر پارسال بوده.', '100':'دو برابر مهر پارسال یا بیشتر بوده.'};
 const GQ = {
   o:{tok:'مشتری', word:'مشتری‌هایتان', who:'تعداد مشتری‌های شما', sub:'هر سفارش را یک مشتری حساب کنید.'},
@@ -4556,7 +4971,7 @@ function fInit(){
     $$('#gToks .gtok').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.i))); };
   const nav = ()=>{ const q = FQ[G.i], last = G.i===FQ.length-1, all = FQ.every(x=>state.g[x.k]!=null);
     $('#qDone').textContent = `سؤال ${fa(G.i+1)} از ${fa(FQ.length)}`;
-    $('#gPrev').hidden = G.i===0; $('#gNext').hidden = true; $('#fReveal').hidden = !last;
+    $('#gPrev').hidden = G.i===0; $('#gNext').hidden = last || state.g[q.k]==null; $('#fReveal').hidden = !last;
     $('#gNext').disabled = state.g[q.k]==null; $('#fReveal').disabled = !all; };
   const H0 = 48, hOf = v => Math.min(100, H0*(1+v/100));
   const paintBar = q => { const v = state.g[q.k], bar = $('#gNow'), lab = $('#gNowL'), set = v!=null;
@@ -4571,14 +4986,17 @@ function fInit(){
       <div class="g3-viz" aria-hidden="true"><div class="g2-col"><div class="g2-track"><span class="g2-bar old" style="height:${H0}%"></span></div><small>مهر پارسال</small></div>
         <div class="g2-col"><div class="g2-track"><span class="g2-bar now" id="gNow"><b id="gNowL">؟</b></span></div><small>مهر امسال</small></div></div>
       <div class="gopts g3-st" role="group" aria-label="جواب شما">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" style="height:${STEP(v)}px" aria-label="${h} ${t}"><b>${glb(t)}</b>${h==='حدود'||h==='یا بیشتر'?`<small>${h}</small>`:''}</button>`).join('')}</div></div>`;
-    $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v; $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q); toks(); nav();
-      const st = $(`#qgrid .g3-s[data-i="${G.i}"]`); if (st){ st.classList.add('ok'); st.querySelector('em').innerHTML = glb(GOPTS.find(o=>o[0]===state.g[q.k])[3]); }
+    $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v;
       clearTimeout(G.t); const at = G.i;
-      if (at < FQ.length-1) G.t = setTimeout(()=>{ if (G.i===at && state.cur==='fQ') go(at+1); }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 700);
-      else if (FQ.every(x=>state.g[x.k]!=null)) $('#fReveal').focus({preventScroll:true}); }));
+      if (at < FQ.length-1) G.t = setTimeout(()=>{ if (G.i===at && !$('#fQ').hidden) go(at+1); }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 700);
+      try { $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q);
+        const st = $(`#qgrid .g3-s[data-i="${at}"]`); if (st){ st.classList.add('ok'); const em = st.querySelector('em'); if (em) em.innerHTML = glb(t3(state.g[q.k])); }
+        toks(); } catch(e){ console.warn(e); }
+      try { nav(); } catch(e){ console.warn(e); }
+      if (at === FQ.length-1 && FQ.every(x=>state.g[x.k]!=null)) $('#fReveal').focus({preventScroll:true}); }));
     $$('#qgrid .g3-s').forEach(b=>b.addEventListener('click',()=>{ clearTimeout(G.t); go(+b.dataset.i); }));
     paintBar(q); toks(); nav(); };
-  const go = i => { const t = performance.now(); if (t-G.lock<320) return; G.lock = t; G.i = Math.max(0, Math.min(FQ.length-1, i)); draw(); };
+  const go = i => { const t = performance.now(); if (t-G.lock<320){ clearTimeout(G.w); G.w = setTimeout(()=>go(i), 340-(t-G.lock)); return; } G.lock = t; G.i = Math.max(0, Math.min(FQ.length-1, i)); draw(); };
   $('#gNext').addEventListener('click',()=>{ if (state.g[FQ[G.i].k]!=null) go(G.i+1); });
   $('#gPrev').addEventListener('click',()=>{ clearTimeout(G.t); go(G.i-1); });
   draw();
@@ -4587,7 +5005,7 @@ function fInit(){
   const paint = ()=>{ const c = state.fcat, pv = state.fprov;
     citySearch();
     const drop = !!pv && pv!==PK_PV; PK_PV = pv || null;
-    $('#fCityQuick').innerHTML = CITY_CHIPS.filter(x=>AR_PD[x[0]]).map(([p0,c0])=>`<button class="pk ct ${pv===p0?'on':''}" data-qc="${c0}" data-qp="${p0}" aria-pressed="${pv===p0}" title="${p0===c0?'استان '+p0:p0+' · '+c0}"><span class="ct-sh">${provShape(p0)}</span><span class="ct-n">${c0}</span></button>`).join('');
+    $('#fCityQuick').innerHTML = CITY_CHIPS.filter(x=>AR_PD[x[0]] || YTD[x[0]]).map(([p0,c0])=>`<button class="pk ct ${pv===p0?'on':''}" data-qc="${c0}" data-qp="${p0}" aria-pressed="${pv===p0}" title="${p0===c0?'استان '+p0:p0+' · '+c0}"><span class="ct-sh">${provShape(p0)}</span><span class="ct-n">${c0}</span></button>`).join('');
     const csh = $('#fCSh'); csh.innerHTML = pv ? provShape(pv) : ''; $('#fCS').classList.toggle('has-sh', !!pv);
     if (drop) pkDrop(pv);
     $$('#fCityQuick [data-qc]').forEach(b=>b.addEventListener('click',()=>setCity(b.dataset.qc, b.dataset.qp)));
@@ -4954,10 +5372,10 @@ function fArea(){
   $('#cyGo').onclick = ()=>{ state.direct = false; state.viaArea = true; fShow('stage2'); }; $('#cyDemo').onclick = dmOpen;
   const all = Object.values(AR_PD), med = k => { const v = all.map(x=>x[k]).sort((a,b)=>a-b); return (v[8]+v[9])/2; };
   const RK = {o:['کمترین افت سفارش',-1], f:['کمترین تورم خوراکی',1], m:['بیشترین رشد قیمت منو',-1], a:['بیشترین رشد میانگین فاکتور',-1]};
-  $('#cyTb').innerHTML = `<table><thead><tr><th>شاخص · بهار ۱۴۰۵</th><th>${pv}</th><th>میانه ۱۸ استان</th><th>جایگاه بین ۱۸ استان</th></tr></thead><tbody>${['o','f','m','a'].map(k=>{
+  $('#cyTb').innerHTML = `<table><thead><tr><th>شاخص · بهار ۱۴۰۵</th><th>${pv}</th><th>میانه ۱۹ استان</th><th>جایگاه بین ۱۹ استان</th></tr></thead><tbody>${['o','f','m','a'].map(k=>{
     const rank = all.filter(x=>RK[k][1]*(x[k]-p[k])<0).length+1;
     return `<tr><th>${{o:'تغییر سفارش',f:'تورم خوراکی',m:'رشد قیمت منو',a:'رشد میانگین فاکتور'}[k]}</th><td>${arN(k,p[k])}</td><td>${arN(k,med(k))}</td><td><b>${fa(rank)}</b> از ۱۸ <small>در ${RK[k][0]}</small></td></tr>`; }).join('')}</tbody></table>
-    <p>عددها نسبت به بهار ۱۴۰۴ است. میانه یعنی عدد وسط ۱۸ استان گزارش.</p>`;
+    <p>عددها نسبت به بهار ۱۴۰۴ است. میانه یعنی عدد وسط ۱۹ استان گزارش.</p>`;
   const view = v => { $('#cyMx').style.display = v==='mx' ? '' : 'none'; $('#cyTb').hidden = v==='mx'; $$('.cy-tg button').forEach(b=>{ b.classList.toggle('on', b.dataset.v===v); b.setAttribute('aria-selected', b.dataset.v===v); }); };
   $$('.cy-tg button').forEach(b=>b.onclick = ()=>view(b.dataset.v)); $$('#cyCards .cy-c').forEach(b=>b.addEventListener('click',()=>view('mx'))); view('mx');
   arDraw(fArea.m || 'res');
@@ -4991,7 +5409,7 @@ function fMine(){
   drawMine(z, N0);
   const hasArea = !!AR_PD[pv], ab = $('#mAreaBtn');
   $('#mUnlock').onclick = ()=>{ state.direct = false; state.viaArea = false; fShow('stage2'); }; $('#mDemo').onclick = dmOpen;
-  ab.hidden = !hasArea; if (hasArea){ ab.textContent = pv.length > 8 ? `تحلیل تخصصی ${pv} ←` : `تحلیل تخصصی بازار ${pv} ←`; ab.title = 'سه ماتریس گزارش بهار ۱۴۰۵ برای استان شما'; ab.onclick = ()=>fShow('fArea'); }
+  ab.hidden = !hasArea; if (hasArea){ ab.textContent = pv.length > 8 ? `تحلیل تخصصی ${pv} ←` : `تحلیل تخصصی بازار ${pv} ←`; $('#mSpr2').href = AR_PD[pv] ? `spring-1405.html?pv=${encodeURIComponent(pv)}#matrix` : 'spring-1405.html'; ab.title = 'سه ماتریس گزارش بهار ۱۴۰۵ برای استان شما'; ab.onclick = ()=>fShow('fArea'); }
   $('#mEnd').classList.remove('go');
   $('#mSum').classList.remove('go'); $('#mSum').innerHTML = FQ.map(()=>'<span class="g2-c wait">؟</span>').join('') + '<b class="g2-n wait">؟ از ۳</b>'; playCards('#mGrid', z, 'صنف شما', {row:i=>{ const li = $$('#mNoteL li')[i]; if (li) li.classList.add('gr'); }, all:(still,near)=>{ const r1 = state.r1!=null ? state.r1 : n1, g1 = state.r1Gap!=null ? state.r1Gap : gapOf(nat.all);
     const dir = z!==nat.all ? dirOf(r1, g1, near, gapOf(z)) : '';
@@ -5359,30 +5777,7 @@ kv(); fInit(); fRender(BYHASH[location.hash.slice(1)] || 'sKV');
 /* trust index page */
 (function(){
   const ov = $('#trustX'); if (!ov) return;
-  const cv = $('#tsCv'), x = cv.getContext('2d'), W = 720, H = 250, sl = $('#tsS');
-  let seed = 7; const rnd = ()=>{ seed = (seed*16807)%2147483647; return seed/2147483647; };
-  const P = []; for (let i=0;i<400;i++) P.push([20+rnd()*680, 14+rnd()*76]);
-  const NZ = []; for (let i=0;i<=360;i++) NZ.push(rnd()*2-1);
-  const L = (a,b,t0,t1,t)=>a+(b-a)*(t-t0)/(t1-t0);
-  const ecg = t=>{ t=((t%1)+1)%1; if(t<.28)return 0; if(t<.33)return -.12*Math.sin((t-.28)/.05*Math.PI); if(t<.40)return 0; if(t<.415)return L(0,.18,.40,.415,t); if(t<.44)return L(.18,-1,.415,.44,t); if(t<.47)return L(-1,.5,.44,.47,t); if(t<.49)return L(.5,0,.47,.49,t); if(t<.56)return 0; if(t<.68)return -.22*Math.sin((t-.56)/.12*Math.PI); return 0; };
-  let n = 12, ph = 0, raf = 0, auto = true;
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function draw(){
-    x.clearRect(0,0,W,H); const k = Math.min(Math.round(n),400);
-    x.strokeStyle = 'rgba(190,242,100,.2)'; x.lineWidth = 1;
-    for (let i=1;i<k;i++){ const a=P[i]; let b=0, bd=1e9; for (let j=0;j<i;j++){ const d=(a[0]-P[j][0])**2+(a[1]-P[j][1])**2; if(d<bd){bd=d;b=j;} } x.beginPath(); x.moveTo(a[0],a[1]); x.lineTo(P[b][0],P[b][1]); x.stroke(); }
-    for (let i=0;i<k;i++){ x.fillStyle = i===k-1 ? '#BEF264' : 'rgba(190,242,100,.78)'; x.beginPath(); x.arc(P[i][0],P[i][1], i===k-1?3.6:2.3, 0, 7); x.fill(); }
-    const amp = Math.min(1, 2.6/Math.sqrt(n)), base = 178, ys = 46;
-    x.strokeStyle = '#FF3A29'; x.lineWidth = 2.6; x.lineJoin = 'round'; x.beginPath();
-    for (let i=0;i<=720;i++){ const px=i, t=i/360+ph, nz=NZ[(Math.floor(i/2)+Math.floor(ph*90))%361]*amp*.55, y=base+(ecg(t)+nz)*ys; i ? x.lineTo(px,y) : x.moveTo(px,y); }
-    x.stroke();
-    const c = n<25 ? ['هنوز کافی نیست','#FBBF24'] : n<90 ? ['قابل اتکا','#BEF264'] : ['دقیق','#4ADE80'];
-    $('#tsC').textContent = c[0]; $('#tsC').style.color = c[1]; $('#tsSv').textContent = fa(Math.round(n));
-  }
-  function loop(){ if (ov.hidden) { raf = 0; return; } ph += .004; if (auto && n < 260) { n += .35; sl.value = Math.round(n); } draw(); raf = requestAnimationFrame(loop); }
-  sl.addEventListener('input', ()=>{ auto = false; n = +sl.value; draw(); });
-  const open = ()=>{ ov.hidden = false; ov.scrollTop = 0; document.body.style.overflow = 'hidden'; $('#tsN').textContent = fa(window.__tn||178794729);
-    n = 12; auto = !still; sl.value = 12; if (still) { n = 120; sl.value = 120; draw(); } else if (!raf) raf = requestAnimationFrame(loop); $('#tsX').focus(); };
+  const open = ()=>{ ov.hidden = false; ov.scrollTop = 0; document.body.style.overflow = 'hidden'; $('#tsN').textContent = fa(window.__tn||178794729); $('#tsX').focus(); };
   const close = ()=>{ ov.hidden = true; document.body.style.overflow = ''; };
   document.addEventListener('click', e=>{ const t = e.target.closest('[data-trust]'); if (t) { e.preventDefault(); e.stopPropagation(); if (!$('#about').hidden) { $('#about').hidden = true; } open(); } }, true);
   $('#tsX').addEventListener('click', close);
@@ -5395,6 +5790,122 @@ addEventListener('message', e => { const f = document.getElementById('tsEng');
   if (f && e.source === f.contentWindow && e.data && e.data.engH) f.style.height = Math.ceil(e.data.engH) + 'px';
   const d = document.getElementById('tsDoc');
   if (d && e.source === d.contentWindow && e.data && e.data.docH) d.style.height = Math.ceil(e.data.docH) + 'px'; });
+</script>
+<script>
+addEventListener('load', ()=>setTimeout(()=>document.querySelectorAll('img[data-anim]').forEach(im=>{
+  const a = new Image(); a.onload = ()=>{ im.src = im.dataset.anim; }; a.src = im.dataset.anim; }), 400));
+</script>
+<script>
+/* v118: the trust journey - live count, the map, the tank, the hourly engine, the monthly output, the coverage */
+(function(){
+  const ov = $('#trustX'); if (!ov) return;
+  const NS = 'http://www.w3.org/2000/svg', mk = (t,a)=>{ const e = document.createElementNS(NS,t); for (const k in a) e.setAttribute(k,a[k]); return e; };
+  const P2 = n=>String(n).padStart(2,'0').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+  /* live count from a dated base (24 Aban 1405); the rate is an estimate until wired to the live figure */
+  const BASE = 178794729, T0 = Date.UTC(2026,10,14,20,30), RATE = 4.6;
+  const midnight = ()=>{ const d = new Date(); d.setHours(0,0,0,0); return d.getTime(); };
+  const tick = ()=>{ const n = BASE + Math.floor(Math.max(0, Date.now()-T0)/1000*RATE); window.__tn = n;
+    ['#trustN','#trustR','#tPoolN','#dmPoolN','#tsN','#tvHeroN','#abN','#abLive'].forEach(id=>{ const el = $(id); if (el) el.textContent = fa(n); });
+    const td = '+' + fa(Math.floor((Date.now()-Math.max(midnight(),T0))/1000*RATE)); ['#tvToday','#tvHeroT'].forEach(id=>{ const el = $(id); if (el) el.textContent = td; }); };
+  tick(); setInterval(tick, 1000);
+
+  const ON = CITY_CHIPS.map(x=>x[0]).filter(n=>IR_MAP.c[n]);
+  /* 1. the map: provinces, live cities, and a mouth at the bottom where invoices leave for the tank */
+  const map = $('#tjMap');
+  Object.entries(IR_MAP.p).forEach(([n,d])=>map.append(mk('path',{d, class:'pv'})));
+  ON.forEach((n,i)=>{ const [x,y] = IR_MAP.c[n]; map.append(mk('circle',{cx:x, cy:y, r:16, class:'ring', style:`--i:${i}`}), mk('circle',{cx:x, cy:y, r:6.5, class:'city'})); });
+  const MOUTH = [500, 950];
+  map.append(mk('circle',{cx:MOUTH[0], cy:MOUTH[1], r:9, class:'mouth'}));
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches; let k = 0;
+  const fly = ()=>{ if (ov.hidden || still) return; const [x,y] = IR_MAP.c[ON[Math.floor(Math.random()*ON.length)]];
+    const c = mk('circle',{cx:x, cy:y, r:6, class:'fly'+(++k % 9 === 0 ? ' mine' : '')}); map.append(c);
+    const a = c.animate([{transform:'translate(0,0)', opacity:0},{opacity:1, offset:.15},{transform:`translate(${MOUTH[0]-x}px,${MOUTH[1]-y}px)`, opacity:.95}],
+      {duration:1700 + Math.random()*700, easing:'cubic-bezier(.5,0,.7,1)'});
+    a.onfinish = ()=>c.remove(); setTimeout(()=>c.remove(), 2800); };
+  setInterval(fly, 220);
+  let lastY = 0;
+  ov.addEventListener('scroll', ()=>{ const y = ov.scrollTop, d = Math.abs(y-lastY); if (d > 24){ lastY = y; for (let i = 0; i < Math.min(4, Math.round(d/40)); i++) fly(); } }, {passive:true});
+
+  /* 2. the tank: each invoice arrives in its business's colour, drifts among the others, and its colour fades into the market's */
+  const mix = $('#tjMix'), SRC = ['#FFB766','#7DD3FC','#F9A8D4','#C4D8D0','#FDE68A'], MKT = [190,242,100];
+  const hex = h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+  const PT = [];
+  const add = ()=>{ const c = hex(SRC[Math.floor(Math.random()*SRC.length)]), e = mk('circle',{r:5.4});
+    mix.append(e); PT.push({e, c, x:150+(Math.random()*20-10), y:24, vx:(Math.random()-.5)*.04, vy:.09+Math.random()*.04, age:0}); if (PT.length > 54){ PT.shift().e.remove(); } };
+  for (let i=0;i<40;i++){ add(); const p = PT[PT.length-1]; const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random())*112; p.x = 150+Math.cos(a)*r; p.y = 150+Math.sin(a)*r; p.age = Math.random()*6000; p.vy = (Math.random()-.5)*.06; }
+  let mixLast = performance.now(), addT = 0;
+  const mixStep = now=>{ const dt = Math.min(60, now - mixLast); mixLast = now;
+    if (!ov.hidden){ addT += dt; if (addT > 420){ addT = 0; add(); }
+      PT.forEach(p=>{ p.age += dt;
+        p.vx += (Math.random()-.5)*.012*dt/16; p.vy += (Math.random()-.5)*.012*dt/16;
+        p.vx *= .985; p.vy *= .985; const sp = Math.hypot(p.vx,p.vy); if (sp > .09){ p.vx *= .09/sp; p.vy *= .09/sp; }
+        p.x += p.vx*dt; p.y += p.vy*dt;
+        const dx = p.x-150, dy = p.y-150, d = Math.hypot(dx,dy); if (d > 118){ p.x = 150+dx/d*118; p.y = 150+dy/d*118; p.vx -= dx/d*.05; p.vy -= dy/d*.05; }
+        const k = Math.min(1, p.age/4200), col = p.c.map((v,i)=>Math.round(v+(MKT[i]-v)*k));
+        p.e.setAttribute('cx', p.x.toFixed(1)); p.e.setAttribute('cy', p.y.toFixed(1)); p.e.setAttribute('fill', `rgb(${col})`); p.e.setAttribute('opacity', (.55+.45*(1-k*.4)).toFixed(2)); }); }
+    requestAnimationFrame(mixStep); };
+  if (still) PT.forEach(p=>{ p.e.setAttribute('cx',p.x); p.e.setAttribute('cy',p.y); p.e.setAttribute('fill','rgb('+MKT+')'); }); else requestAnimationFrame(mixStep);
+
+  /* 3. the engine: a 24-hour dial; today's hours so far are lit */
+  const hg = $('#tjHrs'), HR = [];
+  for (let h=0; h<24; h++){ const l = mk('line',{x1:150, y1:20, x2:150, y2:36, transform:`rotate(${h*15} 150 150)`, class:'hr'}); HR.push(l); hg.append(l); }
+  /* the engine is always working: a sweeping hand lights the hours it passes, the arc fills with the current hour */
+  const hour = ()=>{ const d = new Date(), h = d.getHours(); HR.forEach((e,i)=>e.classList.toggle('on', i<h));
+    $('#tjClk').textContent = `آخرین سنجش ${P2((h+23)%24)}:۰۰ · بعدی ${P2(h)}:۰۰`; };
+  hour(); setInterval(hour, 30000);
+  const sw = $('#tjSw'), arc = $('#tjArc'), ds = $('#tjDs'), CIRC = 2*Math.PI*118;
+  arc.style.strokeDasharray = CIRC;
+  const engStep = now=>{ if (!ov.hidden){ const ang = (now/3200*360) % 360; sw.setAttribute('transform', `rotate(${ang.toFixed(1)} 150 150)`);
+      HR.forEach((e,i)=>{ const dd = (ang - i*15 + 360) % 360, g = dd < 70 ? 1 - dd/70 : 0; e.style.strokeOpacity = e.classList.contains('on') ? 1 : (.22 + .78*g).toFixed(2); });
+      const d = new Date(), fr = (d.getMinutes()*60 + d.getSeconds())/3600; arc.style.strokeDashoffset = (CIRC*(1-fr)).toFixed(1);
+      ds.textContent = 'در حال سنجش' + '.'.repeat(1 + Math.floor(now/450) % 3); }
+    requestAnimationFrame(engStep); };
+  if (!still) requestAnimationFrame(engStep);
+
+  /* 4. the market sheet: real figures (café restaurants, noon shift, all provinces, 1405), one month at a time */
+  const M = ['اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر'];
+  const DD = [{s:2.16,o:1.59,p:7.89,b:-6.77},{s:7.21,o:-3.52,p:8.49,b:2.42},{s:-7.85,o:-10.12,p:4.82,b:-1.65},{s:19.63,o:9.68,p:5.95,b:4.09},{s:12.52,o:6.57,p:2.17,b:3.00},{s:-0.30,o:-0.96,p:6.79,b:-5.38}];
+  const pct = v=>(v<0?'−':'+') + Math.abs(v).toFixed(1).replace('.','٫').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]) + '٪';
+  const rowsEl = $('#tjSheetRows');
+  rowsEl.innerHTML = M.map((m,i)=>`<div class="tj-tr" data-i="${i}"><span class="m">${m}</span>${['s','o','p','b'].map(k=>`<span class="v${DD[i][k]<0?' neg':''}">${pct(DD[i][k])}</span>`).join('')}<span class="wait"><i></i>در حال پردازش</span></div>`).join('')
+    + `<div class="tj-tr next"><span class="m">آبان</span><span class="wait on">در انتظار پایان ماه</span></div>`;
+  const TR = [...rowsEl.querySelectorAll('.tj-tr[data-i]')];
+  let mi = 0, mt = 0;
+  const step = ()=>{ if (ov.hidden){ mt = setTimeout(step, 800); return; }
+    if (mi >= TR.length){ mt = setTimeout(()=>{ TR.forEach(r=>r.className = 'tj-tr'); mi = 0; step(); }, 3200); return; }
+    const r = TR[mi]; r.classList.add('busy');
+    mt = setTimeout(()=>{ r.classList.remove('busy'); r.classList.add('done'); mi++; mt = setTimeout(step, 450); }, 1100); };
+  if (still) TR.forEach(r=>r.classList.add('done')); else step();
+
+  /* credibility: the pulse is ragged until the market has enough invoices, then it beats clean.
+     Two real Fars markets take turns: fast food (enough) and food courts (not yet). */
+  const ecgP = $('#tjEcg'), fillEl = $('#tjFill'), mkEl = $('#tjMk'), stEl = $('#tjSt'), card = $('.tj-cred');
+  const yp = YTD['فارس'] || {};
+  const MK = [{n:'فست‌فودهای فارس', to: yp['فست فود'] ? 1.18 : .6}, {n:'فودکورت‌های فارس', to: yp['فود کورت'] ? 1.18 : .58}];
+  const beat = t=>{ t = ((t%1)+1)%1; if (t<.30) return 0; if (t<.34) return -.10*Math.sin((t-.30)/.04*Math.PI);
+    if (t<.40) return 0; if (t<.42) return (t-.40)/.02*.25; if (t<.45) return .25-(t-.42)/.03*1.25; if (t<.48) return -1+(t-.45)/.03*1.2; if (t<.50) return .2-(t-.48)/.02*.2;
+    if (t<.62) return 0; if (t<.70) return -.22*Math.sin((t-.62)/.08*Math.PI); return 0; };
+  let mi2 = 0, f = 0, ph = 0, t0 = performance.now(), hold = 0;
+  const draw = ()=>{ const c = Math.min(1, f), ok = f >= 1;
+    let d = ''; for (let x=0; x<=600; x+=4){ const t = x/200 + ph, n = (Math.sin(x*.31+ph*40)+Math.sin(x*.137+ph*23)*.8+Math.sin(x*.053+ph*11)*.6)/2.4;
+      const y = 100 + beat(t)*70*c + n*58*(1-c*c); d += (x?'L':'M') + x + ' ' + y.toFixed(1); }
+    ecgP.setAttribute('d', d); fillEl.style.height = Math.min(100, f/1.25*100) + '%';
+    card.classList.toggle('ok', ok); };
+  /* time-based: the gauge fills in ~4.5 s, holds 3.4 s, then the next market */
+  let last = performance.now();
+  const loop = now=>{ const dt = Math.min(100, now - last); last = now;
+    if (!ov.hidden){ const m = MK[mi2];
+      ph += dt * .00036;
+      if (!hold){ f = Math.min(m.to, f + dt * .00026); if (f >= m.to) hold = now; stEl.textContent = f >= 1 ? 'به حد کافی رسید؛ نبض این بازار معتبر است' : 'در حال جمع شدن فاکتورها'; }
+      else if (now - hold > 3400){ mi2 = (mi2+1) % MK.length; f = 0; hold = 0; mkEl.textContent = MK[mi2].n; }
+      else if (f < 1) stEl.textContent = 'هنوز به حد کافی نرسیده؛ فعلاً عدد کل فارس نشان داده می‌شود';
+      draw(); }
+    requestAnimationFrame(loop); };
+  if (still){ f = 1.18; draw(); stEl.textContent = 'به حد کافی رسید؛ نبض این بازار معتبر است'; } else requestAnimationFrame(loop);
+
+  $('#tvHow').addEventListener('click', e=>{ e.preventDefault(); ov.scrollTo({top: $('#tjStart').offsetTop - 24, behavior: still ? 'auto' : 'smooth'}); });
+  $('#tvAbout').addEventListener('click', ()=>{ $('#tsX').click(); setTimeout(()=>$('#abLink').click(), 60); });
+})();
 </script>
 </body>
 </html>
