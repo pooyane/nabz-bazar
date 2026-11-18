@@ -3751,6 +3751,8 @@ body.in-panel .ab-foot{display:none}
 #fQ .gopt.on b,#fQ .gopt.on small{color:#10292B !important}
 .ab-foot{justify-content:center !important;text-align:center;left:0 !important;right:0 !important}
 .ab-foot .ab-link{margin:0 auto}
+/* v128: no footer on the opening page */
+body.on-hook .ab-foot{display:none !important}
 </style>
 </head>
 <body class="hookpage">
@@ -4942,7 +4944,7 @@ state.g = {};
 const sg = v => (v>0?'+':v<0?'−':'') + fa(Math.abs(Math.round(v))) + '٪';
 const HASH = {sKV:'hook', fIntro:'intro', fQ:'guess', fReal:'market', fPick:'pick', fMine:'mine', fArea:'city', fTour:'preview', stage2:'request'};
 const BYHASH = Object.fromEntries(Object.entries(HASH).map(([k,v])=>[v,k]));
-state.cur = 'sKV';
+state.cur = 'sKV'; document.body.classList.add('on-hook');
 function prevOf(id){ return {fIntro:'sKV', fQ:'fIntro', fReal:'fQ', fPick:'fReal', fMine:'fPick', fArea:'fMine', fTour:'fMine', stage2: state.direct ? 'fIntro' : state.viaArea ? 'fArea' : 'fMine'}[id] || 'sKV'; }
 function fShow(id){ if (location.hash !== '#'+HASH[id]) location.hash = HASH[id]; else fRender(id); }
 function fRender(id){
@@ -4960,7 +4962,7 @@ function fRender(id){
   document.body.classList.toggle('kv-on', ['sKV','fIntro','fQ','fReal','fPick','fMine','fArea','fTour','stage2'].includes(id));
   if (req) fillRequest();
   document.body.classList.toggle('st-on', ['fIntro','fQ','fReal','fPick','fMine','fArea','fTour','stage2'].includes(id));
-  state.cur = id; window.scrollTo({top:0});
+  state.cur = id; document.body.classList.toggle('on-hook', id==='sKV'); window.scrollTo({top:0});
 }
 window.addEventListener('hashchange', ()=>{ if (!$('#view-panel') || $('#view-panel').style.display!=='block') fRender(BYHASH[location.hash.slice(1)] || 'sKV'); });
 function fInit(){
