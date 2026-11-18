@@ -3753,6 +3753,166 @@ body.in-panel .ab-foot{display:none}
 .ab-foot .ab-link{margin:0 auto}
 /* v128: no footer on the opening page */
 body.on-hook .ab-foot{display:none !important}
+/* v129: three stats, three backgrounds */
+.ab-stats.st3 > div{position:relative;overflow:hidden;isolation:isolate;padding:20px 16px 16px;text-align:center}
+.ab-stats.st3 .sb-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.ab-stats.st3 small{display:block;margin-top:6px;font-size:12px;color:#7F968F}
+.ab-stats.st3 b em{font-style:normal;font-size:16px;font-weight:800;color:#A7BDB6}
+/* days: a calendar of day ticks, one lights up as each day passes */
+.st-days .sb-bg{background:repeating-linear-gradient(90deg,rgba(190,242,100,.10) 0 2px,transparent 2px 12px),linear-gradient(180deg,rgba(190,242,100,.08),transparent 70%);
+  -webkit-mask-image:linear-gradient(180deg,#000 0,#000 30%,transparent 75%);mask-image:linear-gradient(180deg,#000 0,#000 30%,transparent 75%);animation:stDays 18s linear infinite}
+@keyframes stDays{to{background-position:-120px 0,0 0}}
+/* trust: a heartbeat line behind the number */
+.st-trust .sb-bg svg{position:absolute;left:0;right:0;top:50%;width:100%;height:60%;transform:translateY(-55%);opacity:.35}
+.st-trust .sb-bg path{fill:none;stroke:#BEF264;stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:60 340;animation:stEcg 2.4s linear infinite}
+@keyframes stEcg{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+.st-trust{border-color:rgba(190,242,100,.35) !important}
+/* capacity: 50 squares, each 100 businesses; 28 are taken */
+.st-cap .sb-bg{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;padding:10px;opacity:.5;-webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.6) 45%,transparent 90%);mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.6) 45%,transparent 90%)}
+.st-cap .sb-bg u{border-radius:3px;background:rgba(255,255,255,.06);aspect-ratio:1}
+.st-cap .sb-bg u.on{background:rgba(190,242,100,.35);animation:stCap 3s ease-in-out infinite;animation-delay:calc(var(--i) * 60ms)}
+@keyframes stCap{50%{background:rgba(190,242,100,.55)}}
+.st-bar{display:block !important;height:8px;margin:10px auto 0 !important;max-width:200px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
+.st-bar i{display:block;height:100%;border-radius:4px;background:#BEF264;margin-inline-start:auto}
+@media (prefers-reduced-motion:reduce){.st-days .sb-bg,.st-trust .sb-bg path,.st-cap .sb-bg u.on{animation:none}}
+/* v129b */
+.ab-stats.st3 .st-capn{direction:rtl;unicode-bidi:isolate}
+.st-days .sb-bg{background:repeating-linear-gradient(90deg,rgba(190,242,100,.22) 0 2px,transparent 2px 11px),linear-gradient(180deg,rgba(190,242,100,.10),transparent 80%) !important;
+  -webkit-mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.5) 55%,transparent 100%) !important;mask-image:linear-gradient(180deg,#000 0,rgba(0,0,0,.5) 55%,transparent 100%) !important}
+.st-cap .sb-bg{opacity:1 !important;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.35)) !important;mask-image:linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.35)) !important}
+.st-cap .sb-bg u{background:rgba(255,255,255,.07) !important}
+.st-cap .sb-bg u.on{background:rgba(190,242,100,.28) !important}
+.st-trust .sb-bg svg{opacity:.5 !important}
+/* v129c: backgrounds sit at layer 0, the content above them */
+.ab-stats.st3 .sb-bg{z-index:0 !important}
+.ab-stats.st3 > div > :not(.sb-bg){position:relative;z-index:1}
+/* v130: cue in the chart's own voice */
+#fQ .gopts{margin-top:30px !important}
+#fQ .gopts::before{content:"حدس شما برای مهر امسال" !important;top:-24px !important;left:0 !important;right:0 !important;transform:none !important;display:block !important;
+  padding:0 !important;border:0 !important;border-radius:0 !important;background:none !important;box-shadow:none !important;text-align:center;
+  font-size:12.5px !important;font-weight:800 !important;color:#BEF264 !important;letter-spacing:0;animation:none !important}
+#fQ .gopts::after{display:none !important}
+#fQ .gopts:has(.gopt.on)::before{content:"حدس شما ثبت شد" !important;color:#A7BDB6 !important}
+/* the empty bar is the question: it breathes until there is an answer */
+#qgrid:not(:has(.gopt.on)) #gNow{animation:gNowAsk 1.8s ease-in-out infinite}
+#qgrid:not(:has(.gopt.on)) #gNowL{color:#BEF264;animation:gNowQ 1.8s ease-in-out infinite}
+@keyframes gNowAsk{50%{border-color:#BEF264;background:rgba(190,242,100,.12)}}
+@keyframes gNowQ{50%{transform:translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){#qgrid #gNow,#qgrid #gNowL{animation:none !important}}
+.ab-soon{display:inline-flex;align-items:center;gap:6px;margin-inline-start:14px;font-size:13px;color:#A7BDB6}
+.ab-soon::before{content:"";width:7px;height:7px;border-radius:50%;background:#FFB766;box-shadow:0 0 0 3px rgba(255,183,102,.18)}
+/* v131: answer tray */
+#fQ .gopts{position:relative;display:grid !important;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px !important;align-items:stretch !important;
+  margin:18px -20px -16px !important;padding:34px 20px 18px !important;border-top:1px solid rgba(190,242,100,.25);border-radius:0 0 20px 20px;background:rgba(190,242,100,.06)}
+#fQ .gopts::before{content:"جواب شما" !important;top:10px !important;left:0 !important;right:0 !important;font-size:13px !important;color:#BEF264 !important}
+#fQ .gopts:has(.gopt.on)::before{content:"جواب شما ثبت شد" !important;color:#A7BDB6 !important}
+#fQ .gopt{height:auto !important;min-height:74px;display:flex !important;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;padding:10px 4px !important;border-radius:14px !important;
+  background:#10282A !important;border:1.5px solid rgba(190,242,100,.45) !important;animation:none !important}
+#fQ .gopt .gmini{display:block;width:16px;height:calc(var(--h) * .22px);min-height:4px;max-height:28px;border-radius:3px 3px 1px 1px;background:rgba(190,242,100,.45);margin-bottom:3px}
+#fQ .gopt.on .gmini{background:#10292B}
+#fQ .gopt:hover{transform:translateY(-2px)}
+#fQ .gopts:not(:has(.gopt.on)) .gopt{animation:goptWave 2.6s ease-in-out infinite !important}
+@media (max-width:620px){#fQ .gopts{gap:5px !important;margin:16px 0 0 !important;padding:32px 10px 14px !important;border-radius:14px !important;border:1px solid rgba(190,242,100,.25)}#fQ .gopt{min-height:66px}}
+/* v132: an unfinished reveal button still looks pressable */
+#fQ #fReveal.pend{opacity:.75}
+#fQ .gopts.nudge{animation:goptNudge .6s ease}
+@keyframes goptNudge{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+/* v133: the source line in two clean parts */
+.r-src.rs2{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.r-src.rs2 > i{display:none}
+.rs-trust{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 6px;border-radius:999px;background:rgba(190,242,100,.07);border:1px solid rgba(190,242,100,.3);color:#C4D8D0;font:inherit;font-size:13.5px;cursor:pointer}
+.rs-trust:hover{border-color:#BEF264}
+.rs-trust i{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 3px rgba(74,222,128,.18)}
+.rs-trust b{font-weight:900;color:#F4FAF7}
+.rs-trust em{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:rgba(190,242,100,.18);color:#BEF264;font-style:normal;font-size:12px;font-weight:900}
+.rs-when{font-size:13.5px;color:#A7BDB6}
+.rs-when::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#5F7570;margin-inline-end:10px;vertical-align:middle}
+/* v134: co-branded footer */
+.ab-end.cob{position:relative;margin-top:48px;padding:40px 20px 26px;border-radius:28px;background:radial-gradient(120% 90% at 50% 0%,rgba(139,92,246,.12),transparent 60%),#0B1716;border:1px solid rgba(255,255,255,.08);text-align:center;overflow:hidden}
+.cob-row{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
+.cob-b{display:flex;justify-content:center}
+.cob-logo{font-size:clamp(26px,4vw,38px);font-weight:900;color:#F4FAF7;letter-spacing:.5px;opacity:.92}
+.cob-logo.latin{font-family:"Segoe UI",Arial,sans-serif;letter-spacing:6px;font-weight:800}
+.cob-mid{position:relative;width:min(300px,46vw);aspect-ratio:320/200}
+.cob-mid svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cob-mid .cA{animation:cobL 6s ease-in-out infinite}.cob-mid .cB{animation:cobR 6s ease-in-out infinite}
+@keyframes cobL{50%{transform:translateX(6px)}}@keyframes cobR{50%{transform:translateX(-6px)}}
+.cob-mid .rA,.cob-mid .rB{fill:none;stroke-width:1.2;stroke-dasharray:3 6}
+.cob-mid .rA{stroke:rgba(190,242,100,.5)}.cob-mid .rB{stroke:rgba(167,139,250,.55)}
+.cob-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:2px}
+.cob-core img{width:44px;height:44px;object-fit:contain}
+.cob-core b{font-size:15px;font-weight:900;color:#F4FAF7;white-space:nowrap}
+.cob-since{margin:10px 0 0;font-size:14px;font-weight:800;color:#BEF264}
+.ab-end.cob .ab-thanks{margin:18px auto 0;max-width:620px;font-size:clamp(20px,2.6vw,26px);line-height:1.7}
+.cob-inv{margin:12px 0 0;font-size:14px;color:#A7BDB6}
+.ab-end.cob .ab-credit{margin-top:22px;font-size:10.5px;color:#5F7570}
+.ab-end.cob .ab-sign{display:none}
+@media (max-width:620px){.cob-row{grid-template-columns:1fr;gap:4px}.cob-mid{width:min(260px,80vw);margin:0 auto}}
+@media (prefers-reduced-motion:reduce){.cob-mid .cA,.cob-mid .cB{animation:none}}
+/* v135: key partners - after smartx.ir/key-partners */
+.ab-end.kp{margin-top:48px;text-align:center}
+.kp-card{display:block;padding:26px 18px 18px;border-radius:28px;background:#0F141A;border:1px solid rgba(255,255,255,.07);color:inherit;text-decoration:none;overflow:hidden;transition:border-color .25s}
+.kp-card:hover{border-color:rgba(190,242,100,.35)}
+.kp-hand{display:block;width:min(560px,100%);height:auto;margin:0 auto;border-radius:18px}
+.kp-band{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);align-items:center;gap:6px;margin-top:10px}
+.kp-logo{display:block;margin:0 auto;height:auto;opacity:.95}
+.kp-sep{width:min(150px,80%)}.kp-smx{width:min(140px,80%)}
+.kp-mid{position:relative;aspect-ratio:1.55/1;display:grid;place-items:center}
+.kp-c{position:absolute;width:52%;aspect-ratio:1;border-radius:50%;top:50%}
+.kp-c.cg{left:12%;transform:translateY(-50%);background:linear-gradient(180deg,rgba(17,24,28,0) 10%,rgba(132,204,22,.55) 70%,#9BD62B 100%)}
+.kp-c.cp{right:12%;transform:translateY(-50%);background:linear-gradient(180deg,#4C1D95 0%,rgba(46,16,101,.85) 35%,rgba(17,24,28,.9) 85%);mix-blend-mode:screen;animation:kpP 7s ease-in-out infinite}
+.kp-c.cg{animation:kpG 7s ease-in-out infinite}
+@keyframes kpG{50%{transform:translate(4%,-50%)}}@keyframes kpP{50%{transform:translate(-4%,-50%)}}
+.kp-ring{position:absolute;inset:-2% 6%;border-radius:50%;border:1px solid rgba(139,92,246,.22)}
+.kp-ring.r2{inset:4% 14%;border-color:rgba(190,242,100,.22)}
+.kp-dot{position:absolute;top:50%;width:8px;height:8px;border-radius:50%;border:1.5px solid #BEF264;transform:translateY(-50%)}
+.kp-dot.d1{left:14%}.kp-dot.d2{right:14%}
+.kp-mid p{position:relative;z-index:1;margin:0;max-width:62%;font-size:clamp(12px,1.5vw,15px);line-height:1.8;color:#E7EFEC}
+.kp-go{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:800;color:#BEF264}
+.ab-end.kp .ab-thanks{margin:24px auto 0;max-width:620px;font-size:clamp(20px,2.6vw,26px);line-height:1.7}
+.kp-inv{margin:10px 0 0;font-size:14px;color:#A7BDB6}
+.ab-end.kp .ab-credit{margin-top:20px;font-size:10.5px;color:#5F7570}
+@media (max-width:620px){.kp-band{grid-template-columns:1fr;gap:12px}.kp-mid{width:100%;max-width:320px;margin:0 auto}.kp-band .kp-smx{order:3}}
+@media (prefers-reduced-motion:reduce){.kp-c{animation:none !important}}
+/* v136: an own co-branded close */
+.ab-end.jn{margin-top:48px;text-align:center}
+.jn-card{position:relative;display:block;padding:38px 22px 26px;border-radius:28px;overflow:hidden;isolation:isolate;text-decoration:none;color:inherit;
+  background:radial-gradient(60% 90% at 100% 0%,rgba(139,92,246,.16),transparent 70%),radial-gradient(60% 90% at 0% 100%,rgba(132,204,22,.14),transparent 70%),#0E1517;
+  border:1px solid rgba(255,255,255,.08);transition:border-color .25s}
+.jn-card:hover{border-color:rgba(190,242,100,.35)}
+.jn-dia{position:absolute;left:50%;top:50%;width:320px;height:320px;transform:translate(-50%,-50%) rotate(45deg);z-index:-1;border-radius:10px;
+  border:1px solid transparent;background:linear-gradient(#0E1517,#0E1517) padding-box,linear-gradient(135deg,rgba(132,204,22,.45),rgba(236,72,153,.35)) border-box;opacity:.35}
+.jn-row{display:grid;grid-template-columns:auto minmax(60px,1fr) auto;align-items:center;gap:16px;max-width:620px;margin:0 auto}
+.jn-logo{display:block;height:auto}
+.jn-smx{width:clamp(96px,16vw,132px)}.jn-sep{width:clamp(104px,17vw,140px)}
+.jn-line{width:100%;height:46px;overflow:visible}
+.jn-p{fill:none;stroke:url(#jnG);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:520;stroke-dashoffset:520;animation:jnDraw 3.2s ease-in-out infinite}
+@keyframes jnDraw{0%{stroke-dashoffset:520}45%,75%{stroke-dashoffset:0}100%{stroke-dashoffset:-520}}
+.jn-key{margin:26px auto 0;max-width:640px;font-size:clamp(21px,2.8vw,28px);line-height:1.75;font-weight:900;color:#F4FAF7}
+.jn-sub{margin:12px auto 0;max-width:560px;font-size:14.5px;line-height:1.9;color:#A7BDB6}
+.jn-go{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:800;color:#BEF264}
+.ab-end.jn .ab-credit{margin-top:18px;font-size:10.5px;color:#5F7570}
+@media (max-width:620px){.jn-row{grid-template-columns:1fr;gap:10px}.jn-line{height:36px;max-width:240px;margin:0 auto}.jn-dia{width:240px;height:240px}}
+@media (prefers-reduced-motion:reduce){.jn-p{animation:none;stroke-dashoffset:0}}
+/* v137: the logo's own pulse joins the two brands */
+.jn-card{background:radial-gradient(70% 100% at 50% 0%,rgba(255,58,41,.07),transparent 70%),#0E1517 !important}
+.jn-line{height:40px !important}
+.jn-base{fill:none;stroke:rgba(255,58,41,.18);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.jn-p{stroke:#FF3A29 !important;stroke-dasharray:120 420 !important;stroke-dashoffset:540;animation:jnEcg 1.6s linear infinite !important;filter:drop-shadow(0 0 4px rgba(255,58,41,.7))}
+@keyframes jnEcg{from{stroke-dashoffset:540}to{stroke-dashoffset:0}}
+.jn-go{margin-top:14px !important}
+.jn-sub{margin:16px auto 0 !important;font-size:12.5px !important;line-height:1.9 !important;color:#7F968F !important;max-width:520px}
+@media (prefers-reduced-motion:reduce){.jn-p{animation:none !important;stroke-dasharray:none !important}}
+/* v138: the handshake, quiet, behind the card */
+.jn-hand{position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(assets/partners-handshake.webp) center 42%/min(760px,120%) auto no-repeat;opacity:.22;filter:saturate(.8);
+  -webkit-mask-image:radial-gradient(60% 75% at 50% 45%,#000 30%,transparent 80%);mask-image:radial-gradient(60% 75% at 50% 45%,#000 30%,transparent 80%)}
+.jn-card{padding-bottom:30px !important}
+@media (max-width:620px){.jn-hand{background-size:150% auto;opacity:.18}}
+/* v139: the two brands closer; one line; 27 in focus */
+.jn-row{max-width:460px !important;gap:12px !important;grid-template-columns:auto minmax(60px,150px) auto !important;justify-content:center}
+.jn-key{max-width:none !important;white-space:nowrap;font-size:clamp(15px,2.1vw,21px) !important;font-weight:800 !important;margin-top:24px !important}
+.jn-27{display:inline-block;margin:0 4px;font-size:2em;line-height:1;font-weight:900;color:#BEF264;vertical-align:-.18em;text-shadow:0 0 18px rgba(190,242,100,.35)}
+@media (max-width:620px){.jn-key{white-space:normal}.jn-row{grid-template-columns:1fr !important}}
 </style>
 </head>
 <body class="hookpage">
@@ -3853,8 +4013,8 @@ body.on-hook .ab-foot{display:none !important}
         <div class="sc-top"><button class="backl" data-prev>→ قبلی</button><span class="live"><i></i> واقعیت بازار · کل کشور · مهر ۱۴۰۴ ← مهر ۱۴۰۵</span><div class="crumbs"><span class="ok">۱ · سؤال از شما</span><span class="on">۲ · بازار ایران</span><span class="">۳ · بازار شما</span><span class="">۴ · اتصال</span></div></div>
         <div class="qpanel rpanel">
           <p class="gstage"><b>بازی حدس · مرحله ۱ از ۲</b> کل ایران</p>
-          <p class="q-kick">حدس شما، در مقایسه با بازار کل ایران</p>
-          <p class="r-src"><i></i>بر پایه <button type="button" class="ts-open" data-trust><b class="num" id="trustR">۱۷۸٬۷۹۴٬۷۲۹</b> فاکتور واقعی و ناشناس <u>شاخص اعتماد ؟</u></button> · مهر امسال نسبت به مهر پارسال</p>
+          <p class="q-kick">ببینید کجای بازار ایران قرار دارید</p>
+          <p class="r-src rs2"><button type="button" class="rs-trust" data-trust aria-label="شاخص اعتماد چیست؟"><i></i><span>شاخص اعتماد</span><b class="num" id="trustR">۱۷۸٬۷۹۴٬۷۲۹</b><span>فاکتور واقعی</span><em>؟</em></button><span class="rs-when">مهر امسال نسبت به مهر پارسال</span></p>
           <h1 class="q-h2" id="fRealH">—</h1>
           <p class="q-sub2 r-sub">مهر امسال نسبت به مهر پارسال، در همه کافه رستوران‌های کشور.</p>
           <div class="rstack" id="rgrid"></div>
@@ -3864,7 +4024,7 @@ body.on-hook .ab-foot{display:none !important}
                         <div class="g2-r" role="row"><span class="g2-l"><small>مرحله ۱</small><b>کل ایران</b></span><span class="g2-x" id="rSum"></span></div>
                         <div class="g2-r g2-next" role="row"><span class="g2-l"><small>مرحله ۲</small><b>شهر و صنف شما</b></span><span class="g2-x" id="rNextRow" aria-label="هنوز بازی نشده"></span></div>
                       </div></div>
-                      <div class="g2-act"><strong class="rn-h">اما بازار شما کل ایران نیست.</strong><p class="rn-s">با شهر و صنف خودتان، <em>نزدیک‌تر</em> می‌شوید یا <em>دورتر</em>؟</p><span id="rWhyT" hidden></span><div class="mend-b"><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button></div></div></div></div>
+                      <div class="g2-act"><strong class="rn-h">اما بازار شما کل ایران نیست.</strong><p class="rn-s">حالا با شهر و صنف خودتان بسنجید؛<br>ببینید <em>نزدیک‌تر</em> می‌شوید یا <em>دورتر</em>.</p><span id="rWhyT" hidden></span><div class="mend-b"><button class="btn primary big" id="fYes">مقایسه با شهر و صنف خودم ←</button></div></div></div></div>
           <div class="final" id="fEndNo" hidden></div>
         </div>
       </section>
@@ -4195,7 +4355,7 @@ body.on-hook .ab-foot{display:none !important}
       <section class="tj-st" id="tjStart">
         <span class="tj-n">۱</span>
         <h2>از سراسر کشور</h2>
-        <p>بیش از <b>۴٬۰۰۰</b> کافه، رستوران و فست‌فود در استان‌های مختلف به نبض بازار وصل‌اند. هر نقطه روی این نقشه، بازاری است که فاکتورهایش را می‌فرستد.</p>
+        <p>بیش از <b>۲٬۸۰۰</b> کافه، رستوران و فست‌فود در استان‌های مختلف به نبض بازار وصل‌اند. هر نقطه روی این نقشه، بازاری است که فاکتورهایش را می‌فرستد.</p>
         <svg class="tj-map" id="tjMap" viewBox="0 0 1000 960" aria-label="نقشه ایران؛ فاکتورها از استان‌ها به پایین نقشه و مخزن تجمیع می‌روند"></svg>
       </section>
       <div class="tj-pipe" aria-hidden="true"><i></i><i></i><i></i><em>هر ساعت</em></div>
@@ -4334,9 +4494,13 @@ body.on-hook .ab-foot{display:none !important}
     <section id="ab5" class="ab-together"><h2><i>۰۵</i>یک کار جمعی، به نفع همه</h2>
       <p>تصویری که هیچ مجموعه‌ای به‌تنهایی نمی‌دید، از کنار هم قرار گرفتن فاکتورهای همه ساخته می‌شود. هر مجموعه‌ای که وصل می‌شود، این تصویر را برای همه دقیق‌تر می‌کند.</p>
       <p class="ab-big">کنار هم، بازار را روشن‌تر می‌بینیم.</p>
-      <div class="ab-stats"><div><b>بیش از ۳ سال</b><span>کار مستمر روی این پروژه</span></div><div><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>شاخص اعتماد، زنده</span><button type="button" class="ts-mini" data-trust>شاخص اعتماد یعنی چه؟</button></div><div><b>۱۰ هزار</b><span>کسب‌وکار؛ ظرفیت اولیه این طرح</span></div></div>
+      <div class="ab-stats st3">
+        <div class="st-days"><i class="sb-bg" aria-hidden="true"></i><b class="num" id="stDays">—</b><span>روز تحقیق و توسعه تخصصی</span><small>از پاییز ۱۴۰۲</small></div>
+        <div class="st-trust"><i class="sb-bg" aria-hidden="true"><svg viewBox="0 0 300 80" preserveAspectRatio="none"><path d="M0 40 H110 L122 40 L130 22 L140 62 L150 14 L160 54 L168 40 H300"/></svg></i><b class="num" id="abN">۱۷۸٬۷۹۴٬۷۲۹</b><span>شاخص اعتماد، زنده</span><button type="button" class="ts-mini" data-trust>شاخص اعتماد یعنی چه؟</button></div>
+        <div class="st-cap"><i class="sb-bg" aria-hidden="true" id="stGrid"></i><b class="st-capn"><bdi>۲٬۸۰۰</bdi> <em>از <bdi>۵٬۰۰۰</bdi></em></b><span>کسب‌وکار؛ ظرفیت مرحله اول</span><span class="st-bar" aria-hidden="true"><i style="width:56%"></i></span><small>۲٬۲۰۰ جای خالی تا پایان ظرفیت</small></div>
+      </div>
       
-      <div class="ab-rep"><i class="ab-cov" style="background-image:url(assets/story/drawer.webp)"></i><div><small>نخستین روایت ما</small><b>گزارش فصلی صنعت غذا و نوشیدنی · بهار ۱۴۰۵</b><span>صندوق پر از پول، اما مشتری کمتر؛ روایتی از فروش، سفارش و واقعیت بازار، با تحلیل استان‌ها.</span>
+      <div class="ab-rep"><i class="ab-cov" style="background-image:url(assets/story/drawer.webp)"></i><div><small>تازه‌ترین گزارش فصلی</small><b>گزارش فصلی صنعت غذا و نوشیدنی · بهار ۱۴۰۵</b><span>صندوق پر از پول، اما مشتری کمتر؛ روایتی از فروش، سفارش و واقعیت بازار، با تحلیل استان‌ها.</span>
         <div class="ab-rb"><a class="btn primary" href="spring-1405.html">گزارش بهار را ببینید ←</a></div></div></div></section>
 
     <section id="ab6"><h2><i>۰۶</i>اعتماد و محرمانگی</h2>
@@ -4352,7 +4516,7 @@ body.on-hook .ab-foot{display:none !important}
       <h3>چرا این تصویر قابل اتکاست</h3>
       <div class="ab-g4">
         <div><b>داده واقعی صندوق</b><span>فاکتورهای ثبت‌شده، نه نظرسنجی یا تخمین.</span></div>
-        <div><b>فراتر از فروش آنلاین</b><span>سالن، بسته‌بندی، دلیوری، اسنپ و سایت اختصاصی.</span></div>
+        <div><b>فراتر از فروش آنلاین</b><span>سالن، بسته‌بندی، دلیوری، نرم‌افزارهای سفارش آنلاین و سایت اختصاصی.</span></div>
         <div><b>به‌روزرسانی هر ساعت</b><span>فاکتورهای تازه هر ساعت به تصویر بازار اضافه می‌شوند.</span></div>
         <div><b>شاخص اطمینان</b><span>کنار هر مقایسه، کیفیت نمونه همان بازار و روزهای ثبت‌شده هر ماه.</span></div>
       </div></section>
@@ -4365,11 +4529,22 @@ body.on-hook .ab-foot{display:none !important}
         <details><summary>اختلاف منفی با بازار را چطور بخوانم؟</summary><p>به‌عنوان یک نشانه برای مقایسه، نه یک نمره. اختلاف نشان می‌دهد کدام شاخص، در کدام شیفت یا نوع سفارش، بیشترین فرصت رشد را دارد.</p></details>
       </div></section>
 
-    <footer class="ab-end">
-      <p>این پروژه با سرمایه‌گذاری مستقیم سپیدز و اسمارت‌ایکس انجام شده است.</p>
-      <p class="ab-thanks">پاسخی است به ۲۵ سال همراهی شما، و به صنعتی که به این شرکت‌ها جان داد.</p>
-      <p class="ab-sign">سپیدز · اسمارت‌ایکس</p>
-      <p class="ab-credit">نقشه: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© مشارکت‌کنندگان OpenStreetMap</a> · geoBoundaries</p></footer>
+    <footer class="ab-end jn">
+      <a class="jn-card" href="https://smartx.ir/key-partners/" target="_blank" rel="noopener" aria-label="شرکای تجاری: سپیدز و اسمارت‌ایکس">
+        <i class="jn-hand" aria-hidden="true"></i>
+        <div class="jn-row">
+          <img class="jn-logo jn-sep" src="assets/logo-sepidz.png" alt="سپیدز">
+          <svg class="jn-line" viewBox="0 0 132 30" preserveAspectRatio="none" aria-hidden="true">
+            <path class="jn-base" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/>
+            <path class="jn-p" d="M132 15 H74 L69 15 L64 5 L58 26 L52 9 L48 15 H0"/>
+          </svg>
+          <img class="jn-logo jn-smx" src="assets/logo-smartx.png" alt="اسمارت‌ایکس">
+        </div>
+        <p class="jn-key">پاسخی است به <b class="jn-27">۲۷</b> سال همراهی شما، و به صنعتی که به این شرکت‌ها جان داد.</p>
+        <span class="jn-go">اطلاعات بیشتر ↗</span>
+      </a>
+      <p class="ab-credit">نقشه: <bdi dir="ltr">© OpenStreetMap contributors · geoBoundaries</bdi></p>
+    </footer>
   </article>
 </div>
 <div class="demo" id="demo" role="dialog" aria-modal="true" aria-label="نمونه گزارش نبض بازار" hidden>
@@ -4974,7 +5149,7 @@ function fInit(){
   const nav = ()=>{ const q = FQ[G.i], last = G.i===FQ.length-1, all = FQ.every(x=>state.g[x.k]!=null);
     $('#qDone').textContent = `سؤال ${fa(G.i+1)} از ${fa(FQ.length)}`;
     $('#gPrev').hidden = G.i===0; $('#gNext').hidden = last || state.g[q.k]==null; $('#fReveal').hidden = !last;
-    $('#gNext').disabled = state.g[q.k]==null; $('#fReveal').disabled = !all; };
+    $('#gNext').disabled = state.g[q.k]==null; $('#fReveal').disabled = false; $('#fReveal').classList.toggle('pend', !all); };
   const H0 = 48, hOf = v => Math.min(100, H0*(1+v/100));
   const paintBar = q => { const v = state.g[q.k], bar = $('#gNow'), lab = $('#gNowL'), set = v!=null;
     bar.classList.toggle('set', set); bar.style.height = (set ? hOf(v) : H0)+'%';
@@ -4987,10 +5162,12 @@ function fInit(){
       <p class="g3-sub">${Q.sub} <span>مهر امسال نسبت به مهر پارسال.</span></p>
       <div class="g3-viz" aria-hidden="true"><div class="g2-col"><div class="g2-track"><span class="g2-bar old" style="height:${H0}%"></span></div><small>مهر پارسال</small></div>
         <div class="g2-col"><div class="g2-track"><span class="g2-bar now" id="gNow"><b id="gNowL">؟</b></span></div><small>مهر امسال</small></div></div>
-      <div class="gopts g3-st" role="group" aria-label="جواب شما">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" style="height:${STEP(v)}px" aria-label="${h} ${t}"><b>${glb(t)}</b>${h==='حدود'||h==='یا بیشتر'?`<small>${h}</small>`:''}</button>`).join('')}</div></div>`;
+      <div class="gopts g3-st" role="group" aria-label="جواب شما">${GOPTS.map(([v,t,h])=>`<button type="button" class="gopt ${state.g[q.k]===v?'on':''}" data-v="${v}" style="--h:${STEP(v)}" aria-label="${h} ${t}"><i class="gmini" aria-hidden="true"></i><b>${glb(t)}</b>${h==='حدود'||h==='یا بیشتر'?`<small>${h}</small>`:''}</button>`).join('')}</div></div>`;
     $$('#qgrid .gopt').forEach(b=>b.addEventListener('click',()=>{ state.g[q.k] = +b.dataset.v;
       clearTimeout(G.t); const at = G.i;
-      if (at < FQ.length-1) G.t = setTimeout(()=>{ if (G.i===at && !$('#fQ').hidden) go(at+1); }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 700);
+      const nextOpen = (()=>{ for (let k=1; k<FQ.length; k++){ const j = (at+k) % FQ.length; if (state.g[FQ[j].k]==null) return j; } return -1; })();
+      const dest = nextOpen >= 0 ? nextOpen : (at < FQ.length-1 ? at+1 : -1);
+      if (dest >= 0) G.t = setTimeout(()=>{ if (G.i===at && !$('#fQ').hidden) go(dest); }, matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 700);
       try { $$('#qgrid .gopt').forEach(x=>x.classList.toggle('on',x===b)); paintBar(q);
         const st = $(`#qgrid .g3-s[data-i="${at}"]`); if (st){ st.classList.add('ok'); const em = st.querySelector('em'); if (em) em.innerHTML = glb(t3(state.g[q.k])); }
         toks(); } catch(e){ console.warn(e); }
@@ -5737,7 +5914,10 @@ $('#filmModal').addEventListener('click',e=>{ if (e.target.id==='filmModal') fmC
 $('#fmGo').addEventListener('click',()=>{ fmClose(); fShow('fQ'); });
 document.addEventListener('keydown',e=>{ if (e.key==='Escape' && $('#filmModal').classList.contains('open')) fmClose(); });
 
-$('#fReveal').addEventListener('click',()=>fShow('fReal'));
+$('#fReveal').addEventListener('click',()=>{ const miss = FQ.findIndex(x=>state.g[x.k]==null);
+  if (miss < 0) { fShow('fReal'); return; }
+  const st = $(`#qgrid .g3-s[data-i="${miss}"]`); if (st) st.click();
+  setTimeout(()=>{ const t = $('#qgrid .gopts'); if (t){ t.classList.remove('nudge'); void t.offsetWidth; t.classList.add('nudge'); } }, 380); });
 $('#fYes').addEventListener('click',()=>fShow('fPick'));
 $('#fNo') && $('#fNo').addEventListener('click',()=>{ state.viaNo = true; state.fcat = state.fcat || 'فست فود'; state.scope='کل کشور'; state.prov='تهران'; state.cat=state.fcat; renderGroup(); const e=$('#fEndNo'); e.hidden=false; finalBox(e); e.scrollIntoView({behavior:'smooth',block:'center'}); });
 (function(){ const ov = $('#about'), link = $('#abLink'), close = ()=>{ ov.hidden = true; document.body.style.overflow = ''; link.focus(); };
@@ -5907,6 +6087,17 @@ addEventListener('load', ()=>setTimeout(()=>document.querySelectorAll('img[data-
 
   $('#tvHow').addEventListener('click', e=>{ e.preventDefault(); ov.scrollTo({top: $('#tjStart').offsetTop - 24, behavior: still ? 'auto' : 'smooth'}); });
   $('#tvAbout').addEventListener('click', ()=>{ $('#tsX').click(); setTimeout(()=>$('#abLink').click(), 60); });
+})();
+</script>
+<script>
+/* v129: days of R&D since the base day (27 Aban 1402 = 18 Nov 2023), one more every day; the capacity grid */
+(function(){
+  const BASE = new Date(2023, 10, 18), el = document.getElementById('stDays');
+  const put = ()=>{ const d = Math.floor((new Date().setHours(0,0,0,0) - BASE.getTime()) / 86400000) + 1; el.textContent = fa(d); };
+  put(); setInterval(put, 3600000);
+  const g = document.getElementById('stGrid'); let h = '';
+  for (let i = 0; i < 50; i++) h += `<u class="${i < 28 ? 'on' : ''}" style="--i:${i}"></u>`;   /* each square = 100 businesses */
+  g.innerHTML = h;
 })();
 </script>
 </body>
